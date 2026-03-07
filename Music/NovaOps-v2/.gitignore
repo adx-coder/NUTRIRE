@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+.env
+history.db
+plans/
+evaluation/results/
+tests/.tmp/
+runbooks/*.md

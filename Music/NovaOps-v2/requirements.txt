@@ -1,0 +1,26 @@
+# AWS Strands Agents SDK
+strands-agents>=0.1.0
+strands-agents-tools>=0.1.0
+
+# AWS
+boto3>=1.36.0
+
+# Web API
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+pydantic>=2.11.0
+
+# HTTP client
+requests>=2.32.0
+
+# Kubernetes
+kubernetes>=32.0.0
+
+# Environment
+python-dotenv>=1.0.1
+
+# PDF reports
+reportlab>=4.0.0
+
+# YAML parsing (skills index)
+pyyaml>=6.0.0
