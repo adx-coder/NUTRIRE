@@ -1,90 +1,176 @@
 # NovaOps v2
 
-NovaOps v2 is a multi-agent incident response system built for the Amazon Nova hackathon track. It investigates alerts with specialist agents, validates the reasoning path, proposes safe remediation, and stores a full filesystem-first audit trail for demo and review.
+**Autonomous multi-agent SRE war room powered by Amazon Nova 2 Lite.**
 
-## Current State
+NovaOps v2 responds to production alerts end-to-end: it triages the incident, dispatches four specialist analysts in parallel, reasons over their findings, validates the reasoning path with an adversarial critic, proposes a remediation action, and gates that action through a policy engine before any execution touches infrastructure. Every decision is logged to an append-only audit trail. Human override is always available.
 
-- Multi-agent graph orchestration with triage, analysts, reasoner, critic, and remediation planner
-- Full governance gate with policy decisions, risk scoring, and append-only audit logs
-- Typed schema validation for agent outputs
-- Ghost Mode approval before remediation execution
-- Offline mock mode for demo-safe runs without Bedrock access
-- Local knowledge retrieval by default for hackathon-safe cost control
-- Investigation artifacts written to `plans/{incident_id}/`
-- Evaluation harness with scenario-based scoring
-- Test suite covering parsing, execution, artifacts, API flow, retrieval mode, governance, and offline runtime behavior
+Built for the Amazon Nova AI Hackathon 2026.
 
-## Repository Layout
+---
 
-- `agents/`: orchestration, prompts, schemas, artifacts, PIR generation
-- `aggregator/`: log, metric, Kubernetes, and GitHub data fetchers
-- `tools/`: tool wrappers, executor, knowledge retrieval
-- `api/`: FastAPI server, history database, Slack notifier
-- `evaluation/`: scenarios and runner
-- `skills/`: shared and domain-specific playbooks
-- `plans/`: generated investigation outputs
-- `runbooks/`: learned PIR content
-- `tests/`: unit tests
+## How It Works
 
-## Quick Start
-
-```powershell
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-Copy-Item .env.example .env
-$env:NOVAOPS_USE_MOCK="1"
-venv\Scripts\python.exe -m agents.main "P2 traffic surge alert on checkout-service in prod causing elevated latency"
+```
+Alert
+  |
+  v
+Triage Agent          -- classifies domain, severity (P1-P4), service
+  |
+  +-- Log Analyst -------+
+  +-- Metrics Analyst ---|-- run in parallel
+  +-- K8s Inspector  ----|
+  +-- GitHub Analyst ----+
+  |
+  v
+Root Cause Reasoner   -- synthesises findings, forms ranked hypotheses
+  |
+  v
+Critic Agent          -- adversarial review; can reject and loop (max 3x)
+  |
+  v
+Remediation Planner   -- proposes one of: rollback / scale / restart / noop
+  |
+  v
+Governance Gate       -- evaluates risk score + policy; ALLOW_AUTO | REQUIRE_APPROVAL | DENY
+  |
+  v
+Executor              -- runs remediation tool (or waits for human approval)
 ```
 
-## Hackathon Defaults
+All agent outputs are validated against typed schemas and written to `plans/{incident_id}/` as inspectable JSON artifacts.
 
-The project is set up to avoid unnecessary managed-service spend:
-
-- `HACKATHON_MODE=true`
-- `NOVAOPS_USE_MOCK=true` means fully offline incident investigation and mock execution
-- local TF-IDF knowledge retrieval is preferred unless you explicitly opt into managed Bedrock KB usage
-
-The managed setup helper in `scripts/setup_bedrock_kb.py` requires `--allow-managed-kb`.
-
-## Runtime Modes
-
-- Mock mode:
-  - Set `NOVAOPS_USE_MOCK=true`
-  - No live Bedrock calls are made for investigation or remediation
-  - Deterministic offline agent outputs are generated for demo and testing
-- Live mode:
-  - Set `NOVAOPS_USE_MOCK=false`
-  - Requires Bedrock access and the normal AWS environment variables
-  - Falls back safely to human escalation if runtime execution fails
+---
 
 ## Governance
 
-NovaOps v2 now evaluates every proposed action through a governance layer:
+Every proposed remediation passes through a policy engine before execution.
 
-- policy-driven decision: `ALLOW_AUTO`, `REQUIRE_APPROVAL`, or `DENY`
-- risk scoring based on action, severity, and confidence
-- append-only audit trail in `plans/{incident_id}/audit.jsonl`
-- persisted governance decision in `plans/{incident_id}/governance.json`
-- human-readable governance summary in `plans/{incident_id}/governance_report.md`
+**Risk score (0-100):**
+- Action weight: rollback=40, restart=20, scale=15, noop=0
+- Severity weight: P1=30, P2=20, P3=10, P4=5
+- Confidence penalty: `max(0, (0.75 - confidence) * 40)` for low-confidence decisions
 
-## Run Tests
+**Policy decisions (first match wins, evaluated in priority order):**
 
-```powershell
-venv\Scripts\python.exe -m unittest discover -s tests -v
+| Policy | Condition | Decision |
+|---|---|---|
+| noop_requires_approval | action=noop | REQUIRE_APPROVAL |
+| p1_always_requires_approval | severity=P1 | REQUIRE_APPROVAL |
+| rollback_always_requires_approval | action=rollback | REQUIRE_APPROVAL |
+| low_confidence_escalate | confidence < 0.65 | REQUIRE_APPROVAL |
+| high_confidence_p3_p4_auto | P3/P4 + restart/scale + conf >= 0.75 | ALLOW_AUTO |
+| p2_scale_high_confidence | P2 + scale + conf >= 0.85 | ALLOW_AUTO |
+| default_require_approval | (catch-all) | REQUIRE_APPROVAL |
+
+**Confidence precedence (deterministic):**
+`critic.confidence > root_cause.confidence_overall > top_hypothesis.confidence > 0.0`
+
+**Artifacts written per incident:**
+- `governance.json` — full decision record
+- `governance_report.md` — human-readable summary with risk bar and audit table
+- `audit.jsonl` — append-only event log (TRIAGE_COMPLETE, HYPOTHESIS_FORMED, CRITIC_VERDICT, GOVERNANCE_DECISION, EXECUTION_STARTED, EXECUTION_COMPLETE, HUMAN_OVERRIDE, ...)
+
+---
+
+## Repository Layout
+
+```
+agents/         orchestration graph, prompts, schemas, artifacts, PIR generation
+aggregator/     log, metric, Kubernetes, and GitHub data fetchers (live + mock)
+api/            FastAPI server, SQLite history DB, Slack notifier, PagerDuty webhook
+governance/     GovernanceGate, PolicyEngine, AuditLog, report generator
+tools/          tool wrappers, RemediationExecutor, knowledge retrieval
+evaluation/     15 scenario harness covering 6 failure domains
+skills/         domain playbooks (oom, traffic_surge, deadlock, config_drift, ...)
+runbooks/       learned PIR content for RAG
+plans/          generated investigation artifacts (git-ignored)
+tests/          37 unit tests
 ```
 
-## Main Artifacts
+---
 
-Each run creates a folder under `plans/` containing:
+## Quick Start
 
-- `report.md`
-- `governance.json`
-- `governance_report.md`
-- `audit.jsonl`
-- `structured.json`
-- `validation.json`
-- `trace.json`
-- `findings/*.json`
+```bash
+python -m venv venv
+source venv/Scripts/activate        # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env
 
-These files are intended to be demoable and inspectable without needing a debugger.
+# Run in fully offline mock mode (no Bedrock spend)
+NOVAOPS_USE_MOCK=1 python -m agents "P2 OOM alert on payment-service in prod"
+```
+
+### Live mode (Amazon Nova 2 Lite on Bedrock)
+
+```bash
+export AWS_DEFAULT_REGION=us-east-2
+export AWS_BEARER_TOKEN_BEDROCK=<your-token>
+export NOVAOPS_USE_MOCK=0
+python -m agents "P2 traffic surge on checkout-service in prod"
+```
+
+### API server
+
+```bash
+uvicorn api.server:app --reload
+# POST /api/webhook/pagerduty  — trigger investigation
+# GET  /api/incidents/{id}     — fetch status + artifacts
+# POST /api/incidents/{id}/approve  — human approval → governance gate → execution
+# GET  /api/governance/{id}/decision
+# GET  /api/governance/{id}/audit
+```
+
+---
+
+## Environment Variables
+
+| Variable | Default | Description |
+|---|---|---|
+| `NOVAOPS_USE_MOCK` | `true` | Offline mode — no Bedrock calls |
+| `NOVA_MODEL_ID` | `us.amazon.nova-2-lite-v1:0` | Bedrock inference profile |
+| `AWS_DEFAULT_REGION` | `us-east-1` | Bedrock region |
+| `AWS_BEARER_TOKEN_BEDROCK` | — | Bearer token for Bedrock access |
+| `HACKATHON_MODE` | `false` | Alias for mock mode |
+| `SLACK_WEBHOOK_URL` | — | Ghost Mode approval notifications |
+| `USE_BEDROCK_KB` | `false` | Use managed Bedrock Knowledge Bases for RAG |
+
+---
+
+## Evaluation
+
+```bash
+python -m evaluation --list          # show all 15 scenarios
+python -m evaluation --scenario 1    # run one scenario
+python -m evaluation --domain oom    # run all OOM scenarios
+python -m evaluation --all           # run full suite
+```
+
+Scenarios cover: `oom`, `traffic_surge`, `deadlock`, `config_drift`, `dependency_failure`, `cascading_failure`.
+
+---
+
+## Tests
+
+```bash
+python -m unittest discover -s tests -v
+# 37 tests, < 1s
+```
+
+---
+
+## Artifacts
+
+Each investigation writes to `plans/{incident_id}/`:
+
+| File | Contents |
+|---|---|
+| `report.md` | Full investigation report |
+| `governance.json` | Policy decision, risk score, confidence |
+| `governance_report.md` | Human-readable governance summary |
+| `audit.jsonl` | Append-only event log |
+| `structured.json` | Typed agent outputs |
+| `validation.json` | Schema validation scores |
+| `trace.json` | Failure metadata (if investigation failed) |
+| `findings/*.json` | Per-agent structured findings |
+| `plan.md` | Investigation plan (updated to COMPLETED) |
