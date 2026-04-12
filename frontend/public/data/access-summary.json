@@ -1,0 +1,2027 @@
+{
+  "generatedAt": "2026-04-12",
+  "totalZips": 60,
+  "zips": {
+    "20001": {
+      "zip": "20001",
+      "label": "Shaw / NoMa",
+      "centroidLat": 38.9079,
+      "centroidLon": -77.0179,
+      "nearbyOrgCount": 24,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 9,
+        "tue": 10,
+        "wed": 14,
+        "thu": 10,
+        "fri": 7,
+        "sat": 9,
+        "sun": 5
+      },
+      "languageAccess": {
+        "Spanish": 23,
+        "Amharic": 21,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 19,
+        "appointment_ok": 24,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20002": {
+      "zip": "20002",
+      "label": "Capitol Hill NE",
+      "centroidLat": 38.905,
+      "centroidLon": -76.9958,
+      "nearbyOrgCount": 18,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 7,
+        "tue": 9,
+        "wed": 12,
+        "thu": 9,
+        "fri": 6,
+        "sat": 8,
+        "sun": 4
+      },
+      "languageAccess": {
+        "Spanish": 18,
+        "Amharic": 18,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 16,
+        "appointment_ok": 18,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20009": {
+      "zip": "20009",
+      "label": "Adams Morgan / Columbia Heights",
+      "centroidLat": 38.9194,
+      "centroidLon": -77.0378,
+      "nearbyOrgCount": 24,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 9,
+        "tue": 9,
+        "wed": 13,
+        "thu": 9,
+        "fri": 6,
+        "sat": 6,
+        "sun": 3
+      },
+      "languageAccess": {
+        "Spanish": 23,
+        "Amharic": 20,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "low_friction": 2,
+        "any_walk_in": 18,
+        "appointment_ok": 24
+      },
+      "gaps": []
+    },
+    "20010": {
+      "zip": "20010",
+      "label": "Columbia Heights",
+      "centroidLat": 38.9333,
+      "centroidLon": -77.0332,
+      "nearbyOrgCount": 24,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 7,
+        "tue": 8,
+        "wed": 11,
+        "thu": 10,
+        "fri": 4,
+        "sat": 4,
+        "sun": 3
+      },
+      "languageAccess": {
+        "Spanish": 23,
+        "Amharic": 20,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "low_friction": 3,
+        "any_walk_in": 17,
+        "appointment_ok": 24
+      },
+      "gaps": []
+    },
+    "20011": {
+      "zip": "20011",
+      "label": "Petworth / Brightwood",
+      "centroidLat": 38.9521,
+      "centroidLon": -77.0239,
+      "nearbyOrgCount": 22,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 4,
+        "tue": 8,
+        "wed": 7,
+        "thu": 9,
+        "fri": 3,
+        "sat": 4,
+        "sun": 2
+      },
+      "languageAccess": {
+        "Spanish": 21,
+        "Amharic": 16,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "low_friction": 3,
+        "any_walk_in": 16,
+        "appointment_ok": 22
+      },
+      "gaps": []
+    },
+    "20017": {
+      "zip": "20017",
+      "label": "Brookland",
+      "centroidLat": 38.9393,
+      "centroidLon": -76.9897,
+      "nearbyOrgCount": 22,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 5,
+        "tue": 11,
+        "wed": 10,
+        "thu": 11,
+        "fri": 5,
+        "sat": 8,
+        "sun": 3
+      },
+      "languageAccess": {
+        "Spanish": 21,
+        "Amharic": 14,
+        "Chinese": 1,
+        "Vietnamese": 1,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 1
+      },
+      "dignityAccess": {
+        "any_walk_in": 17,
+        "appointment_ok": 22,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20019": {
+      "zip": "20019",
+      "label": "Deanwood / Capitol View",
+      "centroidLat": 38.8946,
+      "centroidLon": -76.9379,
+      "nearbyOrgCount": 17,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 2,
+        "tue": 7,
+        "wed": 5,
+        "thu": 4,
+        "fri": 6,
+        "sat": 6,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 17,
+        "Amharic": 9,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 13,
+        "appointment_ok": 17,
+        "low_friction": 1
+      },
+      "gaps": []
+    },
+    "20020": {
+      "zip": "20020",
+      "label": "Anacostia / Fort Stanton",
+      "centroidLat": 38.8571,
+      "centroidLon": -76.9754,
+      "nearbyOrgCount": 20,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 5,
+        "wed": 6,
+        "thu": 8,
+        "fri": 5,
+        "sat": 5,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 20,
+        "Amharic": 20,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 15,
+        "appointment_ok": 20,
+        "low_friction": 1
+      },
+      "gaps": []
+    },
+    "20032": {
+      "zip": "20032",
+      "label": "Congress Heights / Bellevue",
+      "centroidLat": 38.8311,
+      "centroidLon": -77.0068,
+      "nearbyOrgCount": 12,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 3,
+        "wed": 5,
+        "thu": 2,
+        "fri": 4,
+        "sat": 2,
+        "sun": 2
+      },
+      "languageAccess": {
+        "Spanish": 12,
+        "Amharic": 12,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 7,
+        "appointment_ok": 12,
+        "low_friction": 1
+      },
+      "gaps": []
+    },
+    "20706": {
+      "zip": "20706",
+      "label": "Lanham",
+      "centroidLat": 38.9617,
+      "centroidLon": -76.8472,
+      "nearbyOrgCount": 9,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 4,
+        "wed": 4,
+        "thu": 4,
+        "fri": 4,
+        "sat": 6,
+        "sun": 3
+      },
+      "languageAccess": {
+        "Spanish": 9,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 9,
+        "appointment_ok": 9,
+        "low_friction": 1
+      },
+      "gaps": []
+    },
+    "20737": {
+      "zip": "20737",
+      "label": "Riverdale Park",
+      "centroidLat": 38.9617,
+      "centroidLon": -76.9264,
+      "nearbyOrgCount": 9,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 2,
+        "tue": 2,
+        "wed": 3,
+        "thu": 2,
+        "fri": 3,
+        "sat": 1,
+        "sun": 2
+      },
+      "languageAccess": {
+        "Spanish": 9,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 6,
+        "appointment_ok": 9,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20740": {
+      "zip": "20740",
+      "label": "College Park",
+      "centroidLat": 38.9807,
+      "centroidLon": -76.9369,
+      "nearbyOrgCount": 8,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 1,
+        "tue": 3,
+        "wed": 2,
+        "thu": 1,
+        "fri": 3,
+        "sat": 2,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 8,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 5,
+        "appointment_ok": 8,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20743": {
+      "zip": "20743",
+      "label": "Capitol Heights",
+      "centroidLat": 38.8833,
+      "centroidLon": -76.8908,
+      "nearbyOrgCount": 21,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 6,
+        "tue": 5,
+        "wed": 5,
+        "thu": 5,
+        "fri": 7,
+        "sat": 10,
+        "sun": 4
+      },
+      "languageAccess": {
+        "Spanish": 20,
+        "Amharic": 1,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 1,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 15,
+        "appointment_ok": 21,
+        "low_friction": 1
+      },
+      "gaps": []
+    },
+    "20744": {
+      "zip": "20744",
+      "label": "Fort Washington",
+      "centroidLat": 38.7422,
+      "centroidLon": -76.9952,
+      "nearbyOrgCount": 3,
+      "accessScore": 0.44,
+      "dayAccess": {
+        "mon": 0,
+        "tue": 0,
+        "wed": 2,
+        "thu": 0,
+        "fri": 0,
+        "sat": 2,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 3,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 3,
+        "any_walk_in": 2,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Monday, Tuesday, Thursday, Friday, Sunday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20745": {
+      "zip": "20745",
+      "label": "Oxon Hill",
+      "centroidLat": 38.8141,
+      "centroidLon": -76.9944,
+      "nearbyOrgCount": 10,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 2,
+        "tue": 3,
+        "wed": 4,
+        "thu": 4,
+        "fri": 3,
+        "sat": 4,
+        "sun": 3
+      },
+      "languageAccess": {
+        "Spanish": 10,
+        "Amharic": 6,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 10,
+        "any_walk_in": 7,
+        "low_friction": 1
+      },
+      "gaps": []
+    },
+    "20746": {
+      "zip": "20746",
+      "label": "Suitland",
+      "centroidLat": 38.8443,
+      "centroidLon": -76.9231,
+      "nearbyOrgCount": 11,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 5,
+        "wed": 3,
+        "thu": 4,
+        "fri": 4,
+        "sat": 6,
+        "sun": 2
+      },
+      "languageAccess": {
+        "Spanish": 10,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 1,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 11,
+        "any_walk_in": 9,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20747": {
+      "zip": "20747",
+      "label": "District Heights",
+      "centroidLat": 38.8571,
+      "centroidLon": -76.8931,
+      "nearbyOrgCount": 20,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 7,
+        "tue": 7,
+        "wed": 6,
+        "thu": 6,
+        "fri": 7,
+        "sat": 14,
+        "sun": 7
+      },
+      "languageAccess": {
+        "Spanish": 19,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 1,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 20,
+        "any_walk_in": 16,
+        "low_friction": 2
+      },
+      "gaps": []
+    },
+    "20748": {
+      "zip": "20748",
+      "label": "Temple Hills",
+      "centroidLat": 38.8195,
+      "centroidLon": -76.9416,
+      "nearbyOrgCount": 11,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 2,
+        "tue": 5,
+        "wed": 3,
+        "thu": 3,
+        "fri": 4,
+        "sat": 5,
+        "sun": 2
+      },
+      "languageAccess": {
+        "Spanish": 11,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 11,
+        "any_walk_in": 8,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20770": {
+      "zip": "20770",
+      "label": "Greenbelt",
+      "centroidLat": 38.9959,
+      "centroidLon": -76.8753,
+      "nearbyOrgCount": 5,
+      "accessScore": 0.74,
+      "dayAccess": {
+        "mon": 1,
+        "tue": 0,
+        "wed": 1,
+        "thu": 1,
+        "fri": 0,
+        "sat": 2,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 5,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 4,
+        "appointment_ok": 5,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Tuesday, Friday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20781": {
+      "zip": "20781",
+      "label": "Hyattsville",
+      "centroidLat": 38.9507,
+      "centroidLon": -76.9482,
+      "nearbyOrgCount": 15,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 4,
+        "tue": 5,
+        "wed": 5,
+        "thu": 5,
+        "fri": 5,
+        "sat": 4,
+        "sun": 3
+      },
+      "languageAccess": {
+        "Spanish": 15,
+        "Amharic": 3,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 9,
+        "appointment_ok": 15,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20782": {
+      "zip": "20782",
+      "label": "West Hyattsville",
+      "centroidLat": 38.9685,
+      "centroidLon": -76.9661,
+      "nearbyOrgCount": 14,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 4,
+        "tue": 5,
+        "wed": 4,
+        "thu": 4,
+        "fri": 6,
+        "sat": 8,
+        "sun": 3
+      },
+      "languageAccess": {
+        "Spanish": 14,
+        "Amharic": 2,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 1
+      },
+      "dignityAccess": {
+        "any_walk_in": 10,
+        "appointment_ok": 14,
+        "low_friction": 1
+      },
+      "gaps": []
+    },
+    "20783": {
+      "zip": "20783",
+      "label": "Langley Park",
+      "centroidLat": 38.9866,
+      "centroidLon": -76.9826,
+      "nearbyOrgCount": 18,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 3,
+        "wed": 3,
+        "thu": 5,
+        "fri": 9,
+        "sat": 12,
+        "sun": 2
+      },
+      "languageAccess": {
+        "Spanish": 17,
+        "Amharic": 10,
+        "Chinese": 0,
+        "Vietnamese": 1,
+        "Korean": 0,
+        "Arabic": 1,
+        "French": 5
+      },
+      "dignityAccess": {
+        "any_walk_in": 15,
+        "appointment_ok": 18,
+        "low_friction": 3
+      },
+      "gaps": []
+    },
+    "20784": {
+      "zip": "20784",
+      "label": "New Carrollton",
+      "centroidLat": 38.9426,
+      "centroidLon": -76.9065,
+      "nearbyOrgCount": 10,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 2,
+        "tue": 1,
+        "wed": 4,
+        "thu": 3,
+        "fri": 2,
+        "sat": 3,
+        "sun": 2
+      },
+      "languageAccess": {
+        "Spanish": 10,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 8,
+        "appointment_ok": 10,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20785": {
+      "zip": "20785",
+      "label": "Landover Hills",
+      "centroidLat": 38.9324,
+      "centroidLon": -76.887,
+      "nearbyOrgCount": 9,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 2,
+        "wed": 3,
+        "thu": 3,
+        "fri": 3,
+        "sat": 4,
+        "sun": 3
+      },
+      "languageAccess": {
+        "Spanish": 9,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 5,
+        "appointment_ok": 9,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20850": {
+      "zip": "20850",
+      "label": "Rockville",
+      "centroidLat": 39.0537,
+      "centroidLon": -77.1222,
+      "nearbyOrgCount": 8,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 4,
+        "tue": 4,
+        "wed": 3,
+        "thu": 3,
+        "fri": 5,
+        "sat": 5,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 8,
+        "Amharic": 0,
+        "Chinese": 3,
+        "Vietnamese": 0,
+        "Korean": 1,
+        "Arabic": 0,
+        "French": 2
+      },
+      "dignityAccess": {
+        "any_walk_in": 4,
+        "appointment_ok": 8,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20852": {
+      "zip": "20852",
+      "label": "North Bethesda",
+      "centroidLat": 39.0537,
+      "centroidLon": -77.1222,
+      "nearbyOrgCount": 8,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 4,
+        "tue": 4,
+        "wed": 3,
+        "thu": 3,
+        "fri": 5,
+        "sat": 5,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 8,
+        "Amharic": 0,
+        "Chinese": 3,
+        "Vietnamese": 0,
+        "Korean": 1,
+        "Arabic": 0,
+        "French": 2
+      },
+      "dignityAccess": {
+        "any_walk_in": 4,
+        "appointment_ok": 8,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20853": {
+      "zip": "20853",
+      "label": "Rockville (east)",
+      "centroidLat": 39.0846,
+      "centroidLon": -77.123,
+      "nearbyOrgCount": 7,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 1,
+        "tue": 3,
+        "wed": 3,
+        "thu": 2,
+        "fri": 4,
+        "sat": 4,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 7,
+        "Amharic": 2,
+        "Chinese": 3,
+        "Vietnamese": 1,
+        "Korean": 1,
+        "Arabic": 1,
+        "French": 3
+      },
+      "dignityAccess": {
+        "appointment_ok": 7,
+        "any_walk_in": 5,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20874": {
+      "zip": "20874",
+      "label": "Germantown",
+      "centroidLat": 39.1734,
+      "centroidLon": -77.2614,
+      "nearbyOrgCount": 6,
+      "accessScore": 0.79,
+      "dayAccess": {
+        "mon": 1,
+        "tue": 0,
+        "wed": 1,
+        "thu": 1,
+        "fri": 2,
+        "sat": 1,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 6,
+        "Amharic": 0,
+        "Chinese": 2,
+        "Vietnamese": 1,
+        "Korean": 1,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 2,
+        "appointment_ok": 6,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Tuesday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20877": {
+      "zip": "20877",
+      "label": "Gaithersburg",
+      "centroidLat": 39.1372,
+      "centroidLon": -77.1958,
+      "nearbyOrgCount": 18,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 7,
+        "tue": 8,
+        "wed": 5,
+        "thu": 8,
+        "fri": 8,
+        "sat": 7,
+        "sun": 3
+      },
+      "languageAccess": {
+        "Spanish": 16,
+        "Amharic": 1,
+        "Chinese": 4,
+        "Vietnamese": 0,
+        "Korean": 1,
+        "Arabic": 1,
+        "French": 4
+      },
+      "dignityAccess": {
+        "appointment_ok": 18,
+        "any_walk_in": 10,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20878": {
+      "zip": "20878",
+      "label": "Gaithersburg (west)",
+      "centroidLat": 39.1101,
+      "centroidLon": -77.2312,
+      "nearbyOrgCount": 3,
+      "accessScore": 0.67,
+      "dayAccess": {
+        "mon": 2,
+        "tue": 3,
+        "wed": 2,
+        "thu": 3,
+        "fri": 3,
+        "sat": 1,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 3,
+        "Amharic": 0,
+        "Chinese": 2,
+        "Vietnamese": 1,
+        "Korean": 1,
+        "Arabic": 1,
+        "French": 1
+      },
+      "dignityAccess": {
+        "appointment_ok": 3,
+        "any_walk_in": 1,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Sunday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20886": {
+      "zip": "20886",
+      "label": "Montgomery Village",
+      "centroidLat": 39.1766,
+      "centroidLon": -77.1986,
+      "nearbyOrgCount": 5,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 1,
+        "tue": 1,
+        "wed": 1,
+        "thu": 2,
+        "fri": 2,
+        "sat": 1,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 4,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 1,
+        "French": 2
+      },
+      "dignityAccess": {
+        "appointment_ok": 5,
+        "any_walk_in": 3,
+        "low_friction": 1
+      },
+      "gaps": []
+    },
+    "20901": {
+      "zip": "20901",
+      "label": "Silver Spring",
+      "centroidLat": 39.0149,
+      "centroidLon": -77.0098,
+      "nearbyOrgCount": 19,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 6,
+        "tue": 2,
+        "wed": 4,
+        "thu": 7,
+        "fri": 6,
+        "sat": 11,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 18,
+        "Amharic": 15,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 3
+      },
+      "dignityAccess": {
+        "any_walk_in": 15,
+        "appointment_ok": 19,
+        "low_friction": 2
+      },
+      "gaps": []
+    },
+    "20902": {
+      "zip": "20902",
+      "label": "Wheaton",
+      "centroidLat": 39.0362,
+      "centroidLon": -77.0356,
+      "nearbyOrgCount": 12,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 4,
+        "tue": 6,
+        "wed": 4,
+        "thu": 5,
+        "fri": 1,
+        "sat": 3,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 12,
+        "Amharic": 9,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 1,
+        "French": 4
+      },
+      "dignityAccess": {
+        "low_friction": 1,
+        "any_walk_in": 10,
+        "appointment_ok": 12
+      },
+      "gaps": []
+    },
+    "20904": {
+      "zip": "20904",
+      "label": "Colesville",
+      "centroidLat": 39.0581,
+      "centroidLon": -76.9783,
+      "nearbyOrgCount": 13,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 2,
+        "wed": 4,
+        "thu": 2,
+        "fri": 3,
+        "sat": 7,
+        "sun": 4
+      },
+      "languageAccess": {
+        "Spanish": 12,
+        "Amharic": 7,
+        "Chinese": 0,
+        "Vietnamese": 4,
+        "Korean": 2,
+        "Arabic": 0,
+        "French": 3
+      },
+      "dignityAccess": {
+        "any_walk_in": 8,
+        "appointment_ok": 13,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20906": {
+      "zip": "20906",
+      "label": "Aspen Hill",
+      "centroidLat": 39.0838,
+      "centroidLon": -77.0578,
+      "nearbyOrgCount": 8,
+      "accessScore": 0.68,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 3,
+        "wed": 0,
+        "thu": 0,
+        "fri": 4,
+        "sat": 2,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 8,
+        "Amharic": 4,
+        "Chinese": 1,
+        "Vietnamese": 0,
+        "Korean": 1,
+        "Arabic": 0,
+        "French": 1
+      },
+      "dignityAccess": {
+        "appointment_ok": 8,
+        "any_walk_in": 3,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Wednesday, Thursday, Sunday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "20910": {
+      "zip": "20910",
+      "label": "Silver Spring (downtown)",
+      "centroidLat": 38.9918,
+      "centroidLon": -77.0306,
+      "nearbyOrgCount": 12,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 3,
+        "wed": 4,
+        "thu": 7,
+        "fri": 3,
+        "sat": 4,
+        "sun": 2
+      },
+      "languageAccess": {
+        "Spanish": 12,
+        "Amharic": 10,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 2
+      },
+      "dignityAccess": {
+        "any_walk_in": 10,
+        "appointment_ok": 12,
+        "low_friction": 2
+      },
+      "gaps": []
+    },
+    "20912": {
+      "zip": "20912",
+      "label": "Takoma Park",
+      "centroidLat": 38.9801,
+      "centroidLon": -77.0075,
+      "nearbyOrgCount": 19,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 4,
+        "tue": 4,
+        "wed": 5,
+        "thu": 10,
+        "fri": 7,
+        "sat": 8,
+        "sun": 2
+      },
+      "languageAccess": {
+        "Spanish": 19,
+        "Amharic": 12,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 3
+      },
+      "dignityAccess": {
+        "low_friction": 3,
+        "any_walk_in": 17,
+        "appointment_ok": 19
+      },
+      "gaps": []
+    },
+    "21201": {
+      "zip": "21201",
+      "label": "Baltimore Downtown",
+      "centroidLat": 39.296,
+      "centroidLon": -76.621,
+      "nearbyOrgCount": 50,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 46,
+        "tue": 47,
+        "wed": 47,
+        "thu": 46,
+        "fri": 47,
+        "sat": 46,
+        "sun": 47
+      },
+      "languageAccess": {
+        "Spanish": 43,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 50,
+        "any_walk_in": 19,
+        "low_friction": 1
+      },
+      "gaps": []
+    },
+    "21202": {
+      "zip": "21202",
+      "label": "Baltimore Inner Harbor",
+      "centroidLat": 39.2883,
+      "centroidLon": -76.6076,
+      "nearbyOrgCount": 36,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 33,
+        "tue": 33,
+        "wed": 34,
+        "thu": 33,
+        "fri": 34,
+        "sat": 33,
+        "sun": 33
+      },
+      "languageAccess": {
+        "Spanish": 33,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 36,
+        "any_walk_in": 16,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "21205": {
+      "zip": "21205",
+      "label": "Baltimore East",
+      "centroidLat": 39.3019,
+      "centroidLon": -76.5835,
+      "nearbyOrgCount": 31,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 24,
+        "tue": 24,
+        "wed": 26,
+        "thu": 24,
+        "fri": 26,
+        "sat": 26,
+        "sun": 24
+      },
+      "languageAccess": {
+        "Spanish": 20,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 31,
+        "any_walk_in": 14,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "21207": {
+      "zip": "21207",
+      "label": "Gwynn Oak",
+      "centroidLat": 39.3193,
+      "centroidLon": -76.7226,
+      "nearbyOrgCount": 12,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 12,
+        "tue": 12,
+        "wed": 12,
+        "thu": 12,
+        "fri": 12,
+        "sat": 12,
+        "sun": 12
+      },
+      "languageAccess": {
+        "Spanish": 10,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 12,
+        "any_walk_in": 4,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "21215": {
+      "zip": "21215",
+      "label": "Northwest Baltimore",
+      "centroidLat": 39.3453,
+      "centroidLon": -76.6768,
+      "nearbyOrgCount": 17,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 17,
+        "tue": 17,
+        "wed": 17,
+        "thu": 17,
+        "fri": 17,
+        "sat": 17,
+        "sun": 17
+      },
+      "languageAccess": {
+        "Spanish": 17,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 17,
+        "any_walk_in": 8,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "21217": {
+      "zip": "21217",
+      "label": "Penn North / Sandtown",
+      "centroidLat": 39.3111,
+      "centroidLon": -76.6427,
+      "nearbyOrgCount": 34,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 32,
+        "tue": 32,
+        "wed": 33,
+        "thu": 32,
+        "fri": 32,
+        "sat": 32,
+        "sun": 33
+      },
+      "languageAccess": {
+        "Spanish": 22,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 13,
+        "appointment_ok": 34,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "21223": {
+      "zip": "21223",
+      "label": "Southwest Baltimore",
+      "centroidLat": 39.2826,
+      "centroidLon": -76.6554,
+      "nearbyOrgCount": 28,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 23,
+        "tue": 24,
+        "wed": 23,
+        "thu": 24,
+        "fri": 24,
+        "sat": 23,
+        "sun": 25
+      },
+      "languageAccess": {
+        "Spanish": 25,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 28,
+        "any_walk_in": 13,
+        "low_friction": 1
+      },
+      "gaps": []
+    },
+    "21224": {
+      "zip": "21224",
+      "label": "Canton / Highlandtown",
+      "centroidLat": 39.279,
+      "centroidLon": -76.5691,
+      "nearbyOrgCount": 13,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 9,
+        "tue": 9,
+        "wed": 11,
+        "thu": 9,
+        "fri": 11,
+        "sat": 9,
+        "sun": 9
+      },
+      "languageAccess": {
+        "Spanish": 13,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 13,
+        "any_walk_in": 6,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "21229": {
+      "zip": "21229",
+      "label": "Irvington / Edmondson",
+      "centroidLat": 39.2804,
+      "centroidLon": -76.6869,
+      "nearbyOrgCount": 16,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 12,
+        "tue": 12,
+        "wed": 12,
+        "thu": 12,
+        "fri": 15,
+        "sat": 12,
+        "sun": 13
+      },
+      "languageAccess": {
+        "Spanish": 15,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 8,
+        "appointment_ok": 16,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "21230": {
+      "zip": "21230",
+      "label": "Federal Hill",
+      "centroidLat": 39.2683,
+      "centroidLon": -76.6277,
+      "nearbyOrgCount": 21,
+      "accessScore": 1.0,
+      "dayAccess": {
+        "mon": 19,
+        "tue": 20,
+        "wed": 19,
+        "thu": 20,
+        "fri": 19,
+        "sat": 19,
+        "sun": 19
+      },
+      "languageAccess": {
+        "Spanish": 19,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 21,
+        "any_walk_in": 8,
+        "low_friction": 1
+      },
+      "gaps": []
+    },
+    "22041": {
+      "zip": "22041",
+      "label": "Baileys Crossroads",
+      "centroidLat": 38.8541,
+      "centroidLon": -77.136,
+      "nearbyOrgCount": 14,
+      "accessScore": 0.79,
+      "dayAccess": {
+        "mon": 2,
+        "tue": 2,
+        "wed": 4,
+        "thu": 2,
+        "fri": 2,
+        "sat": 5,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 14,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 3,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 11,
+        "appointment_ok": 14,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Sunday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "22042": {
+      "zip": "22042",
+      "label": "Falls Church",
+      "centroidLat": 38.8622,
+      "centroidLon": -77.1917,
+      "nearbyOrgCount": 2,
+      "accessScore": 0.38,
+      "dayAccess": {
+        "mon": 1,
+        "tue": 1,
+        "wed": 0,
+        "thu": 0,
+        "fri": 0,
+        "sat": 0,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 2,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "appointment_ok": 2,
+        "any_walk_in": 1,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Wednesday, Thursday, Friday, Saturday, Sunday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "22044": {
+      "zip": "22044",
+      "label": "Seven Corners",
+      "centroidLat": 38.8648,
+      "centroidLon": -77.1551,
+      "nearbyOrgCount": 13,
+      "accessScore": 0.79,
+      "dayAccess": {
+        "mon": 2,
+        "tue": 3,
+        "wed": 4,
+        "thu": 1,
+        "fri": 2,
+        "sat": 4,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 13,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 1,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 10,
+        "appointment_ok": 13,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Sunday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "22101": {
+      "zip": "22101",
+      "label": "McLean",
+      "centroidLat": 38.9462,
+      "centroidLon": -77.1892,
+      "nearbyOrgCount": 0,
+      "accessScore": 0.0,
+      "dayAccess": {
+        "mon": 0,
+        "tue": 0,
+        "wed": 0,
+        "thu": 0,
+        "fri": 0,
+        "sat": 0,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 0,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "low_friction": 0,
+        "any_walk_in": 0,
+        "appointment_ok": 0
+      },
+      "gaps": [
+        "No food resources within walking distance."
+      ]
+    },
+    "22150": {
+      "zip": "22150",
+      "label": "Springfield",
+      "centroidLat": 38.7815,
+      "centroidLon": -77.181,
+      "nearbyOrgCount": 3,
+      "accessScore": 0.44,
+      "dayAccess": {
+        "mon": 0,
+        "tue": 0,
+        "wed": 0,
+        "thu": 1,
+        "fri": 0,
+        "sat": 2,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 3,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 2,
+        "appointment_ok": 3,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Monday, Tuesday, Wednesday, Friday, Sunday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "22191": {
+      "zip": "22191",
+      "label": "Woodbridge",
+      "centroidLat": 38.6472,
+      "centroidLon": -77.2593,
+      "nearbyOrgCount": 6,
+      "accessScore": 0.79,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 1,
+        "wed": 1,
+        "thu": 3,
+        "fri": 2,
+        "sat": 2,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 6,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 3,
+        "appointment_ok": 6,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Sunday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "22192": {
+      "zip": "22192",
+      "label": "Lake Ridge",
+      "centroidLat": 38.6834,
+      "centroidLon": -77.2872,
+      "nearbyOrgCount": 2,
+      "accessScore": 0.61,
+      "dayAccess": {
+        "mon": 1,
+        "tue": 1,
+        "wed": 1,
+        "thu": 2,
+        "fri": 1,
+        "sat": 0,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 2,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 1,
+        "appointment_ok": 2,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Saturday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "22193": {
+      "zip": "22193",
+      "label": "Dale City",
+      "centroidLat": 38.6396,
+      "centroidLon": -77.3272,
+      "nearbyOrgCount": 7,
+      "accessScore": 0.79,
+      "dayAccess": {
+        "mon": 1,
+        "tue": 1,
+        "wed": 2,
+        "thu": 2,
+        "fri": 2,
+        "sat": 2,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 7,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 5,
+        "appointment_ok": 7,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Sunday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "22204": {
+      "zip": "22204",
+      "label": "Arlington (Columbia Pike)",
+      "centroidLat": 38.8583,
+      "centroidLon": -77.087,
+      "nearbyOrgCount": 13,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 1,
+        "tue": 2,
+        "wed": 3,
+        "thu": 3,
+        "fri": 1,
+        "sat": 8,
+        "sun": 2
+      },
+      "languageAccess": {
+        "Spanish": 13,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 7,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 11,
+        "appointment_ok": 13,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "22301": {
+      "zip": "22301",
+      "label": "Alexandria (Del Ray)",
+      "centroidLat": 38.8203,
+      "centroidLon": -77.0573,
+      "nearbyOrgCount": 10,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 4,
+        "wed": 2,
+        "thu": 4,
+        "fri": 5,
+        "sat": 5,
+        "sun": 1
+      },
+      "languageAccess": {
+        "Spanish": 10,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 8,
+        "appointment_ok": 10,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "22304": {
+      "zip": "22304",
+      "label": "Alexandria (west)",
+      "centroidLat": 38.8148,
+      "centroidLon": -77.1176,
+      "nearbyOrgCount": 5,
+      "accessScore": 0.79,
+      "dayAccess": {
+        "mon": 2,
+        "tue": 1,
+        "wed": 2,
+        "thu": 3,
+        "fri": 2,
+        "sat": 1,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 5,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 4,
+        "appointment_ok": 5,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Sunday.",
+        "No walk-in, no-ID-required options available.",
+        "No Amharic-speaking food resources despite large Amharic-speaking community."
+      ]
+    },
+    "22305": {
+      "zip": "22305",
+      "label": "Arlandria",
+      "centroidLat": 38.8378,
+      "centroidLon": -77.0605,
+      "nearbyOrgCount": 11,
+      "accessScore": 0.85,
+      "dayAccess": {
+        "mon": 3,
+        "tue": 5,
+        "wed": 5,
+        "thu": 3,
+        "fri": 5,
+        "sat": 7,
+        "sun": 2
+      },
+      "languageAccess": {
+        "Spanish": 11,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 4,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 11,
+        "appointment_ok": 11,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No walk-in, no-ID-required options available."
+      ]
+    },
+    "22314": {
+      "zip": "22314",
+      "label": "Old Town Alexandria",
+      "centroidLat": 38.8051,
+      "centroidLon": -77.0591,
+      "nearbyOrgCount": 5,
+      "accessScore": 0.74,
+      "dayAccess": {
+        "mon": 1,
+        "tue": 1,
+        "wed": 0,
+        "thu": 2,
+        "fri": 1,
+        "sat": 2,
+        "sun": 0
+      },
+      "languageAccess": {
+        "Spanish": 5,
+        "Amharic": 0,
+        "Chinese": 0,
+        "Vietnamese": 0,
+        "Korean": 0,
+        "Arabic": 0,
+        "French": 0
+      },
+      "dignityAccess": {
+        "any_walk_in": 3,
+        "appointment_ok": 5,
+        "low_friction": 0
+      },
+      "gaps": [
+        "No food resources on Wednesday, Sunday.",
+        "No walk-in, no-ID-required options available."
+      ]
+    }
+  },
+  "summary": {
+    "avgAccessScore": 0.84,
+    "zipsWithZeroOrgs": 1,
+    "zipsWithWeekendGap": 2,
+    "zipsWithNoLowFriction": 40
+  }
+}

@@ -1,0 +1,564 @@
+{
+  "generatedAt": "2026-04-12",
+  "totalZipsAnalyzed": 60,
+  "gaps": [
+    {
+      "zip": "20744",
+      "label": "Fort Washington",
+      "centroidLat": 38.7422,
+      "centroidLon": -76.9952,
+      "population": 45000,
+      "needScore": 0.132,
+      "supplyScore": 0.041,
+      "gap": 0.091,
+      "underservedPopulation": 4095,
+      "nearbyOrgCount": 3,
+      "suggestedHost": {
+        "name": "Breath of Life SDA Church",
+        "distance_km": 0.5,
+        "has_hours": true
+      },
+      "why": "Fort Washington has moderate food access but growing need (13% poverty rate, 45,000 residents)."
+    },
+    {
+      "zip": "22192",
+      "label": "Lake Ridge",
+      "centroidLat": 38.6834,
+      "centroidLon": -77.2872,
+      "population": 45000,
+      "needScore": 0.092,
+      "supplyScore": 0.018,
+      "gap": 0.074,
+      "underservedPopulation": 3330,
+      "nearbyOrgCount": 2,
+      "suggestedHost": {
+        "name": "Ebenezer Baptist Church",
+        "distance_km": 1.6,
+        "has_hours": true
+      },
+      "why": "Lake Ridge has moderate food access but growing need (9% poverty rate, 45,000 residents)."
+    },
+    {
+      "zip": "22042",
+      "label": "Falls Church",
+      "centroidLat": 38.8622,
+      "centroidLon": -77.1917,
+      "population": 32000,
+      "needScore": 0.092,
+      "supplyScore": 0.026,
+      "gap": 0.066,
+      "underservedPopulation": 2112,
+      "nearbyOrgCount": 2,
+      "suggestedHost": {
+        "name": "La Iglesia Episcopal de Santa Maria",
+        "distance_km": 0.9,
+        "has_hours": true
+      },
+      "why": "Falls Church has moderate food access but growing need (9% poverty rate, 32,000 residents)."
+    },
+    {
+      "zip": "20878",
+      "label": "Gaithersburg (west)",
+      "centroidLat": 39.1101,
+      "centroidLon": -77.2312,
+      "population": 42000,
+      "needScore": 0.072,
+      "supplyScore": 0.022,
+      "gap": 0.05,
+      "underservedPopulation": 2100,
+      "nearbyOrgCount": 3,
+      "suggestedHost": {
+        "name": "Community Hope Center (Gaithersburg CARES Hub)",
+        "distance_km": 0.0,
+        "has_hours": true
+      },
+      "why": "Gaithersburg (west) has moderate food access but growing need (7% poverty rate, 42,000 residents)."
+    },
+    {
+      "zip": "20874",
+      "label": "Germantown",
+      "centroidLat": 39.1734,
+      "centroidLon": -77.2614,
+      "population": 52000,
+      "needScore": 0.092,
+      "supplyScore": 0.046,
+      "gap": 0.046,
+      "underservedPopulation": 2392,
+      "nearbyOrgCount": 6,
+      "suggestedHost": {
+        "name": "The UpCounty Hub",
+        "distance_km": 0.9,
+        "has_hours": true
+      },
+      "why": "Germantown has moderate food access but growing need (9% poverty rate, 52,000 residents)."
+    },
+    {
+      "zip": "22191",
+      "label": "Woodbridge",
+      "centroidLat": 38.6472,
+      "centroidLon": -77.2593,
+      "population": 40000,
+      "needScore": 0.112,
+      "supplyScore": 0.076,
+      "gap": 0.036,
+      "underservedPopulation": 1440,
+      "nearbyOrgCount": 6,
+      "suggestedHost": {
+        "name": "Woodbridge Workers",
+        "distance_km": 0.5,
+        "has_hours": true
+      },
+      "why": "Woodbridge has moderate food access but growing need (11% poverty rate, 40,000 residents)."
+    },
+    {
+      "zip": "22101",
+      "label": "McLean",
+      "centroidLat": 38.9462,
+      "centroidLon": -77.1892,
+      "population": 30000,
+      "needScore": 0.032,
+      "supplyScore": 0.0,
+      "gap": 0.032,
+      "underservedPopulation": 960,
+      "nearbyOrgCount": 0,
+      "suggestedHost": null,
+      "why": "No food pantries within walking distance of McLean (30,000 residents)."
+    },
+    {
+      "zip": "22150",
+      "label": "Springfield",
+      "centroidLat": 38.7815,
+      "centroidLon": -77.181,
+      "population": 25000,
+      "needScore": 0.072,
+      "supplyScore": 0.04,
+      "gap": 0.032,
+      "underservedPopulation": 800,
+      "nearbyOrgCount": 3,
+      "suggestedHost": {
+        "name": "The Journey",
+        "distance_km": 1.5,
+        "has_hours": true
+      },
+      "why": "Springfield has moderate food access but growing need (7% poverty rate, 25,000 residents)."
+    },
+    {
+      "zip": "20906",
+      "label": "Aspen Hill",
+      "centroidLat": 39.0838,
+      "centroidLon": -77.0578,
+      "population": 50000,
+      "needScore": 0.092,
+      "supplyScore": 0.064,
+      "gap": 0.028,
+      "underservedPopulation": 1400,
+      "nearbyOrgCount": 8,
+      "suggestedHost": {
+        "name": "Food Pantry | Oak Chapel Church",
+        "distance_km": 0.0,
+        "has_hours": true
+      },
+      "why": "Aspen Hill has moderate food access but growing need (9% poverty rate, 50,000 residents)."
+    },
+    {
+      "zip": "22193",
+      "label": "Dale City",
+      "centroidLat": 38.6396,
+      "centroidLon": -77.3272,
+      "population": 42000,
+      "needScore": 0.132,
+      "supplyScore": 0.104,
+      "gap": 0.028,
+      "underservedPopulation": 1176,
+      "nearbyOrgCount": 7,
+      "suggestedHost": {
+        "name": "Food Pantry - Woodbridge, Holy Family Catholic Church Social Ministries",
+        "distance_km": 0.9,
+        "has_hours": true
+      },
+      "why": "Dale City has moderate food access but growing need (13% poverty rate, 42,000 residents)."
+    },
+    {
+      "zip": "22304",
+      "label": "Alexandria (west)",
+      "centroidLat": 38.8148,
+      "centroidLon": -77.1176,
+      "population": 30000,
+      "needScore": 0.112,
+      "supplyScore": 0.09,
+      "gap": 0.022,
+      "underservedPopulation": 660,
+      "nearbyOrgCount": 5,
+      "suggestedHost": {
+        "name": "Alexandria Food Pantry",
+        "distance_km": 1.1,
+        "has_hours": true
+      },
+      "why": "Alexandria (west) has moderate food access but growing need (11% poverty rate, 30,000 residents)."
+    },
+    {
+      "zip": "20850",
+      "label": "Rockville",
+      "centroidLat": 39.0537,
+      "centroidLon": -77.1222,
+      "population": 48000,
+      "needScore": 0.072,
+      "supplyScore": 0.052,
+      "gap": 0.02,
+      "underservedPopulation": 960,
+      "nearbyOrgCount": 8,
+      "suggestedHost": {
+        "name": "So What Else",
+        "distance_km": 0.0,
+        "has_hours": true
+      },
+      "why": "Rockville has moderate food access but growing need (7% poverty rate, 48,000 residents)."
+    },
+    {
+      "zip": "20886",
+      "label": "Montgomery Village",
+      "centroidLat": 39.1766,
+      "centroidLon": -77.1986,
+      "population": 30000,
+      "needScore": 0.082,
+      "supplyScore": 0.063,
+      "gap": 0.019,
+      "underservedPopulation": 570,
+      "nearbyOrgCount": 5,
+      "suggestedHost": {
+        "name": "Women Who Care Ministries",
+        "distance_km": 1.3,
+        "has_hours": true
+      },
+      "why": "Montgomery Village has moderate food access but growing need (8% poverty rate, 30,000 residents)."
+    },
+    {
+      "zip": "21207",
+      "label": "Gwynn Oak",
+      "centroidLat": 39.3193,
+      "centroidLon": -76.7226,
+      "population": 35000,
+      "needScore": 0.168,
+      "supplyScore": 0.163,
+      "gap": 0.005,
+      "underservedPopulation": 175,
+      "nearbyOrgCount": 12,
+      "suggestedHost": {
+        "name": "ICNA Relief",
+        "distance_km": 0.6,
+        "has_hours": false
+      },
+      "why": "Gwynn Oak has moderate food access but growing need (16% poverty rate, 35,000 residents)."
+    },
+    {
+      "zip": "20852",
+      "label": "North Bethesda",
+      "centroidLat": 39.0537,
+      "centroidLon": -77.1222,
+      "population": 35000,
+      "needScore": 0.062,
+      "supplyScore": 0.061,
+      "gap": 0.001,
+      "underservedPopulation": 35,
+      "nearbyOrgCount": 8,
+      "suggestedHost": {
+        "name": "So What Else",
+        "distance_km": 0.0,
+        "has_hours": true
+      },
+      "why": "North Bethesda has moderate food access but growing need (6% poverty rate, 35,000 residents)."
+    },
+    {
+      "zip": "20001",
+      "label": "Shaw / NoMa",
+      "centroidLat": 38.9079,
+      "centroidLon": -77.0179,
+      "population": 35000,
+      "needScore": 0.204,
+      "supplyScore": 0.204,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 24,
+      "suggestedHost": {
+        "name": "Food Resources | DC LGBTQ+ Community Center",
+        "distance_km": 0.0,
+        "has_hours": false
+      },
+      "why": "Shaw / NoMa has moderate food access but growing need (20% poverty rate, 35,000 residents)."
+    },
+    {
+      "zip": "20002",
+      "label": "Capitol Hill NE",
+      "centroidLat": 38.905,
+      "centroidLon": -76.9958,
+      "population": 38000,
+      "needScore": 0.168,
+      "supplyScore": 0.168,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 18,
+      "suggestedHost": {
+        "name": "New Samaritan Baptist Church",
+        "distance_km": 0.4,
+        "has_hours": true
+      },
+      "why": "Capitol Hill NE has moderate food access but growing need (16% poverty rate, 38,000 residents)."
+    },
+    {
+      "zip": "20009",
+      "label": "Adams Morgan / Columbia Heights",
+      "centroidLat": 38.9194,
+      "centroidLon": -77.0378,
+      "population": 42000,
+      "needScore": 0.17,
+      "supplyScore": 0.17,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 24,
+      "suggestedHost": {
+        "name": "YWCA National Capital Area",
+        "distance_km": 0.6,
+        "has_hours": true
+      },
+      "why": "Adams Morgan / Columbia Heights has moderate food access but growing need (17% poverty rate, 42,000 residents)."
+    },
+    {
+      "zip": "20010",
+      "label": "Columbia Heights",
+      "centroidLat": 38.9333,
+      "centroidLon": -77.0332,
+      "population": 28000,
+      "needScore": 0.19,
+      "supplyScore": 0.19,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 24,
+      "suggestedHost": {
+        "name": "Loaves & Fishes",
+        "distance_km": 0.2,
+        "has_hours": true
+      },
+      "why": "Columbia Heights has moderate food access but growing need (19% poverty rate, 28,000 residents)."
+    },
+    {
+      "zip": "20011",
+      "label": "Petworth / Brightwood",
+      "centroidLat": 38.9521,
+      "centroidLon": -77.0239,
+      "population": 36000,
+      "needScore": 0.148,
+      "supplyScore": 0.148,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 22,
+      "suggestedHost": {
+        "name": "Food & Friends",
+        "distance_km": 0.0,
+        "has_hours": true
+      },
+      "why": "Petworth / Brightwood has moderate food access but growing need (14% poverty rate, 36,000 residents)."
+    },
+    {
+      "zip": "20017",
+      "label": "Brookland",
+      "centroidLat": 38.9393,
+      "centroidLon": -76.9897,
+      "population": 20000,
+      "needScore": 0.128,
+      "supplyScore": 0.128,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 22,
+      "suggestedHost": {
+        "name": "Capital Area Food Bank",
+        "distance_km": 0.0,
+        "has_hours": true
+      },
+      "why": "Brookland has moderate food access but growing need (12% poverty rate, 20,000 residents)."
+    },
+    {
+      "zip": "20019",
+      "label": "Deanwood / Capitol View",
+      "centroidLat": 38.8946,
+      "centroidLon": -76.9379,
+      "population": 32000,
+      "needScore": 0.264,
+      "supplyScore": 0.264,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 17,
+      "suggestedHost": {
+        "name": "Ward Memorial AME Church",
+        "distance_km": 0.4,
+        "has_hours": true
+      },
+      "why": "Deanwood / Capitol View has moderate food access but growing need (26% poverty rate, 32,000 residents)."
+    },
+    {
+      "zip": "20020",
+      "label": "Anacostia / Fort Stanton",
+      "centroidLat": 38.8571,
+      "centroidLon": -76.9754,
+      "population": 38000,
+      "needScore": 0.304,
+      "supplyScore": 0.304,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 20,
+      "suggestedHost": {
+        "name": "Emmanuel Baptist Church",
+        "distance_km": 0.3,
+        "has_hours": true
+      },
+      "why": "Anacostia / Fort Stanton has moderate food access but growing need (30% poverty rate, 38,000 residents)."
+    },
+    {
+      "zip": "20032",
+      "label": "Congress Heights / Bellevue",
+      "centroidLat": 38.8311,
+      "centroidLon": -77.0068,
+      "population": 25000,
+      "needScore": 0.334,
+      "supplyScore": 0.334,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 12,
+      "suggestedHost": {
+        "name": "Covenant Baptist Food Pantry",
+        "distance_km": 0.4,
+        "has_hours": false
+      },
+      "why": "Congress Heights / Bellevue has moderate food access but growing need (33% poverty rate, 25,000 residents)."
+    },
+    {
+      "zip": "20706",
+      "label": "Lanham",
+      "centroidLat": 38.9617,
+      "centroidLon": -76.8472,
+      "population": 35000,
+      "needScore": 0.112,
+      "supplyScore": 0.112,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 9,
+      "suggestedHost": {
+        "name": "St. Matthias Catholic Church",
+        "distance_km": 0.6,
+        "has_hours": true
+      },
+      "why": "Lanham has moderate food access but growing need (11% poverty rate, 35,000 residents)."
+    },
+    {
+      "zip": "20737",
+      "label": "Riverdale Park",
+      "centroidLat": 38.9617,
+      "centroidLon": -76.9264,
+      "population": 22000,
+      "needScore": 0.168,
+      "supplyScore": 0.168,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 9,
+      "suggestedHost": {
+        "name": "River of Life Redeemed Christian Church of God",
+        "distance_km": 0.4,
+        "has_hours": true
+      },
+      "why": "Riverdale Park has moderate food access but growing need (16% poverty rate, 22,000 residents)."
+    },
+    {
+      "zip": "20740",
+      "label": "College Park",
+      "centroidLat": 38.9807,
+      "centroidLon": -76.9369,
+      "population": 30000,
+      "needScore": 0.188,
+      "supplyScore": 0.188,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 8,
+      "suggestedHost": {
+        "name": "College Park Community Food Bank",
+        "distance_km": 1.3,
+        "has_hours": true
+      },
+      "why": "College Park has moderate food access but growing need (18% poverty rate, 30,000 residents)."
+    },
+    {
+      "zip": "20743",
+      "label": "Capitol Heights",
+      "centroidLat": 38.8833,
+      "centroidLon": -76.8908,
+      "population": 40000,
+      "needScore": 0.172,
+      "supplyScore": 0.172,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 21,
+      "suggestedHost": {
+        "name": "Food Pantry | Faith Temple 2",
+        "distance_km": 0.0,
+        "has_hours": true
+      },
+      "why": "Capitol Heights has moderate food access but growing need (17% poverty rate, 40,000 residents)."
+    },
+    {
+      "zip": "20745",
+      "label": "Oxon Hill",
+      "centroidLat": 38.8141,
+      "centroidLon": -76.9944,
+      "population": 28000,
+      "needScore": 0.152,
+      "supplyScore": 0.152,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 10,
+      "suggestedHost": {
+        "name": "Food Pantry | Saint Paul's United Methodist Church Prince George's County",
+        "distance_km": 1.0,
+        "has_hours": false
+      },
+      "why": "Oxon Hill has moderate food access but growing need (15% poverty rate, 28,000 residents)."
+    },
+    {
+      "zip": "20746",
+      "label": "Suitland",
+      "centroidLat": 38.8443,
+      "centroidLon": -76.9231,
+      "population": 30000,
+      "needScore": 0.142,
+      "supplyScore": 0.142,
+      "gap": 0.0,
+      "underservedPopulation": 0,
+      "nearbyOrgCount": 11,
+      "suggestedHost": {
+        "name": "Food Pantry | Beltway Church of Christ",
+        "distance_km": 0.8,
+        "has_hours": false
+      },
+      "why": "Suitland has moderate food access but growing need (14% poverty rate, 30,000 residents)."
+    }
+  ],
+  "summary": {
+    "highestGap": {
+      "zip": "20744",
+      "label": "Fort Washington",
+      "centroidLat": 38.7422,
+      "centroidLon": -76.9952,
+      "population": 45000,
+      "needScore": 0.132,
+      "supplyScore": 0.041,
+      "gap": 0.091,
+      "underservedPopulation": 4095,
+      "nearbyOrgCount": 3,
+      "suggestedHost": {
+        "name": "Breath of Life SDA Church",
+        "distance_km": 0.5,
+        "has_hours": true
+      },
+      "why": "Fort Washington has moderate food access but growing need (13% poverty rate, 45,000 residents)."
+    },
+    "avgGap": 0.009,
+    "totalUnderserved": 22205
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-04-12T09:13:46.806248+00:00",
+  "totalOrganizations": 1395,
+  "byState": {
+    "MD": 877,
+    "VA": 422,
+    "DC": 92,
+    "Va": 1,
+    "": 9
+  },
+  "bySource": {
+    "mocofood": 90,
+    "cafb": 358,
+    "two11md": 380,
+    "mdfb-find-food": 259,
+    "two11va": 314
+  },
+  "coverage": {
+    "hasHours": 763,
+    "hasCoords": 1395,
+    "hasHeroCopy": 1401,
+    "hasHoursPct": 54,
+    "hasCoordsPct": 100
+  },
+  "sources": [
+    {
+      "id": "two11md",
+      "name": "211 Maryland",
+      "count": 380
+    },
+    {
+      "id": "cafb",
+      "name": "Capital Area Food Bank",
+      "count": 358
+    },
+    {
+      "id": "two11va",
+      "name": "211 Virginia",
+      "count": 314
+    },
+    {
+      "id": "mdfb-find-food",
+      "name": "Maryland Food Bank",
+      "count": 259
+    },
+    {
+      "id": "mocofood",
+      "name": "Montgomery County Food Council",
+      "count": 90
+    }
+  ]
+}
