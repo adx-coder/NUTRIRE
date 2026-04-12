@@ -1,0 +1,35 @@
+/* Nutrire design tokens — see docs/DESIGN.md §2 */
+
+:root {
+  /* Surface */
+  --bg: #FBFAF7;
+  --bg-raised: #FFFFFF;
+  --bg-muted: #F4F1EA;
+
+  /* Ink */
+  --ink: #1F2421;
+  --ink-soft: #4A524E;
+  --ink-muted: #7E867F;
+  --ink-disabled: #B7BDB5;
+
+  /* Sage — primary trust */
+  --sage: #4F7F6A;
+  --sage-deep: #3A6551;
+  --sage-soft: #E8EFE9;
+
+  /* Terracotta — urgent only */
+  --terracotta: #C96F4A;
+  --terracotta-soft: #FAE9E1;
+
+  /* Mustard — "likely" confidence, NOT warnings */
+  --mustard: #D9A441;
+  --mustard-soft: #FBEFD0;
+
+  /* Stone — stale confidence, quiet */
+  --stone: #9A9A92;
+  --stone-soft: #EEECE6;
+
+  /* Border */
+  --border: #E7E3DA;
+  --border-strong: #CEC9BD;
+}
