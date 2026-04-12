@@ -1,0 +1,4344 @@
+{
+  "126 port street, easton, md 21601": {
+    "lat": 38.7721284,
+    "lng": -76.0778728,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:04:54Z"
+  },
+  "17510 horsehead road, brandywine, md 20613": {
+    "lat": 38.6493016,
+    "lng": -76.7699422,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:04:56Z"
+  },
+  "3915 pennington avenue, curtis bay, md 21226": {
+    "lat": 39.2293073,
+    "lng": -76.5885714,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:04:57Z"
+  },
+  "2812 reisterstown road, baltimore, md 21215": {
+    "lat": 39.3202873,
+    "lng": -76.6536588,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:04:59Z"
+  },
+  "301 west main street, middletown, md 21769": {
+    "lat": 39.4447337,
+    "lng": -77.553443,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:01Z"
+  },
+  "2614 kenhill drive, bowie, md 20715": {
+    "lat": 38.9614721,
+    "lng": -76.7412144,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:03Z"
+  },
+  "202 jefferson pike, knoxville, md 21758": {
+    "lat": 39.3276257,
+    "lng": -77.665125,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:07Z"
+  },
+  "4414 wilkens avenue, baltimore, md 21229": {
+    "lat": 39.2738371,
+    "lng": -76.6708556,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:09Z"
+  },
+  "100 east timonium road, lutherville timonium, md 21093": {
+    "lat": 39.445575,
+    "lng": -76.6208959,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:10Z"
+  },
+  "17904 binkley avenue, maugansville, md 21767": {
+    "lat": 39.6989828,
+    "lng": -77.7464754,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:12Z"
+  },
+  "105 north mill street, chestertown, md 21620": {
+    "lat": 39.2104012,
+    "lng": -76.0682377,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:14Z"
+  },
+  "1200 linden avenue, halethorpe, md 21227": {
+    "lat": 39.2547084,
+    "lng": -76.6988237,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:16Z"
+  },
+  "624 gutman avenue, baltimore, md 21218": {
+    "lat": 39.3174891,
+    "lng": -76.6067931,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:18Z"
+  },
+  "29533 canvasback drive, easton, md 21601": {
+    "lat": 38.7750948,
+    "lng": -76.0508655,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:19Z"
+  },
+  "9055 tamar drive, columbia, md 21045": {
+    "lat": 39.2097455,
+    "lng": -76.8232353,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:23Z"
+  },
+  "226 washburn avenue, brooklyn, md 21225": {
+    "lat": 39.2360866,
+    "lng": -76.6091027,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:24Z"
+  },
+  "640 lucabaugh mill road, westminster, md 21157": {
+    "lat": 39.5911834,
+    "lng": -76.9704067,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:26Z"
+  },
+  "19401 middletown road, parkton, md 21120": {
+    "lat": 39.6563199,
+    "lng": -76.6989991,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:28Z"
+  },
+  "17 south main street, smithsburg, md 21783": {
+    "lat": 39.6507008,
+    "lng": -77.5701748,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:30Z"
+  },
+  "74 frederick street, taneytown, md 21787": {
+    "lat": 39.6583786,
+    "lng": -77.1785791,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:33Z"
+  },
+  "4924 wyaconda road, north bethesda, 20852": {
+    "lat": 39.0449715,
+    "lng": -77.0982877,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:36Z"
+  },
+  "3922 hampden street, kensington, 20895": {
+    "lat": 39.0315618,
+    "lng": -77.0797664,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:38Z"
+  },
+  "12701 veirs mill road, rockville, 20853": {
+    "lat": 39.0654379,
+    "lng": -77.096933,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:40Z"
+  },
+  "12901 georgia avenue, silver spring, 20906": {
+    "lat": 39.0673843,
+    "lng": -77.0592941,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:42Z"
+  },
+  "12247 georgia avenue, silver spring, 20902": {
+    "lat": 39.0561705,
+    "lng": -77.0493115,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:44Z"
+  },
+  "2518 fairland road, silver spring, 20904": {
+    "lat": 39.0765466,
+    "lng": -76.9702225,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:46Z"
+  },
+  "11002 veirs mill road, silver spring, 20902": {
+    "lat": 39.0718286,
+    "lng": -77.1090765,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:48Z"
+  },
+  "2206 briggs road, silver spring, 20906": {
+    "lat": 39.0720171,
+    "lng": -76.9383247,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:50Z"
+  },
+  "10700 georgia ave., wheaton, 20902": {
+    "lat": 39.0307141,
+    "lng": -77.0483782,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:52Z"
+  },
+  "6121 montrose road, north bethesda, 20852": {
+    "lat": 39.052765,
+    "lng": -77.123351,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:05:53Z"
+  },
+  "3132 bel pre road, silver spring, 20906": {
+    "lat": 39.0903699,
+    "lng": -77.0648705,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:01Z"
+  },
+  "751 twinbrook parkway, rockville, 20851": {
+    "lat": 39.0813947,
+    "lng": -77.1140394,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:02Z"
+  },
+  "1605 veirs mill road, rockville, 20851": {
+    "lat": 39.0768558,
+    "lng": -77.1236242,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:04Z"
+  },
+  "516 randolph road, silver spring, 20904": {
+    "lat": 39.0639265,
+    "lng": -76.9674525,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:08Z"
+  },
+  "801 university boulevard west, silver spring, 20901": {
+    "lat": 39.0320012,
+    "lng": -77.0229126,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:10Z"
+  },
+  "14500 layhill road, silver spring, 20906": {
+    "lat": 39.0945561,
+    "lng": -77.0455667,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:12Z"
+  },
+  "10140 sutherland road, silver spring, 20901": {
+    "lat": 39.0134978,
+    "lng": -77.0190887,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:14Z"
+  },
+  "8900 georgia avenue, silver spring, 20910": {
+    "lat": 39.001108,
+    "lng": -77.0342895,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:16Z"
+  },
+  "12800 new hampshire avenue, silver spring, 20904": {
+    "lat": 39.0761335,
+    "lng": -77.0019544,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:19Z"
+  },
+  "9601 colesville road, silver spring, 20901": {
+    "lat": 39.0119275,
+    "lng": -77.0172692,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:21Z"
+  },
+  "9100 colesville road, silver spring, 20910": {
+    "lat": 39.004635,
+    "lng": -77.023528,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:23Z"
+  },
+  "8300 old georgetown road, bethesda, 20814": {
+    "lat": 38.9931553,
+    "lng": -77.1084105,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:25Z"
+  },
+  "5020 battery lane, bethesda, 20814": {
+    "lat": 38.9904825,
+    "lng": -77.1028354,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:26Z"
+  },
+  "5033 wilson lane, bethesda, 20814": {
+    "lat": 38.9875296,
+    "lng": -77.100406,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:28Z"
+  },
+  "608 north horners lane, rockville, 20850": {
+    "lat": 39.0934323,
+    "lng": -77.1437854,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:30Z"
+  },
+  "828 wayne avenue, silver spring, 20910": {
+    "lat": 38.9965219,
+    "lng": -77.022546,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:32Z"
+  },
+  "300 university boulevard east, silver spring, 20901": {
+    "lat": 39.012125,
+    "lng": -77.0003574,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:34Z"
+  },
+  "16227 batchellors forest road, olney, 20832": {
+    "lat": 39.1340732,
+    "lng": -77.0465191,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:35Z"
+  },
+  "8106 georgia avenue, silver spring, 20910": {
+    "lat": 38.990572,
+    "lng": -77.0265155,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:37Z"
+  },
+  "14500 new hampshire avenue, colesville, 20904": {
+    "lat": 39.0938261,
+    "lng": -77.0014406,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:39Z"
+  },
+  "420 university boulevard east, silver spring, 20901": {
+    "lat": 39.0087209,
+    "lng": -76.9974763,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:41Z"
+  },
+  "630 silver spring avenue, silver spring, 20910": {
+    "lat": 38.9919035,
+    "lng": -77.0147421,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:43Z"
+  },
+  "397 east gude drive, rockville, 20850": {
+    "lat": 39.0982234,
+    "lng": -77.1371298,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:44Z"
+  },
+  "501 sligo avenue, silver spring, 20910": {
+    "lat": 38.991462,
+    "lng": -77.011749,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:46Z"
+  },
+  "9700 hedin drive, silver spring, 20903": {
+    "lat": 39.015836,
+    "lng": -76.987071,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:48Z"
+  },
+  "8545 piney branch road, silver spring, 20901": {
+    "lat": 38.998276,
+    "lng": -77.0020859,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:50Z"
+  },
+  "15300 new hampshire ave., silver spring, 20905": {
+    "lat": 39.1074828,
+    "lng": -77.0016015,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:54Z"
+  },
+  "8818 piney branch road, silver spring, 20903": {
+    "lat": 39.0001857,
+    "lng": -76.9940861,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:06:56Z"
+  },
+  "1500 st camillus dr, silver spring, 20903": {
+    "lat": 39.0100868,
+    "lng": -76.9833385,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:01Z"
+  },
+  "15800 crabbs branch way, rockville, 20855": {
+    "lat": 39.1135997,
+    "lng": -77.1584651,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:03Z"
+  },
+  "15000 good hope road, silver spring, 20905": {
+    "lat": 39.1029549,
+    "lng": -76.9825555,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:09Z"
+  },
+  "12917 old columbia pike, silver spring, 20904": {
+    "lat": 39.0672504,
+    "lng": -76.9621674,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:13Z"
+  },
+  "1150 carnation drive, rockville, 20850": {
+    "lat": 39.100196,
+    "lng": -77.1749399,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:14Z"
+  },
+  "15911 redland road, derwood, 20855": {
+    "lat": 39.1199699,
+    "lng": -77.1597765,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:16Z"
+  },
+  "12214 plum orchard drive, silver spring, 20904": {
+    "lat": 39.050685,
+    "lng": -76.9569757,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:18Z"
+  },
+  "7001 new hampshire avenue, takoma park, 20912": {
+    "lat": 38.976952,
+    "lng": -76.992273,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:20Z"
+  },
+  "1310 olney sandy spring road, ashton-sandy spring, 20860": {
+    "lat": 39.1492678,
+    "lng": -77.0245073,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:22Z"
+  },
+  "9221 corporate blvd, rockville, 20850": {
+    "lat": 39.1094997,
+    "lng": -77.1907429,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:25Z"
+  },
+  "9630 gudelsky drive, rockville, 20850": {
+    "lat": 39.0931526,
+    "lng": -77.1997933,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:27Z"
+  },
+  "3310 briggs chaney road, silver spring, 20904": {
+    "lat": 39.0720171,
+    "lng": -76.9383247,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:34Z"
+  },
+  "219 riggs road northeast, washington, 20011": {
+    "lat": 38.9557348,
+    "lng": -77.0021773,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:38Z"
+  },
+  "9008 rosemont drive, gaithersburg, 20877": {
+    "lat": 39.1272669,
+    "lng": -77.1858704,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:40Z"
+  },
+  "3315 greencastle road, burtonsville, 20866": {
+    "lat": 39.0971526,
+    "lng": -76.9433891,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:41Z"
+  },
+  "10310 oaklyn drive, potomac, 20854": {
+    "lat": 39.0023472,
+    "lng": -77.2141756,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:43Z"
+  },
+  "17620 washington grove lane, gaithersburg, 20877": {
+    "lat": 39.1392645,
+    "lng": -77.1799566,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:45Z"
+  },
+  "4900 puerto rico ave ne, washington, 20017": {
+    "lat": 38.9473003,
+    "lng": -76.9994569,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:47Z"
+  },
+  "3537 spencerville road, burtonsville, 20866": {
+    "lat": 39.1075733,
+    "lng": -76.9385141,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:48Z"
+  },
+  "15225 old columbia pike, burtonsville, 20866": {
+    "lat": 39.1049158,
+    "lng": -76.9383476,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:50Z"
+  },
+  "18800 new hampshire avenue, ashton-sandy spring, 20861": {
+    "lat": 39.1491245,
+    "lng": -77.0122983,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:52Z"
+  },
+  "201 south frederick avenue, gaithersburg, 20877": {
+    "lat": 39.1385531,
+    "lng": -77.1943576,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:54Z"
+  },
+  "13814 travilah road, rockville, 20850": {
+    "lat": 39.0827533,
+    "lng": -77.2347297,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:07:56Z"
+  },
+  "19411 woodfield road, gaithersburg, 20879": {
+    "lat": 39.1745589,
+    "lng": -77.150878,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:00Z"
+  },
+  "19425 woodfield road, gaithersburg, 20879": {
+    "lat": 39.1758982,
+    "lng": -77.1496634,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:02Z"
+  },
+  "13 firstfield road, gaithersburg, 20878": {
+    "lat": 39.140033,
+    "lng": -77.225364,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:03Z"
+  },
+  "811 russell ave, gaithersburg, 20879": {
+    "lat": 39.1562232,
+    "lng": -77.210952,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:05Z"
+  },
+  "19642 club house rd., montgomery village, 20886": {
+    "lat": 39.1742532,
+    "lng": -77.2065292,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:07Z"
+  },
+  "20301 pleasant ridge drive, montgomery village, 20886": {
+    "lat": 39.1903164,
+    "lng": -77.1911742,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:09Z"
+  },
+  "20874": {
+    "lat": 39.1668584,
+    "lon": -77.2748736
+  },
+  "12900 middlebrook road, germantown, 20874": {
+    "lat": 39.1789842,
+    "lng": -77.2683808,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:12Z"
+  },
+  "20021 aircraft drive, germantown, 20874": {
+    "lat": 39.1858897,
+    "lng": -77.2636891,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:14Z"
+  },
+  "21925 frederick road, clarksburg, 20841": {
+    "lat": 39.2172033,
+    "lng": -77.2535999,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:16Z"
+  },
+  "15920 barnesville road, montgomery county, 20841": {
+    "lat": 39.2007861,
+    "lng": -77.3328018,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:18Z"
+  },
+  "20872": {
+    "lat": 39.2757428,
+    "lon": -77.2140556
+  },
+  "5757 temple hill road, temple hills, 20748": {
+    "lat": 38.8040834,
+    "lng": -76.9332718,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:21Z"
+  },
+  "11210 bethesda church road, damascus, 20872": {
+    "lat": 39.3003302,
+    "lng": -77.2336139,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:23Z"
+  },
+  "17821 elgin road, poolesville, 20837": {
+    "lat": 39.1480868,
+    "lng": -77.4138941,
+    "confidence": "low",
+    "cached_at": "2026-04-12T02:08:25Z"
+  },
+  "10310 oaklyn drive, potomac, 20854, md": {
+    "lat": 39.0023472,
+    "lon": -77.2141756
+  },
+  "6180 old central avenue, capitol heights, md 20743": {
+    "lat": 38.8865336,
+    "lon": -76.9029245
+  },
+  "608 north horners lane, rockville, 20850, rockviille, md": null,
+  "8818 piney branch road, silver spring, 20903, md": {
+    "lat": 39.0001857,
+    "lon": -76.9940861
+  },
+  "828 wayne avenue, silver spring, 20910, md": {
+    "lat": 38.9965219,
+    "lon": -77.022546
+  },
+  "16227 batchellors forest road, olney, 20832, md": {
+    "lat": 39.1340732,
+    "lon": -77.0465191
+  },
+  "801 university boulevard west, silver spring, 20901, md": {
+    "lat": 39.0320012,
+    "lon": -77.0229126
+  },
+  "12917 old columbia pike, silver spring, 20904, md": {
+    "lat": 39.0672504,
+    "lon": -76.9621674
+  },
+  "9630 gudelsky drive, rockville, 20850, md": {
+    "lat": 39.0931526,
+    "lon": -77.1997933
+  },
+  "13 firstfield road, gaithersburg, 20878, md": {
+    "lat": 39.140033,
+    "lon": -77.225364
+  },
+  "5757 temple hill road, temple hills, 20748, camp springs, md": {
+    "lat": 38.8136461,
+    "lon": -76.939673
+  },
+  "5033 wilson lane, bethesda, 20814, md": {
+    "lat": 38.9875296,
+    "lon": -77.100406
+  },
+  "11002 veirs mill road, silver spring, 20902, wheaton, md": null,
+  "12247 georgia avenue, silver spring, 20902, md": {
+    "lat": 39.0563368,
+    "lon": -77.0493092
+  },
+  "9520 richmond highway, lorton, va 22079": {
+    "lat": 38.6981514,
+    "lon": -77.2141602
+  },
+  "518 south glebe road, arlington, va 22204": {
+    "lat": 38.8665041,
+    "lon": -77.0953879
+  },
+  "3922 hampden street, kensington, 20895, md": {
+    "lat": 39.0315618,
+    "lon": -77.0797664
+  },
+  "4924 wyaconda road, north bethesda, 20852, rockville, md": null,
+  "7001 new hampshire avenue, takoma park, 20912, md": {
+    "lat": 38.976952,
+    "lon": -76.992273
+  },
+  "17620 washington grove lane, gaithersburg, 20877, md": {
+    "lat": 39.1392645,
+    "lon": -77.1799566
+  },
+  "3911 saint barnabas road, suitland, md 20746": {
+    "lat": 38.8324464,
+    "lon": -76.9406069
+  },
+  "18800 new hampshire avenue, ashton-sandy spring, 20861, md": {
+    "lat": 39.1491245,
+    "lon": -77.0122983
+  },
+  "12900 middlebrook road, germantown, 20874, md": {
+    "lat": 39.1789842,
+    "lon": -77.2683808
+  },
+  "10411 greenbelt road, lanham, md 20706": {
+    "lat": 38.9889881,
+    "lon": -76.8249061
+  },
+  "4711 edmondson ave  baltimore md 21229-2404": {
+    "lat": 39.2923479,
+    "lon": -76.6994719
+  },
+  "401 aldersgate dr  denton md 21629-3053": {
+    "lat": 38.8880476,
+    "lon": -75.8087918
+  },
+  "21537 great mills rd  lexington pk md 20653-4250": {
+    "lat": 38.2571882,
+    "lon": -76.4742216
+  },
+  "429 asbury dr  severna park md 21146-1373": {
+    "lat": 39.081522,
+    "lon": -76.5480179
+  },
+  "3207 marnat rd  baltimore md 21208-4506": {
+    "lat": 39.3722767,
+    "lon": -76.7007929
+  },
+  "116 west pennsylvania avenue, towson, md 21204": {
+    "lat": 39.4008877,
+    "lon": -76.6056514
+  },
+  "756 elk mills rd  elk mills md 21920-0012": {
+    "lat": 39.6575951,
+    "lon": -75.8254155
+  },
+  "400 s bond st  baltimore md 21231-2323": {
+    "lat": 39.2814794,
+    "lon": -76.5950588
+  },
+  "2612 wilkens ave  baltimore md 21223-3313": {
+    "lat": 39.2791871,
+    "lon": -76.656831
+  },
+  "7915 old ocean city road, whaleyville, md 21872": {
+    "lat": 38.393707,
+    "lon": -75.302412
+  },
+  "768 blue ball road, elkton, md 21921": {
+    "lat": 39.629729,
+    "lon": -75.857315
+  },
+  "7605 old national pike  boonsboro md 21713-2003": {
+    "lat": 39.5240119,
+    "lon": -77.6624714
+  },
+  "510 n main st  hurlock md 21643-3502": {
+    "lat": 38.6385106,
+    "lon": -75.865361
+  },
+  "141 s clinton st  baltimore md 21224-2341": {
+    "lat": 39.2908248,
+    "lon": -76.5701537
+  },
+  "9189 red branch rd  columbia md 21045-2013": null,
+  "196 hammonds ln  brooklyn park md 21225-3649": {
+    "lat": 39.2156577,
+    "lon": -76.6184337
+  },
+  "27893 garrett hwy  accident md 21520-3020": null,
+  "10 distillery dr  westminster md 21158-7160": {
+    "lat": 39.5757028,
+    "lon": -76.9945658
+  },
+  "25 bloomsbury ave  catonsville md 21228-4641": {
+    "lat": 39.2709673,
+    "lon": -76.7309059
+  },
+  "12915 pinehill dr  hagerstown md 21740-1034": null,
+  "135 e high st  elkton md 21921-5624": {
+    "lat": 39.6087718,
+    "lon": -75.8334248
+  },
+  "110 ritchie hwy  pasadena md 21122-4304": {
+    "lat": 39.1104635,
+    "lon": -76.5757591
+  },
+  "6045 solomons island road, huntingtown, md 20639": {
+    "lat": 38.6564087,
+    "lon": -76.6056557
+  },
+  "305 north kent street, chestertown, md 21620": {
+    "lat": 39.2131673,
+    "lon": -76.0659753
+  },
+  "2301 putty hill avenue, parkville, md 21234": {
+    "lat": 39.3898065,
+    "lon": -76.5459221
+  },
+  "21641 great mills road, lexington park, md 20653": {
+    "lat": 38.2616204,
+    "lon": -76.4626092
+  },
+  "335 west 27th street, baltimore, md 21211": {
+    "lat": 39.3201791,
+    "lon": -76.6209949
+  },
+  "535 s smallwood st  baltimore md 21223-2947": {
+    "lat": 39.2803791,
+    "lon": -76.6503075
+  },
+  "7900 east baltimore street, baltimore, md 21224": {
+    "lat": 39.2966629,
+    "lon": -76.5220079
+  },
+  "725 main st  reisterstown md 21136-2501": {
+    "lat": 39.4522039,
+    "lon": -76.8198048
+  },
+  "5204 liberty heights avenue, gwynn oak, md 21207": null,
+  "1040 south beechfield avenue, baltimore, md 21229": {
+    "lat": 39.2635336,
+    "lon": -76.6876183
+  },
+  "408 gordy rd  salisbury md 21804-3317": {
+    "lat": 38.3890705,
+    "lon": -75.5656646
+  },
+  "1000 goodwill ave  cambridge md 21613-2972": {
+    "lat": 38.560141,
+    "lon": -76.073301
+  },
+  "7414 ellen avenue, unit 103, sparrows point, md 21219": null,
+  "4004 ballenger creek pike  frederick md 21703-7942": {
+    "lat": 39.34447,
+    "lon": -77.474818
+  },
+  "130 south seton avenue, unit c, emmitsburg, md 21727": null,
+  "524 maryland avenue, essex, md 21221": {
+    "lat": 39.3084785,
+    "lon": -76.4738481
+  },
+  "818 benny st, salisbury, md 21804": {
+    "lat": 38.3724555,
+    "lon": -75.5867675
+  },
+  "11017 kemps mill rd  williamsport md 21795-3129": null,
+  "360 s dukeland st  baltimore md 21223-2701": {
+    "lat": 39.280234,
+    "lon": -76.6626556
+  },
+  "630 clyde ave  fruitland md 21826-0027": null,
+  "13723 point lookout rd  ridge md 20680-0487": {
+    "lat": 38.1197321,
+    "lon": -76.3732674
+  },
+  "155 orville road, essex, md 21221": {
+    "lat": 39.3257027,
+    "lon": -76.4506889
+  },
+  "5345 deale churchton rd  churchton md 20733-9626": null,
+  "419 west south street, frederick, md 21701": {
+    "lat": 39.4117449,
+    "lon": -77.4186873
+  },
+  "7200 harford road, parkville, md 21234": {
+    "lat": 39.3730362,
+    "lon": -76.5434817
+  },
+  "7544 holabird avenue, dundalk, md 21222": {
+    "lat": 39.2709972,
+    "lon": -76.5054225
+  },
+  "608 e patrick st  frederick md 21701-5732": {
+    "lat": 39.40445,
+    "lon": -77.3816146
+  },
+  "401 woodbourne avenue, baltimore, md": {
+    "lat": 39.3552924,
+    "lon": -76.610507
+  },
+  "2031 w baltimore st  baltimore md 21223-1559": {
+    "lat": 39.2878137,
+    "lon": -76.649638
+  },
+  "21 w frederick st  walkersville md 21793-8230": {
+    "lat": 39.4816637,
+    "lon": -77.3505827
+  },
+  "13900 burntwoods road,, baltimore, md 21737": null,
+  "8615 church lane, randallstown, md 21133": {
+    "lat": 39.365692,
+    "lon": -76.7778622
+  },
+  "24516 budds creek rd  clements md 20624-0149": {
+    "lat": 38.3416318,
+    "lon": -76.750986
+  },
+  "4 south gay street, baltimore, md 21202": {
+    "lat": 39.2894569,
+    "lon": -76.6091216
+  },
+  "8701 winands rd  randallstown md 21133-4001": {
+    "lat": 39.3802974,
+    "lon": -76.7817114
+  },
+  "1321 woodbridge station way\nb  edgewood md 21040-3830": null,
+  "1009 north washington street, easton, md": {
+    "lat": 38.7885341,
+    "lon": -76.0676029
+  },
+  "407 dudley corners rd  sudlersville md 21668-1235": null,
+  "206 del rhodes ave  queenstown md 21658-1364": {
+    "lat": 38.9898104,
+    "lon": -76.1569329
+  },
+  "1101 market st  pocomoke city md 21851-1703": {
+    "lat": 38.067104,
+    "lon": -75.556525
+  },
+  "1740 forest drive, annapolis, md 21401": {
+    "lat": 38.969362,
+    "lon": -76.5183986
+  },
+  "8146 quarterfield rd  severn md 21144-2705": {
+    "lat": 39.1229793,
+    "lon": -76.6708077
+  },
+  "3106 liberty heights ave  baltimore md 21215-7449": {
+    "lat": 39.3237113,
+    "lon": -76.6686273
+  },
+  "11759 somerset ave  princess anne md 21853-0481": {
+    "lat": 38.2040239,
+    "lon": -75.6932459
+  },
+  "9385 gerwig ln ste j  columbia md 21046-1574": null,
+  "116 west high street, hancock, md 21750": {
+    "lat": 39.7005377,
+    "lon": -78.1815103
+  },
+  "7006 graces quarters rd  middle river md 21220-1623": {
+    "lat": 39.3620464,
+    "lon": -76.3659486
+  },
+  "7710 windsor mill road, suite 100, windsor mill, md 21244": null,
+  "5011 arbutus ave  baltimore md 21215-5723": {
+    "lat": 39.3425789,
+    "lon": -76.6804459
+  },
+  "565 national highway, cumberland, md 21502": {
+    "lat": 39.6608347,
+    "lon": -78.7782374
+  },
+  "502 mccormick dr ste d/e  glen burnie md 21061-3216": null,
+  "46855 s shangri la dr  lexington pk md 20653-4166": {
+    "lat": 38.2611171,
+    "lon": -76.4556974
+  },
+  "6901 security boulevard, suite 200, windsor mill, md 21244": null,
+  "3301 milford mill rd  baltimore md 21244-2042": {
+    "lat": 39.3476658,
+    "lon": -76.7675314
+  },
+  "3820 s hanover st  baltimore md 21225-1709": {
+    "lat": 39.2359457,
+    "lon": -76.6111456
+  },
+  "9058 double hills rd  denton md 21629-3411": {
+    "lat": 38.8655145,
+    "lon": -75.8234383
+  },
+  "5115 old court rd  randallstown md 21133-4701": {
+    "lat": 39.3633634,
+    "lon": -76.7764017
+  },
+  "8187 telegraph road, severn, md 21144": {
+    "lat": 39.1080333,
+    "lon": -76.6926914
+  },
+  "1927 featherbed ln  baltimore md 21207-4125": {
+    "lat": 39.3240259,
+    "lon": -76.7402969
+  },
+  "5401 frankford ave  baltimore md 21206-6139": {
+    "lat": 39.3231256,
+    "lon": -76.5414527
+  },
+  "115 bryan pl  hagerstown md 21740-4530": {
+    "lat": 39.650581,
+    "lon": -77.7337821
+  },
+  "14376 benedictine ln  ridgely md 21660-1435": null,
+  "708 highland rd  street md 21154-1306": {
+    "lat": 39.6686557,
+    "lon": -76.3775386
+  },
+  "392 cypress street, millington, md 21651": {
+    "lat": 39.2587364,
+    "lon": -75.838047
+  },
+  "2000 capital dr  annapolis md 21401-4686": {
+    "lat": 38.984086,
+    "lon": -76.5306708
+  },
+  "6750 woodbine road, silver spring, md 21797": null,
+  "1512 woodlawn dr  baltimore md 21207-4009": {
+    "lat": 39.3063837,
+    "lon": -76.7342482
+  },
+  "6000 radecke avenue, baltimore, md 21206": {
+    "lat": 39.330867,
+    "lon": -76.531724
+  },
+  "200 road b  elkton md 21921-6695": {
+    "lat": 39.6023438,
+    "lon": -75.844955
+  },
+  "30683 hampden ave  princess anne md 21853-1012": {
+    "lat": 38.1994308,
+    "lon": -75.6871977
+  },
+  "25 summit ave  hagerstown md 21740-5522": {
+    "lat": 39.6423155,
+    "lon": -77.7235015
+  },
+  "2000 sand hill road, marriottsville, md 21104": {
+    "lat": 39.3162502,
+    "lon": -76.9285932
+  },
+  "1611 jersey rd  salisbury md 21802-2656": {
+    "lat": 38.4100934,
+    "lon": -75.6019456
+  },
+  "4196 old washington rd  waldorf md 20602-3221": {
+    "lat": 38.5976685,
+    "lon": -76.9357102
+  },
+  "2100 north monroe street, baltimore, md 21217": {
+    "lat": 39.3122689,
+    "lon": -76.6492279
+  },
+  "515 otsego st  perryville md 21903-2704": {
+    "lat": 39.561353,
+    "lon": -76.0740944
+  },
+  "121 e antietam st  hagerstown md 21740-5601": {
+    "lat": 39.6393006,
+    "lon": -77.7185716
+  },
+  "614 race st  cambridge md 21613-0815": {
+    "lat": 38.5666429,
+    "lon": -76.0777755
+  },
+  "12430 scaggsville rd  highland md 20777-9727": null,
+  "101 avon beach rd  dundalk md 21222-6105": {
+    "lat": 39.2429827,
+    "lon": -76.5124343
+  },
+  "20850 langley rd  lexington pk md 20653-4373": null,
+  "301 homewood ave  centreville md 21617-1306": {
+    "lat": 39.047828,
+    "lon": -76.0694324
+  },
+  "1725 eastern ave  baltimore md 21231-2573": {
+    "lat": 39.2854071,
+    "lon": -76.5921769
+  },
+  "2620 quantico ave  baltimore md 21215-7011": {
+    "lat": 39.3379176,
+    "lon": -76.6620727
+  },
+  "600 edison st  salisbury md 21802-1714": {
+    "lat": 38.368375,
+    "lon": -75.588646
+  },
+  "1118 ward st  baltimore md 21230-1817": {
+    "lat": 39.2819356,
+    "lon": -76.6329309
+  },
+  "230 n fulton ave  baltimore md 21223-1661": {
+    "lat": 39.2823557,
+    "lon": -76.6448476
+  },
+  "4317 north point blvd  dundalk md 21222-5048": {
+    "lat": 39.2581825,
+    "lon": -76.4626659
+  },
+  "20 s prospect st  hagerstown md 21740-5408": {
+    "lat": 39.643254,
+    "lon": -77.724697
+  },
+  "960 craigtown road, port deposit, md 21904": {
+    "lat": 39.6303747,
+    "lon": -76.0766224
+  },
+  "9621 reisterstown rd  owings mills md 21117-4134": {
+    "lat": 39.4048116,
+    "lon": -76.7585013
+  },
+  "603 e patapsco ave  baltimore md 21225-1954": {
+    "lat": 39.2359113,
+    "lon": -76.6021935
+  },
+  "246 main street, reisterstown, md 21136": {
+    "lat": 39.462339,
+    "lon": -76.8288821
+  },
+  "800 e east st  delmar md 21875-1806": {
+    "lat": 38.454878,
+    "lon": -75.567289
+  },
+  "1930 brookdale rd  windsor mill md 21244-1704": {
+    "lat": 39.3131358,
+    "lon": -76.7593679
+  },
+  "475 west central avenue, davidsonville, md 21035": null,
+  "8232 redmiles ln  odenton md 21113-1100": {
+    "lat": 39.101183,
+    "lon": -76.6925793
+  },
+  "21366 sharp st  rock hall md 21661-0477": {
+    "lat": 39.1358575,
+    "lon": -76.2322185
+  },
+  "4901 woodbine road, sykesville, md 21784": {
+    "lat": 39.4397958,
+    "lon": -77.0544904
+  },
+  "7566 e howard rd  glen burnie md 21060-8313": {
+    "lat": 39.1537396,
+    "lon": -76.5852651
+  },
+  "9202 philadelphia rd  rosedale md 21237-4319": {
+    "lat": 39.3503525,
+    "lon": -76.4697202
+  },
+  "3301 windsor ave  baltimore md 21216-2616": {
+    "lat": 39.3118463,
+    "lon": -76.6727435
+  },
+  "326 barclay st  salisbury md 21802-1792": {
+    "lat": 38.3712595,
+    "lon": -75.5905013
+  },
+  "1407 bolton st  baltimore md 21217-4202": {
+    "lat": 39.30636,
+    "lon": -76.625081
+  },
+  "814 4th st  pocomoke city md 21851-0661": {
+    "lat": 38.0698403,
+    "lon": -75.5696851
+  },
+  "11227 racetrack road, berlin, md 21811": null,
+  "30632 hampden ave  princess anne md 21853-0401": {
+    "lat": 38.199071,
+    "lon": -75.689323
+  },
+  "241 s washington st  snow hill md 21863-1253": {
+    "lat": 38.169864,
+    "lon": -75.3875713
+  },
+  "12 worcester st  ocean city md 21843-0756": {
+    "lat": 38.3279283,
+    "lon": -75.0873975
+  },
+  "2901 druid park dr ste 112  baltimore md 21215-8174": null,
+  "10301 coastal hwy  ocean city md 21842-2501": {
+    "lat": 38.4149878,
+    "lon": -75.0574627
+  },
+  "6948 dogwood rd  windsor mill md 21244-2658": null,
+  "303 s main st, hurlock, md 21643,": {
+    "lat": 38.631192,
+    "lon": -75.861869
+  },
+  "2848 w lafayette ave  baltimore md 21216-4350": {
+    "lat": 39.298177,
+    "lon": -76.664224
+  },
+  "1020 w lafayette ave  baltimore md 21217-2555": {
+    "lat": 39.2995511,
+    "lon": -76.6356637
+  },
+  "518 franklin ave  essex md 21221-6721": {
+    "lat": 39.3107935,
+    "lon": -76.4763825
+  },
+  "601 washington ave  hagerstown md 21740-4635": {
+    "lat": 39.646552,
+    "lon": -77.730007
+  },
+  "103 railroad ave, brooklyn, md 21663": null,
+  "410 delaware ave  salisbury md 21801-4012": {
+    "lat": 38.3707744,
+    "lon": -75.6079351
+  },
+  "1546 north fremont avenue, baltimore, md": {
+    "lat": 39.3062334,
+    "lon": -76.6387213
+  },
+  "8801 harford road, parkville, md 21234": {
+    "lat": 39.3834059,
+    "lon": -76.5337001
+  },
+  "120 north front street, baltimore, md 21202": {
+    "lat": 39.2913453,
+    "lon": -76.6063094
+  },
+  "29533 canvasback dr  easton md 21601-7141": {
+    "lat": 38.7750948,
+    "lon": -76.0508655
+  },
+  "22375 three notch rd  lexington pk md 20653-2017": {
+    "lat": 38.2821261,
+    "lon": -76.4705332
+  },
+  "5110 frederick ave  baltimore md 21229-3218": {
+    "lat": 39.2815135,
+    "lon": -76.6995342
+  },
+  "112d connolly rd  fallston md 21047-2524": {
+    "lat": 39.5066063,
+    "lon": -76.3919362
+  },
+  "4321 old york rd  baltimore md 21212-4813": {
+    "lat": 39.3425728,
+    "lon": -76.6071195
+  },
+  "219 n chester st  baltimore md 21231-1302": {
+    "lat": 39.2948937,
+    "lon": -76.5874795
+  },
+  "21 aberdeen avenue, aberdeen, md": {
+    "lat": 39.5039962,
+    "lon": -76.1582957
+  },
+  "8700 memory gardens ln  hebron md 21830-0028": null,
+  "8301 liberty rd  windsor mill md 21244-3107": {
+    "lat": 39.356124,
+    "lon": -76.7661207
+  },
+  "2201 garrison boulevard, baltimore, md 21216": {
+    "lat": 39.3123307,
+    "lon": -76.6751014
+  },
+  "407 oak street, salisbury, md 21804": {
+    "lat": 38.3620325,
+    "lon": -75.593804
+  },
+  "300 seneca ave, havre de grace, md": {
+    "lat": 39.536077,
+    "lon": -76.099664
+  },
+  "123 n main st  berlin md 21811-1553": {
+    "lat": 38.3266016,
+    "lon": -75.2198312
+  },
+  "3701 4th st  brooklyn md 21225-2026": {
+    "lat": 39.2359325,
+    "lon": -76.6058546
+  },
+  "1609 druid hill ave  baltimore md 21217-3427": {
+    "lat": 39.304785,
+    "lon": -76.6316377
+  },
+  "26 magothy beach rd  pasadena md 21122-4428": {
+    "lat": 39.1205344,
+    "lon": -76.5187572
+  },
+  "10 frederick rd  thurmont md 21788-1809": {
+    "lat": 39.6214963,
+    "lon": -77.4120803
+  },
+  "6020 marian drive, baltimore, md 21215": {
+    "lat": 39.349143,
+    "lon": -76.7107645
+  },
+  "15 randolph ave  hagerstown md 21740-4009": {
+    "lat": 39.645407,
+    "lon": -77.716649
+  },
+  "1100 philadelphia rd  joppa md 21085-3204": {
+    "lat": 39.4400019,
+    "lon": -76.3399878
+  },
+  "46707 south shangri-la drive, lexington park, md 20653": {
+    "lat": 38.2605318,
+    "lon": -76.459843
+  },
+  "3604 n rogers ave  baltimore md 21207-7035": {
+    "lat": 39.3351205,
+    "lon": -76.7049265
+  },
+  "3200 walbrook ave  baltimore md 21216-3032": {
+    "lat": 39.3103232,
+    "lon": -76.6712825
+  },
+  "32 main st  westernport md 21562-1442": {
+    "lat": 39.4844605,
+    "lon": -79.0449385
+  },
+  "2214 evergreen street, baltimore, md 21216": {
+    "lat": 39.3130513,
+    "lon": -76.6606206
+  },
+  "5315 harford road, baltimore, md 21214": {
+    "lat": 39.3506771,
+    "lon": -76.5624207
+  },
+  "1203 pine st  delmar md 21875": {
+    "lat": 38.4523336,
+    "lon": -75.5771604
+  },
+  "3401 edgewood rd  baltimore md 21215-7320": {
+    "lat": 39.3260233,
+    "lon": -76.673556
+  },
+  "112 n main st  hurlock md 21643-0298": {
+    "lat": 38.634165,
+    "lon": -75.8639315
+  },
+  "209 west fayette street, baltimore, md 21201": {
+    "lat": 39.2902065,
+    "lon": -76.6184456
+  },
+  "75 chandelle road, middle river, md 21220": {
+    "lat": 39.3370504,
+    "lon": -76.4536828
+  },
+  "117 summit avenue, hagerstown, md 21740": {
+    "lat": 39.6411034,
+    "lon": -77.724492
+  },
+  "124 e baltimore st  hagerstown md 21740-6104": {
+    "lat": 39.6379034,
+    "lon": -77.7195897
+  },
+  "1322 west road, salisbury, md 21801": {
+    "lat": 38.388964,
+    "lon": -75.6114245
+  },
+  "658 lucabaugh mill road, westminster, md 21157": {
+    "lat": 39.5923934,
+    "lon": -76.9715428
+  },
+  "3001-3005 baker street, baltimore, md 21216": {
+    "lat": 39.3062287,
+    "lon": -76.6583123
+  },
+  "502 s main st  hurlock md 21643-3617": {
+    "lat": 38.625133,
+    "lon": -75.860895
+  },
+  "1730 twin springs rd #218, halethorpe, md 21227": null,
+  "7222 ambassador rd  windsor mill md 21244-2724": {
+    "lat": 39.3291269,
+    "lon": -76.7513354
+  },
+  "5200 denmore ave  baltimore md 21215-5027": {
+    "lat": 39.348641,
+    "lon": -76.6781742
+  },
+  "6622 loch raven boulevard, baltimore, md 21239": {
+    "lat": 39.3778357,
+    "lon": -76.5803469
+  },
+  "410 delaware ave  salisbury md 21801": {
+    "lat": 38.3707744,
+    "lon": -75.6079351
+  },
+  "2424 mcelderry street, baltimore, md 21205": {
+    "lat": 39.297822,
+    "lon": -76.582783
+  },
+  "1401 n milton ave  baltimore md 21213": {
+    "lat": 39.3072374,
+    "lon": -76.5825979
+  },
+  "8240 loch raven blvd  towson md 21286": {
+    "lat": 39.3889764,
+    "lon": -76.5722645
+  },
+  "3225 round rd  brooklyn md 21225": {
+    "lat": 39.2454365,
+    "lon": -76.6262536
+  },
+  "225 michael ln  aberdeen md 21001": {
+    "lat": 39.5113268,
+    "lon": -76.1518249
+  },
+  "2422 west patapsco avenue, suite 100 remove, baltimore, md 21230": null,
+  "22 irongate dr  waldorf md 20602": {
+    "lat": 38.6147082,
+    "lon": -76.9107279
+  },
+  "10 hudson st  annapolis md 21401": {
+    "lat": 38.9841277,
+    "lon": -76.5338041
+  },
+  "3601 old frederick road, baltimore, md 21229": {
+    "lat": 39.283175,
+    "lon": -76.676715
+  },
+  "225 n division st  salisbury md 21801": {
+    "lat": 38.3678136,
+    "lon": -75.6003638
+  },
+  "1355 homestead street, baltimore, md 21218": {
+    "lat": 39.3231499,
+    "lon": -76.5998408
+  },
+  "961 johnsville road, sykesville, md 21784": null,
+  "2700 washington avenue, halethorpe, md 21227": {
+    "lat": 39.2435737,
+    "lon": -76.6611511
+  },
+  "1918 pulaski hwy, edgewood, md 21040": {
+    "lat": 39.4338718,
+    "lon": -76.323666
+  },
+  "67 winters ln, catonsville, md 21228": {
+    "lat": 39.2749788,
+    "lon": -76.7385774
+  },
+  "425 high st, cambridge, md 21613": {
+    "lat": 38.5696495,
+    "lon": -76.0796785
+  },
+  "400 brookletts ave, easton, md 21601": {
+    "lat": 38.770562,
+    "lon": -76.069657
+  },
+  "10264 baltimore national pike, ellicott city, md 21042": {
+    "lat": 39.2818207,
+    "lon": -76.8664213
+  },
+  "1980 trimble rd  edgewood md 21040": {
+    "lat": 39.4181084,
+    "lon": -76.3069461
+  },
+  "201 n potomac ave  hagerstown md 21740": {
+    "lat": 39.6501568,
+    "lon": -77.7133475
+  },
+  "101 w 23rd st  baltimore md 21218": {
+    "lat": 39.315107,
+    "lon": -76.6186975
+  },
+  "3501 7th st, brooklyn, baltimore, md 21225,": {
+    "lat": 39.2378198,
+    "lon": -76.5994695
+  },
+  "2835 virginia ave  baltimore md 21215": {
+    "lat": 39.345004,
+    "lon": -76.662062
+  },
+  "5616 park heights ave  baltimore md 21215": {
+    "lat": 39.3527172,
+    "lon": -76.6853794
+  },
+  "7000 rossville blvd  rosedale md 21237": {
+    "lat": 39.3398153,
+    "lon": -76.4860778
+  },
+  "2216 pot spring rd  timonium  md 21093": {
+    "lat": 39.4496037,
+    "lon": -76.6083636
+  },
+  "721 e 25th st  baltimore md 21218": {
+    "lat": 39.3181626,
+    "lon": -76.603137
+  },
+  "529 walker ave  baltimore  md 21212": {
+    "lat": 39.3716215,
+    "lon": -76.6062109
+  },
+  "4623 falls road  baltimore md 21209": {
+    "lat": 39.3450502,
+    "lon": -76.6406944
+  },
+  "915 liberty road   eldersburg md 21784": {
+    "lat": 39.4066247,
+    "lon": -76.9651567
+  },
+  "101 w bel air avenue   aberdeen md 21001": {
+    "lat": 39.5101728,
+    "lon": -76.1654703
+  },
+  "38 west baltimore street, taneytown, md": {
+    "lat": 39.6608369,
+    "lon": -77.1771219
+  },
+  "4301 raspe avenue, baltimore, md 21206": {
+    "lat": 39.3490147,
+    "lon": -76.534636
+  },
+  "7828 saint patricia lane, dundalk, md 21222": {
+    "lat": 39.2692896,
+    "lon": -76.4747928
+  },
+  "1130 west lexington street, baltimore, md 21223": {
+    "lat": 39.2910233,
+    "lon": -76.6354497
+  },
+  "1021 leadenhall street, baltimore, md 21230": {
+    "lat": 39.2774072,
+    "lon": -76.6174073
+  },
+  "8910 waltham woods rd, parkville, md 21234": {
+    "lat": 39.401979,
+    "lon": -76.542298
+  },
+  "1300 n eden st, baltimore, md 21213": {
+    "lat": 39.305292,
+    "lon": -76.599692
+  },
+  "8203 harford rd, parkville, md 21234": {
+    "lat": 39.3783284,
+    "lon": -76.5387281
+  },
+  "21 linwood ave, bel air, md 21014": {
+    "lat": 39.5316479,
+    "lon": -76.3432741
+  },
+  "227 basil avenue, chesapeake city, md 21915": {
+    "lat": 39.5185461,
+    "lon": -75.822715
+  },
+  "8701 winands road, randallstown, md 21133": {
+    "lat": 39.3802974,
+    "lon": -76.7817114
+  },
+  "1708 whitehead rd suite 101, woodlawn, md 21207": null,
+  "302 n baltimore ave, ocean city, md 21842": {
+    "lat": 38.3341889,
+    "lon": -75.0847701
+  },
+  "2718 harford road, baltimore, md": {
+    "lat": 39.320761,
+    "lon": -76.5914847
+  },
+  "11832 eastern avenue, middle river, md 21220": {
+    "lat": 39.3478937,
+    "lon": -76.3882123
+  },
+  "12060 main street, libertytown, md 21762": {
+    "lat": 39.4844191,
+    "lon": -77.2497835
+  },
+  "12747 old bridge road, ocean city, md 21842": {
+    "lat": 38.3305391,
+    "lon": -75.1013502
+  },
+  "1201 maple avenue, halethorpe, md 21227": {
+    "lat": 39.252985,
+    "lon": -76.7011226
+  },
+  "1401 edison highway, baltimore, md 21213": {
+    "lat": 39.3074102,
+    "lon": -76.5731221
+  },
+  "7302 pulaski hwy, rosedale, md 21237": {
+    "lat": 39.310811,
+    "lon": -76.5292744
+  },
+  "27765 nanticoke road, salisbury, md 21801": {
+    "lat": 38.3679075,
+    "lon": -75.6505473
+  },
+  "424 south pulaski street, baltimore, md 21223": {
+    "lat": 39.281981,
+    "lon": -76.6494604
+  },
+  "501 n fulton ave, baltimore, md 21223": {
+    "lat": 39.294038,
+    "lon": -76.6452302
+  },
+  "10825 reisterstown rd, owings mills, md 21117": {
+    "lat": 39.4277002,
+    "lon": -76.789262
+  },
+  "6327 meadowridge road, elkridge, md 21075": null,
+  "109 n central ave, ridgely, md 21660": {
+    "lat": 38.950466,
+    "lon": -75.8851783
+  },
+  "1603 market street, pocomoke city, md 21851": {
+    "lat": 38.0632454,
+    "lon": -75.551073
+  },
+  "2655 worcester highway, pocomoke city, md 21851": {
+    "lat": 38.0653049,
+    "lon": -75.5478586
+  },
+  "3748 main street, trappe, md 21673": {
+    "lat": 38.6641817,
+    "lon": -76.0619907
+  },
+  "817 camden avenue, salisbury, md 21801": {
+    "lat": 38.353889,
+    "lon": -75.606256
+  },
+  "2450 cambridge beltway, cambridge, md 21613": {
+    "lat": 38.5460393,
+    "lon": -76.0920667
+  },
+  "10014 white hall rd, hagerstown, md 21740": null,
+  "110 church lane, oakland, md 21550": null,
+  "12428 fingerboard road, monrovia, maryland 21770": null,
+  "16829 lappans rd, williamsport, md 21795": null,
+  "17805 oak ridge drive, hagerstown, md": {
+    "lat": 39.6181069,
+    "lon": -77.7539771
+  },
+  "middletown food bank, 301 w main st, middletown, md 21769": null,
+  "525 george st, hagerstown, md 21740": {
+    "lat": 39.6479109,
+    "lon": -77.7272491
+  },
+  "6430 jefferson pike, frederick, md 21703": {
+    "lat": 39.4025838,
+    "lon": -77.444365
+  },
+  "1125 appleton st, baltimore, md 21217": {
+    "lat": 39.3017754,
+    "lon": -76.6483114
+  },
+  "2501 eutaw pl, baltimore, md 21217": {
+    "lat": 39.3146452,
+    "lon": -76.6377063
+  },
+  "4584 edmondson ave, baltimore, md 21229": {
+    "lat": 39.2941915,
+    "lon": -76.6935724
+  },
+  "3529 edmondson avenue, baltimore, md 21229": null,
+  "1935 w pratt st, baltimore, md 21223": {
+    "lat": 39.2849613,
+    "lon": -76.6479047
+  },
+  "303 eastern blvd, essex, md 21221": {
+    "lat": 39.3060849,
+    "lon": -76.4804862
+  },
+  "501 granary rd, forest hill, maryland 21050": {
+    "lat": 39.568028,
+    "lon": -76.3561944
+  },
+  "1719 sykesville rd, westminster, md 21157": null,
+  "1220 n chester st, baltimore, md 21213": {
+    "lat": 39.3051519,
+    "lon": -76.5884999
+  },
+  "1706 eastern ave, baltimore, md 21231": {
+    "lat": 39.285771,
+    "lon": -76.5927674
+  },
+  "3601 eastern ave, baltimore, md 21224": {
+    "lat": 39.2862365,
+    "lon": -76.5667566
+  },
+  "4701 hamilton ave, baltimore, md 21206": {
+    "lat": 39.3371096,
+    "lon": -76.5402456
+  },
+  "5807 harford rd, baltimore, md 21214": {
+    "lat": 39.3553711,
+    "lon": -76.5580191
+  },
+  "610 n chester st, baltimore, md 21205": {
+    "lat": 39.2979167,
+    "lon": -76.5880208
+  },
+  "913 n bond st, baltimore, md 21205": {
+    "lat": 39.3007082,
+    "lon": -76.5962566
+  },
+  "2140 e hoffman st, baltimore, md 21213": {
+    "lat": 39.306785,
+    "lon": -76.5878351
+  },
+  "315 south main street, north east, md 21901": {
+    "lat": 39.596197,
+    "lon": -75.9424405
+  },
+  "8700 ironsides road, nanjemoy, md 20662": null,
+  "1827 wiltburger street north west, suite 100, washington, dc 20001": null,
+  "46694 midway drive, lexington park, md 20653": {
+    "lat": 38.264908,
+    "lon": -76.460469
+  },
+  "942 frederick road, annapolis, md 21402": null,
+  "3483 liberty parkway, dundalk, md 21222": {
+    "lat": 39.245979,
+    "lon": -76.5083211
+  },
+  "608 church hill road, centreville, md 21617": {
+    "lat": 39.0496009,
+    "lon": -76.0596683
+  },
+  "186 hanover street, aberdeen, md 21001": {
+    "lat": 39.510532,
+    "lon": -76.1514288
+  },
+  "25550 point lookout road, salisbury, md 20650": null,
+  "400 shipley road, linthicum heights, md 21090": {
+    "lat": 39.2018066,
+    "lon": -76.6579487
+  },
+  "205 saint mary's avenue, la plata, md 20646": null,
+  "2903 dunleer road, dundalk, md 21222": {
+    "lat": 39.256287,
+    "lon": -76.5220892
+  },
+  "10290 h.g. trueman road, lusby, md 20657": {
+    "lat": 38.3971504,
+    "lon": -76.436626
+  },
+  "110 west bel air avenue, rockville, md 21001": null,
+  "429 asbury drive, severna park, md 21146": {
+    "lat": 39.081522,
+    "lon": -76.5480179
+  },
+  "1200 churchville road, bel air, md 21014": {
+    "lat": 39.5439193,
+    "lon": -76.3267555
+  },
+  "3911 garrison boulevard, baltimore, md 21215": {
+    "lat": 39.3340806,
+    "lon": -76.6831691
+  },
+  "31 west washington street, annapolis, md 21401": {
+    "lat": 38.979018,
+    "lon": -76.4968309
+  },
+  "1727 lynch road, dundalk, md 21222": {
+    "lat": 39.2691333,
+    "lon": -76.4932304
+  },
+  "27 south caroline street, baltimore, md 21231": {
+    "lat": 39.290728,
+    "lon": -76.5968083
+  },
+  "3445 park heights ave, baltimore, md 21215": {
+    "lat": 39.3278959,
+    "lon": -76.657462
+  },
+  "6802 walker mill road, capitol heights, md 20743": {
+    "lat": 38.8695057,
+    "lon": -76.8908417
+  },
+  "1450 abingdon road, abingdon, md 21009": {
+    "lat": 39.4652522,
+    "lon": -76.2862661
+  },
+  "100 jibsail drive, prince frederick, md 20678": {
+    "lat": 38.5110713,
+    "lon": -76.6380434
+  },
+  "301 college parkway, arnold, md 21012": {
+    "lat": 39.0513554,
+    "lon": -76.5063491
+  },
+  "7006 graces quarter road, middle river, md 21220": null,
+  "8680 fort smallwood road, landover, md 21122": null,
+  "67 winters lane, suite d, catonsville, md 21228": null,
+  "5105 leonardtown road, waldorf, md 20601": {
+    "lat": 38.5859034,
+    "lon": -76.863315
+  },
+  "44 west main street, frostburg, md 21532": {
+    "lat": 39.6576149,
+    "lon": -78.9284566
+  },
+  "926 bay ridge avenue, annapolis, md 21403": {
+    "lat": 38.9659376,
+    "lon": -76.4898495
+  },
+  "2862 jessup road, route 175, jessup, md 20794": null,
+  "398 philos avenue, westernport, md 21562": {
+    "lat": 39.4859073,
+    "lon": -79.0367034
+  },
+  "1546 north fremont avenue, baltimore, md 21217": {
+    "lat": 39.3062334,
+    "lon": -76.6387213
+  },
+  "15848 rock point road, newburg, md 20664": {
+    "lat": 38.298899,
+    "lon": -76.8802797
+  },
+  "9620 bird river road, middle river, md 21220": {
+    "lat": 39.3494214,
+    "lon": -76.4490812
+  },
+  "605 westminster pike, reisterstown, md 21136": {
+    "lat": 39.4773434,
+    "lon": -76.8465169
+  },
+  "12995 church road, waldorf, md 20601": {
+    "lat": 38.6266286,
+    "lon": -76.8513861
+  },
+  "25 summit avenue, hagerstown, md 21740": {
+    "lat": 39.6423155,
+    "lon": -77.7235015
+  },
+  "2000 east belvedere avenue, baltimore, md 21239": {
+    "lat": 39.3564864,
+    "lon": -76.5783597
+  },
+  "21 linwood avenue, bel air, md 21014": {
+    "lat": 39.5316479,
+    "lon": -76.3432741
+  },
+  "24840 lambs meadow road, worton, md 21678": {
+    "lat": 39.2833644,
+    "lon": -76.1069136
+  },
+  "400 benfield road, severna park, md 21146": {
+    "lat": 39.0785994,
+    "lon": -76.5701845
+  },
+  "9600 pulaski drive, suite 115, middle river, md 21220": null,
+  "12301 old columbia pike, silver spring, 20904": null,
+  "9770 patuxent woods drive, suite 316, columbia, md 21046": null,
+  "10545 guilford road, suite 104, jessup, md 20794": null,
+  "14500 lay hill road, silver spring, md 20906": null,
+  "12504 nave cross road northeast, cumberland, md 21502": null,
+  "3449 falls road, baltimore, md 21211": {
+    "lat": 39.3297325,
+    "lon": -76.6341862
+  },
+  "6000 loch raven boulevard, baltimore, md 21239": {
+    "lat": 39.3643142,
+    "lon": -76.586943
+  },
+  "2638 east baltimore street, baltimore, md 21224": {
+    "lat": 39.2922959,
+    "lon": -76.5791745
+  },
+  "610 middle river road, middle river, md 21220": {
+    "lat": 39.3415507,
+    "lon": -76.4497926
+  },
+  "4408 liberty heights avenue, gwynn oak, md 21207": null,
+  "105 vianney lane, prince frederick, md 20678": {
+    "lat": 38.5377202,
+    "lon": -76.5805409
+  },
+  "701 east first street, cumberland, md 21502": null,
+  "1263 east north avenue, baltimore, md 21202": {
+    "lat": 39.3115851,
+    "lon": -76.6010257
+  },
+  "301 cumberland street, cumberland, md 21502": {
+    "lat": 39.6530954,
+    "lon": -78.7666265
+  },
+  "8505 old leonardtown road, hughesville, md 20637": {
+    "lat": 38.5288914,
+    "lon": -76.781648
+  },
+  "810 aiken avenue, perryville, md 21903": {
+    "lat": 39.5678693,
+    "lon": -76.0701767
+  },
+  "751 twinbrook parkway, rockville, md 20851": {
+    "lat": 39.0813947,
+    "lon": -77.1140394
+  },
+  "1402 north main street, mount airy, md 21771": {
+    "lat": 39.3898025,
+    "lon": -77.142743
+  },
+  "814 light street, baltimore, md 21230": {
+    "lat": 39.2794034,
+    "lon": -76.6128515
+  },
+  "3030 bethany lane, ellicott city, md 21042": {
+    "lat": 39.2880057,
+    "lon": -76.8584284
+  },
+  "31 norwood road, silver spring, md 20905": null,
+  "101 catalpa drive, suite 103, la plata, md 20646": null,
+  "230 west street, annapolis, md 21401": {
+    "lat": 38.9768972,
+    "lon": -76.501706
+  },
+  "455 bow street, elkton, md 21921": {
+    "lat": 39.6154732,
+    "lon": -75.8312835
+  },
+  "1643 churchville road, bel air, md 21015": {
+    "lat": 39.5387436,
+    "lon": -76.3385079
+  },
+  "408 gordy road, salisbury, md 21804": {
+    "lat": 38.3890705,
+    "lon": -75.5656646
+  },
+  "135 east high street, elkton, md 21921": {
+    "lat": 39.610007,
+    "lon": -75.828555
+  },
+  "9411 liberty road, randallstown, md 21133": {
+    "lat": 39.3728961,
+    "lon": -76.8099181
+  },
+  "5115 old court road, randallstown, md 21133": {
+    "lat": 39.3633634,
+    "lon": -76.7764017
+  },
+  "814 fourth street, pocomoke city, md 21851": null,
+  "1600 whitehead court, gwynn oak, md 21207": {
+    "lat": 39.3102722,
+    "lon": -76.7374785
+  },
+  "9900 washington boulevard, laurel, md 20723": {
+    "lat": 39.1142194,
+    "lon": -76.8342678
+  },
+  "215 south law street, aberdeen, md 21001": {
+    "lat": 39.5080349,
+    "lon": -76.1699419
+  },
+  "2106 churchville road, bel air, md 21015": {
+    "lat": 39.5555041,
+    "lon": -76.2878094
+  },
+  "16931 york road, monkton, md 21111": {
+    "lat": 39.5893095,
+    "lon": -76.6624917
+  },
+  "1020 east way, glen burnie, md 21060": {
+    "lat": 39.1535712,
+    "lon": -76.6140021
+  },
+  "304 5th avenue southeast, glen burnie, md 21061": {
+    "lat": 39.157252,
+    "lon": -76.6239743
+  },
+  "6300 southern maryland boulevard, huntingtown, md 20639": {
+    "lat": 38.6602495,
+    "lon": -76.607832
+  },
+  "3501 7th street, brooklyn, md 21225": {
+    "lat": 39.2378198,
+    "lon": -76.5994695
+  },
+  "8823 dayton avenue, north beach, md 20714": {
+    "lat": 38.7035671,
+    "lon": -76.5344794
+  },
+  "1607 cromwell bridge road, parkville, md 21234": {
+    "lat": 39.4029255,
+    "lon": -76.5622689
+  },
+  "200 road b, elkton, md 21921": {
+    "lat": 39.6023438,
+    "lon": -75.844955
+  },
+  "5401 frankford avenue, baltimore, md 21206": {
+    "lat": 39.3231256,
+    "lon": -76.5414527
+  },
+  "521 mack avenue, salisbury, md 21801": {
+    "lat": 38.373381,
+    "lon": -75.604654
+  },
+  "914 middle river road, suite 105, middle river, md 21220": null,
+  "3009 chesapeake beach road, chesapeake beach, md 20732": {
+    "lat": 38.6985638,
+    "lon": -76.5523057
+  },
+  "22 north mechanic street, cumberland, md 21502": {
+    "lat": 39.6516187,
+    "lon": -78.7634148
+  },
+  "4603 eastern avenue, mount rainier, md 20712": {
+    "lat": 38.9442416,
+    "lon": -76.9743077
+  },
+  "12 north 5th street, denton, md 21629": {
+    "lat": 38.8861992,
+    "lon": -75.8289409
+  },
+  "21 aberdeen shopping plaza, aberdeen, md 21001": {
+    "lat": 39.5208858,
+    "lon": -76.1890046
+  },
+  "2001 west north avenue, baltimore, md 21217": {
+    "lat": 39.3094699,
+    "lon": -76.6501511
+  },
+  "116 main street, grantsville, md 21536": {
+    "lat": 39.6964625,
+    "lon": -79.1548496
+  },
+  "3600 brightseat road, hyattsville, md 20785": {
+    "lat": 38.9355788,
+    "lon": -76.8588095
+  },
+  "21291 three notch road, lexington park, md 20653": {
+    "lat": 38.2541478,
+    "lon": -76.4320696
+  },
+  "14 south benedum street, union bridge, md 21791": {
+    "lat": 39.567839,
+    "lon": -77.176728
+  },
+  "3812 edmondson avenue, baltimore, md 21229": {
+    "lat": 39.2942091,
+    "lon": -76.6800549
+  },
+  "1911 rohresville road, suite k, knoxville, md 21758": null,
+  "6600 york road, suite 204, towson, md 21212": null,
+  "541 south beechfield avenue, baltimore, md 21229": {
+    "lat": 39.2755635,
+    "lon": -76.6941785
+  },
+  "715 ingleside avenue, catonsville, md 21228": {
+    "lat": 39.2852356,
+    "lon": -76.7311194
+  },
+  "5801 harford road, baltimore, md 21214": {
+    "lat": 39.3549826,
+    "lon": -76.5584098
+  },
+  "401 west industrial boulevard, towson, md 21502": null,
+  "8730 crisfield highway, westover, md 21871": {
+    "lat": 38.104579,
+    "lon": -75.714741
+  },
+  "1401 pennsylvania avenue, baltimore, md 21217": {
+    "lat": 39.3016777,
+    "lon": -76.6317849
+  },
+  "3043 west belvedere avenue, baltimore, md 21215": {
+    "lat": 39.349765,
+    "lon": -76.6737325
+  },
+  "6025 moravia park drive, baltimore, md 21206": {
+    "lat": 39.3146068,
+    "lon": -76.5424888
+  },
+  "200 washington street, cambridge, md 21613": {
+    "lat": 38.561621,
+    "lon": -76.072886
+  },
+  "1021 saint mary's road, pylesville, md 21132": null,
+  "657 broadneck road, annapolis, md 21409": null,
+  "2000 hambrooks boulevard, cambridge, md 21613": {
+    "lat": 38.5783726,
+    "lon": -76.0781436
+  },
+  "6634 saint barnabus road, oxon hill, md 20745": null,
+  "4710 pennington avenue, 1st floor, curtis bay, md 21226": null,
+  "12915 pinehill drive, hagerstown, md 21740": null,
+  "8334 liberty road, windsor mill, md 21244": {
+    "lat": 39.35822,
+    "lon": -76.7676007
+  },
+  "501 hampton lane, towson, md 21286": {
+    "lat": 39.4141442,
+    "lon": -76.5981247
+  },
+  "5450 blue heron lane, columbia, md 21044": {
+    "lat": 39.2210666,
+    "lon": -76.8672523
+  },
+  "1046 south carroll street, hampstead, md 21074": null,
+  "201 south frederick avenue, gaithersburg, md 20877": {
+    "lat": 39.1385531,
+    "lon": -77.1943576
+  },
+  "8397 piney orchard parkway, odenton, md 21113": {
+    "lat": 39.0865609,
+    "lon": -76.6993977
+  },
+  "1300 druid hill avenue, baltimore, md 21217": {
+    "lat": 39.3018614,
+    "lon": -76.6290819
+  },
+  "10 distillery drive, westminster, md 21157": {
+    "lat": 39.5757028,
+    "lon": -76.9945658
+  },
+  "1800 seton drive, gaithersburg, md 20877": null,
+  "8901 washington street, savage, md 20763": {
+    "lat": 39.136353,
+    "lon": -76.8216762
+  },
+  "601 east potomac street, brunswick, md 21716": {
+    "lat": 39.311558,
+    "lon": -77.6229918
+  },
+  "401 woodbourne avenue, baltimore, md 21212": {
+    "lat": 39.3552924,
+    "lon": -76.610507
+  },
+  "525 george street, hagerstown, md 21742": {
+    "lat": 39.6479109,
+    "lon": -77.7272491
+  },
+  "9510 piscataway road, owings, md 20735": null,
+  "28 north conococheague street, williamsport, md 21795": {
+    "lat": 39.5995735,
+    "lon": -77.8214003
+  },
+  "812 boundary street, salisbury, md 21801": {
+    "lat": 38.3735171,
+    "lon": -75.6114759
+  },
+  "201 mount royal avenue, aberdeen, md 21001": {
+    "lat": 39.517578,
+    "lon": -76.165514
+  },
+  "3317 saint luke's lane, gwynn oak, md 21207": null,
+  "1212 chesaco avenue, rosedale, md 21237": {
+    "lat": 39.3200076,
+    "lon": -76.5123241
+  },
+  "31 south schroeder street, baltimore, md 21223": {
+    "lat": 39.2881301,
+    "lon": -76.6335769
+  },
+  "43 monroe street, westminster, md 21157": {
+    "lat": 39.5860391,
+    "lon": -76.9929076
+  },
+  "4801 sipple avenue, baltimore, md 21206": {
+    "lat": 39.3281662,
+    "lon": -76.5504791
+  },
+  "117 roesler road, glen burnie, md 21060": {
+    "lat": 39.177099,
+    "lon": -76.6146734
+  },
+  "1804 quarter avenue, capitol heights, md 20743": {
+    "lat": 38.8653274,
+    "lon": -76.9235593
+  },
+  "1500 saint camillus drive, silver spring, md 20903": {
+    "lat": 39.0100868,
+    "lon": -76.9833385
+  },
+  "15 west church street, frederick, md 21701": {
+    "lat": 39.415689,
+    "lon": -77.4113879
+  },
+  "425 north chester street, baltimore, md 21231": {
+    "lat": 39.2961825,
+    "lon": -76.5874442
+  },
+  "689 ritchie highway, severna park, md 21146": {
+    "lat": 39.0724611,
+    "lon": -76.5385605
+  },
+  "114 north union avenue, havre de grace, md 21078": {
+    "lat": 39.5479257,
+    "lon": -76.0920189
+  },
+  "5900 princess garden parkway, lanham, md 20706": {
+    "lat": 38.9615517,
+    "lon": -76.8640022
+  },
+  "7901 bradshaw road, upper falls, md 21156": {
+    "lat": 39.4357502,
+    "lon": -76.4017826
+  },
+  "14 east all saints street, frederick, md 21701": {
+    "lat": 39.4118172,
+    "lon": -77.4109402
+  },
+  "601 south stonestreet avenue, rockville, md 20850": {
+    "lat": 39.082749,
+    "lon": -77.143522
+  },
+  "3075 livingston road, bryans road, md 20616": {
+    "lat": 38.6254264,
+    "lon": -77.0738505
+  },
+  "200 bloomsbury avenue, catonsville, md 21228": {
+    "lat": 39.2670096,
+    "lon": -76.7304111
+  },
+  "3978 littlestown pike, westminster, md 21158": {
+    "lat": 39.5942101,
+    "lon": -76.9992083
+  },
+  "1786 north market street, frederick, md 21701": {
+    "lat": 39.4371109,
+    "lon": -77.4015905
+  },
+  "7894 ocean gateway, easton, md 21601": {
+    "lat": 38.7659418,
+    "lon": -76.0611519
+  },
+  "407 west bell street, ridgely, md 21660": {
+    "lat": 38.944692,
+    "lon": -75.893145
+  },
+  "5130 citation drive, salisbury, md 21804": null,
+  "1205 north main street, 3rd floor, hampstead, md 21074": null,
+  "3184 church street, suite 201, manchester, md 21102": null,
+  "528 booth street and delaware avenue, salisbury, md 21801": null,
+  "9515 belair road, nottingham, md 21236": {
+    "lat": 39.4093063,
+    "lon": -76.4669278
+  },
+  "1526 north fremont avenue, baltimore, md 21217": {
+    "lat": 39.3062334,
+    "lon": -76.6387213
+  },
+  "30 south martin street, clear spring, md 21722": {
+    "lat": 39.6546791,
+    "lon": -77.9315498
+  },
+  "1728 east bank street, baltimore, md 21231": null,
+  "9833 harford road, parkville, md 21234": {
+    "lat": 39.4019205,
+    "lon": -76.5178702
+  },
+  "2409 rocks road, forest hill, md 21050": {
+    "lat": 39.5862041,
+    "lon": -76.3873942
+  },
+  "300 east oldtown road, cumberland, md 21502": {
+    "lat": 39.6393209,
+    "lon": -78.7581833
+  },
+  "206 east courtland place, bel air, md 21014": null,
+  "2300 pot spring road, suite 103, lutherville timonium, md 21093": null,
+  "31901 tri-county way, suite 112, salisbury, md 21804": null,
+  "4825 cordell avenue, suite 204, bethesda, md 20814": null,
+  "105 4th street, gaithersburg, md 21842": null,
+  "2303 hudson drive, salisbury, md 21804": null,
+  "87 west street, annapolis, md 21401": {
+    "lat": 38.9778347,
+    "lon": -76.4966056
+  },
+  "1024 main street, darlington, md 21034": {
+    "lat": 39.63754,
+    "lon": -76.203672
+  },
+  "1601 old eastern avenue, essex, md 21221": {
+    "lat": 39.3153903,
+    "lon": -76.4498832
+  },
+  "3300 moreland place, bowie, md 20715": {
+    "lat": 38.9750871,
+    "lon": -76.7514255
+  },
+  "2401 saint paul street, baltimore, md 21218": {
+    "lat": 39.3166177,
+    "lon": -76.6149682
+  },
+  "200 railroad avenue, saint michaels, md 21663": {
+    "lat": 38.7864497,
+    "lon": -76.2247836
+  },
+  "25 east church street, williamsport, md 21795": {
+    "lat": 39.5979324,
+    "lon": -77.8203159
+  },
+  "14 south potomac street, hagerstown, md 21740": {
+    "lat": 39.6417217,
+    "lon": -77.7204217
+  },
+  "1501 mcculloh street, baltimore, md 21217": {
+    "lat": 39.3044096,
+    "lon": -76.629665
+  },
+  "308 gorman avenue, laurel, md 20707": {
+    "lat": 39.0984608,
+    "lon": -76.8506114
+  },
+  "50 east bel air avenue, aberdeen, md 21001": {
+    "lat": 39.507522,
+    "lon": -76.159844
+  },
+  "8513 fort smallwood road, pasadena, md 21122": {
+    "lat": 39.1563288,
+    "lon": -76.5165788
+  },
+  "14454 solomons island road south, solomons, md 20688": null,
+  "8990 old annapolis road, suite a, columbia, md 21045": null,
+  "10390 guilford road, suite a, jessup, md 20794": null,
+  "1122 parsons road, suite f, olney, md 20832": null,
+  "9190 church street, room 206, union bridge, md 21791": null,
+  "30632 hampden avenue, princess anne, md 21853": {
+    "lat": 38.199071,
+    "lon": -75.689323
+  },
+  "1400 doewood lane, capitol heights, md 20743": null,
+  "403 brightseat road, hyattsville, md 20785": null,
+  "15901 fred robinson way, bowie, md 20716": null,
+  "12401 willowbrook road southeast, cumberland, md 21502": {
+    "lat": 39.6518749,
+    "lon": -78.7364469
+  },
+  "820 chesapeake street southeast, washington, dc 20032": {
+    "lat": 38.8293734,
+    "lon": -76.9924544
+  },
+  "14374 benedictine lane, ridgely, md 21660": null,
+  "14 north lewis street, staunton, va 24401": {
+    "lat": 38.1496174,
+    "lon": -79.0750563
+  },
+  "1207 harris street, charlottesville, va 22903": {
+    "lat": 38.0398044,
+    "lon": -78.4808397
+  },
+  "211 east washington street, suffolk, va 23434": {
+    "lat": 36.7274115,
+    "lon": -76.580697
+  },
+  "2942 prosperity avenue, fairfax, va 22031": {
+    "lat": 38.871965,
+    "lon": -77.2369376
+  },
+  "357 cloud street, front royal, va 22630": {
+    "lat": 38.9123781,
+    "lon": -78.190851
+  },
+  "2510 estaline valley road, route 601, goshen, va 24439": null,
+  "1355 west spring street, wytheville, va 24382": {
+    "lat": 36.9399146,
+    "lon": -81.0946765
+  },
+  "19110 beaver dam road, beaverdam, va 23015": {
+    "lat": 37.9283296,
+    "lon": -77.657513
+  },
+  "103 woodland drive, clarksville, va 23927": {
+    "lat": 36.6208052,
+    "lon": -78.5722502
+  },
+  "3130 richmond highway, stafford, va 22554": {
+    "lat": 38.4725537,
+    "lon": -77.3955349
+  },
+  "371 linden drive, staunton, va 24401": {
+    "lat": 38.130429,
+    "lon": -79.064901
+  },
+  "1149 franklin street, rocky mount, va 24151": {
+    "lat": 36.9907402,
+    "lon": -79.9012907
+  },
+  "2288 dillons fork road, fieldale, va 24089": {
+    "lat": 36.6952086,
+    "lon": -79.9717643
+  },
+  "2857 stuarts draft highway, route 340, stuarts draft, va 24477": null,
+  "810 old graves mill road, lynchburg, va 24502": {
+    "lat": 37.3658004,
+    "lon": -79.2262681
+  },
+  "1817 general booth boulevard, virginia beach, va 23454": {
+    "lat": 36.7788103,
+    "lon": -76.004841
+  },
+  "482 commerce road, farmville, va 23901": null,
+  "206 3rd avenue, radford, va 24141": {
+    "lat": 37.139532,
+    "lon": -80.5582376
+  },
+  "611 chestnut grove road, appomattox, va 24522": {
+    "lat": 37.257595,
+    "lon": -78.807892
+  },
+  "10 harrison avenue, williamsburg, va 23185": {
+    "lat": 37.2750451,
+    "lon": -76.7145711
+  },
+  "3420 club house road, virginia beach, va 23452": {
+    "lat": 36.8246989,
+    "lon": -76.090525
+  },
+  "2003 kecoughtan road, hampton, va 23661": {
+    "lat": 37.0015849,
+    "lon": -76.3819201
+  },
+  "2800 lafayette boulevard, norfolk, va 23509": {
+    "lat": 36.875819,
+    "lon": -76.255648
+  },
+  "13813 warwick boulevard, bldg e, newport news, va 23602": null,
+  "7840 john clayton memorial highway, gloucester, va 23061": {
+    "lat": 37.4242227,
+    "lon": -76.5066179
+  },
+  "7057 linda circle, hayes, va 23072": null,
+  "308 hanover street, fredericksburg, va 22401": {
+    "lat": 38.3006721,
+    "lon": -77.4598824
+  },
+  "5833 poplar hall drive, norfolk, va 23502": {
+    "lat": 36.8483254,
+    "lon": -76.2050859
+  },
+  "5291 main street, stephens city, va 22655": {
+    "lat": 39.0855308,
+    "lon": -78.216599
+  },
+  "62 waterloo street, warrenton, va 20186": {
+    "lat": 38.7141471,
+    "lon": -77.7976091
+  },
+  "133 east culpeper street, culpeper, va 22701": {
+    "lat": 38.4724524,
+    "lon": -77.9958387
+  },
+  "446 highland avenue, highland memorial presbyterian church, winchester, va 22601": null,
+  "706 harding avenue, blacksburg, va 24060": {
+    "lat": 37.2366751,
+    "lon": -80.4064099
+  },
+  "24757 arcola mills drive, dulles, va 20166": null,
+  "728 church avenue southeast, a, roanoke, va 24013": {
+    "lat": 37.2717729,
+    "lon": -79.9334105
+  },
+  "12942 lutheran church road, lovettsville, va 20180": {
+    "lat": 39.2613175,
+    "lon": -77.6440423
+  },
+  "920 maybeury drive, richmond, va 23229": null,
+  "17 buffalo gap highway, churchville, va 24421": {
+    "lat": 38.2255756,
+    "lon": -79.163484
+  },
+  "68 dick huff lane, verona, va 24482": {
+    "lat": 38.1951437,
+    "lon": -79.0133243
+  },
+  "3321 fairystone park highway, bassett, va 24055": {
+    "lat": 36.7565897,
+    "lon": -79.9873199
+  },
+  "530 southpark boulevard, colonial heights, va 23834": {
+    "lat": 37.242889,
+    "lon": -77.3913754
+  },
+  "252 blue ridge drive, orange, va 22960": {
+    "lat": 38.2423197,
+    "lon": -78.1022791
+  },
+  "155 washington street, bristol, va 24201": {
+    "lat": 36.5968731,
+    "lon": -82.1778904
+  },
+  "2179 stuarts draft highway, stuarts draft, va 24477": {
+    "lat": 38.0300636,
+    "lon": -79.0558264
+  },
+  "36 east main street, berryville, va 22611": {
+    "lat": 39.1459688,
+    "lon": -77.9655562
+  },
+  "6507 main street, the plains, va 20198": {
+    "lat": 38.861929,
+    "lon": -77.7760061
+  },
+  "11452 wards road, rustburg, va 24588": {
+    "lat": 37.2870944,
+    "lon": -79.1660319
+  },
+  "1925 grove avenue, richmond, va 23220": {
+    "lat": 37.551079,
+    "lon": -77.464501
+  },
+  "30 red valley road, boones mill, va 24065": null,
+  "2712 brandon avenue southwest, roanoke, va 24015": {
+    "lat": 37.261294,
+    "lon": -79.996344
+  },
+  "1600 jefferson highway, fishersville, va 22939": {
+    "lat": 38.102877,
+    "lon": -78.9754392
+  },
+  "35 north bank street, luray, va 22835": {
+    "lat": 38.667367,
+    "lon": -78.463509
+  },
+  "667 hannah street, hampton, va 23661": {
+    "lat": 37.0064972,
+    "lon": -76.3892109
+  },
+  "250 mill creek parkway, chesapeake, va 23323": {
+    "lat": 36.7391128,
+    "lon": -76.3487549
+  },
+  "154 west government avenue, norfolk, va 23503": {
+    "lat": 36.9520612,
+    "lon": -76.2566604
+  },
+  "1870 big spring drive, elliston, va 24087": {
+    "lat": 37.2201418,
+    "lon": -80.2295077
+  },
+  "243 jackson lane, concord, va 24538": null,
+  "70 south high street, community mennonite church, harrisonburg, va 22801": null,
+  "2050 lambs road, charlottesville, va 22901": null,
+  "1409 todds lane, hampton, va 23666": {
+    "lat": 37.0423141,
+    "lon": -76.4243423
+  },
+  "829 indiana street, salem, va 24153": {
+    "lat": 37.2849609,
+    "lon": -80.0470913
+  },
+  "12129 county line road, keysville, va 23947": null,
+  "420 college view drive, bridgewater, va 22812": {
+    "lat": 38.3776523,
+    "lon": -78.9633401
+  },
+  "4500 millridge parkway, midlothian, va 23112": null,
+  "1000 east city hall avenue, norfolk, va 23504": {
+    "lat": 36.8459693,
+    "lon": -76.2818733
+  },
+  "600 comer lane, shenandoah, va 22849": {
+    "lat": 38.49285,
+    "lon": -78.610414
+  },
+  "801 sophia street, fredericksburg, va 22401": null,
+  "9890 thomas nelson highway, lovingston, va 22949": {
+    "lat": 37.7509865,
+    "lon": -78.8776439
+  },
+  "2 east wolfe street, harrisonburg, va 22802": {
+    "lat": 38.451446,
+    "lon": -78.867904
+  },
+  "110 church street, madison heights, va 24572": {
+    "lat": 37.4200254,
+    "lon": -79.1319092
+  },
+  "107 east lee street, broadway, va 22815": null,
+  "1737 wards ferry road, lynchburg, va 24502": {
+    "lat": 37.3611719,
+    "lon": -79.1939888
+  },
+  "24 governor stanley highway, bassett, va 24055": null,
+  "2501 marshall avenue, suite g, newport news, va 23607": null,
+  "821 lafayette boulevard, fredericksburg, va 22401": null,
+  "1794 richmond road, troy, va 22974": {
+    "lat": 37.9842261,
+    "lon": -78.2919023
+  },
+  "6000 grove avenue, richmond, va 23226": {
+    "lat": 37.572982,
+    "lon": -77.521934
+  },
+  "1601 south colorado street, salem, va 24153": {
+    "lat": 37.27424,
+    "lon": -80.054583
+  },
+  "52 hayters gap road, lebanon, va 24266": null,
+  "216 west leigh street, richmond, va 23220": {
+    "lat": 37.5505241,
+    "lon": -77.4420535
+  },
+  "2128 melrose avenue northwest, roanoke, va 24017": {
+    "lat": 37.2853951,
+    "lon": -79.9711929
+  },
+  "2209 buffalo springs turnpike, monroe, va 24574": {
+    "lat": 37.6103706,
+    "lon": -79.2396275
+  },
+  "2850 maidens road, goochland, va 23063": {
+    "lat": 37.7501078,
+    "lon": -77.8604691
+  },
+  "950 nellie jones road, la crosse, va 23950": null,
+  "13050 the glebe lane, charles city, va 23030": {
+    "lat": 37.3664313,
+    "lon": -77.0443739
+  },
+  "1601 rolling hills drive, henrico, va 23229": {
+    "lat": 37.6029813,
+    "lon": -77.5454811
+  },
+  "10499 jerico road, bealeton, va 22712": null,
+  "128 church street east, martinsville, va 24112": {
+    "lat": 36.6900906,
+    "lon": -79.8704015
+  },
+  "21649 timberlake road, lynchburg, va 24502": {
+    "lat": 37.327997,
+    "lon": -79.2496561
+  },
+  "13157 south old moneta road, moneta, va 24121": {
+    "lat": 37.1829159,
+    "lon": -79.6183781
+  },
+  "927 orange road, madison, va 22727": {
+    "lat": 38.3437935,
+    "lon": -78.2638392
+  },
+  "1869 boyers road, harrisonburg, va 22801": null,
+  "120 commerce street, north, culpeper, va 22701": {
+    "lat": 38.4766137,
+    "lon": -77.9917682
+  },
+  "133 north delphine avenue, waynesboro, va 22980": {
+    "lat": 38.0664049,
+    "lon": -78.8770119
+  },
+  "405 talbot hall road, norfolk, va 23505": {
+    "lat": 36.9030313,
+    "lon": -76.2833618
+  },
+  "39 joynes road, hampton, va 23666": {
+    "lat": 37.02626,
+    "lon": -76.408049
+  },
+  "1300 augustine avenue, fredericksburg, va 22401": {
+    "lat": 38.2993105,
+    "lon": -77.4773984
+  },
+  "10501 plank road, spotsylvania courthouse, va 22553": null,
+  "412 jefferson avenue north, pulaski, va 24301": {
+    "lat": 37.0500734,
+    "lon": -80.7821833
+  },
+  "120 epperly mill road southwest, floyd, va 24091": {
+    "lat": 36.9069288,
+    "lon": -80.334498
+  },
+  "516 wenonah avenue, pearisburg, va 24134": null,
+  "400 west main street, christiansburg, va 24073": {
+    "lat": 37.125877,
+    "lon": -80.4128536
+  },
+  "141 south pine avenue, chilhowie, va 24319": {
+    "lat": 36.8019089,
+    "lon": -81.675031
+  },
+  "3080 meadowbridge road, richmond, va 23222": {
+    "lat": 37.5718655,
+    "lon": -77.4195288
+  },
+  "81 main street, stanardsville, va 22973": {
+    "lat": 38.2974751,
+    "lon": -78.4377355
+  },
+  "601 west main street, waynesboro, va 22980": {
+    "lat": 38.068951,
+    "lon": -78.891389
+  },
+  "11220 nuckols road, glen allen, va 23059": {
+    "lat": 37.6807855,
+    "lon": -77.5849297
+  },
+  "10313 south grant avenue, manassas, va 20110": {
+    "lat": 38.7304515,
+    "lon": -77.4599641
+  },
+  "8812 courthouse road, spotsylvania courthouse, va 22553": {
+    "lat": 38.1970741,
+    "lon": -77.591093
+  },
+  "5000 corporate woods drive, suite 400, virginia beach, va 23462": null,
+  "520 north arthur ashe boulevard, richmond, va 23220": {
+    "lat": 37.5585436,
+    "lon": -77.4722078
+  },
+  "112 south kent street, winchester, va 22601": {
+    "lat": 39.1823801,
+    "lon": -78.1630013
+  },
+  "507 caroline street, suite b, ashland, va 23005": null,
+  "1175 cambria street northeast, christiansburg, va 24073": {
+    "lat": 37.1448219,
+    "lon": -80.4059226
+  },
+  "520 oaklette drive, chesapeake, va 23325": {
+    "lat": 36.822655,
+    "lon": -76.2396246
+  },
+  "1700 west beverley street, staunton, va 24401": {
+    "lat": 38.1550478,
+    "lon": -79.0969537
+  },
+  "1911 south kadel avenue, covington, va 24426": {
+    "lat": 37.7644394,
+    "lon": -80.0005606
+  },
+  "2999 river road west, goochland, va 23063": {
+    "lat": 37.6864171,
+    "lon": -77.886698
+  },
+  "15 upton lane, stafford, va 22554": {
+    "lat": 38.423804,
+    "lon": -77.407053
+  },
+  "600 happy acres road, chesapeake, va 23323": {
+    "lat": 36.7614856,
+    "lon": -76.3461414
+  },
+  "1117 cherry hill church road, cluster springs, va 24592": {
+    "lat": 36.6268626,
+    "lon": -78.9086161
+  },
+  "1176 huell matthews highway, south boston, va 24592": {
+    "lat": 36.6861314,
+    "lon": -78.8998377
+  },
+  "1446 kempsville road, virginia beach, va 23464": {
+    "lat": 36.794543,
+    "lon": -76.1754534
+  },
+  "680 industrial road, a, warrenton, va 20186": {
+    "lat": 38.6965376,
+    "lon": -77.7853142
+  },
+  "10250 kings highway, king george, va 22485": {
+    "lat": 38.2614871,
+    "lon": -77.1685034
+  },
+  "11401 international drive, richmond, va 23236": null,
+  "8947 courthouse road, spotsylvania courthouse, va 22553": {
+    "lat": 38.2071535,
+    "lon": -77.5812112
+  },
+  "801 east virginia avenue, vinton, va 24179": {
+    "lat": 37.274432,
+    "lon": -79.890334
+  },
+  "1165 rio road east, charlottesville, va 22901": {
+    "lat": 38.0698402,
+    "lon": -78.467468
+  },
+  "525 kempsville road, chesapeake, va 23320": {
+    "lat": 36.7447502,
+    "lon": -76.22256
+  },
+  "401 north main street, amherst, va 24521": {
+    "lat": 37.5937078,
+    "lon": -79.0380808
+  },
+  "139 francis avenue, monroe, va 24574": {
+    "lat": 37.5036602,
+    "lon": -79.124512
+  },
+  "4103 monument avenue, richmond, va 23230": {
+    "lat": 37.5695806,
+    "lon": -77.4868242
+  },
+  "405 shell road, chesapeake, va 23323": {
+    "lat": 36.7509235,
+    "lon": -76.344479
+  },
+  "1924 east pembroke avenue, hampton, va 23663": {
+    "lat": 37.038934,
+    "lon": -76.3095794
+  },
+  "660 south main street, harrisonburg, va 22801": {
+    "lat": 38.442645,
+    "lon": -78.8726953
+  },
+  "3700 lee highway, weyers cave, va 24486": {
+    "lat": 38.3011245,
+    "lon": -78.9357885
+  },
+  "2005 langdon road southwest, roanoke, va 24015": {
+    "lat": 37.2609493,
+    "lon": -79.9950506
+  },
+  "4845 cloverdale road, roanoke, va 24019": {
+    "lat": 37.3275479,
+    "lon": -79.8723509
+  },
+  "9629 norfolk avenue, norfolk, va 23503": {
+    "lat": 36.948988,
+    "lon": -76.247664
+  },
+  "1233 shields road, newport news, va 23608": {
+    "lat": 37.1517456,
+    "lon": -76.5089449
+  },
+  "2233 south main street, rocky mount, va 24151": {
+    "lat": 36.9913276,
+    "lon": -79.8900204
+  },
+  "800 williamsburg avenue, suite a, portsmouth, va 23704": null,
+  "202 south cameron street, winchester, va 22601": {
+    "lat": 39.1814901,
+    "lon": -78.1646026
+  },
+  "2606 heth court, dumfries, va 22026": {
+    "lat": 38.5597783,
+    "lon": -77.3274808
+  },
+  "22417 watauga road, abingdon, va 24211": null,
+  "3713 pennington lane, woodbridge, va 22192": {
+    "lat": 38.6621538,
+    "lon": -77.3244434
+  },
+  "321 grafton drive, yorktown, va 23692": null,
+  "312 2nd street, williamsburg, va 23185": {
+    "lat": 37.2741262,
+    "lon": -76.6832557
+  },
+  "827 commerce street, petersburg, va 23803": {
+    "lat": 37.2265264,
+    "lon": -77.4171358
+  },
+  "900 harris street, charlottesville, va 22903": {
+    "lat": 38.0376084,
+    "lon": -78.4825658
+  },
+  "2708 south nelson street, arlington, va 22206": {
+    "lat": 38.843564,
+    "lon": -77.0894074
+  },
+  "2020 laskin road, virginia beach, va 23454": {
+    "lat": 36.8468004,
+    "lon": -76.0383527
+  },
+  "603 south memorial boulevard, martinsville, va 24112": {
+    "lat": 36.6829235,
+    "lon": -79.8757919
+  },
+  "8878 james madison highway, fork union, va 23055": {
+    "lat": 37.7748432,
+    "lon": -78.2509447
+  },
+  "400 kendrick lane, suite b, front royal, va 22630": null,
+  "1400 ewell road, virginia beach, va 23455": {
+    "lat": 36.8839136,
+    "lon": -76.1333429
+  },
+  "147 resource lane, louisa, va 23093": {
+    "lat": 38.0232682,
+    "lon": -77.9570504
+  },
+  "1701 elm avenue, portsmouth, va 23704": {
+    "lat": 36.825745,
+    "lon": -76.3120549
+  },
+  "7485 general puller highway, topping, va 23169": null,
+  "830 monticello avenue, charlottesville, va 22902": {
+    "lat": 38.022808,
+    "lon": -78.4765642
+  },
+  "724 dale avenue southeast, roanoke, va 24013": {
+    "lat": 37.2694553,
+    "lon": -79.9311526
+  },
+  "5101 massaponax church road, fredericksburg, va 22407": {
+    "lat": 38.1935512,
+    "lon": -77.5098299
+  },
+  "2 west grace street, richmond, va 23220": {
+    "lat": 37.544912,
+    "lon": -77.442807
+  },
+  "1033 big bethel road, hampton, va 23666": {
+    "lat": 37.0493871,
+    "lon": -76.4300734
+  },
+  "900 b street, waynesboro, va 22980": {
+    "lat": 38.075677,
+    "lon": -78.870822
+  },
+  "813 henry street, calvary baptist church, norfolk, va 23504": null,
+  "105 garland drive, staunton, va 24401": {
+    "lat": 38.16535,
+    "lon": -79.099408
+  },
+  "1600 olde william street, fredericksburg, va 22401": {
+    "lat": 38.2953867,
+    "lon": -77.4812514
+  },
+  "219 east washington avenue, vinton, va 24179": {
+    "lat": 37.2802678,
+    "lon": -79.8622512
+  },
+  "115 south lexington avenue, covington, va 24426": {
+    "lat": 37.78871,
+    "lon": -79.9960705
+  },
+  "20051 tabernacle road, barhamsville, va 23011": {
+    "lat": 37.4588729,
+    "lon": -76.800906
+  },
+  "344 phoenix street, dungannon, va 24245": null,
+  "217 west washington street, bedford, va 24523": {
+    "lat": 37.3334247,
+    "lon": -79.524667
+  },
+  "185 ashby avenue, harrisonburg, va 22802": {
+    "lat": 38.4601427,
+    "lon": -78.8626134
+  },
+  "15 west washington street, middleburg, va 20117": {
+    "lat": 38.9684981,
+    "lon": -77.736585
+  },
+  "1519 williamsburg road, richmond, va 23231": {
+    "lat": 37.5142821,
+    "lon": -77.3970691
+  },
+  "825 college avenue, fredericksburg, va 22401": {
+    "lat": 38.297353,
+    "lon": -77.472856
+  },
+  "305 cassell road, wytheville, va 24382": {
+    "lat": 36.9541323,
+    "lon": -81.0639108
+  },
+  "3623 roundhill avenue northwest, roanoke, va 24012": {
+    "lat": 37.3029747,
+    "lon": -79.9462424
+  },
+  "50 indian trail road, penn laird, va 22846": {
+    "lat": 38.3928672,
+    "lon": -78.8090838
+  },
+  "2211 park avenue, lynchburg, va 24501": {
+    "lat": 37.40469,
+    "lon": -79.1630032
+  },
+  "750 memorial drive, danville, va 24541": {
+    "lat": 36.5918928,
+    "lon": -79.4034492
+  },
+  "918 bragg road, fredericksburg, va 22407": null,
+  "2420 memorial avenue, lynchburg, va 24501": {
+    "lat": 37.4027724,
+    "lon": -79.167071
+  },
+  "249 east shirley avenue, warrenton, va 20186": {
+    "lat": 38.7045708,
+    "lon": -77.7927315
+  },
+  "918 south lincoln street, arlington, va 22204": {
+    "lat": 38.8613442,
+    "lon": -77.0937086
+  },
+  "113 executive drive, building 2, suite 110, sterling, va 20166": null,
+  "1108 sedalia school road, big island, va 24526": {
+    "lat": 37.4906729,
+    "lon": -79.4433517
+  },
+  "10009 spotswood trail, stanardsville, va 22973": null,
+  "246 west main street, abingdon, va 24210": {
+    "lat": 36.7090775,
+    "lon": -81.9786726
+  },
+  "412 gibbons avenue, elkton, va 22827": {
+    "lat": 38.4088534,
+    "lon": -78.6249416
+  },
+  "710 clay street, lynchburg, va 24504": {
+    "lat": 37.4149153,
+    "lon": -79.1459433
+  },
+  "225 fulcher street, first united methodist church, hillsville, va 24343": null,
+  "800 thompson street, ashland, va 23005": {
+    "lat": 37.7664062,
+    "lon": -77.4944605
+  },
+  "300 fort collier road, winchester, va 22603": {
+    "lat": 39.1903758,
+    "lon": -78.1410542
+  },
+  "1556 euclid avenue, bristol, va 24201": {
+    "lat": 36.6003446,
+    "lon": -82.1988213
+  },
+  "146 east main street, martinsville, va 24112": {
+    "lat": 36.690611,
+    "lon": -79.8695746
+  },
+  "1465 incarnation drive, charlottesville, va 22901": {
+    "lat": 38.0728648,
+    "lon": -78.4758621
+  },
+  "215 school road, gladys, va 24554": {
+    "lat": 37.161714,
+    "lon": -79.0832539
+  },
+  "415 oakleigh avenue, appomattox, va 24522": {
+    "lat": 37.3562562,
+    "lon": -78.8216797
+  },
+  "17202 richmond turnpike, milford, va 22514": {
+    "lat": 38.0238653,
+    "lon": -77.3410329
+  },
+  "208 east jefferson street, charlottesville, va 22902": {
+    "lat": 38.0316494,
+    "lon": -78.4795916
+  },
+  "2114 lafayette boulevard, norfolk, va 23509": {
+    "lat": 36.8773573,
+    "lon": -76.2610603
+  },
+  "140 east main street, radford, va 24141": {
+    "lat": 37.1344438,
+    "lon": -80.5379038
+  },
+  "131 east water street, pocahontas, va 24635": {
+    "lat": 37.3049629,
+    "lon": -81.3393133
+  },
+  "3110 pioneer road northwest, roanoke, va 24012": {
+    "lat": 37.3048701,
+    "lon": -79.9441873
+  },
+  "400 kingdom way, fredericksburg, va 22401": null,
+  "123 henry street, danville, va 24540": {
+    "lat": 36.5926891,
+    "lon": -79.3869305
+  },
+  "1008 franklin road southwest, roanoke, va 24016": {
+    "lat": 37.2644941,
+    "lon": -79.9457295
+  },
+  "216 ironbound road, williamsburg, va 23188": {
+    "lat": 37.2883803,
+    "lon": -76.72821
+  },
+  "4 duncan drive, hampton, va 23663": {
+    "lat": 37.031149,
+    "lon": -76.3093708
+  },
+  "2306 airline boulevard, portsmouth, va 23701": {
+    "lat": 36.8185583,
+    "lon": -76.3540395
+  },
+  "798 hillman highway northeast, abingdon, va 24210": {
+    "lat": 36.7220643,
+    "lon": -81.9379303
+  },
+  "650 monroe avenue, room 126, fort eustis, va 23604": null,
+  "192 elephant curve road northwest, floyd, va 24091": {
+    "lat": 36.9405287,
+    "lon": -80.3498429
+  },
+  "10878 buckley hall road, mathews, va 23109": {
+    "lat": 37.4370037,
+    "lon": -76.3208261
+  },
+  "2500 chestnut avenue, newport news, va 23607": {
+    "lat": 36.9876038,
+    "lon": -76.4061541
+  },
+  "2011 fairmount avenue, richmond, va 23223": {
+    "lat": 37.5424802,
+    "lon": -77.4147483
+  },
+  "717 rugby road, charlottesville, va 22903": {
+    "lat": 38.0435062,
+    "lon": -78.4988642
+  },
+  "1379 tazewell avenue, tazewell, va 24630": {
+    "lat": 37.1327122,
+    "lon": -81.5273015
+  },
+  "435 north cameron street, winchester, va 22601": {
+    "lat": 39.1890698,
+    "lon": -78.1625424
+  },
+  "620 baker road, virginia beach, va 23462": {
+    "lat": 36.8573337,
+    "lon": -76.1690642
+  },
+  "1320 la salle avenue, hampton, va 23669": null,
+  "5705 washington boulevard, arlington, va 22205": {
+    "lat": 38.8836007,
+    "lon": -77.1354962
+  },
+  "606 north irving street, arlington, va 22201": {
+    "lat": 38.8802524,
+    "lon": -77.0971675
+  },
+  "909 south dinwiddie street, arlington, va 22204": {
+    "lat": 38.8563787,
+    "lon": -77.1121927
+  },
+  "1086 harris road, kilmarnock, va 22482": {
+    "lat": 37.6919199,
+    "lon": -76.3861716
+  },
+  "613 north royal avenue, front royal, va 22630": {
+    "lat": 38.9265679,
+    "lon": -78.1939095
+  },
+  "40 kings way, hampton, va 23669": {
+    "lat": 37.0267672,
+    "lon": -76.3440893
+  },
+  "321 tazewell avenue southeast, roanoke, va 24013": {
+    "lat": 37.2701907,
+    "lon": -79.9359479
+  },
+  "1310 church street, lynchburg, va 24504": {
+    "lat": 37.4107981,
+    "lon": -79.1398029
+  },
+  "350 spotswood drive, lexington, va 24450": {
+    "lat": 37.7791848,
+    "lon": -79.4431596
+  },
+  "392 maple avenue, newport news, va 23607": {
+    "lat": 36.9947772,
+    "lon": -76.3987833
+  },
+  "710 dawn street, richmond, va 23222": {
+    "lat": 37.5622796,
+    "lon": -77.4421794
+  },
+  "65 seddon street, bland, va 24315": {
+    "lat": 37.1014525,
+    "lon": -81.1232338
+  },
+  "1125 roanoke street, christiansburg, va 24073": {
+    "lat": 37.13376,
+    "lon": -80.3872399
+  },
+  "2709 monument avenue, richmond, va 23220": {
+    "lat": 37.5595095,
+    "lon": -77.4709756
+  },
+  "5525 raby road, norfolk, va 23502": {
+    "lat": 36.8568116,
+    "lon": -76.2182763
+  },
+  "820 campbell avenue southwest, roanoke, va 24016": {
+    "lat": 37.2703964,
+    "lon": -79.9561704
+  },
+  "8200 woodman road, henrico, va 23228": {
+    "lat": 37.631005,
+    "lon": -77.4843811
+  },
+  "151 mitchell bell road, madison heights, va 24572": null,
+  "118 east washington street, petersburg, va 23803": {
+    "lat": 37.2280166,
+    "lon": -77.4009491
+  },
+  "408 west center street, galax, va 24333": {
+    "lat": 36.6617683,
+    "lon": -80.9287968
+  },
+  "1301 west main street, b, radford, va 24141": null,
+  "10056 dean drive, manassas, va 20110": {
+    "lat": 38.7446355,
+    "lon": -77.5006915
+  },
+  "11232 cedar hill road, gordonsville, va 22942": null,
+  "16 liberty street extension, martinsville, va 24112": null,
+  "750 miller drive southeast, suite 110, leesburg, va 20175": null,
+  "15386 old spotswood trail, elkton, va 22827": {
+    "lat": 38.4092166,
+    "lon": -78.6402915
+  },
+  "20593 blue and gold drive, elkton, va 22827": null,
+  "149 west spotswood avenue, elkton, va 22827": null,
+  "1228 jamison avenue southeast, roanoke, va 24013": {
+    "lat": 37.2706124,
+    "lon": -79.923234
+  },
+  "4932 frontage road northwest, roanoke, va 24019": {
+    "lat": 37.3252461,
+    "lon": -79.9915861
+  },
+  "1340 baldwin avenue northeast, roanoke, va 24012": {
+    "lat": 37.2814944,
+    "lon": -79.9163519
+  },
+  "325 campbell avenue southwest, roanoke, va 24016": {
+    "lat": 37.2716926,
+    "lon": -79.9467483
+  },
+  "6123 montrose road, rockville, 20852": null,
+  "13618 layhill road, silver spring, 20906": null,
+  "14516 bauer drive, rockville, 20853": null,
+  "31 norwood rd, silver spring, 20905": null,
+  "12621 old columbia pike, silver spring, 20904": null,
+  "university boulevard east, takoma park": null,
+  "p.o. box 430, olney, 20830": null,
+  "900 ednor road, silver spring, 20905": null,
+  "8322 helgerman court, gaithersburg, 20877": null,
+  "7101 horizon terrace, derwood, 20855": null,
+  "2 teachers way, room 200, gaithersburg, 20877": null,
+  "811 russell ave, suite g, gaithersburg, 20879": null,
+  "19642 club house rd., suite 620, montgomery village, 20886": null,
+  "7915 old ocean city rd  whaleyville md 21872-2051": {
+    "lat": 38.393707,
+    "lon": -75.302412
+  },
+  "6045 solomons island rd  huntingtown md 20639-8876": {
+    "lat": 38.6065407,
+    "lon": -76.613605
+  },
+  "305 n kent st  chestertown md 21620-1609": {
+    "lat": 39.2143669,
+    "lon": -76.0609153
+  },
+  "2301 putty hill ave  parkville md 21234-3914": {
+    "lat": 39.3898065,
+    "lon": -76.5459221
+  },
+  "21641 great mills rd  lexington pk md 20653-1239": {
+    "lat": 38.2616204,
+    "lon": -76.4626092
+  },
+  "5204 liberty heights ave  baltimore md 21207-7057": {
+    "lat": 39.3337342,
+    "lon": -76.702031
+  },
+  "1040 s beechfield ave  baltimore md 21229-4938": {
+    "lat": 39.2786445,
+    "lon": -76.6938619
+  },
+  "640 lucabaugh mill rd westminster md 21157-3814": {
+    "lat": 39.5911834,
+    "lon": -76.9704067
+  },
+  "624 gutman ave  baltimore md 21218-5422": {
+    "lat": 39.3174891,
+    "lon": -76.6067931
+  },
+  "130 s seton ave  emmitsburg md 21727-0074": {
+    "lat": 39.7037336,
+    "lon": -77.3273473
+  },
+  "524 maryland ave  essex md 21221-6734": {
+    "lat": 39.3084785,
+    "lon": -76.4738481
+  },
+  "155 orville rd  essex md 21221-1309": {
+    "lat": 39.3257027,
+    "lon": -76.4506889
+  },
+  "7200 harford rd  baltimore md 21234-7702": {
+    "lat": 39.3682661,
+    "lon": -76.548007
+  },
+  "7544 holabird ave  dundalk md 21222-2104": {
+    "lat": 39.2709972,
+    "lon": -76.5054225
+  },
+  "1200 linden ave  arbutus md 21227-2423": {
+    "lat": 39.2547084,
+    "lon": -76.6988237
+  },
+  "6901 security blvd  windsor mill md 21244-2412": {
+    "lat": 39.3124769,
+    "lon": -76.7505314
+  },
+  "8187 telegraph rd  severn md 21144-3205": {
+    "lat": 39.1080333,
+    "lon": -76.6926914
+  },
+  "17904 binkley ave  maugansville md 21767-9731": {
+    "lat": 39.6989828,
+    "lon": -77.7464754
+  },
+  "392 cypress st  millington md 21651-1160": {
+    "lat": 39.2587364,
+    "lon": -75.838047
+  },
+  "6750 woodbine rd  woodbine md 21797-9402": {
+    "lat": 39.3894146,
+    "lon": -77.0566266
+  },
+  "6000 radecke ave  baltimore md 21206-3955": {
+    "lat": 39.330867,
+    "lon": -76.531724
+  },
+  "2000 sand hill rd  marriottsvl md 21104-1649": null,
+  "126 port st  easton md 21601-2600": {
+    "lat": 38.7721284,
+    "lon": -76.0778728
+  },
+  "817 n mount st  baltimore md 21217-2117": {
+    "lat": 39.2979603,
+    "lon": -76.6442579
+  },
+  "4901 woodbine rd  sykesville md 21784-9348": {
+    "lat": 39.4397958,
+    "lon": -77.0544904
+  },
+  "103 railroad ave  st michaels md 21663-0354": {
+    "lat": 38.786453,
+    "lon": -76.2244843
+  },
+  "8801 harford rd  parkville md 21234-4121": {
+    "lat": 39.3834059,
+    "lon": -76.5337001
+  },
+  "120 n front st  baltimore md 21202-4804": {
+    "lat": 39.2913453,
+    "lon": -76.6063094
+  },
+  "17 s main st  smithsburg md 21783-0218": {
+    "lat": 39.6507008,
+    "lon": -77.5701748
+  },
+  "2201 garrison blvd  baltimore md 21216-2612": {
+    "lat": 39.3123307,
+    "lon": -76.6751014
+  },
+  "407 oak st  salisbury md 21804-5574": {
+    "lat": 38.3620325,
+    "lon": -75.593804
+  },
+  "6020 marian dr  baltimore md 21215-3325": {
+    "lat": 39.349143,
+    "lon": -76.7107645
+  },
+  "2214 evergreen st  baltimore md 21216-2930": {
+    "lat": 39.3130513,
+    "lon": -76.6606206
+  },
+  "5315 harford rd  baltimore md 21214-2255": {
+    "lat": 39.3506771,
+    "lon": -76.5624207
+  },
+  "209 w fayette st  baltimore md 21201-3403": {
+    "lat": 39.2902065,
+    "lon": -76.6184456
+  },
+  "1322 west rd  salisbury md 21801-8019": {
+    "lat": 38.388964,
+    "lon": -75.6114245
+  },
+  "658 lucabaugh mill rd  westminster md 21157-3814": {
+    "lat": 39.5923934,
+    "lon": -76.9715428
+  },
+  "6622 loch raven blvd  baltimore md 21239": {
+    "lat": 39.3710161,
+    "lon": -76.5825953
+  },
+  "2424 mcelderry st baltimore md 21205": {
+    "lat": 39.297822,
+    "lon": -76.582783
+  },
+  "105 n mill st, chestertown, md 21620": {
+    "lat": 39.2104012,
+    "lon": -76.0682377
+  },
+  "2422 w patapsco ave  baltimore md 21230": {
+    "lat": 39.2527077,
+    "lon": -76.6504688
+  },
+  "3601 old frederick rd  baltimore md 21229": {
+    "lat": 39.283175,
+    "lon": -76.676715
+  },
+  "1355 homestead st  baltimore md 21218": {
+    "lat": 39.3231499,
+    "lon": -76.5998408
+  },
+  "961 johnsville rd  sykesville md 21784": {
+    "lat": 39.4047233,
+    "lon": -76.9608766
+  },
+  "12747 old bridge rd, ocean city, md 21842": {
+    "lat": 38.3305391,
+    "lon": -75.1013502
+  },
+  "1201 maple ave, arbutus, baltimore, md 21227": {
+    "lat": 39.252985,
+    "lon": -76.7011226
+  },
+  "27765 nanticoke rd, salisbury, md 21801": {
+    "lat": 38.3679075,
+    "lon": -75.6505473
+  },
+  "6327 meadowridge road elkridge, md 21075": null,
+  "817 camden ave, salisbury, md 21801": {
+    "lat": 38.353889,
+    "lon": -75.606256
+  },
+  "3529 edmondson ave, baltimore, md 21229": {
+    "lat": 39.2937368,
+    "lon": -76.6767688
+  },
+  "6000 davis boulevard, suitland, md 20746": null,
+  "211 maryland park drive, capitol heights, md 20743": null,
+  "65 massachusetts avenue northwest, washington, dc 20001": {
+    "lat": 38.8986841,
+    "lon": -77.0110822
+  },
+  "6706 marlboro pike, district heights, md 20747": {
+    "lat": 38.8524257,
+    "lon": -76.8896949
+  },
+  "4201 brinkley road, towson, md 20748": null,
+  "12301 old columbia pike, 1st floor, silver spring, md 20904": null,
+  "8310 fort foote, fort washington, md 20744": {
+    "lat": 38.774834,
+    "lon": -77.0240859
+  },
+  "110 ritchie highway, pasadena, md 21122": {
+    "lat": 39.1104635,
+    "lon": -76.5757591
+  },
+  "725 main street, reisterstown, md 21136": {
+    "lat": 39.4522039,
+    "lon": -76.8198048
+  },
+  "8501 jericho city drive, hyattsville, md 20785": {
+    "lat": 38.907735,
+    "lon": -76.8559316
+  },
+  "10140 sutherland road, silver spring, md 20901": {
+    "lat": 39.0134978,
+    "lon": -77.0190887
+  },
+  "20021 aircraft drive, germantown, md 20874": {
+    "lat": 39.1858897,
+    "lon": -77.2636891
+  },
+  "3011 ross avenue, sparrows point, md 21219": {
+    "lat": 39.2409127,
+    "lon": -76.4493997
+  },
+  "17821 elgin road, poolesville, md 20837": {
+    "lat": 39.1480868,
+    "lon": -77.4138941
+  },
+  "7000 rossville boulevard, rosedale, md 21237": {
+    "lat": 39.3398153,
+    "lon": -76.4860778
+  },
+  "4924 wyaconda road, rockville, md 20852": null,
+  "5340 baltimore avenue, hyattsville, md 20781": {
+    "lat": 38.9551316,
+    "lon": -76.940885
+  },
+  "2120 industrial parkway, silver spring, md 20904": null,
+  "601 washington avenue, hagerstown, md 21740": {
+    "lat": 39.646552,
+    "lon": -77.730007
+  },
+  "12430 scaggsville road, highland, md 20777": {
+    "lat": 39.1676448,
+    "lon": -76.9443123
+  },
+  "6948 dogwood road, windsor mill, md 21244": null,
+  "3701 fourth street, brooklyn, md 21225": null,
+  "1407 bolton street, baltimore, md 21217": {
+    "lat": 39.30636,
+    "lon": -76.625081
+  },
+  "23 north court street, westminster, md 21157": {
+    "lat": 39.5703792,
+    "lon": -76.989148
+  },
+  "836 regency drive, virginia beach, va 23454": {
+    "lat": 36.85397,
+    "lon": -76.0340073
+  },
+  "11484 washington plaza west, suite 210, reston, va 20190": null,
+  "154 north main street, harrisonburg, va 22802": {
+    "lat": 38.4509185,
+    "lon": -78.868089
+  },
+  "8951 courthouse road, spotsylvania courthouse, va 22553": {
+    "lat": 38.2071535,
+    "lon": -77.5812112
+  },
+  "1400 idlewood avenue, richmond, va 23220": {
+    "lat": 37.5431361,
+    "lon": -77.4598983
+  },
+  "7511 fordson road, alexandria, va 22306": null,
+  "6037 franconia road, alexandria, va 22310": null,
+  "3601 russell road, alexandria, va 22305": {
+    "lat": 38.8372754,
+    "lon": -77.0648158
+  },
+  "2700 19th street south, arlington, va 22204": {
+    "lat": 38.8541288,
+    "lon": -77.0831513
+  },
+  "402 4th street southeast, roanoke, va 24013": {
+    "lat": 37.2699791,
+    "lon": -79.9349252
+  },
+  "14160 ferndale road, woodbridge, va 22193": {
+    "lat": 38.6463615,
+    "lon": -77.3212012
+  },
+  "20850": {
+    "lat": 39.0862697,
+    "lon": -77.1854691
+  },
+  "21629": {
+    "lat": 38.8745329,
+    "lon": -75.8303794
+  },
+  "21920": {
+    "lat": 39.6567326,
+    "lon": -75.8268068
+  },
+  "21872": {
+    "lat": 38.3961647,
+    "lon": -75.2974677
+  },
+  "21921": {
+    "lat": 39.6239568,
+    "lon": -75.8558715
+  },
+  "21643": {
+    "lat": 38.6400478,
+    "lon": -75.870304
+  },
+  "21045": {
+    "lat": 39.2033764,
+    "lon": -76.8297879
+  },
+  "21520": {
+    "lat": 39.6260859,
+    "lon": -79.3051682
+  },
+  "21740": {
+    "lat": 39.6335286,
+    "lon": -77.7376887
+  },
+  "21804": {
+    "lat": 38.3578558,
+    "lon": -75.563971
+  },
+  "21219": {
+    "lat": 39.2318748,
+    "lon": -76.4445241
+  },
+  "21795": {
+    "lat": 39.5991739,
+    "lon": -77.8053017
+  },
+  "21826": {
+    "lat": 38.3231233,
+    "lon": -75.6205889
+  },
+  "20733": {
+    "lat": 38.8019777,
+    "lon": -76.5296649
+  },
+  "21737": {
+    "lat": 39.2604384,
+    "lon": -77.0109793
+  },
+  "21040": {
+    "lat": 39.4316475,
+    "lon": -76.3068187
+  },
+  "21668": {
+    "lat": 39.1864054,
+    "lon": -75.8563465
+  },
+  "21851": {
+    "lat": 38.0693007,
+    "lon": -75.5532277
+  },
+  "21853": {
+    "lat": 38.2057865,
+    "lon": -75.7108674
+  },
+  "21046": {
+    "lat": 39.1717623,
+    "lon": -76.8504871
+  },
+  "21244": {
+    "lat": 39.3340878,
+    "lon": -76.7654397
+  },
+  "21502": {
+    "lat": 39.6464226,
+    "lon": -78.789145
+  },
+  "21061": {
+    "lat": 39.1550452,
+    "lon": -76.6314931
+  },
+  "21660": {
+    "lat": 38.9395045,
+    "lon": -75.8685878
+  },
+  "21651": {
+    "lat": 39.2504421,
+    "lon": -75.8680661
+  },
+  "21104": {
+    "lat": 39.32423,
+    "lon": -76.9118732
+  },
+  "21802": {
+    "lat": 38.3822106,
+    "lon": -75.5956078
+  },
+  "20777": {
+    "lat": 39.1791721,
+    "lon": -76.9651874
+  },
+  "20653": {
+    "lat": 38.2550965,
+    "lon": -76.4552693
+  },
+  "21875": {
+    "lat": 38.4414437,
+    "lon": -75.5581541
+  },
+  "21035": {
+    "lat": 38.9269272,
+    "lon": -76.6223479
+  },
+  "21811": {
+    "lat": 38.3481995,
+    "lon": -75.1735844
+  },
+  "21863": {
+    "lat": 38.1759932,
+    "lon": -75.3944613
+  },
+  "21843": {
+    "lat": 38.3614853,
+    "lon": -75.0711725
+  },
+  "21842": {
+    "lat": 38.3893239,
+    "lon": -75.0740169
+  },
+  "21801": {
+    "lat": 38.3668822,
+    "lon": -75.6102983
+  },
+  "21830": {
+    "lat": 38.4116758,
+    "lon": -75.6903416
+  },
+  "21562": {
+    "lat": 39.4842495,
+    "lon": -79.0291902
+  },
+  "21227": {
+    "lat": 39.2432094,
+    "lon": -76.6752431
+  },
+  "21915": {
+    "lat": 39.5136733,
+    "lon": -75.8416359
+  },
+  "21207": {
+    "lat": 39.3245631,
+    "lon": -76.720406
+  },
+  "21075": {
+    "lat": 39.1973739,
+    "lon": -76.7601845
+  },
+  "21550": {
+    "lat": 39.4207986,
+    "lon": -79.3830235
+  },
+  "21770": {
+    "lat": 39.3518207,
+    "lon": -77.2676235
+  },
+  "21769": {
+    "lat": 39.4388686,
+    "lon": -77.5339072
+  },
+  "21157": {
+    "lat": 39.562413,
+    "lon": -76.9876308
+  },
+  "21901": {
+    "lat": 39.6123713,
+    "lon": -75.9613959
+  },
+  "21601": {
+    "lat": 38.7772316,
+    "lon": -76.0866238
+  },
+  "20613": {
+    "lat": 38.6921909,
+    "lon": -76.8544071
+  },
+  "21226": {
+    "lat": 39.2222679,
+    "lon": -76.5831916
+  },
+  "20715": {
+    "lat": 38.9802883,
+    "lon": -76.7433085
+  },
+  "21758": {
+    "lat": 39.3501547,
+    "lon": -77.6857462
+  },
+  "21093": {
+    "lat": 39.4362574,
+    "lon": -76.6371071
+  },
+  "20662": {
+    "lat": 38.4395592,
+    "lon": -77.1903307
+  },
+  "21218": {
+    "lat": 39.3270465,
+    "lon": -76.6039441
+  },
+  "21767": {
+    "lat": 39.6996209,
+    "lon": -77.7392365
+  },
+  "21620": {
+    "lat": 39.2161457,
+    "lon": -76.0718521
+  },
+  "21225": {
+    "lat": 39.2367128,
+    "lon": -76.6106881
+  },
+  "21120": {
+    "lat": 39.6457324,
+    "lon": -76.6766957
+  },
+  "21787": {
+    "lat": 39.6560515,
+    "lon": -77.1666807
+  },
+  "20746": {
+    "lat": 38.8387011,
+    "lon": -76.9175949
+  },
+  "21402": {
+    "lat": 38.9912417,
+    "lon": -76.4786419
+  },
+  "21783": {
+    "lat": 39.652433,
+    "lon": -77.5793008
+  },
+  "21727": {
+    "lat": 39.6601968,
+    "lon": -77.2281996
+  },
+  "20650": {
+    "lat": 38.253609,
+    "lon": -76.613312
+  },
+  "20646": {
+    "lat": 38.5280274,
+    "lon": -76.9813856
+  },
+  "21001": {
+    "lat": 39.5102952,
+    "lon": -76.1826897
+  },
+  "21220": {
+    "lat": 39.3409406,
+    "lon": -76.4153677
+  },
+  "21122": {
+    "lat": 39.1237131,
+    "lon": -76.528944
+  },
+  "21228": {
+    "lat": 39.278215,
+    "lon": -76.7422935
+  },
+  "21532": {
+    "lat": 39.6478586,
+    "lon": -78.9286422
+  },
+  "20794": {
+    "lat": 39.153793,
+    "lon": -76.8040203
+  },
+  "20748": {
+    "lat": 38.8199138,
+    "lon": -76.9431018
+  },
+  "21230": {
+    "lat": 39.2713373,
+    "lon": -76.6228513
+  },
+  "20905": {
+    "lat": 39.1059059,
+    "lon": -76.9940633
+  },
+  "21536": {
+    "lat": 39.6775895,
+    "lon": -79.1687277
+  },
+  "21212": {
+    "lat": 39.3646665,
+    "lon": -76.6100095
+  },
+  "21871": {
+    "lat": 38.0921301,
+    "lon": -75.7429394
+  },
+  "21132": {
+    "lat": 39.6736865,
+    "lon": -76.4002513
+  },
+  "21409": {
+    "lat": 39.0259677,
+    "lon": -76.4514985
+  },
+  "20745": {
+    "lat": 38.8056992,
+    "lon": -76.9922604
+  },
+  "21074": {
+    "lat": 39.622264,
+    "lon": -76.8249969
+  },
+  "21797": {
+    "lat": 39.3164228,
+    "lon": -77.0708834
+  },
+  "20735": {
+    "lat": 38.7549376,
+    "lon": -76.8998196
+  },
+  "21102": {
+    "lat": 39.6788149,
+    "lon": -76.8219235
+  },
+  "21231": {
+    "lat": 39.2882864,
+    "lon": -76.5902033
+  },
+  "21014": {
+    "lat": 39.5327735,
+    "lon": -76.3480504
+  },
+  "20814": {
+    "lat": 39.0023966,
+    "lon": -77.1033656
+  },
+  "21663": {
+    "lat": 38.7867519,
+    "lon": -76.2254241
+  },
+  "21784": {
+    "lat": 39.3762654,
+    "lon": -76.9667276
+  },
+  "20688": {
+    "lat": 38.3363315,
+    "lon": -76.4592808
+  },
+  "20832": {
+    "lat": 39.1483578,
+    "lon": -77.071518
+  },
+  "21791": {
+    "lat": 39.5453025,
+    "lon": -77.1853931
+  },
+  "20716": {
+    "lat": 38.928327,
+    "lon": -76.728445
+  },
+  "24401": {
+    "lat": 38.1350759,
+    "lon": -79.0756406
+  },
+  "23434": {
+    "lat": 36.7387361,
+    "lon": -76.594639
+  },
+  "24439": {
+    "lat": 37.9959997,
+    "lon": -79.4828517
+  },
+  "24382": {
+    "lat": 36.95624,
+    "lon": -81.0577998
+  },
+  "23927": {
+    "lat": 36.6041356,
+    "lon": -78.5284008
+  },
+  "24151": {
+    "lat": 36.9824087,
+    "lon": -79.8816337
+  },
+  "24089": {
+    "lat": 36.7036154,
+    "lon": -79.955538
+  },
+  "24477": {
+    "lat": 38.019253,
+    "lon": -79.0298549
+  },
+  "24502": {
+    "lat": 37.3558619,
+    "lon": -79.2212639
+  },
+  "23454": {
+    "lat": 36.8262103,
+    "lon": -76.0213695
+  },
+  "23901": {
+    "lat": 37.3003658,
+    "lon": -78.3974623
+  },
+  "24141": {
+    "lat": 37.1298172,
+    "lon": -80.5574922
+  },
+  "24522": {
+    "lat": 37.3616354,
+    "lon": -78.8258783
+  },
+  "23185": {
+    "lat": 37.2590115,
+    "lon": -76.7071436
+  },
+  "23452": {
+    "lat": 36.838633,
+    "lon": -76.093646
+  },
+  "23661": {
+    "lat": 37.0073241,
+    "lon": -76.3805631
+  },
+  "23509": {
+    "lat": 36.8791429,
+    "lon": -76.2604524
+  },
+  "23602": {
+    "lat": 37.1140942,
+    "lon": -76.5185809
+  },
+  "23061": {
+    "lat": 37.4200787,
+    "lon": -76.5398451
+  },
+  "23072": {
+    "lat": 37.2912199,
+    "lon": -76.491432
+  },
+  "22601": {
+    "lat": 39.1706213,
+    "lon": -78.1732263
+  },
+  "24060": {
+    "lat": 37.2257493,
+    "lon": -80.4287822
+  },
+  "20166": {
+    "lat": 38.9756019,
+    "lon": -77.4525203
+  },
+  "24013": {
+    "lat": 37.264442,
+    "lon": -79.9236358
+  },
+  "23229": {
+    "lat": 37.595798,
+    "lon": -77.5650797
+  },
+  "24421": {
+    "lat": 38.2425306,
+    "lon": -79.1746517
+  },
+  "24482": {
+    "lat": 38.2019539,
+    "lon": -79.0006855
+  },
+  "24055": {
+    "lat": 36.7551545,
+    "lon": -79.9936734
+  },
+  "23834": {
+    "lat": 37.275286,
+    "lon": -77.4036447
+  },
+  "24201": {
+    "lat": 36.6084376,
+    "lon": -82.172754
+  },
+  "24588": {
+    "lat": 37.2743533,
+    "lon": -79.1239189
+  },
+  "24065": {
+    "lat": 37.1207689,
+    "lon": -79.9624644
+  },
+  "24015": {
+    "lat": 37.2575459,
+    "lon": -79.9800547
+  },
+  "22939": {
+    "lat": 38.1018216,
+    "lon": -78.9731157
+  },
+  "23323": {
+    "lat": 36.7514855,
+    "lon": -76.3361442
+  },
+  "23503": {
+    "lat": 36.9433411,
+    "lon": -76.2523733
+  },
+  "24087": {
+    "lat": 37.2283798,
+    "lon": -80.2443115
+  },
+  "24538": {
+    "lat": 37.3112344,
+    "lon": -78.9736579
+  },
+  "22801": {
+    "lat": 38.4286268,
+    "lon": -78.8712091
+  },
+  "23666": {
+    "lat": 37.0504477,
+    "lon": -76.4125724
+  },
+  "24153": {
+    "lat": 37.2964418,
+    "lon": -80.0747288
+  },
+  "23947": {
+    "lat": 37.0398073,
+    "lon": -78.4753744
+  },
+  "22812": {
+    "lat": 38.3645224,
+    "lon": -79.0162449
+  },
+  "23112": {
+    "lat": 37.4260983,
+    "lon": -77.6512611
+  },
+  "23504": {
+    "lat": 36.8597964,
+    "lon": -76.2669652
+  },
+  "22849": {
+    "lat": 38.5017859,
+    "lon": -78.6133519
+  },
+  "22401": {
+    "lat": 38.2958168,
+    "lon": -77.4813175
+  },
+  "22949": {
+    "lat": 37.7770334,
+    "lon": -78.864173
+  },
+  "22802": {
+    "lat": 38.4539357,
+    "lon": -78.8486732
+  },
+  "24572": {
+    "lat": 37.4599926,
+    "lon": -79.1153887
+  },
+  "22815": {
+    "lat": 38.6071913,
+    "lon": -78.7976101
+  },
+  "23607": {
+    "lat": 36.9882703,
+    "lon": -76.4153034
+  },
+  "24266": {
+    "lat": 36.8965251,
+    "lon": -82.078779
+  },
+  "24017": {
+    "lat": 37.2963188,
+    "lon": -79.9860556
+  },
+  "24574": {
+    "lat": 37.5414875,
+    "lon": -79.1976004
+  },
+  "23950": {
+    "lat": 36.675065,
+    "lon": -78.0947578
+  },
+  "23030": {
+    "lat": 37.3596449,
+    "lon": -77.1108412
+  },
+  "22712": {
+    "lat": 38.5575406,
+    "lon": -77.7686525
+  },
+  "24112": {
+    "lat": 36.6905104,
+    "lon": -79.8668474
+  },
+  "24121": {
+    "lat": 37.1675535,
+    "lon": -79.6396237
+  },
+  "22980": {
+    "lat": 38.0875407,
+    "lon": -78.9193457
+  },
+  "23505": {
+    "lat": 36.9142055,
+    "lon": -76.2836857
+  },
+  "22553": {
+    "lat": 38.2302184,
+    "lon": -77.6015362
+  },
+  "20190": {
+    "lat": 38.9635826,
+    "lon": -77.3390184
+  },
+  "24301": {
+    "lat": 37.0532402,
+    "lon": -80.7630521
+  },
+  "24091": {
+    "lat": 36.9161341,
+    "lon": -80.3224729
+  },
+  "24134": {
+    "lat": 37.2933168,
+    "lon": -80.7307149
+  },
+  "24073": {
+    "lat": 37.1584394,
+    "lon": -80.4345175
+  },
+  "24319": {
+    "lat": 36.7738825,
+    "lon": -81.663794
+  },
+  "23462": {
+    "lat": 36.841311,
+    "lon": -76.1542276
+  },
+  "23005": {
+    "lat": 37.7471709,
+    "lon": -77.4743656
+  },
+  "23325": {
+    "lat": 36.814195,
+    "lon": -76.2387191
+  },
+  "24426": {
+    "lat": 37.7762516,
+    "lon": -80.0060018
+  },
+  "24592": {
+    "lat": 36.6932947,
+    "lon": -78.9204912
+  },
+  "23464": {
+    "lat": 36.7978846,
+    "lon": -76.1768517
+  },
+  "23236": {
+    "lat": 37.4761199,
+    "lon": -77.5856927
+  },
+  "24179": {
+    "lat": 37.2774497,
+    "lon": -79.8000046
+  },
+  "23320": {
+    "lat": 36.7581553,
+    "lon": -76.2369048
+  },
+  "24521": {
+    "lat": 37.5956921,
+    "lon": -79.0642176
+  },
+  "23663": {
+    "lat": 37.0351201,
+    "lon": -76.3148058
+  },
+  "24486": {
+    "lat": 38.2860159,
+    "lon": -78.9232355
+  },
+  "24019": {
+    "lat": 37.3408211,
+    "lon": -79.9484849
+  },
+  "23608": {
+    "lat": 37.1511109,
+    "lon": -76.5429084
+  },
+  "23704": {
+    "lat": 36.8282743,
+    "lon": -76.316497
+  },
+  "24211": {
+    "lat": 36.6664575,
+    "lon": -81.9325791
+  },
+  "22306": {
+    "lat": 38.7572165,
+    "lon": -77.0903234
+  },
+  "23692": {
+    "lat": 37.1741595,
+    "lon": -76.4577199
+  },
+  "23803": {
+    "lat": 37.2204166,
+    "lon": -77.44612
+  },
+  "22630": {
+    "lat": 38.9564292,
+    "lon": -78.1702693
+  },
+  "23455": {
+    "lat": 36.8866221,
+    "lon": -76.1446803
+  },
+  "23169": {
+    "lat": 37.6006773,
+    "lon": -76.451968
+  },
+  "22310": {
+    "lat": 38.7853081,
+    "lon": -77.1157649
+  },
+  "23011": {
+    "lat": 37.4713301,
+    "lon": -76.8203052
+  },
+  "24245": {
+    "lat": 36.8284931,
+    "lon": -82.4696058
+  },
+  "24523": {
+    "lat": 37.326864,
+    "lon": -79.5206591
+  },
+  "24012": {
+    "lat": 37.3055538,
+    "lon": -79.9252216
+  },
+  "22846": {
+    "lat": 38.3840552,
+    "lon": -78.8028546
+  },
+  "24501": {
+    "lat": 37.3798603,
+    "lon": -79.1699897
+  },
+  "24541": {
+    "lat": 36.5799477,
+    "lon": -79.4656438
+  },
+  "22407": {
+    "lat": 38.2629876,
+    "lon": -77.549239
+  },
+  "24526": {
+    "lat": 37.5225697,
+    "lon": -79.3953174
+  },
+  "22973": {
+    "lat": 38.3043397,
+    "lon": -78.467995
+  },
+  "24210": {
+    "lat": 36.7189884,
+    "lon": -81.9989162
+  },
+  "22827": {
+    "lat": 38.4081638,
+    "lon": -78.6251683
+  },
+  "24504": {
+    "lat": 37.3917956,
+    "lon": -79.1081328
+  },
+  "24343": {
+    "lat": 36.7560505,
+    "lon": -80.7265569
+  },
+  "24554": {
+    "lat": 37.1414771,
+    "lon": -79.064235
+  },
+  "24635": {
+    "lat": 37.3051596,
+    "lon": -81.3428372
+  },
+  "24540": {
+    "lat": 36.6453083,
+    "lon": -79.4120552
+  },
+  "24016": {
+    "lat": 37.2697369,
+    "lon": -79.9514307
+  },
+  "23188": {
+    "lat": 37.3149061,
+    "lon": -76.7604806
+  },
+  "23701": {
+    "lat": 36.8095995,
+    "lon": -76.367904
+  },
+  "23604": {
+    "lat": 37.1563326,
+    "lon": -76.5785928
+  },
+  "23109": {
+    "lat": 37.4356341,
+    "lon": -76.3214857
+  },
+  "24630": {
+    "lat": 37.1353842,
+    "lon": -81.5118643
+  },
+  "23669": {
+    "lat": 37.0434757,
+    "lon": -76.3421059
+  },
+  "24450": {
+    "lat": 37.7897808,
+    "lon": -79.4655657
+  },
+  "24315": {
+    "lat": 37.1157991,
+    "lon": -81.1033427
+  },
+  "24333": {
+    "lat": 36.6586513,
+    "lon": -80.9124968
+  },
+  "22942": {
+    "lat": 38.0893272,
+    "lon": -78.1950858
+  },
+  "20175": {
+    "lat": 39.0932637,
+    "lon": -77.581391
+  },
+  "20851": {
+    "lat": 39.0766634,
+    "lon": -77.1225011
+  },
+  "20855": {
+    "lat": 39.1322876,
+    "lon": -77.1455224
+  },
+  "20860": {
+    "lat": 39.1443262,
+    "lon": -77.0311537
+  },
+  "20866": {
+    "lat": 39.1046278,
+    "lon": -76.9472897
+  },
+  "20879": {
+    "lat": 39.1637745,
+    "lon": -77.2009253
+  },
+  "20886": {
+    "lat": 39.1653598,
+    "lon": -77.2001678
+  },
+  "20841": {
+    "lat": 39.2069297,
+    "lon": -77.2974992
+  },
+  "20837": {
+    "lat": 39.1397042,
+    "lon": -77.4078905
+  }
+}

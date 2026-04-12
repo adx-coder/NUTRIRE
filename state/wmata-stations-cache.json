@@ -1,0 +1,913 @@
+[
+  {
+    "id": "A01",
+    "name": "Metro Center",
+    "lat": 38.8983,
+    "lon": -77.028,
+    "lines": [
+      "RD",
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "A02",
+    "name": "Farragut North",
+    "lat": 38.9039,
+    "lon": -77.0397,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A03",
+    "name": "Dupont Circle",
+    "lat": 38.9096,
+    "lon": -77.0434,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A04",
+    "name": "Woodley Park-Zoo/Adams Morgan",
+    "lat": 38.9248,
+    "lon": -77.0526,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A05",
+    "name": "Cleveland Park",
+    "lat": 38.9342,
+    "lon": -77.058,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A06",
+    "name": "Van Ness-UDC",
+    "lat": 38.9449,
+    "lon": -77.0632,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A07",
+    "name": "Tenleytown-AU",
+    "lat": 38.948,
+    "lon": -77.0796,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A08",
+    "name": "Friendship Heights",
+    "lat": 38.9601,
+    "lon": -77.0856,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A09",
+    "name": "Bethesda",
+    "lat": 38.9844,
+    "lon": -77.097,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A10",
+    "name": "Medical Center",
+    "lat": 38.9999,
+    "lon": -77.0969,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A11",
+    "name": "Grosvenor-Strathmore",
+    "lat": 39.029,
+    "lon": -77.1063,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A12",
+    "name": "White Flint",
+    "lat": 39.0483,
+    "lon": -77.1134,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A13",
+    "name": "Twinbrook",
+    "lat": 39.0625,
+    "lon": -77.1214,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A14",
+    "name": "Rockville",
+    "lat": 39.0847,
+    "lon": -77.1463,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "A15",
+    "name": "Shady Grove",
+    "lat": 39.1198,
+    "lon": -77.1644,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "B01",
+    "name": "Gallery Pl-Chinatown",
+    "lat": 38.8984,
+    "lon": -77.022,
+    "lines": [
+      "RD",
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "B02",
+    "name": "Judiciary Square",
+    "lat": 38.8963,
+    "lon": -77.0165,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "B03",
+    "name": "Union Station",
+    "lat": 38.8973,
+    "lon": -77.0067,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "B04",
+    "name": "Rhode Island Ave-Brentwood",
+    "lat": 38.9205,
+    "lon": -76.9948,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "B05",
+    "name": "Brookland-CUA",
+    "lat": 38.9335,
+    "lon": -76.9945,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "B06",
+    "name": "Fort Totten",
+    "lat": 38.9517,
+    "lon": -77.0023,
+    "lines": [
+      "RD",
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "B07",
+    "name": "Takoma",
+    "lat": 38.9764,
+    "lon": -77.0125,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "B08",
+    "name": "Silver Spring",
+    "lat": 38.994,
+    "lon": -77.031,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "B09",
+    "name": "Forest Glen",
+    "lat": 39.0149,
+    "lon": -77.0525,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "B10",
+    "name": "Wheaton",
+    "lat": 39.0347,
+    "lon": -77.0528,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "B11",
+    "name": "Glenmont",
+    "lat": 39.0621,
+    "lon": -77.053,
+    "lines": [
+      "RD"
+    ]
+  },
+  {
+    "id": "C01",
+    "name": "Metro Center",
+    "lat": 38.8983,
+    "lon": -77.028,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "C02",
+    "name": "McPherson Square",
+    "lat": 38.9018,
+    "lon": -77.0332,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "C03",
+    "name": "Farragut West",
+    "lat": 38.9008,
+    "lon": -77.0461,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "C04",
+    "name": "Foggy Bottom-GWU",
+    "lat": 38.9001,
+    "lon": -77.0502,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "C05",
+    "name": "Rosslyn",
+    "lat": 38.8963,
+    "lon": -77.0706,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "C06",
+    "name": "Arlington Cemetery",
+    "lat": 38.885,
+    "lon": -77.0637,
+    "lines": [
+      "BL"
+    ]
+  },
+  {
+    "id": "C07",
+    "name": "Pentagon",
+    "lat": 38.869,
+    "lon": -77.0534,
+    "lines": [
+      "BL",
+      "YL"
+    ]
+  },
+  {
+    "id": "C08",
+    "name": "Pentagon City",
+    "lat": 38.8626,
+    "lon": -77.0597,
+    "lines": [
+      "BL",
+      "YL"
+    ]
+  },
+  {
+    "id": "C09",
+    "name": "Crystal City",
+    "lat": 38.8576,
+    "lon": -77.0515,
+    "lines": [
+      "BL",
+      "YL"
+    ]
+  },
+  {
+    "id": "C10",
+    "name": "Ronald Reagan Washington National Airport",
+    "lat": 38.8527,
+    "lon": -77.0434,
+    "lines": [
+      "BL",
+      "YL"
+    ]
+  },
+  {
+    "id": "C11",
+    "name": "Potomac Yard",
+    "lat": 38.8437,
+    "lon": -77.049,
+    "lines": [
+      "BL",
+      "YL"
+    ]
+  },
+  {
+    "id": "C12",
+    "name": "Braddock Road",
+    "lat": 38.8136,
+    "lon": -77.0543,
+    "lines": [
+      "BL",
+      "YL"
+    ]
+  },
+  {
+    "id": "C13",
+    "name": "King St-Old Town",
+    "lat": 38.8049,
+    "lon": -77.0618,
+    "lines": [
+      "BL",
+      "YL"
+    ]
+  },
+  {
+    "id": "D01",
+    "name": "Federal Triangle",
+    "lat": 38.8932,
+    "lon": -77.0285,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "D02",
+    "name": "Smithsonian",
+    "lat": 38.8882,
+    "lon": -77.0282,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "D03",
+    "name": "L'Enfant Plaza",
+    "lat": 38.8845,
+    "lon": -77.0215,
+    "lines": [
+      "BL",
+      "OR",
+      "SV",
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "D04",
+    "name": "Federal Center SW",
+    "lat": 38.8851,
+    "lon": -77.0156,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "D05",
+    "name": "Capitol South",
+    "lat": 38.8852,
+    "lon": -77.0054,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "D06",
+    "name": "Eastern Market",
+    "lat": 38.8842,
+    "lon": -76.9969,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "D07",
+    "name": "Potomac Ave",
+    "lat": 38.8792,
+    "lon": -76.9896,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "D08",
+    "name": "Stadium-Armory",
+    "lat": 38.8867,
+    "lon": -76.9784,
+    "lines": [
+      "BL",
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "G01",
+    "name": "Benning Road",
+    "lat": 38.8906,
+    "lon": -76.9385,
+    "lines": [
+      "BL",
+      "SV"
+    ]
+  },
+  {
+    "id": "G02",
+    "name": "Capitol Heights",
+    "lat": 38.8888,
+    "lon": -76.9138,
+    "lines": [
+      "BL",
+      "SV"
+    ]
+  },
+  {
+    "id": "G03",
+    "name": "Addison Road-Seat Pleasant",
+    "lat": 38.8877,
+    "lon": -76.8975,
+    "lines": [
+      "BL",
+      "SV"
+    ]
+  },
+  {
+    "id": "G04",
+    "name": "Morgan Blvd",
+    "lat": 38.8938,
+    "lon": -76.8699,
+    "lines": [
+      "BL",
+      "SV"
+    ]
+  },
+  {
+    "id": "G05",
+    "name": "Largo Town Center",
+    "lat": 38.9003,
+    "lon": -76.8394,
+    "lines": [
+      "BL",
+      "SV"
+    ]
+  },
+  {
+    "id": "K01",
+    "name": "Court House",
+    "lat": 38.8914,
+    "lon": -77.0845,
+    "lines": [
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "K02",
+    "name": "Clarendon",
+    "lat": 38.8866,
+    "lon": -77.0963,
+    "lines": [
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "K03",
+    "name": "Virginia Square-GMU",
+    "lat": 38.8837,
+    "lon": -77.1045,
+    "lines": [
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "K04",
+    "name": "Ballston-MU",
+    "lat": 38.8822,
+    "lon": -77.1118,
+    "lines": [
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "K05",
+    "name": "East Falls Church",
+    "lat": 38.8853,
+    "lon": -77.1565,
+    "lines": [
+      "OR",
+      "SV"
+    ]
+  },
+  {
+    "id": "K06",
+    "name": "West Falls Church-VT/UVA",
+    "lat": 38.9001,
+    "lon": -77.1876,
+    "lines": [
+      "OR"
+    ]
+  },
+  {
+    "id": "K07",
+    "name": "Dunn Loring-Merrifield",
+    "lat": 38.8841,
+    "lon": -77.2284,
+    "lines": [
+      "OR"
+    ]
+  },
+  {
+    "id": "K08",
+    "name": "Vienna/Fairfax-GMU",
+    "lat": 38.8774,
+    "lon": -77.272,
+    "lines": [
+      "OR"
+    ]
+  },
+  {
+    "id": "N01",
+    "name": "McLean",
+    "lat": 38.9241,
+    "lon": -77.2094,
+    "lines": [
+      "SV"
+    ]
+  },
+  {
+    "id": "N02",
+    "name": "Tysons Corner",
+    "lat": 38.9205,
+    "lon": -77.2249,
+    "lines": [
+      "SV"
+    ]
+  },
+  {
+    "id": "N03",
+    "name": "Greensboro",
+    "lat": 38.9186,
+    "lon": -77.2358,
+    "lines": [
+      "SV"
+    ]
+  },
+  {
+    "id": "N04",
+    "name": "Spring Hill",
+    "lat": 38.9276,
+    "lon": -77.2425,
+    "lines": [
+      "SV"
+    ]
+  },
+  {
+    "id": "N06",
+    "name": "Wiehle-Reston East",
+    "lat": 38.9474,
+    "lon": -77.3406,
+    "lines": [
+      "SV"
+    ]
+  },
+  {
+    "id": "N07",
+    "name": "Reston Town Center",
+    "lat": 38.9581,
+    "lon": -77.3596,
+    "lines": [
+      "SV"
+    ]
+  },
+  {
+    "id": "N08",
+    "name": "Herndon",
+    "lat": 38.9682,
+    "lon": -77.3858,
+    "lines": [
+      "SV"
+    ]
+  },
+  {
+    "id": "N09",
+    "name": "Innovation Center",
+    "lat": 38.9812,
+    "lon": -77.4279,
+    "lines": [
+      "SV"
+    ]
+  },
+  {
+    "id": "N10",
+    "name": "Washington Dulles International Airport",
+    "lat": 38.9531,
+    "lon": -77.4477,
+    "lines": [
+      "SV"
+    ]
+  },
+  {
+    "id": "N11",
+    "name": "Loudoun Gateway",
+    "lat": 39.0,
+    "lon": -77.4847,
+    "lines": [
+      "SV"
+    ]
+  },
+  {
+    "id": "N12",
+    "name": "Ashburn",
+    "lat": 39.0124,
+    "lon": -77.4879,
+    "lines": [
+      "SV"
+    ]
+  },
+  {
+    "id": "E01",
+    "name": "Mt Vernon Sq 7th St-Convention Center",
+    "lat": 38.9054,
+    "lon": -77.0224,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "E02",
+    "name": "Shaw-Howard U",
+    "lat": 38.9126,
+    "lon": -77.022,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "E03",
+    "name": "U Street/African-Amer Civil War Memorial/Cardozo",
+    "lat": 38.9167,
+    "lon": -77.0286,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "E04",
+    "name": "Columbia Heights",
+    "lat": 38.9282,
+    "lon": -77.0327,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "E05",
+    "name": "Georgia Ave-Petworth",
+    "lat": 38.9378,
+    "lon": -77.0248,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "E06",
+    "name": "Fort Totten",
+    "lat": 38.9517,
+    "lon": -77.0023,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "F01",
+    "name": "Gallery Pl-Chinatown",
+    "lat": 38.8984,
+    "lon": -77.022,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "F02",
+    "name": "Archives-Navy Mem-Penn Quarter",
+    "lat": 38.8935,
+    "lon": -77.0213,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "F03",
+    "name": "L'Enfant Plaza",
+    "lat": 38.8845,
+    "lon": -77.0215,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "F04",
+    "name": "Waterfront",
+    "lat": 38.8762,
+    "lon": -77.0175,
+    "lines": [
+      "GR"
+    ]
+  },
+  {
+    "id": "F05",
+    "name": "Navy Yard-Ballpark",
+    "lat": 38.8765,
+    "lon": -77.0053,
+    "lines": [
+      "GR"
+    ]
+  },
+  {
+    "id": "F06",
+    "name": "Anacostia",
+    "lat": 38.8631,
+    "lon": -76.9952,
+    "lines": [
+      "GR"
+    ]
+  },
+  {
+    "id": "F07",
+    "name": "Congress Heights",
+    "lat": 38.8458,
+    "lon": -76.9952,
+    "lines": [
+      "GR"
+    ]
+  },
+  {
+    "id": "F08",
+    "name": "Southern Avenue",
+    "lat": 38.8399,
+    "lon": -76.9763,
+    "lines": [
+      "GR"
+    ]
+  },
+  {
+    "id": "F09",
+    "name": "Naylor Road",
+    "lat": 38.851,
+    "lon": -76.9566,
+    "lines": [
+      "GR"
+    ]
+  },
+  {
+    "id": "F10",
+    "name": "Suitland",
+    "lat": 38.8434,
+    "lon": -76.9327,
+    "lines": [
+      "GR"
+    ]
+  },
+  {
+    "id": "F11",
+    "name": "Branch Ave",
+    "lat": 38.8281,
+    "lon": -76.9123,
+    "lines": [
+      "GR"
+    ]
+  },
+  {
+    "id": "C14",
+    "name": "Eisenhower Avenue",
+    "lat": 38.8004,
+    "lon": -77.0774,
+    "lines": [
+      "YL"
+    ]
+  },
+  {
+    "id": "C15",
+    "name": "Huntington",
+    "lat": 38.7944,
+    "lon": -77.0754,
+    "lines": [
+      "YL"
+    ]
+  },
+  {
+    "id": "E07",
+    "name": "West Hyattsville",
+    "lat": 38.9547,
+    "lon": -76.9748,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "E08",
+    "name": "Prince George's Plaza",
+    "lat": 38.9647,
+    "lon": -76.9568,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "E09",
+    "name": "College Park-U of Md",
+    "lat": 38.978,
+    "lon": -76.9284,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  },
+  {
+    "id": "E10",
+    "name": "Greenbelt",
+    "lat": 39.0111,
+    "lon": -76.9114,
+    "lines": [
+      "GR",
+      "YL"
+    ]
+  }
+]

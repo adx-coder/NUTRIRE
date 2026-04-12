@@ -1,0 +1,6609 @@
+{
+  "stats": {
+    "total": 50,
+    "with_geo": 50,
+    "alerts_found": 0,
+    "travel_alerts": 0,
+    "cache_hits": 0,
+    "api_calls": 48,
+    "no_geo": 0
+  },
+  "total": 50,
+  "records": [
+    {
+      "source_id": "mocofood",
+      "name": "Silver Spring Christian Reformed Church",
+      "address": "1501 Arcola Avenue, Silver Spring, 20902",
+      "zip": "20902",
+      "phone": "(301) 284-8401",
+      "website": "http://sscrc.org",
+      "hours": "2nd Tuesday of each month, 3PM-5PM",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "baby_supplies",
+        "bread_bakery",
+        "protein"
+      ],
+      "requirements": [
+        "walk_in",
+        "no_id_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "languages": [
+        "French",
+        "Spanish"
+      ],
+      "raw_text": "Silver Spring Christian Reformed Church | Address: 1501 Arcola Avenue, Silver Spring, 20902 | Phone: (301) 284-8401 | Website: http://sscrc.org | Hours: 2nd Tuesday of each month, 3PM-5PM | Type: Pre-Packed Pantry Items | Accessibility: Walk-in | Languages: French, Spanish | Features: Fresh Produce | Also offers toiletries and culturally relevant foods.",
+      "heroCopy": "Free essential groceries for families — walk in anytime during hours.",
+      "firstVisitGuide": [
+        "Arrive between 3-5 PM on the second Tuesday monthly.",
+        "Bring your ID if comfortable, though none required.",
+        "Explore shared meals and connections with welcoming volunteers."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "culturalNotes": "Culturally relevant foods included for diverse community.",
+      "toneScore": 0.74,
+      "accepts_food_donations": true,
+      "accepts_money_donations": true,
+      "accepts_volunteers": true,
+      "donate_url": "http://sscrc.org",
+      "source_ids": [
+        "mocofood",
+        "two11md",
+        "cafb"
+      ],
+      "cross_source_count": 3,
+      "city": "Silver Spring",
+      "state": "MD",
+      "reconciliation_warnings": [
+        "Hours differ between sources -- showing most trusted.",
+        "Some sources say walk-in, others say appointment needed."
+      ],
+      "lat": 39.045912,
+      "lon": -77.031094,
+      "id": "org_mocofood__silver-spring-christian-reformed-church",
+      "hours_structured": null,
+      "reliability": {
+        "tier": "fresh",
+        "score": 1.0,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "University Bl+University Towers",
+      "nearestTransitId": "2000474",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M12"
+      ],
+      "transitDistanceMeters": 1422,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "2000474",
+          "route": "M12",
+          "all_routes": [
+            "M12"
+          ],
+          "stop_name": "University Bl+University Towers",
+          "lat": 39.036178,
+          "lon": -77.027638,
+          "walk_distance_m": 1422,
+          "walk_minutes": 18,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 18,
+        "reachable_hours_of_week": [],
+        "transit_summary": "18-min walk to Route M12 bus",
+        "enriched_at": "2026-04-12T15:43:25Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Breath of Life SDA Church",
+      "address": "11310 Fort Washington Road, Fort Washington, MD 20744",
+      "city": "Fort Washington",
+      "state": "MD",
+      "zip": "20744",
+      "phone": "(301) 292-2100",
+      "hours": "Wed: 9:30 AM to 5:00 PM; 2nd of the Month (Note: In case of emergency needs, contact the church secretary.)",
+      "requirements": [
+        "appointment_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Breath of Life SDA Church | Address: 11310 Fort Washington Road, Fort Washington, MD 20744 | Phone: (301) 292-2100 | Email: community.service@bolchurchmd.org | Hours: Wed: 9:30 AM to 5:00 PM; 2nd of the Month (Note: In case of emergency needs, contact the church secretary.) | TEFAP: Non-TEFAP | Wed notes:  (Note: In case of emergency needs, contact the church secretary.) | Wed reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Reliable food pantry with pantry staples, open to all.",
+      "firstVisitGuide": [
+        "Call ahead for an appointment—it ensures your visit runs smoothly.",
+        "Bring any ID if you have it, though none is strictly required.",
+        "Ask about emergency needs if you’re facing urgent food shortages."
+      ],
+      "plainEligibility": "Everyone welcome. Call for an appointment—no strict requirements.",
+      "toneScore": 0.8,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.739571,
+      "lon": -77.000027,
+      "id": "org_cafb__breath-of-life-sda-church",
+      "hours_structured": [
+        {
+          "day": "wed",
+          "open": "09:30",
+          "close": "17:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Ft Washington Rd+#11310",
+      "nearestTransitId": "3000123",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P97"
+      ],
+      "transitDistanceMeters": 135,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3000123",
+          "route": "P97",
+          "all_routes": [
+            "P97"
+          ],
+          "stop_name": "Ft Washington Rd+#11310",
+          "lat": 38.740065,
+          "lon": -77.001035,
+          "walk_distance_m": 135,
+          "walk_minutes": 2,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 2,
+        "reachable_hours_of_week": [],
+        "transit_summary": "2-min walk to Route P97 bus",
+        "enriched_at": "2026-04-12T15:43:29Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "ISKCON of Washington",
+      "address": "10310 Oaklyn Dr, Potomac, MD 20854",
+      "city": "Potomac",
+      "state": "MD",
+      "zip": "20854",
+      "phone": "(301) 299-2100",
+      "hours": "Mon: 1:00 PM to 2:00 PM; Every week; 6:00 PM to 7:00 PM; Every week, Tue: 1:00 PM to 2:00 PM; Every week; 6:00 PM to 7:00 PM; Every week, Wed: 1:00 PM to 2:00 PM; Every week; 6:00 PM to 7:00 PM; Every week, Thu: 1:00 PM to 2:00 PM; Every week; 6:00 PM to 7:00 PM; Every week, Fri: 1:00 PM to 2:00 PM; Every week; 6:00 PM to 7:00 PM; Every week, Sat: 1:00 PM to 7:00 PM; Every week, Sun: 2:00 PM to 7:00 PM; Every week",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "ISKCON of Washington | Address: 10310 Oaklyn Dr, Potomac, MD 20854 | Phone: (301) 299-2100 | Email: sharmilabcs@gmail.com | Hours: Mon: 1:00 PM to 2:00 PM; Every week; 6:00 PM to 7:00 PM; Every week, Tue: 1:00 PM to 2:00 PM; Every week; 6:00 PM to 7:00 PM; Every week, Wed: 1:00 PM to 2:00 PM; Every week; 6:00 PM to 7:00 PM; Every week, Thu: 1:00 PM to 2:00 PM; Every week; 6:00 PM to 7:00 PM; Every week, Fri: 1:00 PM to 2:00 PM; Every week; 6:00 PM to 7:00 PM; Every week, Sat: 1:00 PM to 7:00 PM; Every week, Sun: 2:00 PM to 7:00 PM; Every week | TEFAP: Non-TEFAP | Mon notes: \r\n | Mon reqs:  \r\n  | Tue notes: \r\n | Tue reqs:  \r\n  | Wed notes: \r\n | Wed reqs:  \r\n  | Thu notes: \r\n | Thu reqs:  \r\n  | Fri notes: \r\n | Fri reqs:  \r\n  | Sat reqs:   | Sun reqs:  ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein",
+        "frozen"
+      ],
+      "languages": [
+        "Spanish",
+        "Chinese"
+      ],
+      "heroCopy": "A place to nourish bodies and spirits with kindness and shared meals.",
+      "firstVisitGuide": [
+        "Arrive during open hours for a warm welcome.",
+        "No appointment needed—just come as you are.",
+        "Ask about seasonal offerings and community events."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.78,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 39.002361,
+      "lon": -77.214153,
+      "id": "org_cafb__iskcon-of-washington",
+      "hours_structured": [
+        {
+          "day": "mon",
+          "open": "13:00",
+          "close": "14:00"
+        },
+        {
+          "day": "tue",
+          "open": "13:00",
+          "close": "14:00"
+        },
+        {
+          "day": "wed",
+          "open": "13:00",
+          "close": "14:00"
+        },
+        {
+          "day": "thu",
+          "open": "13:00",
+          "close": "14:00"
+        },
+        {
+          "day": "fri",
+          "open": "13:00",
+          "close": "14:00"
+        },
+        {
+          "day": "sat",
+          "open": "13:00",
+          "close": "19:00"
+        },
+        {
+          "day": "sun",
+          "open": "14:00",
+          "close": "19:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "River Rd+Counselman Rd",
+      "nearestTransitId": "2000328",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M82"
+      ],
+      "transitDistanceMeters": 2843,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "2000328",
+          "route": "M82",
+          "all_routes": [
+            "M82"
+          ],
+          "stop_name": "River Rd+Counselman Rd",
+          "lat": 39.016978,
+          "lon": -77.207387,
+          "walk_distance_m": 2843,
+          "walk_minutes": 36,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 36,
+        "reachable_hours_of_week": [],
+        "transit_summary": "36-min walk to Route M82 bus",
+        "enriched_at": "2026-04-12T15:43:35Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "New Hope and Life Church of God, Inc.",
+      "address": "8616 Edgeworth Drive, Capitol Heights, MD 20743",
+      "city": "Capitol Heights",
+      "state": "MD",
+      "zip": "20743",
+      "phone": "(301) 324-5200",
+      "hours": "Wed: 10:00 AM to Until Food Runs Out; Every week (Note: Appointments can be made in case of emergency)",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "New Hope and Life Church of God, Inc. | Address: 8616 Edgeworth Drive, Capitol Heights, MD 20743 | Phone: (301) 324-5200 | Email: newhopeandlifechurchofgod@gmail.com | Hours: Wed: 10:00 AM to Until Food Runs Out; Every week (Note: Appointments can be made in case of emergency) | TEFAP: TEFAP Available | Wed notes:  (Note: Appointments can be made in case of emergency) | Wed reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "A warm welcome and essential groceries — come as you are.",
+      "firstVisitGuide": [
+        "Call ahead to schedule an appointment, especially for emergencies.",
+        "Arrive by 10 AM to access food before it runs out.",
+        "Bring any proof needed for TEFAP if applicable."
+      ],
+      "plainEligibility": "TEFAP assistance available—call to confirm details.",
+      "toneScore": 0.73,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.880922,
+      "lon": -76.856369,
+      "id": "org_cafb__new-hope-and-life-church-of-god-inc",
+      "hours_structured": null,
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Central Av+Ritchie Rd",
+      "nearestTransitId": "3000988",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P63"
+      ],
+      "transitDistanceMeters": 1437,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "G04",
+          "name": "Morgan Blvd",
+          "lines": [
+            "BL",
+            "SV"
+          ],
+          "lat": 38.8938,
+          "lon": -76.8699,
+          "walk_distance_m": 2623,
+          "walk_minutes": 33,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3000988",
+          "route": "P63",
+          "all_routes": [
+            "P63"
+          ],
+          "stop_name": "Central Av+Ritchie Rd",
+          "lat": 38.88969,
+          "lon": -76.861715,
+          "walk_distance_m": 1437,
+          "walk_minutes": 18,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 33,
+        "walk_minutes_to_bus": 18,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "33-min walk to Morgan Blvd (BL/SV line); 18-min walk to Route P63 bus",
+        "enriched_at": "2026-04-12T15:43:42Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "St. Matthias Catholic Church",
+      "address": "9475 Annapolis, Lanham, MD 20706",
+      "city": "Lanham",
+      "state": "MD",
+      "zip": "20706",
+      "phone": "(301) 325-6843",
+      "hours": "Fri: 9:00 AM to Until Food Runs Out; 2nd and 4th of the Month (Note: Service Insights ID card)",
+      "requirements": [
+        "walk_in",
+        "photo_id"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "St. Matthias Catholic Church | Address: 9475 Annapolis, Lanham, MD 20706 | Phone: (301) 325-6843 | Email: ezaldivar@stmatthias.org | Hours: Fri: 9:00 AM to Until Food Runs Out; 2nd and 4th of the Month (Note: Service Insights ID card) | TEFAP: Non-TEFAP | Fri notes:  (Note: Service Insights ID card) | Fri reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Fresh fresh produce and a friendly face at this local food pantry.",
+      "firstVisitGuide": [
+        "Bring a photo ID to access services.",
+        "Arrive by 9 AM for best selection.",
+        "Check availability—food ends when supplies run out."
+      ],
+      "plainEligibility": "Photo ID required. Everyone welcome.",
+      "toneScore": 0.79,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.963835,
+      "lon": -76.840698,
+      "id": "org_cafb__st-matthias-catholic-church",
+      "hours_structured": null,
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Lanham-Severn Rd+94 Av",
+      "nearestTransitId": "3001995",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P20"
+      ],
+      "transitDistanceMeters": 1536,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3001995",
+          "route": "P20",
+          "all_routes": [
+            "P20"
+          ],
+          "stop_name": "Lanham-Severn Rd+94 Av",
+          "lat": 38.971775,
+          "lon": -76.847669,
+          "walk_distance_m": 1536,
+          "walk_minutes": 19,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 19,
+        "reachable_hours_of_week": [],
+        "transit_summary": "19-min walk to Route P20 bus",
+        "enriched_at": "2026-04-12T15:43:47Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Centro de Apoyo Familiar (CAF)",
+      "address": "13923 Minnieville Road, Woodbridge, VA 22193",
+      "city": "Woodbridge",
+      "state": "VA",
+      "zip": "22193",
+      "phone": "(301) 328-3292",
+      "hours": "Fri: 12:00 PM to 2:00 PM; Every week, Sat: 10:00 AM to 1:00 PM; As Needed",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Centro de Apoyo Familiar (CAF) | Address: 13923 Minnieville Road, Woodbridge, VA 22193 | Phone: (301) 328-3292 | Email: wpool@mycaf.org | Hours: Fri: 12:00 PM to 2:00 PM; Every week, Sat: 10:00 AM to 1:00 PM; As Needed | TEFAP: Non-TEFAP | Fri reqs:   | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "A place where families find nourishment and support together.",
+      "firstVisitGuide": [
+        "Arrive during open hours for immediate assistance.",
+        "No appointment needed—just walk in with your family.",
+        "Staff will guide you through available resources kindly."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.8,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.649646,
+      "lon": -77.327231,
+      "id": "org_cafb__centro-de-apoyo-familiar-caf",
+      "hours_structured": [
+        {
+          "day": "fri",
+          "open": "12:00",
+          "close": "14:00"
+        },
+        {
+          "day": "sat",
+          "open": "10:00",
+          "close": "13:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": null,
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": null,
+        "reachable_hours_of_week": [],
+        "transit_summary": "No WMATA transit within 2 km",
+        "enriched_at": "2026-04-12T15:43:47Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "mocofood",
+      "name": "Nourish Now",
+      "address": "397 East Gude Drive, Rockville, 20850",
+      "zip": "20850",
+      "phone": "(301) 330-0222",
+      "website": "http://nourishnow.org",
+      "hours": "Hours and distribution locations vary. No distribution at main address. Please call or check website.",
+      "food_types": [
+        "produce",
+        "protein",
+        "canned_goods",
+        "baby_supplies",
+        "frozen",
+        "dairy",
+        "bread_bakery"
+      ],
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "hot_meals",
+        "snap_assistance",
+        "mobile_pantry"
+      ],
+      "languages": [
+        "Spanish",
+        "Arabic"
+      ],
+      "raw_text": "Nourish Now | Address: 397 East Gude Drive, Rockville, 20850 | Phone: (301) 330-0222 | Website: http://nourishnow.org | Hours: Hours and distribution locations vary. No distribution at main address. Please call or check website. | Type: Pre-Packed Pantry Items, Prepared Meals | Accessibility: Walk-in | Languages: Spanish | Features: Special Diet Accommodations, Fresh Produce, Other Services Offered | Our distribution locations are first come first serve. We also have Arabic and Farsi language accommodations as well as baby food, toiletries, and diapers. Community distributions (confirm locations and times at https://nourishnow.org/receive-food-assistance/): Faith Community Baptist Church: 13618 Layhill Road, Silver Spring, MD 20906,  1st Tuesday of the Month Only  12:00 – 1:00 PM Mt. Calvary Baptist Church: 608 N Horners Lane, Rockville, MD 20850, Every Tuesday  1:00 – 2:00 PM People’s Community Baptist Church: 31 Norwood Road, Silver Spring, MD 20905, Every Wednesday  1:00 – 2:00 PM First Baptist Church Ken-Gar: 3922 Hampden Street, Kensington, MD 20895 , 2nd Wednesday of the Month Only  1:30 – 2:30 PM Washington Grove Elementary School: 8712 Oakmont Street, Gaithersburg, MD 20877, Every Thursday  1:30 – 2:30 PM",
+      "heroCopy": "Reliable food pantry with fresh food, open to all.",
+      "firstVisitGuide": [
+        "Check website for distribution locations and times.",
+        "Arrive early—first-come, first-served distribution.",
+        "Bring your whole household for a full five-day supply."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.75,
+      "accepts_food_donations": true,
+      "accepts_money_donations": true,
+      "accepts_volunteers": true,
+      "donate_url": "http://nourishnow.org",
+      "volunteer_url": "http://nourishnow.org",
+      "source_ids": [
+        "mocofood",
+        "cafb"
+      ],
+      "cross_source_count": 2,
+      "city": "Rockville",
+      "state": "MD",
+      "reconciliation_warnings": [
+        "Hours differ between sources -- showing most trusted.",
+        "Some sources say walk-in, others say appointment needed."
+      ],
+      "lat": 39.106314,
+      "lon": -77.152119,
+      "id": "org_mocofood__nourish-now",
+      "hours_structured": null,
+      "reliability": {
+        "tier": "fresh",
+        "score": 1.0,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": null,
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": null,
+        "reachable_hours_of_week": [],
+        "transit_summary": "No WMATA transit within 2 km",
+        "enriched_at": "2026-04-12T15:43:49Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Impact One Church",
+      "address": "7230 Central Avenue, Capitol Heights, MD 20743",
+      "city": "Capitol Heights",
+      "state": "MD",
+      "zip": "20743",
+      "phone": "(301) 333-2083",
+      "hours": "Sat: 11:00 AM to 2:00 PM; 2nd and 4th of the Month (Note: 11 - until supplies last, please stress that client must register and receive an appointment  timeahead of time at this link: impactonechurch.churchcenter.com)",
+      "requirements": [
+        "appointment_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Impact One Church | Address: 7230 Central Avenue, Capitol Heights, MD 20743 | Phone: (301) 333-2083 | Email: marie.king@impactonechurch.org | Hours: Sat: 11:00 AM to 2:00 PM; 2nd and 4th of the Month (Note: 11 - until supplies last, please stress that client must register and receive an appointment  timeahead of time at this link: impactonechurch.churchcenter.com) | TEFAP: Non-TEFAP | Sat notes:  (Note: 11 - until supplies last, please stress that client must register and receive an appointment  timeahead of time at this link: impactonechurch.churchcenter.com) | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "A warm welcome and nutritious food — come as you are.",
+      "firstVisitGuide": [
+        "Register online for an appointment before visiting.",
+        "Arrive by 11 AM to access available supplies.",
+        "Bring any required documentation for smooth service."
+      ],
+      "plainEligibility": "Register online for an appointment slot first.",
+      "toneScore": 0.49,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.88842,
+      "lon": -76.881084,
+      "id": "org_cafb__impact-one-church",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "11:00",
+          "close": "14:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Central Av+Gentry Ln",
+      "nearestTransitId": "3002862",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P62",
+        "P63"
+      ],
+      "transitDistanceMeters": 129,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "G03",
+          "name": "Addison Road-Seat Pleasant",
+          "lines": [
+            "BL",
+            "SV"
+          ],
+          "lat": 38.8877,
+          "lon": -76.8975,
+          "walk_distance_m": 1699,
+          "walk_minutes": 21,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3002862",
+          "route": "P62",
+          "all_routes": [
+            "P62",
+            "P63"
+          ],
+          "stop_name": "Central Av+Gentry Ln",
+          "lat": 38.888066,
+          "lon": -76.882026,
+          "walk_distance_m": 129,
+          "walk_minutes": 2,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 21,
+        "walk_minutes_to_bus": 2,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "21-min walk to Addison Road-Seat Pleasant (BL/SV line); 2-min walk to Route P62 bus",
+        "enriched_at": "2026-04-12T15:43:57Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Mission of Love Charities, Inc.",
+      "address": "6180 Central Avenue, Capitol Heights, MD 20743",
+      "city": "Capitol Heights",
+      "state": "MD",
+      "zip": "20743",
+      "phone": "(301) 333-4440",
+      "hours": "Mon: 8:00 AM to 2:30 PM; Every week (Note: Prepared Meals as well), Tue: 8:00 AM to 2:30 PM; Every week (Note: Prepared Meals as well), Wed: 8:00 AM to 2:30 PM; Every week (Note: Prepared Meals as well), Thu: 8:00 AM to 2:30 PM; Every week (Note: Prepared Meals as well), Fri: 8:00 AM to 12:30 PM; Every week (Note: Prepared Meals as well)",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance",
+        "hot_meals"
+      ],
+      "raw_text": "Mission of Love Charities, Inc. | Address: 6180 Central Avenue, Capitol Heights, MD 20743 | Phone: (301) 333-4440 | Email: gtorrence@molc-inc.org | Hours: Mon: 8:00 AM to 2:30 PM; Every week (Note: Prepared Meals as well), Tue: 8:00 AM to 2:30 PM; Every week (Note: Prepared Meals as well), Wed: 8:00 AM to 2:30 PM; Every week (Note: Prepared Meals as well), Thu: 8:00 AM to 2:30 PM; Every week (Note: Prepared Meals as well), Fri: 8:00 AM to 12:30 PM; Every week (Note: Prepared Meals as well) | TEFAP: Non-TEFAP | Mon notes:  (Note: Prepared Meals as well) | Mon reqs:   | Tue notes:  (Note: Prepared Meals as well) | Tue reqs:   | Wed notes:  (Note: Prepared Meals as well) | Wed reqs:   | Thu notes:  (Note: Prepared Meals as well) | Thu reqs:   | Fri notes:  (Note: Prepared Meals as well) | Fri reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Community food pantry offering nutritious food to neighbors in need.",
+      "firstVisitGuide": [
+        "Arrive anytime between 8 AM and 2:30 PM (12:30 PM Fri).",
+        "No appointment needed—just walk in with your family.",
+        "Ask staff about meal options and community resources available."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.78,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.886448,
+      "lon": -76.903005,
+      "id": "org_cafb__mission-of-love-charities-inc",
+      "hours_structured": [
+        {
+          "day": "mon",
+          "open": "08:00",
+          "close": "14:30"
+        },
+        {
+          "day": "tue",
+          "open": "08:00",
+          "close": "14:30"
+        },
+        {
+          "day": "wed",
+          "open": "08:00",
+          "close": "14:30"
+        },
+        {
+          "day": "thu",
+          "open": "08:00",
+          "close": "14:30"
+        },
+        {
+          "day": "fri",
+          "open": "08:00",
+          "close": "12:30"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Addison Road-Seat Pleasant",
+      "nearestTransitId": "G03",
+      "nearestTransitType": "metro",
+      "nearestTransitLines": [
+        "BL",
+        "SV"
+      ],
+      "transitDistanceMeters": 713,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "G03",
+          "name": "Addison Road-Seat Pleasant",
+          "lines": [
+            "BL",
+            "SV"
+          ],
+          "lat": 38.8877,
+          "lon": -76.8975,
+          "walk_distance_m": 713,
+          "walk_minutes": 9,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3000949",
+          "route": "P62",
+          "all_routes": [
+            "P62"
+          ],
+          "stop_name": "Central Av+Rollins Av",
+          "lat": 38.886028,
+          "lon": -76.903845,
+          "walk_distance_m": 123,
+          "walk_minutes": 2,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 9,
+        "walk_minutes_to_bus": 2,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "9-min walk to Addison Road-Seat Pleasant (BL/SV line); 2-min walk to Route P62 bus",
+        "enriched_at": "2026-04-12T15:44:05Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "First Baptist Church of Capitol Heights",
+      "address": "6 Capitol Heights Blvd, Capitol Heights, MD 20743",
+      "city": "Capitol Heights",
+      "state": "MD",
+      "zip": "20743",
+      "phone": "(301) 336-0722",
+      "hours": "Tue: 10:00 AM to 1:00 PM; Every Other Week, Thu: 10:00 AM to 1:00 PM; Every Other Week",
+      "requirements": [
+        "proof_of_address",
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "First Baptist Church of Capitol Heights | Address: 6 Capitol Heights Blvd, Capitol Heights, MD 20743 | Phone: (301) 336-0722 | Email: fbcchfoodpantry@outlook.com | Hours: Tue: 10:00 AM to 1:00 PM; Every Other Week, Thu: 10:00 AM to 1:00 PM; Every Other Week | TEFAP: TEFAP Available | Tue reqs:   | Thu reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Walk-in food pantry with pantry staples — no questions asked.",
+      "firstVisitGuide": [
+        "Arrive between 10 AM and 1 PM on your scheduled day.",
+        "No appointment needed—just walk in with your family.",
+        "Ask staff for guidance on available food items."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.77,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.885204,
+      "lon": -76.91388,
+      "id": "org_cafb__first-baptist-church-of-capitol-heights",
+      "hours_structured": [
+        {
+          "day": "tue",
+          "open": "10:00",
+          "close": "13:00"
+        },
+        {
+          "day": "thu",
+          "open": "10:00",
+          "close": "13:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Capitol Heights",
+      "nearestTransitId": "G02",
+      "nearestTransitType": "metro",
+      "nearestTransitLines": [
+        "BL",
+        "SV"
+      ],
+      "transitDistanceMeters": 404,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "G02",
+          "name": "Capitol Heights",
+          "lines": [
+            "BL",
+            "SV"
+          ],
+          "lat": 38.8888,
+          "lon": -76.9138,
+          "walk_distance_m": 404,
+          "walk_minutes": 5,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3004495",
+          "route": "P63",
+          "all_routes": [
+            "P63"
+          ],
+          "stop_name": "Chamber Av+Old Central Av",
+          "lat": 38.885345,
+          "lon": -76.915267,
+          "walk_distance_m": 404,
+          "walk_minutes": 5,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 5,
+        "walk_minutes_to_bus": 5,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "5-min walk to Capitol Heights (BL/SV line); 5-min walk to Route P63 bus",
+        "enriched_at": "2026-04-12T15:44:13Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Trinidad Baptist Church",
+      "address": "6611 Walker Mill Rd, Capitol Heights, MD 20743",
+      "city": "Capitol Heights",
+      "state": "MD",
+      "zip": "20743",
+      "phone": "(301) 341-4901",
+      "hours": "Fri: 9:00 AM to 11:00 AM; 2nd of the Month",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Trinidad Baptist Church | Address: 6611 Walker Mill Rd, Capitol Heights, MD 20743 | Phone: (301) 341-4901 | Email: idastew@yahoo.com | Hours: Fri: 9:00 AM to 11:00 AM; 2nd of the Month | TEFAP: Non-TEFAP | Fri reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "A place of warmth and nourishment for all in need.",
+      "firstVisitGuide": [
+        "Check their schedule for 2nd Fridays only.",
+        "Arrive by 11 AM for best service.",
+        "Call ahead to confirm availability."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.73,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.904791,
+      "lon": -76.91955,
+      "id": "org_cafb__trinidad-baptist-church",
+      "hours_structured": [
+        {
+          "day": "fri",
+          "open": "09:00",
+          "close": "11:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Addison Rd+Duel Pl",
+      "nearestTransitId": "3001127",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P62"
+      ],
+      "transitDistanceMeters": 330,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "G02",
+          "name": "Capitol Heights",
+          "lines": [
+            "BL",
+            "SV"
+          ],
+          "lat": 38.8888,
+          "lon": -76.9138,
+          "walk_distance_m": 2655,
+          "walk_minutes": 33,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3001127",
+          "route": "P62",
+          "all_routes": [
+            "P62"
+          ],
+          "stop_name": "Addison Rd+Duel Pl",
+          "lat": 38.905833,
+          "lon": -76.917317,
+          "walk_distance_m": 330,
+          "walk_minutes": 4,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 33,
+        "walk_minutes_to_bus": 4,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "33-min walk to Capitol Heights (BL/SV line); 4-min walk to Route P62 bus",
+        "enriched_at": "2026-04-12T15:44:21Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Faith Temple No. 2 Church",
+      "address": "211 Maryland Park Drive, Capital Heights, MD 20743",
+      "city": "Capital Heights",
+      "state": "MD",
+      "zip": "20743",
+      "phone": "(301) 350-1035",
+      "hours": "Fri: 10:00 AM to 12:00 PM; 3rd of the Month",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Faith Temple No. 2 Church | Address: 211 Maryland Park Drive, Capital Heights, MD 20743 | Phone: (301) 350-1035 | Email: rhineshiggs@aol.com | Hours: Fri: 10:00 AM to 12:00 PM; 3rd of the Month | TEFAP: Non-TEFAP | Fri reqs:  ",
+      "food_types": [
+        "canned_goods",
+        "produce",
+        "dairy",
+        "bread_bakery",
+        "protein"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "A place for nutritious food and support — everyone belongs here.",
+      "firstVisitGuide": [
+        "Call ahead to confirm your appointment slot.",
+        "Arrive with any required documentation ready.",
+        "Ask staff about available support programs during visit."
+      ],
+      "plainEligibility": "Call to schedule—no ID needed for food pantry.",
+      "toneScore": 0.7,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.891522,
+      "lon": -76.909188,
+      "id": "org_cafb__faith-temple-no-2-church",
+      "hours_structured": [
+        {
+          "day": "fri",
+          "open": "10:00",
+          "close": "12:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "63 St NE+Clay St NE",
+      "nearestTransitId": "1000892",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "C31"
+      ],
+      "transitDistanceMeters": 420,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "G02",
+          "name": "Capitol Heights",
+          "lines": [
+            "BL",
+            "SV"
+          ],
+          "lat": 38.8888,
+          "lon": -76.9138,
+          "walk_distance_m": 824,
+          "walk_minutes": 10,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "1000892",
+          "route": "C31",
+          "all_routes": [
+            "C31"
+          ],
+          "stop_name": "63 St NE+Clay St NE",
+          "lat": 38.893042,
+          "lon": -76.910916,
+          "walk_distance_m": 420,
+          "walk_minutes": 5,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 10,
+        "walk_minutes_to_bus": 5,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "10-min walk to Capitol Heights (BL/SV line); 5-min walk to Route C31 bus",
+        "enriched_at": "2026-04-12T15:44:29Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Loaves & Fishes",
+      "address": "1525 Newton St NW, Washington, DC 20910",
+      "city": "Washington",
+      "state": "DC",
+      "zip": "20910",
+      "phone": "(301) 351-8411",
+      "hours": "Sat: 8:30 AM to 11:30 AM; Every week; 8:30 AM to 11:30 AM; Every week (Note: No verification required), Sun: 8:30 AM to 11:30 AM; Every week (Note: No verification required)",
+      "requirements": [
+        "walk_in",
+        "no_id_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Loaves & Fishes | Address: 1525 Newton St NW, Washington, DC 20910 | Phone: (301) 351-8411 | Email: denize@loavesandfishesdc.org | Hours: Sat: 8:30 AM to 11:30 AM; Every week; 8:30 AM to 11:30 AM; Every week (Note: No verification required), Sun: 8:30 AM to 11:30 AM; Every week (Note: No verification required) | TEFAP: Non-TEFAP | Sat notes: \r\n (Note: No verification required) | Sat reqs:  \r\n  | Sun notes:  (Note: No verification required) | Sun reqs:  ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein"
+      ],
+      "languages": [
+        "Spanish",
+        "Amharic"
+      ],
+      "heroCopy": "Groceries, produce and proteins, and a helping hand for the community.",
+      "firstVisitGuide": [
+        "Arrive by 11:30 AM to avoid long lines.",
+        "No questions asked—just come as you are.",
+        "Explore a variety of fresh and shelf-stable options."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.9,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.933487,
+      "lon": -77.03575,
+      "id": "org_cafb__loaves-fishes",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "08:30",
+          "close": "11:30"
+        },
+        {
+          "day": "sun",
+          "open": "08:30",
+          "close": "11:30"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "16 St NW+Newton St NW",
+      "nearestTransitId": "1002162",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "D60"
+      ],
+      "transitDistanceMeters": 89,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "E04",
+          "name": "Columbia Heights",
+          "lines": [
+            "GR",
+            "YL"
+          ],
+          "lat": 38.9282,
+          "lon": -77.0327,
+          "walk_distance_m": 975,
+          "walk_minutes": 12,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "1002162",
+          "route": "D60",
+          "all_routes": [
+            "D60"
+          ],
+          "stop_name": "16 St NW+Newton St NW",
+          "lat": 38.933475,
+          "lon": -77.036482,
+          "walk_distance_m": 89,
+          "walk_minutes": 1,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 12,
+        "walk_minutes_to_bus": 1,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "12-min walk to Columbia Heights (GR/YL line); 1-min walk to Route D60 bus",
+        "enriched_at": "2026-04-12T15:44:40Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Reid Temple AME Church",
+      "address": "11400 Glenn Dale Blvd, Glenn Dale, MD 20769",
+      "city": "Glenn Dale",
+      "state": "MD",
+      "zip": "20769",
+      "phone": "(301) 352-0320",
+      "hours": "Sat: 10:00 AM to 12:00 PM; 3rd of the Month",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Reid Temple AME Church | Address: 11400 Glenn Dale Blvd, Glenn Dale, MD 20769 | Phone: (301) 352-0320 | Email: laurenajack24@gmail.com | Hours: Sat: 10:00 AM to 12:00 PM; 3rd of the Month | TEFAP: Non-TEFAP | Sat reqs:  ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Fresh produce and proteins and a friendly face at this local food pantry.",
+      "firstVisitGuide": [
+        "Arrive between 10-12 AM on the 3rd Saturday each month.",
+        "No appointment needed—just walk in with your family.",
+        "Bring your ID if comfortable; it’s not required."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.71,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.984438,
+      "lon": -76.809171,
+      "id": "org_cafb__reid-temple-ame-church",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "10:00",
+          "close": "12:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Lanham Severn Rd+Eastgate La",
+      "nearestTransitId": "3002176",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P20"
+      ],
+      "transitDistanceMeters": 1312,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3002176",
+          "route": "P20",
+          "all_routes": [
+            "P20"
+          ],
+          "stop_name": "Lanham Severn Rd+Eastgate La",
+          "lat": 38.986739,
+          "lon": -76.82083,
+          "walk_distance_m": 1312,
+          "walk_minutes": 16,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 16,
+        "reachable_hours_of_week": [],
+        "transit_summary": "16-min walk to Route P20 bus",
+        "enriched_at": "2026-04-12T15:44:45Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Metropolitan Baptist Church",
+      "address": "1200 Mercantile Lane Suite 115B, Largo, MD 20774",
+      "city": "Largo",
+      "state": "MD",
+      "zip": "20774",
+      "phone": "(301) 352-2932",
+      "hours": "Sat: 10:00 AM to 11:30 AM; 2nd and 4th of the Month (Note: The pantry is also available for emergencies), Sun: 11:30 AM to As Needed; 3rd of the Month; 11:30 AM to 12:00 PM; 3rd of the Month (Note: Following 10:15a.m. Church service)",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Metropolitan Baptist Church | Address: 1200 Mercantile Lane Suite 115B, Largo, MD 20774 | Phone: (301) 352-2932 | Email: porterp8@gmail.com | Hours: Sat: 10:00 AM to 11:30 AM; 2nd and 4th of the Month (Note: The pantry is also available for emergencies), Sun: 11:30 AM to As Needed; 3rd of the Month; 11:30 AM to 12:00 PM; 3rd of the Month (Note: Following 10:15a.m. Church service) | TEFAP: Non-TEFAP | Sat notes:  (Note: The pantry is also available for emergencies) | Sat reqs:   | Sun notes: \r\n (Note: Following 10:15a.m. Church service) | Sun reqs:  \r\n ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "A warm place to find nourishment when you need it most.",
+      "firstVisitGuide": [
+        "Arrive during posted hours for quick, no-stress service.",
+        "Emergencies welcome—no appointment needed on Saturdays.",
+        "Follow church service on Sundays for pantry access."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.73,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.906858,
+      "lon": -76.838853,
+      "id": "org_cafb__metropolitan-baptist-church",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "10:00",
+          "close": "11:30"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Lottsford Rd+Medical Center Dr",
+      "nearestTransitId": "3003086",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P41"
+      ],
+      "transitDistanceMeters": 420,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "G05",
+          "name": "Largo Town Center",
+          "lines": [
+            "BL",
+            "SV"
+          ],
+          "lat": 38.9003,
+          "lon": -76.8394,
+          "walk_distance_m": 1092,
+          "walk_minutes": 14,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3003086",
+          "route": "P41",
+          "all_routes": [
+            "P41"
+          ],
+          "stop_name": "Lottsford Rd+Medical Center Dr",
+          "lat": 38.905234,
+          "lon": -76.841494,
+          "walk_distance_m": 420,
+          "walk_minutes": 5,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 14,
+        "walk_minutes_to_bus": 5,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "14-min walk to Largo Town Center (BL/SV line); 5-min walk to Route P41 bus",
+        "enriched_at": "2026-04-12T15:44:51Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Greater New Hope Baptist Church",
+      "address": "816 8th STREET NW, Washington, DC 20001",
+      "city": "Washington",
+      "state": "DC",
+      "zip": "20001",
+      "phone": "(301) 357-4905",
+      "hours": "Tue: 12:00 PM to 2:00 PM; 2nd of the Month; 12:00 PM to 2:00 PM; 2nd of the Month",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Greater New Hope Baptist Church | Address: 816 8th STREET NW, Washington, DC 20001 | Phone: (301) 357-4905 | Email: maryann007@earthlink.net | Hours: Tue: 12:00 PM to 2:00 PM; 2nd of the Month; 12:00 PM to 2:00 PM; 2nd of the Month | TEFAP: Non-TEFAP | Tue notes: \r\n | Tue reqs:  \r\n ",
+      "food_types": [],
+      "languages": [
+        "Spanish",
+        "Amharic"
+      ],
+      "heroCopy": "Groceries and more — a neighborhood food pantry that cares.",
+      "firstVisitGuide": [
+        "Arrive between 12–2 PM on the 2nd Tuesday each month.",
+        "No appointment needed—just walk in with your family.",
+        "Ask staff for a quick tour of available resources."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.74,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.900323,
+      "lon": -77.023292,
+      "id": "org_cafb__greater-new-hope-baptist-church",
+      "hours_structured": [
+        {
+          "day": "tue",
+          "open": "12:00",
+          "close": "14:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Gallery Pl-Chinatown",
+      "nearestTransitId": "B01",
+      "nearestTransitType": "metro",
+      "nearestTransitLines": [
+        "RD",
+        "GR",
+        "YL"
+      ],
+      "transitDistanceMeters": 289,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "B01",
+          "name": "Gallery Pl-Chinatown",
+          "lines": [
+            "RD",
+            "GR",
+            "YL"
+          ],
+          "lat": 38.8984,
+          "lon": -77.022,
+          "walk_distance_m": 289,
+          "walk_minutes": 4,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "1001177",
+          "route": "D40",
+          "all_routes": [
+            "D40"
+          ],
+          "stop_name": "7 St NW+I St NW",
+          "lat": 38.901108,
+          "lon": -77.022008,
+          "walk_distance_m": 178,
+          "walk_minutes": 2,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 4,
+        "walk_minutes_to_bus": 2,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "4-min walk to Gallery Pl-Chinatown (RD/GR/YL line); 2-min walk to Route D40 bus",
+        "enriched_at": "2026-04-12T15:45:01Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Good Samaritan Ministry",
+      "address": "1417 Chillum Rd, Hyattsville, MD 20782",
+      "city": "Hyattsville",
+      "state": "MD",
+      "zip": "20782",
+      "phone": "(301) 363-1679",
+      "hours": "Sat: 10:00 AM to 12:00 PM; 2nd and 4th of the Month",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Good Samaritan Ministry | Address: 1417 Chillum Rd, Hyattsville, MD 20782 | Phone: (301) 363-1679 | Email: j.mbulu@clgministries.org | Hours: Sat: 10:00 AM to 12:00 PM; 2nd and 4th of the Month | TEFAP: TEFAP Available | Sat reqs:  ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Open-door food pantry serving fresh groceries with care.",
+      "firstVisitGuide": [
+        "Arrive by 12 PM to avoid long lines.",
+        "Bring your own bags for easy access to items.",
+        "Ask staff for help finding specific food needs."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.76,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.957084,
+      "lon": -76.985255,
+      "id": "org_cafb__good-samaritan-ministry",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "10:00",
+          "close": "12:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Chillum Rd+Sargent Rd",
+      "nearestTransitId": "3001713",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P42"
+      ],
+      "transitDistanceMeters": 230,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "E07",
+          "name": "West Hyattsville",
+          "lines": [
+            "GR",
+            "YL"
+          ],
+          "lat": 38.9547,
+          "lon": -76.9748,
+          "walk_distance_m": 1352,
+          "walk_minutes": 17,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3001713",
+          "route": "P42",
+          "all_routes": [
+            "P42"
+          ],
+          "stop_name": "Chillum Rd+Sargent Rd",
+          "lat": 38.958168,
+          "lon": -76.986608,
+          "walk_distance_m": 230,
+          "walk_minutes": 3,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 17,
+        "walk_minutes_to_bus": 3,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "17-min walk to West Hyattsville (GR/YL line); 3-min walk to Route P42 bus",
+        "enriched_at": "2026-04-12T15:45:11Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "College Park Community Food Bank",
+      "address": "3621 Campus Drive, College Park, MD 20740",
+      "city": "College Park",
+      "state": "MD",
+      "zip": "20740",
+      "phone": "(301) 364-4931",
+      "hours": "Sat: 9:30 AM to 11:00 AM; Every week",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "College Park Community Food Bank | Address: 3621 Campus Drive, College Park, MD 20740 | Phone: (301) 364-4931 | Email: cpcommunityfoodbank@gmail.com | Hours: Sat: 9:30 AM to 11:00 AM; Every week | TEFAP: Non-TEFAP | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Free groceries for families — walk in anytime during hours.",
+      "firstVisitGuide": [
+        "Arrive by 11 AM to explore available food options.",
+        "No appointment needed—just walk in with your community.",
+        "Ask staff for guidance on accessing resources beyond food."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.75,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.9843395,
+      "lon": -76.9515782,
+      "id": "org_cafb__college-park-community-food-bank",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "09:30",
+          "close": "11:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Adelphi Rd+Tulane Dr",
+      "nearestTransitId": "3002147",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P32"
+      ],
+      "transitDistanceMeters": 729,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "E09",
+          "name": "College Park-U of Md",
+          "lines": [
+            "GR",
+            "YL"
+          ],
+          "lat": 38.978,
+          "lon": -76.9284,
+          "walk_distance_m": 2565,
+          "walk_minutes": 32,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3002147",
+          "route": "P32",
+          "all_routes": [
+            "P32"
+          ],
+          "stop_name": "Adelphi Rd+Tulane Dr",
+          "lat": 38.984684,
+          "lon": -76.955534,
+          "walk_distance_m": 729,
+          "walk_minutes": 9,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 32,
+        "walk_minutes_to_bus": 9,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "32-min walk to College Park-U of Md (GR/YL line); 9-min walk to Route P32 bus",
+        "enriched_at": "2026-04-12T15:45:18Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Bethesda Help",
+      "address": "10100 Old Georgetown Road, Bethesda, MD 20814",
+      "city": "Bethesda",
+      "state": "MD",
+      "zip": "20814",
+      "phone": "(301) 365-2022",
+      "hours": "Mon: 9:00 AM to 4:30 PM; Every week (Note: Clients must call to request food.  Drivers will deliver food within 48 hours), Tue: 9:00 AM to 4:30 PM; Every week (Note: Clients must call to request food.  Drivers will delivery food within 48 hours), Wed: 9:00 AM to 4:30 PM; Every week (Note: Clients must call to request food.  Drivers will deliver food within 48 hours), Thu: 9:00 AM to 4:30 PM; Every week (Note: Clients must call to request food.  Drivers will deliver food within 48 hours), Fri: 9:00 AM to 4:30 PM; Every week (Note: Clients must call to request food.  Drivers will deliver food within 48 hours)",
+      "requirements": [
+        "appointment_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance",
+        "delivery"
+      ],
+      "raw_text": "Bethesda Help | Address: 10100 Old Georgetown Road, Bethesda, MD 20814 | Phone: (301) 365-2022 | Email: aeharvey1007@hotmail.com | Hours: Mon: 9:00 AM to 4:30 PM; Every week (Note: Clients must call to request food.  Drivers will deliver food within 48 hours), Tue: 9:00 AM to 4:30 PM; Every week (Note: Clients must call to request food.  Drivers will delivery food within 48 hours), Wed: 9:00 AM to 4:30 PM; Every week (Note: Clients must call to request food.  Drivers will deliver food within 48 hours), Thu: 9:00 AM to 4:30 PM; Every week (Note: Clients must call to request food.  Drivers will deliver food within 48 hours), Fri: 9:00 AM to 4:30 PM; Every week (Note: Clients must call to request food.  Drivers will deliver food within 48 hours) | TEFAP: Non-TEFAP | Mon notes:  (Note: Clients must call to request food.  Drivers will deliver food within 48 hours) | Mon reqs:   | Tue notes:  (Note: Clients must call to request food.  Drivers will delivery food within 48 hours) | Tue reqs:   | Wed notes:  (Note: Clients must call to request food.  Drivers will deliver food within 48 hours) | Wed reqs:   | Thu notes:  (Note: Clients must call to request food.  Drivers will deliver food within 48 hours) | Thu reqs:   | Fri notes:  (Note: Clients must call to request food.  Drivers will deliver food within 48 hours) | Fri reqs:  ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein",
+        "frozen"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Walk-in food pantry with fresh produce — no questions asked.",
+      "firstVisitGuide": [
+        "Call ahead to request groceries—it’s the fastest way to start.",
+        "Expect a friendly call to confirm your needs and delivery details.",
+        "Delivery arrives within 48 hours after your request."
+      ],
+      "plainEligibility": "Call to request food—no documents needed to start.",
+      "toneScore": 0.48,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 39.020953,
+      "lon": -77.123176,
+      "id": "org_cafb__bethesda-help",
+      "hours_structured": [
+        {
+          "day": "mon",
+          "open": "09:00",
+          "close": "16:30"
+        },
+        {
+          "day": "tue",
+          "open": "09:00",
+          "close": "16:30"
+        },
+        {
+          "day": "wed",
+          "open": "09:00",
+          "close": "16:30"
+        },
+        {
+          "day": "thu",
+          "open": "09:00",
+          "close": "16:30"
+        },
+        {
+          "day": "fri",
+          "open": "09:00",
+          "close": "16:30"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Old Georgetown Rd+Cheshire Dr",
+      "nearestTransitId": "2000366",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M70"
+      ],
+      "transitDistanceMeters": 324,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "2000366",
+          "route": "M70",
+          "all_routes": [
+            "M70"
+          ],
+          "stop_name": "Old Georgetown Rd+Cheshire Dr",
+          "lat": 39.022167,
+          "lon": -77.123236,
+          "walk_distance_m": 324,
+          "walk_minutes": 4,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 4,
+        "reachable_hours_of_week": [],
+        "transit_summary": "4-min walk to Route M70 bus",
+        "enriched_at": "2026-04-12T15:45:24Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Muslim Community Center",
+      "address": "15200 New Hampshire Ave., Silver Spring, MD 20905",
+      "city": "Silver Spring",
+      "state": "MD",
+      "zip": "20905",
+      "phone": "(301) 388-6456",
+      "hours": "Sat: 8:30 AM to 11:00 AM; 2nd and 4th of the Month (Note: provisions are available for emergency cases. some family may need assistance during the week)",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Muslim Community Center | Address: 15200 New Hampshire Ave., Silver Spring, MD 20905 | Phone: (301) 388-6456 | Email: maricel.sinnokrot@mccmd.org | Hours: Sat: 8:30 AM to 11:00 AM; 2nd and 4th of the Month (Note: provisions are available for emergency cases. some family may need assistance during the week) | TEFAP: Non-TEFAP | Sat notes:  (Note: provisions are available for emergency cases. some family may need assistance during the week) | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish",
+        "Amharic"
+      ],
+      "heroCopy": "Groceries, fresh produce, and a helping hand for the community.",
+      "firstVisitGuide": [
+        "Call ahead for emergency provisions or scheduled visits.",
+        "Bring ID if possible, though emergencies may bypass requirements.",
+        "Staff will guide you through available resources quickly."
+      ],
+      "plainEligibility": "Emergency cases welcome; call to confirm availability.",
+      "culturalNotes": "Primarily serves Muslim and diverse local communities.",
+      "toneScore": 0.73,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 39.105502,
+      "lon": -77.003633,
+      "id": "org_cafb__muslim-community-center",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "08:30",
+          "close": "11:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": null,
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": null,
+        "reachable_hours_of_week": [],
+        "transit_summary": "No WMATA transit within 2 km",
+        "enriched_at": "2026-04-12T15:45:24Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Allen Chapel AME Church Outreach Ministry",
+      "address": "2518 Fairland Road, Silver Spring, MD 20904",
+      "city": "Silver Spring",
+      "state": "MD",
+      "zip": "20904",
+      "phone": "(301) 404-2688",
+      "hours": "Sat: 8:00 AM to 10:00 AM; 2nd and 4th of the Month (Note: Montgomery & PG residents); 8:00 AM to 10:00 AM; 2nd and 4th of the Month (Note: Montgomery and Prince George County)",
+      "requirements": [
+        "walk_in",
+        "proof_of_address",
+        "photo_id"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Allen Chapel AME Church Outreach Ministry | Address: 2518 Fairland Road, Silver Spring, MD 20904 | Phone: (301) 404-2688 | Email: dotboddie@yahoo.com | Hours: Sat: 8:00 AM to 10:00 AM; 2nd and 4th of the Month (Note: Montgomery & PG residents); 8:00 AM to 10:00 AM; 2nd and 4th of the Month (Note: Montgomery and Prince George County) | TEFAP: TEFAP Available | Sat notes:  (Note: Montgomery & PG residents)\r\n (Note: Montgomery and Prince George County) | Sat reqs:  \r\n ",
+      "food_types": [
+        "canned_goods",
+        "produce",
+        "protein"
+      ],
+      "languages": [
+        "Spanish",
+        "Amharic"
+      ],
+      "heroCopy": "Fresh nutritious food and a friendly face at this local food pantry.",
+      "firstVisitGuide": [
+        "Bring proof of Montgomery or Prince George County residency.",
+        "Arrive between 8–10 AM for efficient service.",
+        "Ask about TEFAP assistance if eligible for extra support."
+      ],
+      "plainEligibility": "Montgomery/Prince George County residents only. Proof of address required.",
+      "toneScore": 0.71,
+      "source_ids": [
+        "cafb",
+        "mocofood"
+      ],
+      "cross_source_count": 2,
+      "website": "https://www.facebook.com/AllenChapelAMEChurchSilverSpringMD",
+      "reconciliation_warnings": [
+        "Hours differ between sources -- showing most trusted."
+      ],
+      "lat": 39.077768,
+      "lon": -76.958171,
+      "id": "org_cafb__allen-chapel-ame-church-outreach-ministry",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "08:00",
+          "close": "10:00"
+        }
+      ],
+      "reliability": {
+        "tier": "fresh",
+        "score": 1.0,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Old Columbia Pk+Fairland Rd",
+      "nearestTransitId": "2000826",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M54"
+      ],
+      "transitDistanceMeters": 291,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "2000826",
+          "route": "M54",
+          "all_routes": [
+            "M54"
+          ],
+          "stop_name": "Old Columbia Pk+Fairland Rd",
+          "lat": 39.076492,
+          "lon": -76.957448,
+          "walk_distance_m": 291,
+          "walk_minutes": 4,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 4,
+        "reachable_hours_of_week": [],
+        "transit_summary": "4-min walk to Route M54 bus",
+        "enriched_at": "2026-04-12T15:45:29Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Operation Earnie's Plate",
+      "address": "8500 Mike Shapiro Dr, Clinton, MD 20735",
+      "city": "Clinton",
+      "state": "MD",
+      "zip": "20735",
+      "phone": "(301) 404-4461",
+      "hours": "Mon: 10:30 AM to 2:00 PM; 2nd of the Month (Note: Pantry Location: Inside Clinton Manor Senior Citizens Center\nEligibility: Residents only), Tue: 10:00 AM to 3:00 PM; 3rd of the Month (Note: Pantry Location:Fort Washington Manor\nEligibility: Residents only)",
+      "requirements": [
+        "walk_in",
+        "proof_of_address"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Operation Earnie's Plate | Address: 8500 Mike Shapiro Dr, Clinton, MD 20735 | Phone: (301) 404-4461 | Email: earniesplate@gmail.com | Hours: Mon: 10:30 AM to 2:00 PM; 2nd of the Month (Note: Pantry Location: Inside Clinton Manor Senior Citizens Center\nEligibility: Residents only), Tue: 10:00 AM to 3:00 PM; 3rd of the Month (Note: Pantry Location:Fort Washington Manor\nEligibility: Residents only) | TEFAP: Non-TEFAP | Mon notes:  (Note: Pantry Location: Inside Clinton Manor Senior Citizens Center\nEligibility: Residents only) | Mon reqs:   | Tue notes:  (Note: Pantry Location:Fort Washington Manor\nEligibility: Residents only) | Tue reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "A warm meal and community for Clinton’s neighbors—everyone deserves nourishment.",
+      "firstVisitGuide": [
+        "Bring proof of residency to access the pantry.",
+        "Check the day’s location: Clinton Manor (Mon) or Fort Washington Manor (Tue).",
+        "Arrive before closing for the best selection."
+      ],
+      "plainEligibility": "Residents only. Proof of address required.",
+      "toneScore": 0.77,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.772313,
+      "lon": -76.881874,
+      "id": "org_cafb__operation-earnie-s-plate",
+      "hours_structured": [
+        {
+          "day": "mon",
+          "open": "10:30",
+          "close": "14:00"
+        },
+        {
+          "day": "tue",
+          "open": "10:00",
+          "close": "15:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": null,
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": null,
+        "reachable_hours_of_week": [],
+        "transit_summary": "No WMATA transit within 2 km",
+        "enriched_at": "2026-04-12T15:45:29Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "City of Praise Family Ministries",
+      "address": "8806 Brightseat Road, Landover, MD 20785",
+      "city": "Landover",
+      "state": "MD",
+      "zip": "20785",
+      "phone": "(301) 404-8234",
+      "hours": "Thu: 4:30 PM to 6:00 PM; Every week",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "City of Praise Family Ministries | Address: 8806 Brightseat Road, Landover, MD 20785 | Phone: (301) 404-8234 | Email: nancystaten@aol.com | Hours: Thu: 4:30 PM to 6:00 PM; Every week | TEFAP: TEFAP Available | Thu reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Community food pantry offering essential groceries to neighbors in need.",
+      "firstVisitGuide": [
+        "Call ahead to confirm your appointment slot.",
+        "Arrive by 6 PM to avoid closing.",
+        "Bring any required documentation for TEFAP."
+      ],
+      "plainEligibility": "Call to confirm TEFAP eligibility and requirements.",
+      "toneScore": 0.75,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.9104042,
+      "lon": -76.8564644,
+      "id": "org_cafb__city-of-praise-family-ministries",
+      "hours_structured": [
+        {
+          "day": "thu",
+          "open": "16:30",
+          "close": "18:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Morgan Bl+Ring Rd",
+      "nearestTransitId": "3004572",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P61"
+      ],
+      "transitDistanceMeters": 1463,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "G05",
+          "name": "Largo Town Center",
+          "lines": [
+            "BL",
+            "SV"
+          ],
+          "lat": 38.9003,
+          "lon": -76.8394,
+          "walk_distance_m": 2499,
+          "walk_minutes": 31,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3004572",
+          "route": "P61",
+          "all_routes": [
+            "P61"
+          ],
+          "stop_name": "Morgan Bl+Ring Rd",
+          "lat": 38.905934,
+          "lon": -76.865634,
+          "walk_distance_m": 1463,
+          "walk_minutes": 18,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 31,
+        "walk_minutes_to_bus": 18,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "31-min walk to Largo Town Center (BL/SV line); 18-min walk to Route P61 bus",
+        "enriched_at": "2026-04-12T15:45:36Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Turner AME Church",
+      "address": "7201 16th Place, Hyattsville, MD 20783",
+      "city": "Hyattsville",
+      "state": "MD",
+      "zip": "20783",
+      "phone": "(301) 408-0750",
+      "hours": "Fri: 12:00 PM to 2:00 PM; Every Other Week (Note: No Requirements Needed.)",
+      "requirements": [
+        "walk_in",
+        "no_id_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Turner AME Church | Address: 7201 16th Place, Hyattsville, MD 20783 | Phone: (301) 408-0750 | Email: civy@turner-ame.org | Hours: Fri: 12:00 PM to 2:00 PM; Every Other Week (Note: No Requirements Needed.) | TEFAP: Non-TEFAP | Fri notes:  (Note: No Requirements Needed.) | Fri reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "A welcoming place to find nourishment and kindness every other Friday.",
+      "firstVisitGuide": [
+        "No ID or paperwork needed—just come as you are.",
+        "Arrive between 12 PM and 2 PM for support.",
+        "Check their schedule for the next open distribution date."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.95,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.979161,
+      "lon": -76.98084,
+      "id": "org_cafb__turner-ame-church",
+      "hours_structured": [
+        {
+          "day": "fri",
+          "open": "12:00",
+          "close": "14:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Riggs Rd+Drexel St",
+      "nearestTransitId": "3002083",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M12"
+      ],
+      "transitDistanceMeters": 258,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3002083",
+          "route": "M12",
+          "all_routes": [
+            "M12"
+          ],
+          "stop_name": "Riggs Rd+Drexel St",
+          "lat": 38.979678,
+          "lon": -76.978407,
+          "walk_distance_m": 258,
+          "walk_minutes": 3,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 3,
+        "reachable_hours_of_week": [],
+        "transit_summary": "3-min walk to Route M12 bus",
+        "enriched_at": "2026-04-12T15:45:47Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "GAP Food Program",
+      "address": "6715 Suitland Road, Morningside, MD 20746",
+      "city": "Morningside",
+      "state": "MD",
+      "zip": "20746",
+      "phone": "(301) 420-1460",
+      "hours": "Sun: 10:30 AM to 1:00 PM; Every week",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "GAP Food Program | Address: 6715 Suitland Road, Morningside, MD 20746 | Phone: (301) 420-1460 | Email: dawn@dawnmharvey.com | Hours: Sun: 10:30 AM to 1:00 PM; Every week | TEFAP: Non-TEFAP | Sun reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Serving the community with fresh food and dignity.",
+      "firstVisitGuide": [
+        "Arrive by 1 PM for fresh food selection.",
+        "No appointment needed—just walk right in.",
+        "Ask staff for guidance on available items."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.74,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.824228,
+      "lon": -76.891364,
+      "id": "org_cafb__gap-food-program",
+      "hours_structured": [
+        {
+          "day": "sun",
+          "open": "10:30",
+          "close": "13:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Suitland Rd+Tournament St",
+      "nearestTransitId": "3000492",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P87"
+      ],
+      "transitDistanceMeters": 94,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3000492",
+          "route": "P87",
+          "all_routes": [
+            "P87"
+          ],
+          "stop_name": "Suitland Rd+Tournament St",
+          "lat": 38.824047,
+          "lon": -76.890424,
+          "walk_distance_m": 94,
+          "walk_minutes": 1,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 1,
+        "reachable_hours_of_week": [],
+        "transit_summary": "1-min walk to Route P87 bus",
+        "enriched_at": "2026-04-12T15:45:53Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Second Baptist Church Southwest",
+      "address": "5501 Silver Hill Road, District Heights, MD 20747",
+      "city": "District Heights",
+      "state": "MD",
+      "zip": "20747",
+      "phone": "(301) 420-2929",
+      "hours": "Sat: 7:30 AM to 11:30 AM; 2nd of the Month",
+      "requirements": [
+        "appointment_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Second Baptist Church Southwest | Address: 5501 Silver Hill Road, District Heights, MD 20747 | Phone: (301) 420-2929 | Email: gford87333@aol.com | Hours: Sat: 7:30 AM to 11:30 AM; 2nd of the Month | TEFAP: Non-TEFAP | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Open-door food pantry serving fresh fresh produce with care.",
+      "firstVisitGuide": [
+        "Arrive by 7:30 AM for the earliest assistance.",
+        "Bring proof of appointment (2nd of the month only).",
+        "Come prepared with valid ID for smooth service."
+      ],
+      "plainEligibility": "Second Saturday of each month only; appointment may be required.",
+      "toneScore": 0.73,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.852007,
+      "lon": -76.912275,
+      "id": "org_cafb__second-baptist-church-southwest",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "07:30",
+          "close": "11:30"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Silver Hill Rd+West Av",
+      "nearestTransitId": "3000742",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P60",
+        "P66"
+      ],
+      "transitDistanceMeters": 164,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "F10",
+          "name": "Suitland",
+          "lines": [
+            "GR"
+          ],
+          "lat": 38.8434,
+          "lon": -76.9327,
+          "walk_distance_m": 2621,
+          "walk_minutes": 33,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3000742",
+          "route": "P60",
+          "all_routes": [
+            "P60",
+            "P66"
+          ],
+          "stop_name": "Silver Hill Rd+West Av",
+          "lat": 38.852522,
+          "lon": -76.911901,
+          "walk_distance_m": 164,
+          "walk_minutes": 2,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 33,
+        "walk_minutes_to_bus": 2,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "33-min walk to Suitland (GR line); 2-min walk to Route P60 bus",
+        "enriched_at": "2026-04-12T15:46:00Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Beltway Church of Christ",
+      "address": "6000 Davis Blvd, Camp Springs, MD 20746",
+      "city": "Camp Springs",
+      "state": "MD",
+      "zip": "20746",
+      "phone": "(301) 423-2320",
+      "hours": "Thu: 1:00 PM to Until Food Runs Out; 2nd of the Month",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Beltway Church of Christ | Address: 6000 Davis Blvd, Camp Springs, MD 20746 | Phone: (301) 423-2320 | Email: fullofjoymil@verizon.net | Hours: Thu: 1:00 PM to Until Food Runs Out; 2nd of the Month | TEFAP: Non-TEFAP | Thu reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Fresh produce and proteins and a friendly face at this local food pantry.",
+      "firstVisitGuide": [
+        "Arrive by 1 PM for a fair distribution of food.",
+        "Bring ID if required for verification process.",
+        "Ask staff about available resources beyond food."
+      ],
+      "plainEligibility": "Everyone welcome. Second Thursday only; no ID required.",
+      "toneScore": 0.74,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.8162296,
+      "lon": -76.9038209,
+      "id": "org_cafb__beltway-church-of-christ",
+      "hours_structured": null,
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Auth Rd+Medford Av",
+      "nearestTransitId": "3004163",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P62"
+      ],
+      "transitDistanceMeters": 286,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "F11",
+          "name": "Branch Ave",
+          "lines": [
+            "GR"
+          ],
+          "lat": 38.8281,
+          "lon": -76.9123,
+          "walk_distance_m": 2195,
+          "walk_minutes": 28,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3004163",
+          "route": "P62",
+          "all_routes": [
+            "P62"
+          ],
+          "stop_name": "Auth Rd+Medford Av",
+          "lat": 38.816839,
+          "lon": -76.901349,
+          "walk_distance_m": 286,
+          "walk_minutes": 4,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 28,
+        "walk_minutes_to_bus": 4,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "28-min walk to Branch Ave (GR line); 4-min walk to Route P62 bus",
+        "enriched_at": "2026-04-12T15:46:05Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Manna Food Center",
+      "address": "9311 Gaither Rd, Gaithersburg, MD 20877",
+      "city": "Gaithersburg",
+      "state": "MD",
+      "zip": "20877",
+      "phone": "(301) 424-1130",
+      "hours": "Mon: 10:00 AM to 12:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.), Tue: 10:00 AM to 12:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.); 2:00 PM to 5:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.), Wed: 10:00 AM to 12:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.), Thu: 10:00 AM to 12:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.); 2:00 PM to 5:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.), Fri: 10:00 AM to 12:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.); 1:00 PM to 3:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.), Sat: 9:00 AM to 12:00 PM; 1st of the Month (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.)",
+      "requirements": [
+        "appointment_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Manna Food Center | Address: 9311 Gaither Rd, Gaithersburg, MD 20877 | Phone: (301) 424-1130 | Email: edwin@mannafood.org | Hours: Mon: 10:00 AM to 12:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.), Tue: 10:00 AM to 12:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.); 2:00 PM to 5:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.), Wed: 10:00 AM to 12:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.), Thu: 10:00 AM to 12:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.); 2:00 PM to 5:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.), Fri: 10:00 AM to 12:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.); 1:00 PM to 3:00 PM; Every week (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.), Sat: 9:00 AM to 12:00 PM; 1st of the Month (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.) | TEFAP: Non-TEFAP | Mon notes:  (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.) | Mon reqs:   | Tue notes:  (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.)\r\n (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.) | Tue reqs:  \r\n  | Wed notes:  (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.) | Wed reqs:   | Thu notes:  (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.)\r\n (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.) | Thu reqs:  \r\n  | Fri notes:  (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.)\r\n (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.) | Fri reqs:  \r\n  | Sat notes:  (Note: Moco Residents Only. Call (301) 424-1130 to make an appointment. We need to receive your call by 12:00 pm the day before you would like to receive food. Visit https://www.mannafood.org/how-to-receive-food-from-manna/ to find other programs and locations.) | Sat reqs:  ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein",
+        "frozen"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Nutritious food and more — a neighborhood food pantry that cares.",
+      "firstVisitGuide": [
+        "Call by noon the day before to schedule your visit.",
+        "Bring proof of Montgomery County residency if required.",
+        "Arrive during your assigned time slot for efficient service."
+      ],
+      "plainEligibility": "Montgomery County residents only. Call to schedule an appointment.",
+      "toneScore": 0.79,
+      "donate_url": "https://www.mannafood.org/how-to-receive-food-from-manna/",
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 39.118524,
+      "lon": -77.1918,
+      "id": "org_cafb__manna-food-center",
+      "hours_structured": [
+        {
+          "day": "mon",
+          "open": "10:00",
+          "close": "12:00"
+        },
+        {
+          "day": "tue",
+          "open": "10:00",
+          "close": "12:00"
+        },
+        {
+          "day": "wed",
+          "open": "10:00",
+          "close": "12:00"
+        },
+        {
+          "day": "thu",
+          "open": "10:00",
+          "close": "12:00"
+        },
+        {
+          "day": "fri",
+          "open": "10:00",
+          "close": "12:00"
+        },
+        {
+          "day": "sat",
+          "open": "09:00",
+          "close": "12:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": null,
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": null,
+        "reachable_hours_of_week": [],
+        "transit_summary": "No WMATA transit within 2 km",
+        "enriched_at": "2026-04-12T15:46:06Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "InterFaith Works",
+      "address": "751 Twinbrook Pkwy, Rockville, MD 20852",
+      "city": "Rockville",
+      "state": "MD",
+      "zip": "20852",
+      "phone": "(301) 424-3796",
+      "hours": "Tue: 9:00 AM to 3:00 PM; Every week (Note: https://www.iworksmc.org/assistance), Wed: 9:00 AM to 3:00 PM; Every week (Note: https://www.iworksmc.org/assistance), Thu: 9:00 AM to 3:00 PM; Every week (Note: https://www.iworksmc.org/assistance), Fri: 9:00 AM to 3:00 PM; Every week (Note: https://www.iworksmc.org/assistance), Sat: 9:00 AM to 12:00 PM; Every week (Note: https://www.iworksmc.org/assistance)",
+      "requirements": [
+        "appointment_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "InterFaith Works | Address: 751 Twinbrook Pkwy, Rockville, MD 20852 | Phone: (301) 424-3796 | Email: hubcoordinator@iworksmc.org | Hours: Tue: 9:00 AM to 3:00 PM; Every week (Note: https://www.iworksmc.org/assistance), Wed: 9:00 AM to 3:00 PM; Every week (Note: https://www.iworksmc.org/assistance), Thu: 9:00 AM to 3:00 PM; Every week (Note: https://www.iworksmc.org/assistance), Fri: 9:00 AM to 3:00 PM; Every week (Note: https://www.iworksmc.org/assistance), Sat: 9:00 AM to 12:00 PM; Every week (Note: https://www.iworksmc.org/assistance) | TEFAP: Non-TEFAP | Tue notes:  (Note: https://www.iworksmc.org/assistance) | Tue reqs:   | Wed notes:  (Note: https://www.iworksmc.org/assistance) | Wed reqs:   | Thu notes:  (Note: https://www.iworksmc.org/assistance) | Thu reqs:   | Fri notes:  (Note: https://www.iworksmc.org/assistance) | Fri reqs:   | Sat notes:  (Note: https://www.iworksmc.org/assistance) | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish",
+        "Chinese"
+      ],
+      "heroCopy": "Come for pantry staples, stay for the community spirit.",
+      "firstVisitGuide": [
+        "Arrive during open hours for welcoming assistance.",
+        "No appointment needed—just come as you are.",
+        "Staff will guide you through available resources."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.45,
+      "donate_url": "https://www.iworksmc.org/assistance",
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 39.082864,
+      "lon": -77.114102,
+      "id": "org_cafb__interfaith-works",
+      "hours_structured": [
+        {
+          "day": "tue",
+          "open": "09:00",
+          "close": "15:00"
+        },
+        {
+          "day": "wed",
+          "open": "09:00",
+          "close": "15:00"
+        },
+        {
+          "day": "thu",
+          "open": "09:00",
+          "close": "15:00"
+        },
+        {
+          "day": "fri",
+          "open": "09:00",
+          "close": "15:00"
+        },
+        {
+          "day": "sat",
+          "open": "09:00",
+          "close": "12:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": null,
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": null,
+        "reachable_hours_of_week": [],
+        "transit_summary": "No WMATA transit within 2 km",
+        "enriched_at": "2026-04-12T15:46:09Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "mocofood",
+      "name": "Living Faith Lutheran Church",
+      "address": "1605 Veirs Mill Road, Rockville, 20851",
+      "zip": "20851",
+      "phone": "(301) 424-8622",
+      "website": "https://mylivingfaith.org",
+      "hours": "Please call for more information",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "frozen"
+      ],
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "languages": [
+        "Chinese",
+        "Spanish"
+      ],
+      "raw_text": "Living Faith Lutheran Church | Address: 1605 Veirs Mill Road, Rockville, 20851 | Phone: (301) 424-8622 | Website: https://mylivingfaith.org | Hours: Please call for more information | Type: Pre-Packed Pantry Items | Accessibility: Walk-in | Languages: Cantonese, Chinese, Spanish | Features: Special Diet Accommodations, Fresh Produce, Other Services Offered | Walk ins on a first come first served basis. They offer pre-packed grocery bags, a number of free choice items and a swap option for clients between themselves. Our offerings include shelf stable items, culturally relevant foods, fresh produce and some frozen items.",
+      "heroCopy": "Fresh essential groceries and a friendly face at this local food pantry.",
+      "firstVisitGuide": [
+        "Arrive early for first-come, first-served pre-packed bags.",
+        "Explore free-choice items and swap options with staff.",
+        "Ask about culturally relevant foods and special diet needs."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "culturalNotes": "Cantonese/Chinese and Spanish-speaking communities served.",
+      "toneScore": 0.74,
+      "accepts_food_donations": true,
+      "accepts_volunteers": true,
+      "source_ids": [
+        "mocofood",
+        "cafb"
+      ],
+      "cross_source_count": 2,
+      "city": "Rockville",
+      "state": "MD",
+      "reconciliation_warnings": [
+        "Hours differ between sources -- showing most trusted.",
+        "Some sources say walk-in, others say appointment needed."
+      ],
+      "lat": 39.076604,
+      "lon": -77.123174,
+      "id": "org_mocofood__living-faith-lutheran-church",
+      "hours_structured": null,
+      "reliability": {
+        "tier": "fresh",
+        "score": 1.0,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Parklawn Dr+FDA",
+      "nearestTransitId": "2000707",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M12"
+      ],
+      "transitDistanceMeters": 2319,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "A14",
+          "name": "Rockville",
+          "lines": [
+            "RD"
+          ],
+          "lat": 39.0847,
+          "lon": -77.1463,
+          "walk_distance_m": 2823,
+          "walk_minutes": 35,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "2000707",
+          "route": "M12",
+          "all_routes": [
+            "M12"
+          ],
+          "stop_name": "Parklawn Dr+FDA",
+          "lat": 39.061489,
+          "lon": -77.113011,
+          "walk_distance_m": 2319,
+          "walk_minutes": 29,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 35,
+        "walk_minutes_to_bus": 29,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "35-min walk to Rockville (RD line); 29-min walk to Route M12 bus",
+        "enriched_at": "2026-04-12T15:46:14Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "mocofood",
+      "name": "Mt. Calvary Baptist Church",
+      "address": "608 North Horners Lane, Rockville, 20850",
+      "zip": "20850",
+      "phone": "(240) 351-7992",
+      "website": "https://mtcbc.org/food-distribution/",
+      "hours": "Every Tuesday from 1-2pm, First and Third Thursday of each month from 4:30 pm until food runs out or 6:00 pm",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein",
+        "frozen"
+      ],
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "languages": [
+        "Chinese",
+        "Korean",
+        "Spanish"
+      ],
+      "raw_text": "Mt. Calvary Baptist Church | Address: 608 North Horners Lane, Rockville, 20850 | Phone: (240) 351-7992 | Website: https://mtcbc.org/food-distribution/ | Hours: Every Tuesday from 1-2pm, First and Third Thursday of each month from 4:30 pm until food runs out or 6:00 pm | Type: Choice Pantry | Accessibility: Walk-in | Languages: Cantonese, Chinese, Korean, Spanish | Features: Fresh Produce | Tuesday Distributions are in partnership with Nourish Now",
+      "heroCopy": "Fresh produce and community support await you every Tuesday and select Thursdays.",
+      "firstVisitGuide": [
+        "Arrive by 1pm on Tuesdays or 4:30pm on Thursdays.",
+        "No appointment needed—just walk in with your family.",
+        "Help yourself to fresh produce while supplies last."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.73,
+      "accepts_volunteers": true,
+      "volunteer_url": "https://mtcbc.org/",
+      "source_ids": [
+        "mocofood",
+        "cafb"
+      ],
+      "cross_source_count": 2,
+      "city": "Rockviille",
+      "state": "MD",
+      "reconciliation_warnings": [
+        "Hours differ between sources -- showing most trusted."
+      ],
+      "lat": 39.0862697,
+      "lon": -77.1854691,
+      "id": "org_mocofood__mt-calvary-baptist-church",
+      "hours_structured": [
+        {
+          "day": "tue",
+          "open": "01:00",
+          "close": "14:00"
+        },
+        {
+          "day": "thu",
+          "open": "16:30",
+          "close": "18:00"
+        }
+      ],
+      "reliability": {
+        "tier": "fresh",
+        "score": 1.0,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": null,
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": null,
+        "reachable_hours_of_week": [],
+        "transit_summary": "No WMATA transit within 2 km",
+        "enriched_at": "2026-04-12T15:46:14Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Everlasting Joy Foundation",
+      "address": "5170 Lawrence Place, Hyattsville, MD 20781",
+      "city": "Hyattsville",
+      "state": "MD",
+      "zip": "20781",
+      "phone": "(301) 433-3180",
+      "hours": "Sat: 2:00 PM to Until Food Runs Out; Every week",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Everlasting Joy Foundation | Address: 5170 Lawrence Place, Hyattsville, MD 20781 | Phone: (301) 433-3180 | Email: info@theeverlastingjoyfoundation.org | Hours: Sat: 2:00 PM to Until Food Runs Out; Every week | TEFAP: TEFAP Available | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Walk-in food pantry with pantry staples — no questions asked.",
+      "firstVisitGuide": [
+        "Arrive by 2 PM for best selection.",
+        "No appointment needed—just walk in.",
+        "Bring your family and leave with hope."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.75,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.933217,
+      "lon": -76.92641,
+      "id": "org_cafb__everlasting-joy-foundation",
+      "hours_structured": null,
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Kenilworth Av+Lawrence St",
+      "nearestTransitId": "3001352",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P14"
+      ],
+      "transitDistanceMeters": 772,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3001352",
+          "route": "P14",
+          "all_routes": [
+            "P14"
+          ],
+          "stop_name": "Kenilworth Av+Lawrence St",
+          "lat": 38.932327,
+          "lon": -76.933233,
+          "walk_distance_m": 772,
+          "walk_minutes": 10,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 10,
+        "reachable_hours_of_week": [],
+        "transit_summary": "10-min walk to Route P14 bus",
+        "enriched_at": "2026-04-12T15:46:18Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Fountain of Restoration Church",
+      "address": "12304 Livingston Rd, Fort Washington, MD 20744",
+      "city": "Fort Washington",
+      "state": "MD",
+      "zip": "20744",
+      "phone": "(301) 433-5715",
+      "hours": "Sat: 12:00 PM to 4:00 PM; Every Other Week (Note: Bring your own bags)",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Fountain of Restoration Church | Address: 12304 Livingston Rd, Fort Washington, MD 20744 | Phone: (301) 433-5715 | Email: omonibeauty1@yahoo.com | Hours: Sat: 12:00 PM to 4:00 PM; Every Other Week (Note: Bring your own bags) | TEFAP: Non-TEFAP | Sat notes:  (Note: Bring your own bags) | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Walk-in food pantry with pantry staples — no questions asked.",
+      "firstVisitGuide": [
+        "Bring your own bags for easy access to food.",
+        "Arrive between 12 PM and 4 PM on scheduled Saturdays.",
+        "No appointment needed—just come as you are."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing but your own bags.",
+      "toneScore": 0.76,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.720585,
+      "lon": -76.985211,
+      "id": "org_cafb__fountain-of-restoration-church",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "12:00",
+          "close": "16:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Ft Washingtn P+R",
+      "nearestTransitId": "3002813",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P97"
+      ],
+      "transitDistanceMeters": 1185,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3002813",
+          "route": "P97",
+          "all_routes": [
+            "P97"
+          ],
+          "stop_name": "Ft Washingtn P+R",
+          "lat": 38.724691,
+          "lon": -76.994646,
+          "walk_distance_m": 1185,
+          "walk_minutes": 15,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 15,
+        "reachable_hours_of_week": [],
+        "transit_summary": "15-min walk to Route P97 bus",
+        "enriched_at": "2026-04-12T15:46:24Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Clifton Park Baptist Church",
+      "address": "8818 Piney Branch Road, Silver Spring, MD 20903",
+      "city": "Silver Spring",
+      "state": "MD",
+      "zip": "20903",
+      "phone": "(301) 434-2456",
+      "hours": "Thu: 10:00 AM to 12:00 PM; 3rd of the Month, Sat: 8:30 AM to 10:30 AM; 1st of the Month",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Clifton Park Baptist Church | Address: 8818 Piney Branch Road, Silver Spring, MD 20903 | Phone: (301) 434-2456 | Email: outreach.cpbc@gmail.com | Hours: Thu: 10:00 AM to 12:00 PM; 3rd of the Month, Sat: 8:30 AM to 10:30 AM; 1st of the Month | TEFAP: Non-TEFAP | Thu reqs:   | Sat reqs:  ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein"
+      ],
+      "languages": [
+        "Spanish",
+        "Amharic"
+      ],
+      "heroCopy": "Groceries, fresh produce, and a helping hand for the community.",
+      "firstVisitGuide": [
+        "Arrive during scheduled hours for fresh food options.",
+        "No appointment needed—just walk in and serve yourself.",
+        "Ask staff for guidance on available items."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.79,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 39.000211,
+      "lon": -76.994071,
+      "id": "org_cafb__clifton-park-baptist-church",
+      "hours_structured": [
+        {
+          "day": "thu",
+          "open": "10:00",
+          "close": "12:00"
+        },
+        {
+          "day": "sat",
+          "open": "08:30",
+          "close": "10:30"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "University Bl+Piney Branch Rd",
+      "nearestTransitId": "2000227",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M12"
+      ],
+      "transitDistanceMeters": 294,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "2000227",
+          "route": "M12",
+          "all_routes": [
+            "M12"
+          ],
+          "stop_name": "University Bl+Piney Branch Rd",
+          "lat": 39.000556,
+          "lon": -76.995403,
+          "walk_distance_m": 294,
+          "walk_minutes": 4,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 4,
+        "reachable_hours_of_week": [],
+        "transit_summary": "4-min walk to Route M12 bus",
+        "enriched_at": "2026-04-12T15:46:29Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "St. Michael and All Angels",
+      "address": "8501 New Hampshire Ave, Adelphi, MD 20783",
+      "city": "Adelphi",
+      "state": "MD",
+      "zip": "20783",
+      "phone": "(301) 434-4646",
+      "hours": "Fri: 9:00 AM to 11:30 AM; 3rd of the Month (Note: Please note that distribution on the 3rd Friday of each month is by appointment only.), Sat: 2:30 PM to 5:00 PM; 3rd of the Month (Note: We distribute groceries provided by CAFB (TEFAP and non-TEFAP items) on the third Saturday of each month. In addition, clients are served a hot meal which is sponsored separately by the church. Gently used clothing is also available.)",
+      "requirements": [
+        "appointment_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance",
+        "hot_meals"
+      ],
+      "raw_text": "St. Michael and All Angels | Address: 8501 New Hampshire Ave, Adelphi, MD 20783 | Phone: (301) 434-4646 | Email: dg4720@yahoo.com | Hours: Fri: 9:00 AM to 11:30 AM; 3rd of the Month (Note: Please note that distribution on the 3rd Friday of each month is by appointment only.), Sat: 2:30 PM to 5:00 PM; 3rd of the Month (Note: We distribute groceries provided by CAFB (TEFAP and non-TEFAP items) on the third Saturday of each month. In addition, clients are served a hot meal which is sponsored separately by the church. Gently used clothing is also available.) | TEFAP: TEFAP Available | Fri notes:  (Note: Please note that distribution on the 3rd Friday of each month is by appointment only.) | Fri reqs:   | Sat notes:  (Note: We distribute groceries provided by CAFB (TEFAP and non-TEFAP items) on the third Saturday of each month. In addition, clients are served a hot meal which is sponsored separately by the church. Gently used clothing is also available.) | Sat reqs:  ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Fresh food and more — a neighborhood food pantry that cares.",
+      "firstVisitGuide": [
+        "Check 3rd Friday/Saturday for grocery distribution.",
+        "Bring ID on appointment days if required.",
+        "Hot meals served—no appointment needed on Saturdays."
+      ],
+      "plainEligibility": "Everyone welcome. Bring ID for appointment days.",
+      "toneScore": 0.75,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.999469,
+      "lon": -76.982445,
+      "id": "org_cafb__st-michael-and-all-angels",
+      "hours_structured": [
+        {
+          "day": "fri",
+          "open": "09:00",
+          "close": "11:30"
+        },
+        {
+          "day": "fri",
+          "open": "03:00",
+          "close": "03:00",
+          "note": "rd Friday of each month is by appointment only.)"
+        },
+        {
+          "day": "sat",
+          "open": "14:30",
+          "close": "17:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "New Hampshire Av+Ruatan St",
+      "nearestTransitId": "3002311",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M60"
+      ],
+      "transitDistanceMeters": 544,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3002311",
+          "route": "M60",
+          "all_routes": [
+            "M60"
+          ],
+          "stop_name": "New Hampshire Av+Ruatan St",
+          "lat": 38.99958,
+          "lon": -76.983191,
+          "walk_distance_m": 544,
+          "walk_minutes": 7,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 7,
+        "reachable_hours_of_week": [],
+        "transit_summary": "7-min walk to Route M60 bus",
+        "enriched_at": "2026-04-12T15:46:33Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Resurrection Bible Church",
+      "address": "10835 Lanham-Severn Road, Glenn Dale, MD 20769",
+      "city": "Glenn Dale",
+      "state": "MD",
+      "zip": "20769",
+      "phone": "(301) 437-4958",
+      "hours": "Sat: 9:30 AM to 10:30 AM; 2nd of the Month (Note: Must wait in vehicle); 9:30 AM to 10:30 AM; 2nd of the Month (Note: Second Saturday of the month and must RSVP)",
+      "requirements": [
+        "appointment_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Resurrection Bible Church | Address: 10835 Lanham-Severn Road, Glenn Dale, MD 20769 | Phone: (301) 437-4958 | Email: jvillenc20783@yahoo.com | Hours: Sat: 9:30 AM to 10:30 AM; 2nd of the Month (Note: Must wait in vehicle); 9:30 AM to 10:30 AM; 2nd of the Month (Note: Second Saturday of the month and must RSVP) | TEFAP: Non-TEFAP | Sat notes:  (Note: Must wait in vehicle)\r\n (Note: Second Saturday of the month and must RSVP) | Sat reqs:  \r\n ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Community food pantry offering fresh produce to neighbors in need.",
+      "firstVisitGuide": [
+        "RSVP in advance—every spot counts for those waiting.",
+        "Arrive early; wait comfortably in your vehicle.",
+        "Bring ID if required for verification."
+      ],
+      "plainEligibility": "RSVP required. Second Saturday only.",
+      "toneScore": 0.42,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.985746,
+      "lon": -76.821432,
+      "id": "org_cafb__resurrection-bible-church",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "09:30",
+          "close": "10:30"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Lanham Severn Rd+Eastgate La",
+      "nearestTransitId": "3002176",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P20"
+      ],
+      "transitDistanceMeters": 140,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3002176",
+          "route": "P20",
+          "all_routes": [
+            "P20"
+          ],
+          "stop_name": "Lanham Severn Rd+Eastgate La",
+          "lat": 38.986739,
+          "lon": -76.82083,
+          "walk_distance_m": 140,
+          "walk_minutes": 2,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 2,
+        "reachable_hours_of_week": [],
+        "transit_summary": "2-min walk to Route P20 bus",
+        "enriched_at": "2026-04-12T15:46:39Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Royalhouse Chapel International",
+      "address": "7911 Braygreen Road, Laurel, MD 20707",
+      "city": "Laurel",
+      "state": "MD",
+      "zip": "20707",
+      "phone": "(301) 437-9441",
+      "hours": "Tue: As Needed to As Needed; Every Other Week (Note: as needed also on Tuesday by appointment), Sat: 10:00 AM to 12:00 PM; Every Other Week (Note: Drive through)",
+      "requirements": [
+        "appointment_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance",
+        "drive_through"
+      ],
+      "raw_text": "Royalhouse Chapel International | Address: 7911 Braygreen Road, Laurel, MD 20707 | Phone: (301) 437-9441 | Email: asaila@royalhousemd.org | Hours: Tue: As Needed to As Needed; Every Other Week (Note: as needed also on Tuesday by appointment), Sat: 10:00 AM to 12:00 PM; Every Other Week (Note: Drive through) | TEFAP: Non-TEFAP | Tue notes:  (Note: as needed also on Tuesday by appointment) | Tue reqs:   | Sat notes:  (Note: Drive through) | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "A warm welcome and pantry staples — come as you are.",
+      "firstVisitGuide": [
+        "Call ahead for a Tuesday appointment—availability varies.",
+        "Saturday drive-thru is every other week; no ID needed.",
+        "Arrive early to avoid long waits on Saturdays."
+      ],
+      "plainEligibility": "Call to confirm appointment availability—no proof required.",
+      "toneScore": 0.75,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 39.079134,
+      "lon": -76.868556,
+      "id": "org_cafb__royalhouse-chapel-international",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "10:00",
+          "close": "12:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Baltimore Av+Braygreen Rd",
+      "nearestTransitId": "3004416",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P12"
+      ],
+      "transitDistanceMeters": 524,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3004416",
+          "route": "P12",
+          "all_routes": [
+            "P12"
+          ],
+          "stop_name": "Baltimore Av+Braygreen Rd",
+          "lat": 39.07847,
+          "lon": -76.866107,
+          "walk_distance_m": 524,
+          "walk_minutes": 7,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 7,
+        "reachable_hours_of_week": [],
+        "transit_summary": "7-min walk to Route P12 bus",
+        "enriched_at": "2026-04-12T15:46:47Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "St. Camillus Catholic Church",
+      "address": "1600 Saint Camillus Drive, Silver Spring, MD 20903",
+      "city": "Silver Spring",
+      "state": "MD",
+      "zip": "20903",
+      "phone": "(301) 442-1151",
+      "hours": "Fri: 4:00 PM to 6:00 PM; Every week (Note: Clients may visit the pantry once every 4 weeks.), Sat: 10:00 AM to 12:00 PM; Every week (Note: Clients may visit the pantry once every 4 weeks.)",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "St. Camillus Catholic Church | Address: 1600 Saint Camillus Drive, Silver Spring, MD 20903 | Phone: (301) 442-1151 | Email: jromanus74@gmail.com | Hours: Fri: 4:00 PM to 6:00 PM; Every week (Note: Clients may visit the pantry once every 4 weeks.), Sat: 10:00 AM to 12:00 PM; Every week (Note: Clients may visit the pantry once every 4 weeks.) | TEFAP: TEFAP Available | Fri notes:  (Note: Clients may visit the pantry once every 4 weeks.) | Fri reqs:   | Sat notes:  (Note: Clients may visit the pantry once every 4 weeks.) | Sat reqs:  ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein",
+        "frozen"
+      ],
+      "languages": [
+        "Spanish",
+        "Amharic"
+      ],
+      "heroCopy": "Open-door food pantry serving fresh fresh produce with care.",
+      "firstVisitGuide": [
+        "Arrive during open hours for a welcoming, no-judgment experience.",
+        "Bring valid ID to confirm your first-time visit.",
+        "Plan to leave with groceries that honor your family’s needs."
+      ],
+      "plainEligibility": "Visit once every four weeks—no additional proof required.",
+      "toneScore": 0.7,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 39.009508,
+      "lon": -76.981661,
+      "id": "org_cafb__st-camillus-catholic-church",
+      "hours_structured": [
+        {
+          "day": "fri",
+          "open": "16:00",
+          "close": "18:00"
+        },
+        {
+          "day": "sat",
+          "open": "10:00",
+          "close": "12:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Northampton Dr+Avnel Rd",
+      "nearestTransitId": "2000269",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M60"
+      ],
+      "transitDistanceMeters": 411,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "2000269",
+          "route": "M60",
+          "all_routes": [
+            "M60"
+          ],
+          "stop_name": "Northampton Dr+Avnel Rd",
+          "lat": 39.006937,
+          "lon": -76.980718,
+          "walk_distance_m": 411,
+          "walk_minutes": 5,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 5,
+        "reachable_hours_of_week": [],
+        "transit_summary": "5-min walk to Route M60 bus",
+        "enriched_at": "2026-04-12T15:46:52Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "The Hope Center",
+      "address": "4915 Wheeler Rd, Oxon Hill, MD 20745",
+      "city": "Oxon Hill",
+      "state": "MD",
+      "zip": "20745",
+      "phone": "(301) 448-8155",
+      "hours": "Sat: 10:00 AM to 12:00 PM; 2nd and 4th of the Month (Note: Can call to make an appointment for emergencies)",
+      "requirements": [
+        "appointment_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "The Hope Center | Address: 4915 Wheeler Rd, Oxon Hill, MD 20745 | Phone: (301) 448-8155 | Email: colwexecasst@gmail.com | Hours: Sat: 10:00 AM to 12:00 PM; 2nd and 4th of the Month (Note: Can call to make an appointment for emergencies) | TEFAP: Non-TEFAP | Sat notes:  (Note: Can call to make an appointment for emergencies) | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Open-door food pantry serving fresh groceries with care.",
+      "firstVisitGuide": [
+        "Call ahead for an appointment if in need of emergency assistance.",
+        "Arrive between 10 AM and 12 PM for your scheduled time slot.",
+        "Bring any required documents to streamline your visit."
+      ],
+      "plainEligibility": "Call to schedule an appointment—no ID required for walk-ins.",
+      "toneScore": 0.71,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.8217446,
+      "lon": -76.9714118,
+      "id": "org_cafb__the-hope-center",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "10:00",
+          "close": "12:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Wheeler Rd+Iverson Pl",
+      "nearestTransitId": "3000485",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P93",
+        "P94"
+      ],
+      "transitDistanceMeters": 443,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3000485",
+          "route": "P93",
+          "all_routes": [
+            "P93",
+            "P94"
+          ],
+          "stop_name": "Wheeler Rd+Iverson Pl",
+          "lat": 38.823158,
+          "lon": -76.969798,
+          "walk_distance_m": 443,
+          "walk_minutes": 6,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 6,
+        "reachable_hours_of_week": [],
+        "transit_summary": "6-min walk to Route P93 bus",
+        "enriched_at": "2026-04-12T15:46:57Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Destiny Driven",
+      "address": "5900 Princess Garden Parkway, Lanham, MD 20706",
+      "city": "Lanham",
+      "state": "MD",
+      "zip": "20706",
+      "phone": "(301) 455-5970",
+      "hours": "Mon: 11:00 AM to 2:00 PM; As Needed (Note: No pantry requirements); 11:00 AM to 3:00 PM; Every week (Note: No Pantry Requirements.), Tue: 10:00 AM to 3:00 PM; Every week; 11:00 AM to 2:00 PM; Every week (Note: No pantry requirements), Thu: 10:00 AM to 3:00 PM; Every week, Fri: 11:00 AM to 3:00 PM; Every week, Sat: 11:00 AM to 3:00 PM; Every week, Sun: 12:00 PM to 1:30 PM; Every week",
+      "requirements": [
+        "walk_in",
+        "no_id_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Destiny Driven | Address: 5900 Princess Garden Parkway, Lanham, MD 20706 | Phone: (301) 455-5970 | Email: destinydriveninternationalceo@gmail.com | Hours: Mon: 11:00 AM to 2:00 PM; As Needed (Note: No pantry requirements); 11:00 AM to 3:00 PM; Every week (Note: No Pantry Requirements.), Tue: 10:00 AM to 3:00 PM; Every week; 11:00 AM to 2:00 PM; Every week (Note: No pantry requirements), Thu: 10:00 AM to 3:00 PM; Every week, Fri: 11:00 AM to 3:00 PM; Every week, Sat: 11:00 AM to 3:00 PM; Every week, Sun: 12:00 PM to 1:30 PM; Every week | TEFAP: Non-TEFAP | Mon notes:  (Note: No pantry requirements)\r\n (Note: No Pantry Requirements.) | Mon reqs:  \r\n  | Tue notes: \r\n (Note: No pantry requirements) | Tue reqs:  \r\n  | Thu reqs:   | Fri reqs:   | Sat reqs:   | Sun reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Free fresh food for families — walk in anytime during hours.",
+      "firstVisitGuide": [
+        "No ID or proof needed—just come as you are.",
+        "Hours vary daily; check schedule for your best visit time.",
+        "Ask staff about community resources while you’re here."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.88,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.961544,
+      "lon": -76.864,
+      "id": "org_cafb__destiny-driven",
+      "hours_structured": [
+        {
+          "day": "mon",
+          "open": "11:00",
+          "close": "14:00"
+        },
+        {
+          "day": "tue",
+          "open": "10:00",
+          "close": "15:00"
+        },
+        {
+          "day": "thu",
+          "open": "10:00",
+          "close": "15:00"
+        },
+        {
+          "day": "fri",
+          "open": "11:00",
+          "close": "15:00"
+        },
+        {
+          "day": "sat",
+          "open": "11:00",
+          "close": "15:00"
+        },
+        {
+          "day": "sun",
+          "open": "12:00",
+          "close": "13:30"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Princess Garden Pkwy+Annapolis Rd",
+      "nearestTransitId": "3001800",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P21"
+      ],
+      "transitDistanceMeters": 131,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3001800",
+          "route": "P21",
+          "all_routes": [
+            "P21"
+          ],
+          "stop_name": "Princess Garden Pkwy+Annapolis Rd",
+          "lat": 38.962237,
+          "lon": -76.863584,
+          "walk_distance_m": 131,
+          "walk_minutes": 2,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 2,
+        "reachable_hours_of_week": [],
+        "transit_summary": "2-min walk to Route P21 bus",
+        "enriched_at": "2026-04-12T15:47:02Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Brighter Day Ministries Food Pantry",
+      "address": "2525 12th Pl SE, Washington, DC 20020",
+      "city": "Washington",
+      "state": "DC",
+      "zip": "20020",
+      "phone": "(301) 455-6384",
+      "hours": "Thu: 11:00 AM to 3:00 PM; Every week; 4:00 PM to 6:30 PM; Every week",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Brighter Day Ministries Food Pantry | Address: 2525 12th Pl SE, Washington, DC 20020 | Phone: (301) 455-6384 | Email: mable.l.semple@hotmail.com | Hours: Thu: 11:00 AM to 3:00 PM; Every week; 4:00 PM to 6:30 PM; Every week | TEFAP: TEFAP Available | Thu notes: \r\n | Thu reqs:  \r\n ",
+      "food_types": [],
+      "languages": [
+        "Spanish",
+        "Amharic"
+      ],
+      "heroCopy": "Community food pantry offering groceries to neighbors in need.",
+      "firstVisitGuide": [
+        "Arrive by 3:00 PM or 6:30 PM for smooth service.",
+        "No appointment needed—just walk in with your family.",
+        "Ask about TEFAP assistance for extra support."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.74,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.85155,
+      "lon": -76.985323,
+      "id": "org_cafb__brighter-day-ministries-food-pantry",
+      "hours_structured": [
+        {
+          "day": "thu",
+          "open": "11:00",
+          "close": "15:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "12 Pl SE+Jasper Rd SE",
+      "nearestTransitId": "1000226",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "C25",
+        "C26"
+      ],
+      "transitDistanceMeters": 95,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "F07",
+          "name": "Congress Heights",
+          "lines": [
+            "GR"
+          ],
+          "lat": 38.8458,
+          "lon": -76.9952,
+          "walk_distance_m": 2626,
+          "walk_minutes": 33,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "1000226",
+          "route": "C25",
+          "all_routes": [
+            "C25",
+            "C26"
+          ],
+          "stop_name": "12 Pl SE+Jasper Rd SE",
+          "lat": 38.851222,
+          "lon": -76.985242,
+          "walk_distance_m": 95,
+          "walk_minutes": 1,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 33,
+        "walk_minutes_to_bus": 1,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "33-min walk to Congress Heights (GR line); 1-min walk to Route C25 bus",
+        "enriched_at": "2026-04-12T15:47:12Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Sowing Empowerment & Economic Development, Inc.",
+      "address": "6201 Riverdale Road, Riverdale, MD 20737",
+      "city": "Riverdale",
+      "state": "MD",
+      "zip": "20737",
+      "phone": "(301) 458-9808",
+      "hours": "Wed: 12:00 PM to 2:30 PM; Every week (Note: Bring bags)",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Sowing Empowerment & Economic Development, Inc. | Address: 6201 Riverdale Road, Riverdale, MD 20737 | Phone: (301) 458-9808 | Email: cweng@seedinc.org | Hours: Wed: 12:00 PM to 2:30 PM; Every week (Note: Bring bags) | TEFAP: Non-TEFAP | Wed notes:  (Note: Bring bags) | Wed reqs:  ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein",
+        "frozen"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Open-door food pantry serving fresh fresh food with care.",
+      "firstVisitGuide": [
+        "Bring your own bags—no extra fees or judgment.",
+        "Arrive anytime between 12 PM and 2:30 PM.",
+        "Explore a variety of food options for your household."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing but your bags.",
+      "toneScore": 0.7,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.959287,
+      "lon": -76.90621,
+      "id": "org_cafb__sowing-empowerment-economic-development-inc",
+      "hours_structured": [
+        {
+          "day": "wed",
+          "open": "12:00",
+          "close": "14:30"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Riverdale Rd+64 Av",
+      "nearestTransitId": "3001769",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P30",
+        "P31",
+        "P42"
+      ],
+      "transitDistanceMeters": 300,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3001769",
+          "route": "P30",
+          "all_routes": [
+            "P30",
+            "P31",
+            "P42"
+          ],
+          "stop_name": "Riverdale Rd+64 Av",
+          "lat": 38.961199,
+          "lon": -76.907353,
+          "walk_distance_m": 300,
+          "walk_minutes": 4,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 4,
+        "reachable_hours_of_week": [],
+        "transit_summary": "4-min walk to Route P30 bus",
+        "enriched_at": "2026-04-12T15:47:18Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Mt. Jezreel Baptist Church",
+      "address": "420 University Blvd East, Silver Spring, MD 20901",
+      "city": "Silver Spring",
+      "state": "MD",
+      "zip": "20901",
+      "phone": "(301) 461-4257",
+      "hours": "Sat: 10:00 AM to 2:00 PM; 1st of the Month (Note: No restrictions on client's location.  300 non-perishable food bags and produce distributed until gone.)",
+      "requirements": [
+        "walk_in",
+        "no_id_required"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance",
+        "drive_through"
+      ],
+      "raw_text": "Mt. Jezreel Baptist Church | Address: 420 University Blvd East, Silver Spring, MD 20901 | Phone: (301) 461-4257 | Email: kindbea48@comcast.net | Hours: Sat: 10:00 AM to 2:00 PM; 1st of the Month (Note: No restrictions on client's location.  300 non-perishable food bags and produce distributed until gone.) | TEFAP: Non-TEFAP | Sat notes:  (Note: No restrictions on client's location.  300 non-perishable food bags and produce distributed until gone.) | Sat reqs:  ",
+      "food_types": [
+        "canned_goods",
+        "produce"
+      ],
+      "languages": [
+        "Spanish",
+        "Amharic"
+      ],
+      "heroCopy": "Open-door food pantry serving fresh groceries with care.",
+      "firstVisitGuide": [
+        "Arrive anytime between 10 AM–2 PM on the 1st of each month.",
+        "Bring your own bags or use theirs—no restrictions or forms.",
+        "Take what you need; supplies last until they’re all gone."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.72,
+      "source_ids": [
+        "cafb",
+        "mocofood"
+      ],
+      "cross_source_count": 2,
+      "website": "https://www.mtjezreel.com",
+      "reconciliation_warnings": [
+        "Hours differ between sources -- showing most trusted."
+      ],
+      "lat": 39.008767,
+      "lon": -76.997341,
+      "id": "org_cafb__mt-jezreel-baptist-church",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "10:00",
+          "close": "14:00"
+        }
+      ],
+      "reliability": {
+        "tier": "fresh",
+        "score": 1.0,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "University Bl E+E Melbourne Av",
+      "nearestTransitId": "2000295",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M12"
+      ],
+      "transitDistanceMeters": 359,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "2000295",
+          "route": "M12",
+          "all_routes": [
+            "M12"
+          ],
+          "stop_name": "University Bl E+E Melbourne Av",
+          "lat": 39.009985,
+          "lon": -77.000005,
+          "walk_distance_m": 359,
+          "walk_minutes": 4,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 4,
+        "reachable_hours_of_week": [],
+        "transit_summary": "4-min walk to Route M12 bus",
+        "enriched_at": "2026-04-12T15:47:22Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "mocofood",
+      "name": "First Baptist Church of Silver Spring",
+      "address": "828 Wayne Avenue, Silver Spring, 20910",
+      "zip": "20910",
+      "phone": "(301) 754-1100",
+      "website": "http://www.thechurchdowntown.com/",
+      "hours": "Every Saturday, 10AM-12PM",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "languages": [
+        "Spanish",
+        "Amharic"
+      ],
+      "raw_text": "First Baptist Church of Silver Spring | Address: 828 Wayne Avenue, Silver Spring, 20910 | Phone: (301) 754-1100 | Website: http://www.thechurchdowntown.com/ | Hours: Every Saturday, 10AM-12PM | Type: Pre-Packed Pantry Items | Accessibility: Walk-in | Languages: Spanish",
+      "food_types": [
+        "canned_goods",
+        "bread_bakery",
+        "protein"
+      ],
+      "heroCopy": "Free fresh food for families — walk in anytime during hours.",
+      "firstVisitGuide": [
+        "Arrive by 12 PM to avoid closing.",
+        "No appointment needed—just walk in.",
+        "Wayne Street entrance is your entry point."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "culturalNotes": "Serves diverse community; affiliated with Spanish/Haitian/French Creole/Ethiopian churches.",
+      "toneScore": 0.76,
+      "accepts_food_donations": true,
+      "accepts_money_donations": true,
+      "donate_url": "http://www.thechurchdowntown.com",
+      "source_ids": [
+        "mocofood",
+        "cafb"
+      ],
+      "cross_source_count": 2,
+      "city": "Silver Spring",
+      "state": "MD",
+      "reconciliation_warnings": [
+        "Hours differ between sources -- showing most trusted."
+      ],
+      "lat": 38.9965219,
+      "lon": -77.022546,
+      "id": "org_mocofood__first-baptist-church-of-silver-spring",
+      "hours_structured": null,
+      "reliability": {
+        "tier": "fresh",
+        "score": 1.0,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Fenton St+Wayne Av",
+      "nearestTransitId": "2001149",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P30"
+      ],
+      "transitDistanceMeters": 224,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "B08",
+          "name": "Silver Spring",
+          "lines": [
+            "RD"
+          ],
+          "lat": 38.994,
+          "lon": -77.031,
+          "walk_distance_m": 1092,
+          "walk_minutes": 14,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "2001149",
+          "route": "P30",
+          "all_routes": [
+            "P30"
+          ],
+          "stop_name": "Fenton St+Wayne Av",
+          "lat": 38.995257,
+          "lon": -77.024241,
+          "walk_distance_m": 224,
+          "walk_minutes": 3,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 14,
+        "walk_minutes_to_bus": 3,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "14-min walk to Silver Spring (RD line); 3-min walk to Route P30 bus",
+        "enriched_at": "2026-04-12T15:47:29Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Kings and Priests International Ministries",
+      "address": "520 Randolph Road, Silver Spring, MD 20904",
+      "city": "Silver Spring",
+      "state": "MD",
+      "zip": "20904",
+      "phone": "(301) 467-6646",
+      "hours": "Wed: 5:00 PM to 7:30 PM; 1st and 3rd of the Month, Sun: 12:30 PM to 3:30 PM; Every week",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Kings and Priests International Ministries | Address: 520 Randolph Road, Silver Spring, MD 20904 | Phone: (301) 467-6646 | Email: kpciministries@gmail.com | Hours: Wed: 5:00 PM to 7:30 PM; 1st and 3rd of the Month, Sun: 12:30 PM to 3:30 PM; Every week | TEFAP: Non-TEFAP | Wed reqs:   | Sun reqs:  ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein"
+      ],
+      "languages": [
+        "Spanish",
+        "Amharic"
+      ],
+      "heroCopy": "Fresh produce and more — a neighborhood food pantry that cares.",
+      "firstVisitGuide": [
+        "Arrive during stated hours for a welcoming experience.",
+        "No appointment needed—just walk in with your family.",
+        "Staff will guide you through available resources kindly."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.77,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 39.065663,
+      "lon": -77.020494,
+      "id": "org_cafb__kings-and-priests-international-ministries",
+      "hours_structured": [
+        {
+          "day": "wed",
+          "open": "17:00",
+          "close": "19:30"
+        },
+        {
+          "day": "sun",
+          "open": "12:30",
+          "close": "15:30"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Randolph Rd+#500",
+      "nearestTransitId": "2001169",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M42",
+        "M44"
+      ],
+      "transitDistanceMeters": 156,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "2001169",
+          "route": "M42",
+          "all_routes": [
+            "M42",
+            "M44"
+          ],
+          "stop_name": "Randolph Rd+#500",
+          "lat": 39.066468,
+          "lon": -77.019465,
+          "walk_distance_m": 156,
+          "walk_minutes": 2,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 2,
+        "reachable_hours_of_week": [],
+        "transit_summary": "2-min walk to Route M42 bus",
+        "enriched_at": "2026-04-12T15:47:36Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Harvest Gleaners",
+      "address": "3210 Norbeck Road, Silver Spring, MD 20906",
+      "city": "Silver Spring",
+      "state": "MD",
+      "zip": "20906",
+      "phone": "(301) 503-7397",
+      "hours": "Thu: 9:00 AM to 11:00 AM; Every week (Note: Must be a resident of the senior housing complex); 11:00 AM to Until Food Runs Out; Every Other Week (Note: Must be a resident of the senior housing complex)",
+      "requirements": [
+        "walk_in",
+        "proof_of_address"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Harvest Gleaners | Address: 3210 Norbeck Road, Silver Spring, MD 20906 | Phone: (301) 503-7397 | Email: harvestgleaners@aol.com | Hours: Thu: 9:00 AM to 11:00 AM; Every week (Note: Must be a resident of the senior housing complex); 11:00 AM to Until Food Runs Out; Every Other Week (Note: Must be a resident of the senior housing complex) | TEFAP: Non-TEFAP | Thu notes:  (Note: Must be a resident of the senior housing complex)\r\n (Note: Must be a resident of the senior housing complex) | Thu reqs:  \r\n ",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "dairy",
+        "bread_bakery",
+        "protein"
+      ],
+      "languages": [
+        "Spanish",
+        "Amharic"
+      ],
+      "heroCopy": "A place for fresh food and support — everyone belongs here.",
+      "firstVisitGuide": [
+        "Bring your senior housing complex ID for access.",
+        "Food runs out—arrive early to secure your share.",
+        "Check weekly schedule for availability changes."
+      ],
+      "plainEligibility": "Only senior housing residents may visit.",
+      "toneScore": 0.71,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 39.111026,
+      "lon": -77.065338,
+      "id": "org_cafb__harvest-gleaners",
+      "hours_structured": [
+        {
+          "day": "thu",
+          "open": "09:00",
+          "close": "11:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Georgia Av+Norbeck Rd",
+      "nearestTransitId": "2000957",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "M20",
+        "M22"
+      ],
+      "transitDistanceMeters": 1686,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "2000957",
+          "route": "M20",
+          "all_routes": [
+            "M20",
+            "M22"
+          ],
+          "stop_name": "Georgia Av+Norbeck Rd",
+          "lat": 39.110514,
+          "lon": -77.075636,
+          "walk_distance_m": 1686,
+          "walk_minutes": 21,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 21,
+        "reachable_hours_of_week": [],
+        "transit_summary": "21-min walk to Route M20 bus",
+        "enriched_at": "2026-04-12T15:47:41Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "mocofood",
+      "name": "Mid-County Hub at Harvest Intercontinental Church – Olney",
+      "address": "16227 Batchellors Forest Road, Olney, 20832",
+      "zip": "20832",
+      "website": "https://www.harvestersolney.org",
+      "hours": "Drive thru Saturdays 9:00AM - 11:00AM; Pantry Tuesday through Friday, from 3:30 PM to 6:30 PM",
+      "food_types": [
+        "produce",
+        "canned_goods",
+        "baby_supplies",
+        "dairy",
+        "bread_bakery",
+        "protein"
+      ],
+      "requirements": [
+        "appointment_required",
+        "proof_of_address"
+      ],
+      "services": [
+        "food_pantry",
+        "delivery",
+        "drive_through",
+        "snap_assistance"
+      ],
+      "languages": [
+        "French",
+        "Spanish"
+      ],
+      "raw_text": "Mid-County Hub at Harvest Intercontinental Church – Olney | Address: 16227 Batchellors Forest Road, Olney, 20832 | Website: https://www.harvestersolney.org | Hours: Drive thru Saturdays 9:00AM - 11:00AM; Pantry Tuesday through Friday, from 3:30 PM to 6:30 PM | Type: Choice Pantry, Pre-Packed Pantry Items | Accessibility: Appointment Required | Languages: French, Spanish | Features: Delivery, Benefits Counseling, Fresh Produce, Other Services Offered | Other services: Diapers",
+      "heroCopy": "Free nutritious food for families — walk in anytime during hours.",
+      "firstVisitGuide": [
+        "Arrive early for drive-thru or pantry slots.",
+        "Bring valid ID for appointment confirmation.",
+        "Ask about delivery options if needed."
+      ],
+      "plainEligibility": "Appointment required. No proof needed beyond ID.",
+      "culturalNotes": "Serves diverse international community.",
+      "toneScore": 0.48,
+      "accepts_money_donations": true,
+      "donate_url": "https://www.harvestersolney.org",
+      "source_ids": [
+        "mocofood",
+        "cafb"
+      ],
+      "cross_source_count": 2,
+      "phone": "(301) 512-5584",
+      "city": "Olney",
+      "state": "MD",
+      "reconciliation_warnings": [
+        "Hours differ between sources -- showing most trusted.",
+        "Some sources say walk-in, others say appointment needed."
+      ],
+      "lat": 39.1340732,
+      "lon": -77.0465191,
+      "id": "org_mocofood__mid-county-hub-at-harvest-intercontinental-church-olney",
+      "hours_structured": null,
+      "reliability": {
+        "tier": "fresh",
+        "score": 1.0,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": null,
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": null,
+        "reachable_hours_of_week": [],
+        "transit_summary": "No WMATA transit within 2 km",
+        "enriched_at": "2026-04-12T15:47:44Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "CAC Bethel Fellowship Church",
+      "address": "7513 Northern Avenue, Glenn Dale, MD 20769",
+      "city": "Glenn Dale",
+      "state": "MD",
+      "zip": "20769",
+      "phone": "(301) 523-8911",
+      "hours": "Sat: 9:00 AM to 2:00 PM; 3rd of the Month",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "CAC Bethel Fellowship Church | Address: 7513 Northern Avenue, Glenn Dale, MD 20769 | Phone: (301) 523-8911 | Email: stellaeokosun@gmail.com | Hours: Sat: 9:00 AM to 2:00 PM; 3rd of the Month | TEFAP: Non-TEFAP | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Community food pantry offering essential groceries to neighbors in need.",
+      "firstVisitGuide": [
+        "Arrive by 9 AM for the earliest assistance.",
+        "Bring ID to confirm your appointment.",
+        "Ask about seasonal produce and staples available."
+      ],
+      "plainEligibility": "Everyone welcome. Contact ahead for a spot.",
+      "toneScore": 0.72,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.993522,
+      "lon": -76.819658,
+      "id": "org_cafb__cac-bethel-fellowship-church",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "09:00",
+          "close": "14:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Greenbelt Rd+Mission Dr",
+      "nearestTransitId": "3004466",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P20",
+        "P24"
+      ],
+      "transitDistanceMeters": 864,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3004466",
+          "route": "P20",
+          "all_routes": [
+            "P20",
+            "P24"
+          ],
+          "stop_name": "Greenbelt Rd+Mission Dr",
+          "lat": 38.990383,
+          "lon": -76.824369,
+          "walk_distance_m": 864,
+          "walk_minutes": 11,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 11,
+        "reachable_hours_of_week": [],
+        "transit_summary": "11-min walk to Route P20 bus",
+        "enriched_at": "2026-04-12T15:47:49Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "Ports Town Church",
+      "address": "4500 57th Ave, Bladensburg, MD 20717",
+      "city": "Bladensburg",
+      "state": "MD",
+      "zip": "20717",
+      "phone": "(301) 525-6328",
+      "hours": "Mon: 6:00 PM to 9:00 PM; 1st of the Month, Sun: 11:00 AM to 1:00 PM; 3rd of the Month (Note: We will have boxes of non-perishable items available)",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "Ports Town Church | Address: 4500 57th Ave, Bladensburg, MD 20717 | Phone: (301) 525-6328 | Email: ebrichardsonrn@gmail.com | Hours: Mon: 6:00 PM to 9:00 PM; 1st of the Month, Sun: 11:00 AM to 1:00 PM; 3rd of the Month (Note: We will have boxes of non-perishable items available) | TEFAP: Non-TEFAP | Mon reqs:   | Sun notes:  (Note: We will have boxes of non-perishable items available) | Sun reqs:  ",
+      "food_types": [
+        "canned_goods"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "A warm place to find nourishment and community on select evenings and Sundays.",
+      "firstVisitGuide": [
+        "Arrive anytime between opening and closing hours.",
+        "No appointment needed—just walk in with your family.",
+        "Take what you need; no questions asked."
+      ],
+      "plainEligibility": "Everyone welcome. Bring nothing.",
+      "toneScore": 0.77,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.945548,
+      "lon": -76.917438,
+      "id": "org_cafb__ports-town-church",
+      "hours_structured": [
+        {
+          "day": "mon",
+          "open": "18:00",
+          "close": "21:00"
+        },
+        {
+          "day": "sun",
+          "open": "11:00",
+          "close": "13:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "57 Av+Joyce Pl",
+      "nearestTransitId": "3002875",
+      "nearestTransitType": "bus",
+      "nearestTransitLines": [
+        "P40"
+      ],
+      "transitDistanceMeters": 139,
+      "transit_detail": {
+        "nearest_metro": null,
+        "nearest_bus": {
+          "id": "3002875",
+          "route": "P40",
+          "all_routes": [
+            "P40"
+          ],
+          "stop_name": "57 Av+Joyce Pl",
+          "lat": 38.946531,
+          "lon": -76.916453,
+          "walk_distance_m": 139,
+          "walk_minutes": 2,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": null,
+        "walk_minutes_to_bus": 2,
+        "reachable_hours_of_week": [],
+        "transit_summary": "2-min walk to Route P40 bus",
+        "enriched_at": "2026-04-12T15:47:54Z"
+      },
+      "weather_alert": null
+    },
+    {
+      "source_id": "cafb",
+      "name": "St. Margaret of Scotland Catholic Church",
+      "address": "408 Addison Road, South, Capitol Heights, MD 20743",
+      "city": "Capitol Heights",
+      "state": "MD",
+      "zip": "20743",
+      "phone": "(301) 526-9618",
+      "hours": "Sat: 9:00 AM to 12:00 PM; 1st, 2nd, and 3rd of the Month",
+      "requirements": [
+        "walk_in"
+      ],
+      "services": [
+        "food_pantry",
+        "snap_assistance"
+      ],
+      "raw_text": "St. Margaret of Scotland Catholic Church | Address: 408 Addison Road, South, Capitol Heights, MD 20743 | Phone: (301) 526-9618 | Email: katriceemail@gmail.com | Hours: Sat: 9:00 AM to 12:00 PM; 1st, 2nd, and 3rd of the Month | TEFAP: TEFAP Only | Sat reqs:  ",
+      "food_types": [],
+      "languages": [
+        "Spanish"
+      ],
+      "heroCopy": "Free fresh produce for families — walk in anytime during hours.",
+      "firstVisitGuide": [
+        "Check their monthly schedule for operating days.",
+        "Arrive by 12 PM to ensure availability.",
+        "Bring required documentation for TEFAP eligibility."
+      ],
+      "plainEligibility": "TEFAP program only; verify requirements in advance.",
+      "toneScore": 0.74,
+      "source_ids": [
+        "cafb"
+      ],
+      "cross_source_count": 1,
+      "lat": 38.883589,
+      "lon": -76.896282,
+      "id": "org_cafb__st-margaret-of-scotland-catholic-church",
+      "hours_structured": [
+        {
+          "day": "sat",
+          "open": "09:00",
+          "close": "12:00"
+        }
+      ],
+      "reliability": {
+        "tier": "recent",
+        "score": 0.85,
+        "lastConfirmedAt": "2026-04-12T09:05:12Z"
+      },
+      "nearestTransit": "Addison Road-Seat Pleasant",
+      "nearestTransitId": "G03",
+      "nearestTransitType": "metro",
+      "nearestTransitLines": [
+        "BL",
+        "SV"
+      ],
+      "transitDistanceMeters": 619,
+      "transit_detail": {
+        "nearest_metro": {
+          "id": "G03",
+          "name": "Addison Road-Seat Pleasant",
+          "lines": [
+            "BL",
+            "SV"
+          ],
+          "lat": 38.8877,
+          "lon": -76.8975,
+          "walk_distance_m": 619,
+          "walk_minutes": 8,
+          "osrm_used": true
+        },
+        "nearest_bus": {
+          "id": "3000927",
+          "route": "P60",
+          "all_routes": [
+            "P60"
+          ],
+          "stop_name": "Addison Rd S+St Margarets Church",
+          "lat": 38.883274,
+          "lon": -76.897221,
+          "walk_distance_m": 130,
+          "walk_minutes": 2,
+          "osrm_used": true
+        },
+        "walk_minutes_to_metro": 8,
+        "walk_minutes_to_bus": 2,
+        "reachable_hours_of_week": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166
+        ],
+        "transit_summary": "8-min walk to Addison Road-Seat Pleasant (BL/SV line); 2-min walk to Route P60 bus",
+        "enriched_at": "2026-04-12T15:48:02Z"
+      },
+      "weather_alert": null
+    }
+  ]
+}
