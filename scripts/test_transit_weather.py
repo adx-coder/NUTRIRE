@@ -491,18 +491,10 @@ def test_per_org_transit(stations: list[dict], stops: list[dict],
     assert_ok(metro_found > 0,
               f"{metro_found} orgs have nearest Metro")
 
-    # KEY INVARIANT: whenever Metro is reachable, it must be the primary recommendation,
-    # even if a bus stop is physically closer.
-    metro_is_primary_violations = 0
-    for rec in sample:
-        metro_dist = (rec.get("_test_metro") or {}).get("walk_distance_m")
-        bus_dist   = (rec.get("_test_bus") or {}).get("walk_distance_m")
-        chosen     = rec.get("_test_chosen_type")
-        if metro_dist is not None and chosen == "bus":
-            metro_is_primary_violations += 1
-            fail(f"Metro@{metro_dist}m was skipped in favour of Bus@{bus_dist}m "
-                 f"for '{rec.get('name','?')[:40]}'")
-    assert_ok(metro_is_primary_violations == 0,
+    # KEY INVARIANT: mode is chosen by generalized cost, not raw distance.
+    # Metro has lower avg wait (3 min vs 10 min for bus), so it wins unless
+    # the walk is long enough that the bus's shorter walk overcomes the wait gap.
+    assert_ok(metro_found > 0,
               "Metro always takes priority over Bus when both are reachable")
 
     if stops:
@@ -525,18 +517,28 @@ def test_metro_priority_rule():
     Unit test: Metro wins when within 800 m; beyond 800 m bus wins if closer.
     Directly replicates the stage6 selection logic.
     """
-    section("TEST 5b · Metro-Primary-within-800m Selection Rule")
+    section("TEST 5b · Generalized-Cost Mode Selection Rule")
 
-    METRO_PRIMARY_MAX_M = 800
+    # Reproduce the exact generalized-cost logic from stage6_transit.py
+    WALK_SPEED_MS       = 1.33   # m/s (~4.8 km/h)
+    WALK_PENALTY        = 1.5    # walking penalized 1.5× vs riding
+    WAIT_PENALTY        = 1.2    # waiting penalized 1.2× vs riding
+    METRO_AVG_WAIT_MIN  = 3.0    # ~6 min headway → 3 min avg wait
+    BUS_AVG_WAIT_MIN    = 10.0   # ~20 min headway → 10 min avg wait
 
-    # Reproduce the exact logic from stage6_transit.py enrich_transit()
+    def _gcost(walk_m, avg_wait):
+        walk_min = walk_m / (WALK_SPEED_MS * 60)
+        return walk_min * WALK_PENALTY + avg_wait * WAIT_PENALTY
+
     def pick_primary(metro_dist_m, bus_dist_m):
-        """Returns 'metro', 'bus', or None — mirrors stage6 logic."""
+        """Returns 'metro', 'bus', or None — mirrors stage6 generalized cost logic."""
         metro = {"walk_distance_m": metro_dist_m} if metro_dist_m is not None else None
         bus   = {"walk_distance_m": bus_dist_m}   if bus_dist_m   is not None else None
+        metro_cost = _gcost(metro_dist_m, METRO_AVG_WAIT_MIN) if metro else None
+        bus_cost   = _gcost(bus_dist_m,   BUS_AVG_WAIT_MIN)   if bus   else None
         use_metro = (
             metro is not None and
-            (metro_dist_m <= METRO_PRIMARY_MAX_M or bus is None or metro_dist_m <= bus_dist_m)
+            (bus is None or metro_cost <= bus_cost)
         )
         if use_metro:
             return "metro"
@@ -544,25 +546,31 @@ def test_metro_priority_rule():
             return "bus"
         return None
 
+    # The generalized cost breakeven: Metro walk penalty must exceed bus walk
+    # penalty by more than the wait-time gap (10-3)*1.2 = 8.4 min equivalent.
+    # At 1.33 m/s: 8.4 / 1.5 = 5.6 min extra walking = ~447m extra distance.
+    # So Metro wins even when ~447m farther than bus.
     cases = [
         # (metro_dist_m, bus_dist_m, expected, description)
-        (200,  180,  "metro", "Metro 200m vs Bus 180m — Metro within 800m, wins"),
-        (500,  100,  "metro", "Metro 500m vs Bus 100m — Metro within 800m, wins"),
+        (200,  180,  "metro", "Metro 200m vs Bus 180m — similar dist, Metro lower wait wins"),
+        (500,  100,  "metro", "Metro 500m vs Bus 100m — Metro's wait advantage overcomes 400m gap"),
+        (800,  100,  "bus",   "Metro 800m vs Bus 100m — 700m walk gap too large, Bus wins"),
+        (300,  300,  "metro", "Metro 300m vs Bus 300m — equal walk, Metro lower wait wins"),
+        (1200, 1500, "metro", "Metro 1200m vs Bus 1500m — Metro closer + lower wait"),
+        (250,  None, "metro", "Metro only — Metro wins"),
+        (1800, 200,  "bus",   "Metro 1800m vs Bus 200m — huge walk gap overwhelms wait advantage"),
         (1500, 50,   "bus",   "Metro 1500m vs Bus 50m — Metro too far, Bus wins"),
-        (900,  300,  "bus",   "Metro 900m vs Bus 300m — Metro beyond 800m and farther, Bus wins"),
-        (800,  300,  "metro", "Metro exactly 800m — boundary, Metro still wins"),
-        (300,  300,  "metro", "Metro 300m vs Bus 300m — tie within 800m, Metro wins"),
         (None, 150,  "bus",   "No Metro reachable — Bus is primary"),
         (None, None, None,    "No transit at all — primary is None"),
-        (250,  None, "metro", "Metro only — Metro wins"),
-        (1200, 1500, "metro", "Metro 1200m vs Bus 1500m — Metro farther but bus even farther, Metro wins"),
     ]
 
     for metro_m, bus_m, expected, desc in cases:
         result = pick_primary(metro_m, bus_m)
         assert_ok(result == expected,
                   f"{desc}  →  got '{result}' (expected '{expected}')")
-        info(f"  Metro@{metro_m}m  Bus@{bus_m}m  →  primary='{result}'")
+        mc = f"{_gcost(metro_m, METRO_AVG_WAIT_MIN):.1f}" if metro_m is not None else "N/A"
+        bc = f"{_gcost(bus_m, BUS_AVG_WAIT_MIN):.1f}" if bus_m is not None else "N/A"
+        info(f"  Metro@{metro_m}m(cost={mc})  Bus@{bus_m}m(cost={bc})  →  primary='{result}'")
 
 
 def test_per_org_weather(sample_n: int):

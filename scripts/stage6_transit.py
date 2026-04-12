@@ -551,22 +551,37 @@ def enrich_transit(rec: dict, stations: list[dict], stops: list[dict],
         "walk_minutes_to_bus":    walk_bus,
         "reachable_hours_of_week": reachable,
         "transit_summary":        summary,
+        "mode_selection":         "generalized_cost",
         "enriched_at":            _ts(),
     }
 
     # Top-level convenience fields (schema.py NormalizedRecord fields)
     #
-    # Metro wins when it is within METRO_PRIMARY_MAX_M (800 m).
-    # Beyond 800 m, if a bus stop is closer, bus becomes the primary recommendation.
-    # Rationale: a 10-minute walk to Metro is fine; a 20-minute walk when a bus stop
-    # is right there is a poor UX recommendation.
-    METRO_PRIMARY_MAX_M = 800
-    metro_dist = metro["walk_distance_m"] if metro else None
-    bus_dist   = bus["walk_distance_m"]   if bus   else None
+    # Generalized-cost mode selection (research-backed):
+    #   cost = walk_minutes × WALK_PENALTY + avg_wait × WAIT_PENALTY
+    #
+    # Metro runs every ~6 min (avg wait ~3 min), high reliability.
+    # Bus runs every ~20 min (avg wait ~10 min), lower reliability.
+    # Walking time is penalized 1.5× vs in-vehicle time (people dislike walking).
+    # Waiting time is penalized 1.2× (uncertainty/discomfort).
+    #
+    # Sources: TRB generalized cost models, WMATA Better Bus study,
+    #          Human Transit walking distance research.
+    WALK_PENALTY         = 1.5    # walking perceived 1.5× worse than riding
+    WAIT_PENALTY         = 1.2    # waiting perceived 1.2× worse than riding
+    METRO_AVG_WAIT_MIN   = 3.0   # ~6 min headway → 3 min average wait
+    BUS_AVG_WAIT_MIN     = 10.0  # ~20 min headway → 10 min average wait
+
+    def _generalized_cost(walk_m: float, avg_wait: float) -> float:
+        walk_min = walk_m / (WALK_SPEED_MS * 60)   # convert metres to minutes
+        return walk_min * WALK_PENALTY + avg_wait * WAIT_PENALTY
+
+    metro_cost = _generalized_cost(metro["walk_distance_m"], METRO_AVG_WAIT_MIN) if metro else None
+    bus_cost   = _generalized_cost(bus["walk_distance_m"],   BUS_AVG_WAIT_MIN)   if bus   else None
 
     use_metro = (
         metro is not None and
-        (metro_dist <= METRO_PRIMARY_MAX_M or bus is None or metro_dist <= bus_dist)
+        (bus is None or metro_cost <= bus_cost)
     )
 
     if use_metro:
