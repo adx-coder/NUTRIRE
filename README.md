@@ -16,14 +16,14 @@
 
 <p align="center">
   <em>A premium, mobile-first food access intelligence app for the DC / Maryland / Virginia metro area.<br/>
-  Built for the <strong>NourishNet Data Challenge 2025</strong> — University of Maryland · NSF Funded.</em>
+  Built for the <strong>NourishNet Data Challenge 2025</strong> - University of Maryland · NSF Funded.</em>
 </p>
 
 ---
 
 ## The Problem
 
-Food distribution in the DMV is fragmented across hundreds of nonprofits, churches, food banks, and community groups — each with their own websites, schedules, and eligibility rules. A family in need has to check multiple sites, interpret inconsistent formats, and hope the information is current. **Nutrire fixes this.**
+Food distribution in the DMV is fragmented across hundreds of nonprofits, churches, food banks, and community groups - each with their own websites, schedules, and eligibility rules. A family in need has to check multiple sites, interpret inconsistent formats, and hope the information is current. **Nutrire fixes this.**
 
 ## What Nutrire Does
 
@@ -32,7 +32,7 @@ Food distribution in the DMV is fragmented across hundreds of nonprofits, church
 <td width="50%">
 
 ### For Households
-One answer, not a list. Nutrire picks your **single best option** based on distance, open status, access friction, and data confidence — then explains what to expect in warm, anxiety-reducing language.
+One answer, not a list. Nutrire picks your **single best option** based on distance, open status, access friction, and data confidence - then explains what to expect in warm, anxiety-reducing language.
 
 ### For Donors & Volunteers
 Discover which organizations near you accept food, money, or time. Filter by distance, donation type, or language need.
@@ -44,7 +44,7 @@ Discover which organizations near you accept food, money, or time. Filter by dis
 An **equity gap engine** that identifies underserved ZIP codes by computing need (poverty, SNAP rates) vs. supply (nearby orgs, frequency, hours). Surfaces where new pantries would close the biggest gaps.
 
 ### Multilingual
-Full UI + all AI-generated content translated into **English, Spanish, and Amharic** — the three priority languages of the DMV.
+Full UI + all AI-generated content translated into **English, Spanish, and Amharic** - the three priority languages of the DMV.
 
 </td>
 </tr>
@@ -74,7 +74,7 @@ Full UI + all AI-generated content translated into **English, Spanish, and Amhar
 ┌─────────────────────────────────┐     ┌──────────────────────────────┐
 │     DATA PIPELINE (Python)      │     │     FRONTEND (React/Vite)    │
 │                                 │     │                              │
-│  Scrape 6 sources               │     │  Static JSON — no backend    │
+│  Scrape 6 sources               │     │  Static JSON - no backend    │
 │  ↓                              │     │                              │
 │  LLM enrich (Mistral Small)     │     │  React 18 + TypeScript       │
 │  ↓                              │     │  Tailwind CSS + Framer Motion│
@@ -126,7 +126,7 @@ Full UI + all AI-generated content translated into **English, Spanish, and Amhar
 | Field | Coverage |
 |-------|----------|
 | Name, address, coordinates | 100% |
-| AI hero copy + eligibility + first-visit guide | 98–100% |
+| AI hero copy + eligibility + first-visit guide | 98-100% |
 | Spanish + Amharic translations | 100% |
 | Food types | 99% |
 | Phone | 99% |
@@ -152,7 +152,7 @@ npm run preview      # → preview the built app
 
 **Requirements:** Node.js 18+, npm 9+
 
-### Re-running the pipeline (optional — data is pre-built)
+### Re-running the pipeline (optional - data is pre-built)
 
 ```bash
 cd pipeline
@@ -217,11 +217,11 @@ docs/              FINAL_SYSTEM.md (canonical arch), design specs, schema docs
 ### Equity Gap Engine
 Identifies 30 underserved ZIP codes using Census ACS poverty/SNAP data vs. org supply density. Each gap includes a suggested host organization for new distribution events.
 
-### TLDAI — Temporal-Linguistic-Dignity Accessibility Index
+### TLDAI - Temporal-Linguistic-Dignity Accessibility Index
 For each ZIP: *"Can a household speaking language L find a walk-in pantry on day D within 3km?"* Three dimensions: temporal coverage, linguistic access, dignity (friction level).
 
 ### AI-Powered First-Visit Guides
-Every organization has a warm, LLM-generated "what to expect" guide that reduces the anxiety of visiting a food pantry for the first time — a UX innovation no other food access tool offers.
+Every organization has a warm, LLM-generated "what to expect" guide that reduces the anxiety of visiting a food pantry for the first time - a UX innovation no other food access tool offers.
 
 ---
 
