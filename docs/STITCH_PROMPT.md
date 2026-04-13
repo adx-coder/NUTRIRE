@@ -8,7 +8,7 @@ Nutrire is a **mobile-first food access app** for the DMV (DC, Maryland, Virgini
 
 It is NOT a charity app. It should feel like a premium consumer product — think Anthropic claude.ai, Cohere, Linear, or Arc Browser. Clean, warm, confident. The kind of app a stressed parent on a cracked phone can use and immediately feel "ok, I can go here."
 
-**1,401 real organizations** from 5 data sources. Every org has LLM-generated warm copy, structured hours, and eligibility info.
+**1,395 real organizations** from 5 data sources. Every org has LLM-generated warm copy, structured hours, and eligibility info.
 
 ---
 
@@ -98,7 +98,7 @@ One answer. The app decided for you.
 - Light Carto basemap
 
 **Backup section:**
-- "IF THAT DOESN'T WORK" eyebrow + "See all 1,401 →"
+- "IF THAT DOESN'T WORK" eyebrow + "See all 1,395 →"
 - 3 compact rows (rounded-16px, white, subtle border):
   - Each: org name + distance right, status dot + label, heroCopy 2-line clamp, eligibility + "Details →"
 
@@ -111,7 +111,7 @@ Full list with search. Mobile = single column, no map.
 **Top bar:** "← Back" left, location chip right
 
 **Content:**
-- Headline: "1,401 options near you" — 24px display
+- Headline: "1,395 options near you" — 24px display
 - **Search bar:** magnifying glass icon, "Try 'teff flour' or 'hot meals'" placeholder, rounded-xl. Full width.
 - **Filter chips** (horizontal scroll): "Open now" · "Today" · "Walkable" · "Near metro" · "Español" · "አማርኛ" · "No ID" · "Delivers"
 - **Results list:** Stacked backup cards (same compact design). Each card:
@@ -169,7 +169,7 @@ Full-screen map with bottom sheet drawers.
 **Floating controls:**
 - Top-left: "← Back" glass pill
 - Top-right: "Download" small sage pill
-- Bottom: floating stats bar: "1,401 resources · 60 gaps · 23 underserved"
+- Bottom: floating stats bar: "1,395 resources · 60 gaps · 23 underserved"
 
 **Bottom sheet** (iOS-style, draggable, slides up on pin tap):
 - Handle bar

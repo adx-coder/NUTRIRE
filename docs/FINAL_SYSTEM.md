@@ -138,13 +138,9 @@ giving:      acceptsFoodDonations, acceptsMoneyDonations, acceptsVolunteers, don
 | File | Status |
 |------|--------|
 | `FINAL_SYSTEM.md` | **This file.** Canonical description of the shipped system. |
-| `DESIGN.md` | UI/UX design language reference. Current and accurate. |
-| `COPY.md` | Tone and copy guidelines. Current. |
-| `STITCH_PROMPT.md` | Design brief used for Stitch (screen design tool). Current. |
-| `SCHEMA.md` | **Future-state.** Describes events, graphs, shifts — not implemented. |
-| `BACKEND_REBUILD_SPEC.md` | **Future-state.** Agentic backend architecture — not implemented. |
-| `BACKEND_ENRICHMENT_SPEC.md` | **Future-state.** Advanced enrichment pipeline — partially implemented. |
-| `BACKEND_TODO.md` | Backlog items. Mix of done and aspirational. |
+| `DESIGN.md` | UI/UX design language and component spec. Written early in the project as the build target. The shipped app evolved from this spec, adopting a glassmorphism aesthetic and different component names, but the core design principles (warmth, dignity, one-answer-not-a-list) held. |
+| `COPY.md` | Tone and copy guidelines. Current and enforced throughout the UI. |
+| `STITCH_PROMPT.md` | Design brief used for screen mockups. Reference only. |
 
 ---
 

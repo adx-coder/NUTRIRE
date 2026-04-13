@@ -1,6 +1,8 @@
-# Nutrire — Design Spec
+# Nutrire - Design Spec
 
-This is the spec the build answers to. Every decision is cited back to [research/foundation.md](../research/foundation.md) (`R§N`) and uses the voice rules in [COPY.md](./COPY.md).
+> **Note:** This document was written early in the project as the design target. The shipped product evolved from this spec - most notably adopting a glassmorphism aesthetic, using a custom i18n system instead of i18next, and shipping as organization-centric rather than event-centric. The core design principles (dignity, warmth, one-answer-not-a-list, banned-words enforcement) were carried through faithfully. For the canonical description of the shipped system, see [FINAL_SYSTEM.md](./FINAL_SYSTEM.md).
+
+The design decisions below are cited back to research/foundation.md and use the voice rules in [COPY.md](./COPY.md).
 
 ---
 
