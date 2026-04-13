@@ -10,7 +10,9 @@ interface Props {
 
 /**
  * Counts up to `value` when the element scrolls into view.
- * Framer Motion's `animate` driver + useInView for trigger.
+ * Uses Framer Motion's `animate` driver for the tween and `useInView` to
+ * fire the animation only once — avoids re-triggering on scroll-back.
+ * The easing curve [0.22, 1, 0.36, 1] matches the app's spring-like feel.
  */
 export function AnimatedNumber({ value, format, duration = 1.6, className }: Props) {
   const ref = useRef<HTMLSpanElement>(null);
