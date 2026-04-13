@@ -225,6 +225,12 @@ Every organization has a warm, LLM-generated "what to expect" guide that reduces
 
 ---
 
+## Team
+
+Built by **Sankhasubhra Ghosal** and **Ashwath David** for the NourishNet Data Challenge 2025.
+
+---
+
 <p align="center">
   <img src="public/logos/nutrire-mark.png" alt="Nutrire" width="40" />
   <br/>
