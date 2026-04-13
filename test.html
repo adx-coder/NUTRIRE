@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nutrire - Final Report</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;font-size:11pt;line-height:1.7;color:#1F2421;max-width:720px;margin:0 auto;padding:40px 50px}
+@media print{body{padding:10px 30px;font-size:10.5pt}@page{margin:0.7in}}
+h1{font-family:'Inter Tight',sans-serif;font-size:26pt;color:#3A6551;margin-bottom:4px}
+h2{font-size:13pt;color:#3A6551;margin-top:24px;margin-bottom:8px;padding-bottom:3px;border-bottom:1.5px solid #E8EFE9}
+h3{font-size:11pt;color:#4A524E;margin-top:14px;margin-bottom:5px}
+p{margin-bottom:9px}
+.tp{text-align:center;padding:50px 0 30px;page-break-after:always}
+.tp img{width:110px;margin-bottom:16px}
+.tp .sub{font-size:13pt;color:#4A524E;margin-top:6px}
+.tp .ch{font-size:10pt;color:#7E867F;margin-top:20px}
+.tp .nm{font-size:11pt;margin-top:28px;color:#1F2421}
+.tp .dt{font-size:9pt;color:#9A9A92;margin-top:6px}
+strong{color:#3A6551}
+ul{margin:6px 0 10px 18px}
+li{margin-bottom:3px}
+.ss{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.ss img{width:100%;border-radius:6px;border:1px solid #E7E3DA}
+.ss .fw{grid-column:1/-1}
+.cap{font-size:8.5pt;color:#7E867F;margin-top:2px;margin-bottom:8px}
+.ft{text-align:center;margin-top:30px;padding-top:12px;border-top:1px solid #E7E3DA;font-size:8.5pt;color:#9A9A92}
+.pb{page-break-before:always}
+</style>
+</head>
+<body>
+
+<div class="tp">
+<img src="public/logos/nutrire-full.png" alt="Nutrire">
+<h1>Nutrire</h1>
+<div class="sub">Helping families find food support<br>across the DC metro area</div>
+<div class="ch">NourishNet Data Challenge 2025<br>University of Maryland &middot; NSF Funded</div>
+<div class="nm"><strong>Sankhasubhra Ghosal</strong> &amp; <strong>Ashwath David</strong></div>
+<div class="dt">April 2025</div>
+</div>
+
+<h2>1. The Problem We Saw</h2>
+<p>At first glance, food assistance in the DC metro area looks well covered. There are directories, hotlines, and maps everywhere. So it should be easy to find help, right? It isn’t.</p>
+
+<p>We tried it ourselves. Jumped between tools. Nothing felt simple. Nothing felt reassuring. And none of them answered the most basic question — what actually happens when you get there?</p>
+
+<p>That uncertainty matters. It stops people.</p>
+
+<p>So we built something that removes that friction. One clear answer. One place to go. And real, human guidance on what to expect.</p>
+
+<p><strong>Families</strong> - Find the best option instantly. No forms. No barriers.</p>
+<p><strong>Donors</strong> - See exactly where help is needed.</p>
+<p><strong>Volunteers</strong> - Find opportunities that actually fit your time.</p>
+
+<h2 class="pb">2. What the App Looks Like</h2>
+
+<div class="ss">
+
+<div class="fw">
+<img src="WhatsApp Image 2026-04-13 at 16.45.36.jpeg" alt="Home Page">
+<p class="cap">Home screen with search, categories, and nearby options</p>
+</div>
+
+<div>
+<img src="WhatsApp Image 2026-04-13 at 16.45.13.jpeg" alt="Best Match">
+<p class="cap">Best match view with directions and first-visit guidance</p>
+</div>
+
+<div>
+<img src="WhatsApp Image 2026-04-13 at 16.47.00.jpeg" alt="Volunteer Page">
+<p class="cap">Volunteer page with filters and quick sign-up options</p>
+</div>
+
+<div class="fw">
+<img src="WhatsApp Image 2026-04-13 at 16.46.14.jpeg" alt="Equity Map">
+<p class="cap">Equity map showing resource distribution and gaps</p>
+</div>
+
+</div>
+
+<p><strong>Home Page</strong> - Simple. Just type your ZIP or tap “Near me.”</p>
+<p><strong>Best Match</strong> - One clear recommendation, not a long list.</p>
+<p><strong>Organization Detail</strong> - Everything you need, in one place.</p>
+<p><strong>Equity Map</strong> - See where support is missing.</p>
+<p><strong>Volunteer & Give</strong> - Take action in seconds.</p>
+
+<h2 class="pb">3. How We Built the Backend</h2>
+
+<p>A 9-stage Python pipeline handles everything — from scraping to enrichment to analysis.</p>
+
+<p>We pulled messy data from multiple sources, cleaned it, structured it, and enriched it using LLMs — making sure nothing was hallucinated.</p>
+
+<p>We added transit data, multilingual support, and coverage analysis to make the system actually usable in real life.</p>
+
+<h2 class="pb">4. Prompt Engineering</h2>
+
+<p>The biggest shift came when we stopped describing features and started describing experiences.</p>
+
+<p>Instead of “build a component,” we said: “show one best option.”</p>
+
+<p>That single change shaped the entire output.</p>
+
+<ul>
+<li>Clear data structures improved reliability</li>
+<li>Smaller prompts worked better than big ones</li>
+<li>Tone mattered as much as logic</li>
+</ul>
+
+<p>We also built strict checks to prevent incorrect outputs — especially for hours and availability.</p>
+
+<h2>5. What We’d Improve</h2>
+
+<ul>
+<li>Real-time updates instead of batch data</li>
+<li>More language support</li>
+<li>SMS-based access</li>
+<li>User feedback loops</li>
+<li>Better hours coverage</li>
+</ul>
+
+<h2>6. What We Built Beyond the Base</h2>
+
+<ul>
+<li>Full backend pipeline</li>
+<li>Smart ranking system</li>
+<li>Live signals (weather, open/closed)</li>
+<li>Multilingual support</li>
+<li>Transit-aware routing</li>
+<li>Equity analysis engine</li>
+</ul>
+
+<div class="ft">
+<img src="public/logos/nutrire-mark.png" alt="" width="24" style="vertical-align:middle;margin-right:4px;opacity:0.5">
+Nutrire &middot; NourishNet Data Challenge 2025 &middot; University of Maryland &middot; NSF Funded
+</div>
+
+</body>
+</html>w
