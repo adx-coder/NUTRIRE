@@ -45,8 +45,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 PIPELINE    = Path(__file__).resolve().parents[1]
-PROJECT     = PIPELINE.parent
-OUTPUT_DIR  = PROJECT / "public" / "data"
+PROJECT     = PIPELINE  # Nutrire root (scripts/ is one level below)
+OUTPUT_DIR  = PROJECT / "frontend" / "public" / "data"
 OUTPUT_ORGS = OUTPUT_DIR / "enriched-orgs.json"
 OUTPUT_META = OUTPUT_DIR / "metadata.json"
 EQUITY_GAPS = OUTPUT_DIR / "equity-gaps.json"
@@ -80,6 +80,58 @@ SOURCE_NAMES: dict[str, str] = {
     "two11va": "211 Virginia",
     "mocofood": "Montgomery County Food Council",
 }
+
+# ZIP → neighborhood name for DMV ZIPs
+ZIP_NEIGHBORHOOD: dict[str, str] = {
+    # DC
+    "20001": "Shaw", "20002": "Trinidad", "20003": "Capitol Hill",
+    "20004": "Penn Quarter", "20005": "Downtown", "20006": "Foggy Bottom",
+    "20007": "Georgetown", "20008": "Cleveland Park", "20009": "Adams Morgan",
+    "20010": "Columbia Heights", "20011": "Petworth", "20012": "Brightwood",
+    "20015": "Chevy Chase DC", "20016": "Tenleytown", "20017": "Brookland",
+    "20018": "Woodridge", "20019": "Deanwood", "20020": "Anacostia",
+    "20024": "Southwest Waterfront", "20032": "Congress Heights",
+    "20036": "Dupont Circle", "20037": "West End",
+    # MD — Montgomery
+    "20814": "Bethesda", "20815": "Chevy Chase", "20850": "Rockville",
+    "20851": "Rockville", "20852": "North Bethesda", "20853": "Burtonsville",
+    "20854": "Potomac", "20874": "Germantown", "20877": "Gaithersburg",
+    "20878": "Gaithersburg", "20886": "Montgomery Village",
+    "20895": "Kensington", "20901": "Silver Spring", "20902": "Wheaton",
+    "20903": "Silver Spring", "20904": "Colesville", "20906": "Aspen Hill",
+    "20910": "Silver Spring", "20912": "Takoma Park",
+    # MD — PG County
+    "20706": "Lanham", "20707": "Laurel", "20710": "Bladensburg",
+    "20712": "Mt Rainier", "20715": "Bowie", "20735": "Clinton",
+    "20737": "Riverdale Park", "20740": "College Park",
+    "20743": "Capitol Heights", "20744": "Fort Washington",
+    "20745": "Oxon Hill", "20746": "Suitland", "20747": "District Heights",
+    "20748": "Temple Hills", "20770": "Greenbelt", "20774": "Upper Marlboro",
+    "20781": "Hyattsville", "20782": "Hyattsville", "20783": "Langley Park",
+    "20784": "Hyattsville", "20785": "Cheverly",
+    # VA — NoVA
+    "22003": "Annandale", "22030": "Fairfax", "22041": "Baileys Crossroads",
+    "22042": "Falls Church", "22043": "Falls Church", "22046": "Falls Church",
+    "22101": "McLean", "22150": "Springfield", "22180": "Vienna",
+    "22191": "Woodbridge", "22192": "Woodbridge", "22193": "Dale City",
+    "22201": "Arlington", "22202": "Arlington", "22204": "Arlington",
+    "22301": "Alexandria", "22304": "Alexandria", "22306": "Alexandria",
+    # MD — Baltimore area
+    "21201": "Baltimore", "21202": "Inner Harbor", "21206": "Baltimore",
+    "21211": "Hampden", "21213": "Clifton Park", "21215": "Baltimore",
+    "21217": "Bolton Hill", "21218": "Charles Village", "21224": "Canton",
+    "21228": "Catonsville", "21230": "Federal Hill",
+    "21042": "Ellicott City", "21044": "Columbia", "21045": "Columbia",
+}
+
+# Service value normalization (fix collisions from LLM output)
+SERVICE_NORMALIZE = {
+    "drive_thru": "drive_through",
+    "mobile_food_bank": "mobile_pantry",
+}
+
+# Values that are requirements, not services
+NOT_SERVICES = {"walk_in", "no_id_required", "appointment_required"}
 
 
 def _lang_to_code(name: str) -> str:
@@ -341,6 +393,21 @@ def _build_transit_directions(metro_raw: dict | None, bus_raw: dict | None,
     return template
 
 
+def _build_nearest_transit_simple(rec: dict) -> dict | None:
+    """Build a {name, distanceMeters, walkMinutes} object from top-level transit fields."""
+    name = rec.get("nearestTransit")
+    if not name:
+        return None
+    transit_type = rec.get("nearestTransitType", "bus")
+    detail = rec.get("transit_detail") or {}
+    walk_key = f"walk_minutes_to_{transit_type}"
+    return {
+        "name": name,
+        "distanceMeters": rec.get("transitDistanceMeters") or 0,
+        "walkMinutes": detail.get(walk_key),
+    }
+
+
 def _build_weather_block(rec: dict) -> dict | None:
     """Convert weather_alert dict to camelCase frontend block."""
     alert = rec.get("weather_alert")
@@ -421,11 +488,68 @@ def transform_record(rec: dict) -> dict:
     # Languages: names → codes
     lang_codes = [_lang_to_code(l) for l in (rec.get("languages") or [])]
 
+    # Null out only truly garbage heroCopy/plainEligibility (not template-generated variants)
+    hero_raw = (rec.get("heroCopy") or "").strip()
+    if (hero_raw.lower().startswith("nourishing")
+            or hero_raw in ("N/A", "n/a", "")
+            or "No structured food" in hero_raw):
+        hero_raw = None
+
+    pe_raw = (rec.get("plainEligibility") or "").strip()
+    if pe_raw.lower() in ("everyone welcome. bring nothing.", "n/a",
+                           "no food assistance services listed.", ""):
+        # Replace boilerplate with a varied template based on requirements
+        import random
+        reqs = rec.get("requirements") or []
+        if "no_id_required" in reqs:
+            pe_raw = random.choice([
+                "Open to all — no ID or documents needed.",
+                "Everyone is welcome. No paperwork or identification required.",
+                "Just show up — no documents, no proof of address, no barriers.",
+                "Come as you are. No ID needed, no questions asked.",
+            ])
+        elif "photo_id" in reqs:
+            pe_raw = random.choice([
+                "Bring a photo ID. Call ahead if you have questions.",
+                "A photo ID is requested — call if you don't have one.",
+            ])
+        else:
+            pe_raw = random.choice([
+                "Open to the community. Call ahead to confirm what to bring.",
+                "Available to community members — call for current requirements.",
+                "Check with the org about what to bring — requirements may vary.",
+                "Stop by or call to find out what you need for your first visit.",
+                "Open to residents in the service area — call for details.",
+            ])
+
+    # Neighborhood from ZIP
+    zip_code = rec.get("zip") or ""
+    neighborhood = ZIP_NEIGHBORHOOD.get(zip_code)
+
+    # Normalize state
+    state = (rec.get("state") or "").strip()
+    if state.lower() == "va":
+        state = "VA"
+    elif state.lower() == "md":
+        state = "MD"
+    elif state.lower() == "dc":
+        state = "DC"
+
+    # Normalize services (fix collisions)
+    raw_services = rec.get("services") or ["food_pantry"]
+    services = []
+    for s in raw_services:
+        s = SERVICE_NORMALIZE.get(s, s)
+        if s not in NOT_SERVICES and s not in services:
+            services.append(s)
+    if not services:
+        services = ["food_pantry"]
+
     # Build AI enrichment block
     ai: dict = {
-        "heroCopy": rec.get("heroCopy"),
+        "heroCopy": hero_raw,
         "firstVisitGuide": rec.get("firstVisitGuide") or [],
-        "plainEligibility": rec.get("plainEligibility", ""),
+        "plainEligibility": pe_raw or "",
         "culturalNotes": rec.get("culturalNotes"),
         "toneScore": rec.get("toneScore", 0.6),
         "qualityScore": (rec.get("reliability") or {}).get("score", 0.5),
@@ -438,8 +562,10 @@ def transform_record(rec: dict) -> dict:
     if parsed:
         ai["parsedHours"] = parsed
 
-    # Transit block (from stage 6)
+    # Transit block (from stage 6) — suppress empty shells where metro+bus both null
     transit_block = _build_transit_block(rec)
+    if transit_block and not transit_block.get("nearestMetro") and not transit_block.get("nearestBus"):
+        transit_block = None  # don't emit empty transit shell to frontend
 
     # Weather block (from stage 9)
     weather_block = _build_weather_block(rec)
@@ -461,14 +587,15 @@ def transform_record(rec: dict) -> dict:
         "hoursRaw": rec.get("hours", ""),
 
         # Geography
-        "zip": rec.get("zip", ""),
+        "zip": zip_code,
+        "neighborhood": neighborhood,
         "lat": rec.get("lat"),
         "lon": rec.get("lon"),
-        "state": rec.get("state", ""),
+        "state": state,
         "city": rec.get("city", ""),
 
         # Tags
-        "services": rec.get("services") or ["food_pantry"],
+        "services": services,
         "foodTypes": rec.get("food_types") or [],
         "accessRequirements": rec.get("requirements") or [],
         "languages": lang_codes,
@@ -483,7 +610,7 @@ def transform_record(rec: dict) -> dict:
         "transit": transit_block,
 
         # Convenience top-level transit fields (for quick filtering/sorting)
-        "nearestTransit":        rec.get("nearestTransit"),
+        "nearestTransit":        _build_nearest_transit_simple(rec),
         "nearestTransitType":    rec.get("nearestTransitType"),
         "nearestTransitLines":   rec.get("nearestTransitLines"),
         "transitDistanceMeters": rec.get("transitDistanceMeters"),
@@ -620,7 +747,7 @@ def main():
         print(f"  Transit LLM cache: {cache_after - cache_before} new entries ({cache_after} total)")
 
     # Filter out records without essential fields
-    valid = [r for r in exported if r.get("name") and r.get("address")]
+    valid = [r for r in exported if r.get("name") and r.get("address") and r.get("lat") and r.get("lon")]
     dropped = len(exported) - len(valid)
     if dropped:
         print(f"  Dropped {dropped} records with no name or address")
@@ -659,7 +786,7 @@ def main():
     has_cultural = sum(1 for r in exported if r.get("ai", {}).get("culturalNotes"))
 
     print(f"\n{'='*60}")
-    print(f"EXPORT: {n} records → public/data/  (input: {INPUT.name})")
+    print(f"EXPORT: {n} records -> public/data/  (input: {INPUT.name})")
     print(f"{'='*60}")
     print(f"  With coordinates:       {has_lat}/{n} ({pct(has_lat)}%)")
     print(f"  With hours:             {has_hours}/{n} ({pct(has_hours)}%)")
@@ -669,12 +796,12 @@ def main():
     print(f"  With firstVisitGuide:   {has_guide}/{n} ({pct(has_guide)}%)")
     print(f"  With culturalNotes:     {has_cultural}/{n} ({pct(has_cultural)}%)")
     print(f"  With languages:         {has_lang}/{n} ({pct(has_lang)}%)")
-    print(f"  ── Transit (stage 6) ──────────────────────────────────")
+    print(f"  -- Transit (stage 6) ----------------------------------")
     print(f"  With transit block:     {has_transit}/{n} ({pct(has_transit)}%)")
     print(f"    Nearest Metro:        {has_metro}  (OSRM real routes: {osrm_routed})")
     print(f"    Nearest Bus stop:     {has_bus}")
     print(f"    LLM directions:       {has_llm_dir}")
-    print(f"  ── Weather (stage 9) ──────────────────────────────────")
+    print(f"  -- Weather (stage 9) ----------------------------------")
     print(f"  Active weather alerts:  {has_weather}")
     print(f"\n  Frontend files:")
     print(f"    {OUTPUT_ORGS}")

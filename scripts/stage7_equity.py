@@ -13,6 +13,8 @@ Usage:
   python scripts/stage7_equity.py
 """
 import json
+import random
+from datetime import datetime, timezone
 import math
 import sys
 from collections import defaultdict
@@ -21,9 +23,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 PIPELINE   = Path(__file__).resolve().parents[1]
-PROJECT    = PIPELINE.parent
 INPUT      = PIPELINE / "output" / "stage4_normalized.json"
-OUTPUT     = PROJECT / "public" / "data" / "equity-gaps.json"
+OUTPUT     = PIPELINE / "frontend" / "public" / "data" / "equity-gaps.json"
 
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 
@@ -227,7 +228,7 @@ def main():
 
     # Save top 30
     output = {
-        "generatedAt": "2026-04-12",
+        "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "totalZipsAnalyzed": len(gaps),
         "gaps": gaps[:30],
         "summary": {
@@ -246,14 +247,33 @@ def main():
 
 
 def _generate_why(label, need, supply, org_count, pop):
-    if need >= 0.20 and org_count <= 2:
-        return f"{label} has high food insecurity ({int(need*100)}% need) but only {org_count} nearby food resources serving {pop:,} residents."
+    pct = int(need * 100)
+    # org_count == 0 FIRST — most impactful sentence should always surface for food deserts
+    if org_count == 0:
+        return random.choice([
+            f"No food pantries within walking distance of {label} ({pop:,} residents).",
+            f"Zero food resources serve {label}'s {pop:,} residents — a complete desert.",
+            f"{label} has {pop:,} people and no nearby pantries — the widest gap in the region.",
+        ])
+    elif need >= 0.20 and org_count <= 2:
+        return random.choice([
+            f"{label} faces significant food insecurity ({pct}% need) with only {org_count} food resource{'s' if org_count != 1 else ''} serving {pop:,} residents.",
+            f"With {pct}% poverty and just {org_count} nearby pantry{'s' if org_count != 1 else ''}, {label}'s {pop:,} residents lack adequate food access.",
+            f"High need ({pct}%) meets low supply in {label} — {org_count} food org{'s' if org_count != 1 else ''} for {pop:,} people.",
+        ])
     elif need >= 0.15 and org_count <= 4:
-        return f"{label} is underserved with {org_count} food resources for {pop:,} residents in an area with {int(need*100)}% need."
-    elif org_count == 0:
-        return f"No food pantries within walking distance of {label} ({pop:,} residents)."
+        return random.choice([
+            f"{label} is underserved: {org_count} food resources for {pop:,} residents in an area with {pct}% need.",
+            f"Only {org_count} pantries serve {pop:,} people in {label}, where {pct}% of households face food insecurity.",
+            f"{label} has {pct}% need but only {org_count} nearby food options for its {pop:,} residents.",
+        ])
     else:
-        return f"{label} has moderate food access but growing need ({int(need*100)}% poverty rate, {pop:,} residents)."
+        return random.choice([
+            f"{label} has growing need ({pct}% need score) that its {org_count} food resources may not sustain for {pop:,} residents.",
+            f"Food access in {label} is stretched thin: {org_count} orgs serve {pop:,} residents at {pct}% need.",
+            f"With {pct}% need and {org_count} pantries, {label}'s {pop:,} residents face tightening food access.",
+            f"{label} ({pop:,} residents, {pct}% need score) has some food resources but demand is outpacing supply.",
+        ])
 
 
 if __name__ == "__main__":

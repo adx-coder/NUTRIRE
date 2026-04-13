@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12",
+  "generatedAt": "2026-04-13T07:17:45Z",
   "totalZipsAnalyzed": 60,
   "gaps": [
     {
@@ -18,7 +18,7 @@
         "distance_km": 0.5,
         "has_hours": true
       },
-      "why": "Fort Washington has moderate food access but growing need (13% poverty rate, 45,000 residents)."
+      "why": "Food access in Fort Washington is stretched thin: 3 orgs serve 45,000 residents at 13% need."
     },
     {
       "zip": "22192",
@@ -36,7 +36,7 @@
         "distance_km": 1.6,
         "has_hours": true
       },
-      "why": "Lake Ridge has moderate food access but growing need (9% poverty rate, 45,000 residents)."
+      "why": "Lake Ridge (45,000 residents, 9% need score) has some food resources but demand is outpacing supply."
     },
     {
       "zip": "22042",
@@ -54,7 +54,7 @@
         "distance_km": 0.9,
         "has_hours": true
       },
-      "why": "Falls Church has moderate food access but growing need (9% poverty rate, 32,000 residents)."
+      "why": "Food access in Falls Church is stretched thin: 2 orgs serve 32,000 residents at 9% need."
     },
     {
       "zip": "20878",
@@ -72,7 +72,7 @@
         "distance_km": 0.0,
         "has_hours": true
       },
-      "why": "Gaithersburg (west) has moderate food access but growing need (7% poverty rate, 42,000 residents)."
+      "why": "Gaithersburg (west) has growing need (7% need score) that its 3 food resources may not sustain for 42,000 residents."
     },
     {
       "zip": "20874",
@@ -90,7 +90,7 @@
         "distance_km": 0.9,
         "has_hours": true
       },
-      "why": "Germantown has moderate food access but growing need (9% poverty rate, 52,000 residents)."
+      "why": "Food access in Germantown is stretched thin: 6 orgs serve 52,000 residents at 9% need."
     },
     {
       "zip": "22191",
@@ -108,7 +108,7 @@
         "distance_km": 0.5,
         "has_hours": true
       },
-      "why": "Woodbridge has moderate food access but growing need (11% poverty rate, 40,000 residents)."
+      "why": "Food access in Woodbridge is stretched thin: 6 orgs serve 40,000 residents at 11% need."
     },
     {
       "zip": "22101",
@@ -122,7 +122,7 @@
       "underservedPopulation": 960,
       "nearbyOrgCount": 0,
       "suggestedHost": null,
-      "why": "No food pantries within walking distance of McLean (30,000 residents)."
+      "why": "McLean has 30,000 people and no nearby pantries — the widest gap in the region."
     },
     {
       "zip": "22150",
@@ -140,7 +140,7 @@
         "distance_km": 1.5,
         "has_hours": true
       },
-      "why": "Springfield has moderate food access but growing need (7% poverty rate, 25,000 residents)."
+      "why": "Springfield (25,000 residents, 7% need score) has some food resources but demand is outpacing supply."
     },
     {
       "zip": "20906",
@@ -158,7 +158,7 @@
         "distance_km": 0.0,
         "has_hours": true
       },
-      "why": "Aspen Hill has moderate food access but growing need (9% poverty rate, 50,000 residents)."
+      "why": "Food access in Aspen Hill is stretched thin: 8 orgs serve 50,000 residents at 9% need."
     },
     {
       "zip": "22193",
@@ -176,7 +176,7 @@
         "distance_km": 0.9,
         "has_hours": true
       },
-      "why": "Dale City has moderate food access but growing need (13% poverty rate, 42,000 residents)."
+      "why": "Dale City (42,000 residents, 13% need score) has some food resources but demand is outpacing supply."
     },
     {
       "zip": "22304",
@@ -194,7 +194,7 @@
         "distance_km": 1.1,
         "has_hours": true
       },
-      "why": "Alexandria (west) has moderate food access but growing need (11% poverty rate, 30,000 residents)."
+      "why": "Food access in Alexandria (west) is stretched thin: 5 orgs serve 30,000 residents at 11% need."
     },
     {
       "zip": "20850",
@@ -212,7 +212,7 @@
         "distance_km": 0.0,
         "has_hours": true
       },
-      "why": "Rockville has moderate food access but growing need (7% poverty rate, 48,000 residents)."
+      "why": "With 7% need and 8 pantries, Rockville's 48,000 residents face tightening food access."
     },
     {
       "zip": "20886",
@@ -230,7 +230,7 @@
         "distance_km": 1.3,
         "has_hours": true
       },
-      "why": "Montgomery Village has moderate food access but growing need (8% poverty rate, 30,000 residents)."
+      "why": "Montgomery Village (30,000 residents, 8% need score) has some food resources but demand is outpacing supply."
     },
     {
       "zip": "21207",
@@ -248,7 +248,7 @@
         "distance_km": 0.6,
         "has_hours": false
       },
-      "why": "Gwynn Oak has moderate food access but growing need (16% poverty rate, 35,000 residents)."
+      "why": "Gwynn Oak has growing need (16% need score) that its 12 food resources may not sustain for 35,000 residents."
     },
     {
       "zip": "20852",
@@ -266,7 +266,7 @@
         "distance_km": 0.0,
         "has_hours": true
       },
-      "why": "North Bethesda has moderate food access but growing need (6% poverty rate, 35,000 residents)."
+      "why": "North Bethesda has growing need (6% need score) that its 8 food resources may not sustain for 35,000 residents."
     },
     {
       "zip": "20001",
@@ -284,7 +284,7 @@
         "distance_km": 0.0,
         "has_hours": false
       },
-      "why": "Shaw / NoMa has moderate food access but growing need (20% poverty rate, 35,000 residents)."
+      "why": "Shaw / NoMa has growing need (20% need score) that its 24 food resources may not sustain for 35,000 residents."
     },
     {
       "zip": "20002",
@@ -302,7 +302,7 @@
         "distance_km": 0.4,
         "has_hours": true
       },
-      "why": "Capitol Hill NE has moderate food access but growing need (16% poverty rate, 38,000 residents)."
+      "why": "Capitol Hill NE has growing need (16% need score) that its 18 food resources may not sustain for 38,000 residents."
     },
     {
       "zip": "20009",
@@ -320,7 +320,7 @@
         "distance_km": 0.6,
         "has_hours": true
       },
-      "why": "Adams Morgan / Columbia Heights has moderate food access but growing need (17% poverty rate, 42,000 residents)."
+      "why": "Adams Morgan / Columbia Heights (42,000 residents, 17% need score) has some food resources but demand is outpacing supply."
     },
     {
       "zip": "20010",
@@ -338,7 +338,7 @@
         "distance_km": 0.2,
         "has_hours": true
       },
-      "why": "Columbia Heights has moderate food access but growing need (19% poverty rate, 28,000 residents)."
+      "why": "Food access in Columbia Heights is stretched thin: 24 orgs serve 28,000 residents at 19% need."
     },
     {
       "zip": "20011",
@@ -356,7 +356,7 @@
         "distance_km": 0.0,
         "has_hours": true
       },
-      "why": "Petworth / Brightwood has moderate food access but growing need (14% poverty rate, 36,000 residents)."
+      "why": "Petworth / Brightwood has growing need (14% need score) that its 22 food resources may not sustain for 36,000 residents."
     },
     {
       "zip": "20017",
@@ -374,7 +374,7 @@
         "distance_km": 0.0,
         "has_hours": true
       },
-      "why": "Brookland has moderate food access but growing need (12% poverty rate, 20,000 residents)."
+      "why": "Food access in Brookland is stretched thin: 22 orgs serve 20,000 residents at 12% need."
     },
     {
       "zip": "20019",
@@ -392,7 +392,7 @@
         "distance_km": 0.4,
         "has_hours": true
       },
-      "why": "Deanwood / Capitol View has moderate food access but growing need (26% poverty rate, 32,000 residents)."
+      "why": "Deanwood / Capitol View (32,000 residents, 26% need score) has some food resources but demand is outpacing supply."
     },
     {
       "zip": "20020",
@@ -410,7 +410,7 @@
         "distance_km": 0.3,
         "has_hours": true
       },
-      "why": "Anacostia / Fort Stanton has moderate food access but growing need (30% poverty rate, 38,000 residents)."
+      "why": "Anacostia / Fort Stanton (38,000 residents, 30% need score) has some food resources but demand is outpacing supply."
     },
     {
       "zip": "20032",
@@ -428,7 +428,7 @@
         "distance_km": 0.4,
         "has_hours": false
       },
-      "why": "Congress Heights / Bellevue has moderate food access but growing need (33% poverty rate, 25,000 residents)."
+      "why": "Food access in Congress Heights / Bellevue is stretched thin: 12 orgs serve 25,000 residents at 33% need."
     },
     {
       "zip": "20706",
@@ -446,7 +446,7 @@
         "distance_km": 0.6,
         "has_hours": true
       },
-      "why": "Lanham has moderate food access but growing need (11% poverty rate, 35,000 residents)."
+      "why": "Food access in Lanham is stretched thin: 9 orgs serve 35,000 residents at 11% need."
     },
     {
       "zip": "20737",
@@ -464,7 +464,7 @@
         "distance_km": 0.4,
         "has_hours": true
       },
-      "why": "Riverdale Park has moderate food access but growing need (16% poverty rate, 22,000 residents)."
+      "why": "With 16% need and 9 pantries, Riverdale Park's 22,000 residents face tightening food access."
     },
     {
       "zip": "20740",
@@ -482,7 +482,7 @@
         "distance_km": 1.3,
         "has_hours": true
       },
-      "why": "College Park has moderate food access but growing need (18% poverty rate, 30,000 residents)."
+      "why": "Food access in College Park is stretched thin: 8 orgs serve 30,000 residents at 18% need."
     },
     {
       "zip": "20743",
@@ -500,7 +500,7 @@
         "distance_km": 0.0,
         "has_hours": true
       },
-      "why": "Capitol Heights has moderate food access but growing need (17% poverty rate, 40,000 residents)."
+      "why": "Capitol Heights (40,000 residents, 17% need score) has some food resources but demand is outpacing supply."
     },
     {
       "zip": "20745",
@@ -518,7 +518,7 @@
         "distance_km": 1.0,
         "has_hours": false
       },
-      "why": "Oxon Hill has moderate food access but growing need (15% poverty rate, 28,000 residents)."
+      "why": "With 15% need and 10 pantries, Oxon Hill's 28,000 residents face tightening food access."
     },
     {
       "zip": "20746",
@@ -536,7 +536,7 @@
         "distance_km": 0.8,
         "has_hours": false
       },
-      "why": "Suitland has moderate food access but growing need (14% poverty rate, 30,000 residents)."
+      "why": "With 14% need and 11 pantries, Suitland's 30,000 residents face tightening food access."
     }
   ],
   "summary": {
@@ -556,7 +556,7 @@
         "distance_km": 0.5,
         "has_hours": true
       },
-      "why": "Fort Washington has moderate food access but growing need (13% poverty rate, 45,000 residents)."
+      "why": "Food access in Fort Washington is stretched thin: 3 orgs serve 45,000 residents at 13% need."
     },
     "avgGap": 0.009,
     "totalUnderserved": 22205

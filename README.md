@@ -1,372 +1,219 @@
-# Nutrire Backend Pipeline
+# Nutrire — Food Access Intelligence Pipeline
 
-A 9-stage data pipeline that scrapes, enriches, deduplicates, geocodes, and exports **1,401 food assistance organizations** across DC, Maryland, and Virginia into frontend-ready JSON. Built for the NAFSI Data Challenge.
+A 10-stage data pipeline that scrapes, enriches, deduplicates, geocodes, and exports **1,395 food assistance organizations** across DC, Maryland, and Virginia into frontend-ready JSON.
+
+Built for the NourishNet Data Challenge 2026.
 
 ## Architecture
 
 ```
-Stage 1    Scrape           5 sources → 1,518 raw records
-Stage 1b   Enrich           Website scrape + Mistral LLM + templates → heroCopy, hours, languages
-Stage 2    Dedup            Cross-source fuzzy matching → 1,428 unique orgs
-Stage 3    Geocode          CAFB ArcGIS + Nominatim + ZIP fallback → 98% lat/lon
-Stage 4    Normalize        Phone formatting, hours parsing, reliability, IDs, foodTypes, culturalNotes
-Stage 5    Export           → public/data/enriched-orgs.json (frontend-ready)
-Stage 6    Transit          WMATA Metro/Bus + OSRM road routing → walk times, generalized cost mode selection
-Stage 7    Equity Gaps      Supply vs need per ZIP → 30 underserved areas
-Stage 8    TLDAI            Temporal-Linguistic-Dignity Accessibility Index per ZIP
-Stage 9    Weather          NWS alerts per org → severity, travel disruption flags
+Source Layer        5 scrapers (Playwright + curl_cffi)
+                    ↓ 1,518 raw records
+Enrichment Layer    Website scrape → Mistral Small LLM → template fallback
+                    ↓ heroCopy, hours, languages, eligibility, donations
+Dedup Layer         Cross-source fuzzy matching (Union-Find)
+                    ↓ 1,428 unique orgs
+Geo Layer           CAFB ArcGIS + Nominatim + ZIP centroid → 100% lat/lon
+                    ↓
+Normalize Layer     Phone, hours, IDs, reliability, foodTypes, culturalNotes
+                    ↓
+Transit Layer       WMATA Metro/Bus + OSRM road routing → walk times
+                    ↓
+Weather Layer       NWS alerts → severity, travel disruption flags
+                    ↓
+Analytics Layer     Equity gaps (30 ZIPs) + TLDAI accessibility (60 ZIPs)
+                    ↓
+Export              → frontend/public/data/*.json (4 files, frontend-ready)
 ```
 
-Each stage reads from the previous stage's output file. Re-run any stage independently without re-running the whole pipeline.
+## Quick Start
+
+```bash
+# Setup
+cp .env.example .env         # add your Mistral API key
+pip install -r requirements.txt
+playwright install chromium
+
+# Run full pipeline (~45 min first run, ~5 min cached)
+python scripts/stage1_scrape.py
+python scripts/stage1b_enrich.py
+python scripts/stage2_dedup.py
+python scripts/stage3_geocode.py
+python scripts/stage4_normalize.py
+python scripts/fix_languages.py
+python scripts/stage6_transit.py
+python scripts/stage9_weather.py
+python scripts/stage7_equity.py
+python scripts/stage8_tldai.py
+python scripts/stage5_export.py
+```
+
+All stages use persistent caches. Re-runs are instant except for the first scrape and LLM enrichment.
 
 ## Data Sources
 
-| Source | Scraper | Method | Records | Coverage |
-|--------|---------|--------|---------|----------|
-| Capital Area Food Bank | `cafb.py` | Playwright + ArcGIS FeatureServer API | 382 | DC/MD/VA, structured hours |
-| Maryland Food Bank | `mdfb.py` | Playwright pagination (29 pages) | 285 | MD statewide |
-| 211 Maryland | `two11md.py` | Playwright Next.js SSR pagination | 403 | MD statewide |
-| 211 Virginia | `two11md.py` | Playwright Next.js SSR pagination | 343 | VA statewide |
-| MoCo Food Council | `mocofood.py` | DRTS WordPress plugin fields | 105 | Montgomery County, hours + languages |
+| Source | Scraper | Method | Records |
+|--------|---------|--------|---------|
+| Capital Area Food Bank | `cafb.py` | Playwright → ArcGIS FeatureServer API | 382 |
+| Maryland Food Bank | `mdfb.py` | Playwright pagination (29 pages) | 285 |
+| 211 Maryland | `two11md.py` | Playwright Next.js SSR pagination | 403 |
+| 211 Virginia | `two11md.py` | Playwright Next.js SSR pagination | 343 |
+| MoCo Food Council | `mocofood.py` | DRTS WordPress plugin structured fields | 105 |
 
-Cloudflare-protected sites (CAFB, MDFB) use `curl_cffi` with Chrome TLS fingerprint impersonation.
+Cloudflare-protected sites use `curl_cffi` with Chrome TLS fingerprint impersonation.
 
-## Data Quality
+## Data Quality (Post-Pipeline)
 
-| Field | Coverage | Source |
+| Field | Coverage | Method |
 |-------|----------|--------|
-| Address | 98% | Scraper |
+| Coordinates | 100% (1,395) | CAFB ArcGIS + Nominatim + ZIP centroid |
 | Phone | 99% | Scraper |
-| Coordinates | 100% (1,395/1,401) | CAFB ArcGIS + Nominatim + ZIP centroid |
-| Hours | 54% (763/1,401) | Scraper + website scrape |
-| heroCopy | 100% | Mistral LLM + templates |
-| firstVisitGuide | 100% | Mistral LLM + templates |
-| plainEligibility | 100% | Mistral LLM + templates |
-| Languages | 39% (548/1,401) | Scraper + LLM + ZIP inference |
-| Services | 100% | Scraper + LLM |
-| foodTypes | 99% (1,383/1,401) | LLM + heuristic defaults |
-| Website | 89% (1,240/1,401) | Scraper + CAFB fallback |
-| culturalNotes | 19% (261/1,401) | LLM + name/language heuristics |
-| Transit block | 100% (1,395/1,401) | WMATA API + OSRM routing |
-| Weather alerts | Real-time snapshot | NWS API (free, no key) |
-| Reliability score | 100% | Cross-source count + field completeness |
-| Accepts donations | 23% | LLM + website scrape |
-| Accepts volunteers | 27% | LLM + website scrape |
+| heroCopy | 97% (1,367) | Mistral Small LLM + diversified templates |
+| firstVisitGuide | 100% | Mistral Small LLM + templates |
+| plainEligibility | 100% | Mistral Small LLM + 5-variant templates |
+| foodTypes | 99% | LLM + heuristic defaults |
+| Hours | 54% (757) | Scraper + website scrape + LLM |
+| Languages | 51% (713) | Scraper + LLM + ZIP-based inference |
+| Website | 88% | Scraper + CAFB directory fallback |
+| culturalNotes | 19% (259) | LLM + name/language heuristics |
+| Transit (metro/bus) | 29% (402) | WMATA API + OSRM routing |
+| Weather alerts | 71% (993) | NWS API (real-time snapshot) |
+| Neighborhood | 32% (458) | ZIP → neighborhood mapping (90 DMV ZIPs) |
+| Urgency signal | 4% (56) | Equity gap cross-reference |
+| Donations accepted | 23% | LLM + website evidence |
+| Volunteers accepted | 18% | LLM + website evidence |
 
-## Setup
+## Novel Signals
 
-```bash
-cd pipeline-backend
-python -m venv .venv
-source .venv/bin/activate      # macOS/Linux
-# source .venv/Scripts/activate  # Windows
-pip install -r requirements.txt
-playwright install chromium
-```
+### Equity Gap Analysis (Stage 7)
 
-Create `.env` in the project root:
-```
-MISTRAL_API_KEY=your_key_here
-MISTRAL_MODEL=ministral-8b-latest
-WMATA_API_KEY=your_key_here      # Get free at https://developer.wmata.com
-```
-
-The WMATA API key is required for Stage 6 (transit enrichment). Register at the WMATA developer portal for a free key.
-
-## Running the Pipeline
-
-Each stage is a standalone script. Run in order:
-
-```bash
-# Stage 1: Scrape all 5 sources (~2 min)
-python scripts/stage1_scrape.py
-
-# Stage 1b: Enrich via website scrape + Mistral LLM (~45 min scrape + ~25 min LLM)
-python scripts/stage1b_enrich.py
-
-# Stage 2: Deduplicate across sources (~5 sec)
-python scripts/stage2_dedup.py
-
-# Stage 3: Geocode all records (~15 min, cached after first run)
-python scripts/stage3_geocode.py
-
-# Stage 4: Normalize phones, hours, IDs, add defaults (~instant)
-python scripts/stage4_normalize.py
-
-# Fix: Infer languages from ZIP demographics (~instant)
-python scripts/fix_languages.py
-
-# Stage 6: Transit enrichment — WMATA + OSRM (~40 min first run, cached after)
-python scripts/stage6_transit.py
-
-# Stage 9: Weather alerts from NWS (~15 min, 1-hour cache)
-python scripts/stage9_weather.py
-
-# Stage 5: Export to frontend JSON (~instant)
-python scripts/stage5_export.py
-
-# Stage 7: Equity gap analysis (~instant)
-python scripts/stage7_equity.py
-
-# Stage 8: TLDAI accessibility index (~instant)
-python scripts/stage8_tldai.py
-```
-
-Re-runs are fast -- website scrape, LLM calls, geocoding, and transit routing all use persistent caches in `state/`.
-
-### Optional Flags
-
-```bash
-# Stage 6
-python scripts/stage6_transit.py --limit 50      # Process only first 50 orgs
-python scripts/stage6_transit.py --dry-run        # Preview without API calls
-python scripts/stage6_transit.py --no-osrm        # Use haversine instead of OSRM
-
-# Stage 9
-python scripts/stage9_weather.py --from-stage4    # Use stage4 output if stage6 not yet run
-python scripts/stage9_weather.py --limit 20       # Process only first 20 orgs
-python scripts/stage9_weather.py --dry-run        # Preview without API calls
-```
-
-### Integration Test
-
-```bash
-python scripts/test_transit_weather.py --sample 8
-```
-
-Runs 81 assertions across 8 test suites:
-- WMATA Metro station API (102 stations)
-- WMATA Bus stop API (7,505 stops)
-- OSRM road-network routing validation
-- NWS Weather API connectivity
-- Per-org transit enrichment with real OSRM
-- Generalized-cost mode selection (10 unit test cases)
-- Per-org weather alert attachment
-- End-to-end data flow + full field audit (50 fields)
-
-## Transit Enrichment (Stage 6)
-
-### Data Sources
-
-| Source | Type | Count | API |
-|--------|------|-------|-----|
-| WMATA Rail Stations | Metro | 102 stations | WMATA StationList API |
-| WMATA Bus Stops | Bus | 7,505 stops (DMV) | WMATA BusStops API |
-| OSRM | Walking routes | On-demand | Public OSRM server |
-
-### How It Works
-
-1. **Load transit data**: Fetch all Metro stations and DMV bus stops from WMATA API (cached 7 days)
-2. **Haversine pre-filter**: For each org, find the 3 closest Metro stations (within 2km) and 3 closest bus stops (within 3km) by crow-flies distance
-3. **OSRM routing**: Call OSRM for actual road-network walking distance/time for each candidate
-4. **Mode selection**: Pick primary recommendation using generalized cost model
-
-### Generalized Cost Mode Selection
-
-Instead of a fixed distance threshold, the pipeline uses a **research-backed generalized cost model** to decide between Metro and Bus:
+Identifies **30 underserved ZIP codes** by computing supply vs need:
 
 ```
-cost = walk_minutes x 1.5 (walk penalty) + avg_wait x 1.2 (wait penalty)
+NeedScore  = 0.6 * poverty_rate + 0.4 * snap_rate
+SupplyScore = weighted_org_count / (population / 5000) * NeedScore
+Gap         = max(0, NeedScore - SupplyScore)
 ```
 
-| Parameter | Metro | Bus | Source |
-|-----------|-------|-----|--------|
-| Walk penalty | 1.5x | 1.5x | TRB generalized cost research |
-| Wait penalty | 1.2x | 1.2x | TRB generalized cost research |
-| Avg wait time | 3.0 min | 10.0 min | WMATA headway data (~6 min / ~20 min) |
+Uses hardcoded Census ACS poverty/SNAP data for 60 DMV ZIP codes. Each gap includes a suggested host org for new distribution events.
 
-Metro's frequency advantage (3 min avg wait vs 10 min for bus) gives it a built-in **8.4-minute equivalent advantage**, meaning Metro wins even when ~450m further than the nearest bus. This aligns with research showing riders walk 2-2.5x further for rail transit.
+### TLDAI — Temporal-Linguistic-Dignity Accessibility Index (Stage 8)
 
-**Example decisions:**
-| Metro dist | Bus dist | Metro cost | Bus cost | Winner |
-|-----------|---------|-----------|---------|--------|
-| 500m | 100m | 13.0 | 13.9 | Metro (frequency wins) |
-| 800m | 100m | 18.6 | 13.9 | Bus (walk gap too large) |
-| 300m | 300m | 9.2 | 17.6 | Metro (equal walk, lower wait) |
-| 1800m | 200m | 37.4 | 15.8 | Bus (huge walk gap) |
+For each ZIP, answers: *"Can a household speaking language L find a walk-in pantry on day D within 3km?"*
 
-### Transit Fields
+Three dimensions scored per ZIP:
+- **Temporal** — which days of the week have open pantries nearby
+- **Linguistic** — which languages are served by nearby pantries
+- **Dignity** — walk-in/no-ID (low friction) vs appointment/ID-required (high friction)
 
-Each org receives:
-- `nearestTransit` -- station/stop name
-- `nearestTransitType` -- `"metro"` or `"bus"`
-- `nearestTransitLines` -- line codes (e.g., `["RD", "GR"]`)
-- `transitDistanceMeters` -- OSRM walking distance
-- `transit_detail.nearest_metro` -- full Metro details (id, name, lines, walk_distance_m, walk_minutes, osrm_used)
-- `transit_detail.nearest_bus` -- full Bus details (id, route, stop_name, walk_distance_m, walk_minutes)
-- `transit_detail.walk_minutes_to_metro` / `walk_minutes_to_bus`
-- `transit_detail.reachable_hours_of_week` -- Metro service hour slots (0-167)
-- `transit_detail.transit_summary` -- human-readable one-liner
+### Generalized-Cost Transit Mode Selection (Stage 6)
 
-## Weather Alerts (Stage 9)
-
-### How It Works
-
-- Calls the **NWS (National Weather Service) API** for each org's lat/lon -- free, no API key required
-- Filters for 25+ relevant alert types (tornado, flood, blizzard, heat, ice, etc.)
-- Picks the **worst active alert** ranked by NWS severity (Extreme > Severe > Moderate > Minor)
-- Classifies each alert with `affectsTravel` flag for transit-disrupting conditions
-- Cache keyed at 2 decimal places (~1.1km precision, matching NWS grid resolution), 1-hour TTL
-
-### Weather Fields
-
-Each org receives:
-- `weatherAlert.event` -- e.g., "Tornado Warning", "Special Weather Statement"
-- `weatherAlert.level` -- `"warning"` | `"watch"` | `"advisory"` | `"statement"`
-- `weatherAlert.severity` -- NWS severity: Extreme/Severe/Moderate/Minor/Unknown
-- `weatherAlert.headline` -- NWS short headline
-- `weatherAlert.description` -- full NWS description (first 400 chars)
-- `weatherAlert.instruction` -- NWS recommended action
-- `weatherAlert.validFrom` / `validUntil` -- ISO8601 alert window
-- `weatherAlert.affectsTravel` -- boolean, True if alert disrupts travel to pantry
-
-### Standalone Refresh
-
-Weather alerts are also exported to `public/data/weather-alerts.json` as a standalone file that can be refreshed independently via cron without re-running the full pipeline.
-
-## Equity Gap Analysis (Stage 7)
-
-Computes supply vs need per ZIP code using org density against Census poverty/SNAP data. Identifies **30 underserved areas** where new food distribution events would have the most impact.
+Research-backed model for recommending Metro vs Bus:
 
 ```
-Gap = max(0, NeedScore - SupplyScore)
-NeedScore = 0.6 x poverty_rate + 0.4 x snap_rate
-SupplyScore = weighted_org_count / (population / 5000) x NeedScore
+cost = walk_minutes * 1.5 + avg_wait * 1.2
 ```
 
-Output: `public/data/equity-gaps.json` -- 30 ZIPs ranked by gap score.
+Metro's frequency advantage (3 min avg wait vs 10 min for bus) gives it an 8.4-minute equivalent advantage, matching research showing riders walk 2-2.5x further for rail.
 
-## TLDAI -- Temporal-Linguistic-Dignity Accessibility Index (Stage 8)
+### Urgency Signals for Donors
 
-For each ZIP, answers: "Can a household speaking language L find a walk-in pantry on day D within 3km?"
+Cross-references equity gap scores with individual orgs: *"Donations to this pantry go 3.2x further — Fort Washington has 6,860 underserved residents but only 3 food resources."*
 
-Three dimensions:
-- **Temporal**: which days of the week have open pantries
-- **Linguistic**: which languages are served by nearby pantries
-- **Dignity tier**: walk-in/no-ID (low friction) vs appointment/ID-required (high friction)
+## LLM Enrichment
 
-Output: `public/data/access-summary.json` -- 60 ZIPs with dayAccess, languageAccess, dignityAccess, and composite accessScore.
+We use **Mistral Small** — an open-weight model (Apache 2.0 license, weights available on Hugging Face) — deliberately chosen for **full reproducibility**. Any researcher can download the model weights and reproduce our enrichment results exactly, without depending on a proprietary API. The versioned cache key (`PROMPT_VERSION + combined_text`) ensures deterministic outputs across runs.
 
-## Stage 4 Enrichments
-
-Beyond basic normalization (phone formatting, hours parsing, state/city inference, ID generation), Stage 4 applies several data quality heuristics:
-
-| Enrichment | Records Affected | Logic |
-|-----------|-----------------|-------|
-| Default foodTypes | 715 orgs (50%) | Any `food_pantry` service without foodTypes gets `["canned_goods"]` |
-| CAFB website fallback | 351 orgs | CAFB records without website get the CAFB directory URL |
-| culturalNotes inference | 154 orgs | Inferred from org name keywords and non-English languages served |
-| extractedBy provenance | All orgs | Tags whether fields came from LLM (`ministral-8b`) or template |
-| Reliability scoring | All orgs | Cross-source count + field completeness = tier (fresh/recent/stale/unknown) |
-
-## LLM Enrichment (Stage 1b)
-
-Uses **Mistral** (`ministral-8b-latest`) via function calling to extract structured fields from raw text + scraped website content:
-
-- **Cost**: ~$0.21 for 1,518 records
-- **Latency**: ~25 min sequential (0.15s sleep between calls)
-- **Tool schema**: single `enrich_food_org` function extracting 15 fields in one call
-- **Validation**: anti-hallucination check on hours (must appear in source text), banned words check on heroCopy, toneScore clamped to 0-1
-- **Cache**: MD5-keyed persistent cache -- re-runs cost $0
+| Parameter | Value |
+|-----------|-------|
+| Model | `mistral-small-latest` (open-weight, 119B MoE, 6.5B active params) |
+| License | Apache 2.0 (weights on HuggingFace: `mistralai/Mistral-Small-3.1-24B-Instruct-2503`) |
+| Cost | ~$0.80 for 1,518 records via Mistral API |
+| Method | Function calling with 15-field tool schema (`enrich_food_org`) |
+| Validation | Anti-hallucination on hours (token evidence check), banned-word filter on heroCopy, URL evidence check on donate/volunteer URLs, boilerplate detection and replacement |
+| Cache | Versioned MD5 key (`PROMPT_VERSION + combined_text`) — prompt or model changes auto-invalidate |
+| Reproducibility | Self-hostable via vLLM/Ollama with identical weights; API results cached for offline replay |
 
 ## Output Files
 
-### Frontend data (`public/data/`)
+### Frontend (`frontend/public/data/`)
 
-| File | Contents |
-|------|----------|
-| `enriched-orgs.json` | 1,401 orgs with full enrichment (50 fields per org) |
-| `equity-gaps.json` | 30 underserved areas with need/supply/gap scores |
-| `access-summary.json` | Per-ZIP accessibility by day, language, dignity tier (60 ZIPs) |
-| `weather-alerts.json` | Active NWS alerts keyed by org ID (refreshable independently) |
-| `metadata.json` | Pipeline stats, source counts, field coverage |
+| File | Records | Description |
+|------|---------|-------------|
+| `enriched-orgs.json` | 1,395 | Full org records with 50+ fields |
+| `equity-gaps.json` | 30 | Underserved ZIP codes with gap scores |
+| `access-summary.json` | 60 | Per-ZIP accessibility by day/language/dignity |
+| `metadata.json` | — | Pipeline stats, source counts, coverage |
 
-### Intermediate outputs (`output/`)
+### Intermediate (`output/`)
 
 | File | Stage | Records |
 |------|-------|---------|
 | `stage1_raw_records.json` | Scrape | 1,518 |
-| `cafb_raw_features.json` | CAFB ArcGIS | 382 features with lat/lon |
 | `stage1b_enriched_records.json` | Enrich | 1,518 |
 | `stage2_deduped.json` | Dedup | 1,428 |
 | `stage3_geocoded.json` | Geocode | 1,428 |
 | `stage4_normalized.json` | Normalize | 1,428 |
-| `stage6_transit.json` | Transit | 1,428 (1,396 enriched) |
+| `stage6_transit.json` | Transit | 1,428 |
 | `stage9_weather.json` | Weather | 1,428 |
 
-### Caches (`state/`)
+### Caches (`state/`) and Logs (`logs/`)
 
-| File | Purpose | TTL |
-|------|---------|-----|
-| `website-cache.json` | Playwright website scrape results | Permanent |
-| `stage1b-enrichment-cache.json` | Mistral LLM responses | Permanent |
-| `geocode-cache.json` | Nominatim geocode results | Permanent |
-| `transit-cache.json` | Per-org WMATA + OSRM results | 7 days |
-| `wmata-stations-cache.json` | All 102 Metro stations | 7 days |
-| `wmata-stops-cache.json` | 7,505 DMV bus stops | 7 days |
-| `weather-cache.json` | NWS alerts per grid square | 1 hour |
-
-### Logs (`logs/`)
-
-All logs are JSONL format with timestamps for audit:
-
-| File | Purpose |
-|------|---------|
-| `website_scrape.jsonl` | URL, status, latency, hours found |
-| `llm_enrichment.jsonl` | Record name, cache hit/miss, fields extracted |
-| `stage2_dedup.jsonl` | Merge decisions with scores |
-| `stage3_geocode.jsonl` | Address, method, result coords |
-| `template_fills.jsonl` | Template-generated fields per record |
-| `stage6_transit.jsonl` | Per-org Metro/Bus/OSRM results |
-| `stage9_weather.jsonl` | Per-org NWS alert lookups |
+All caches are JSON. All logs are JSONL with timestamps. Re-runs hit cache and cost $0.
 
 ## External APIs
 
-| API | Key Required | Cost | Used In |
-|-----|-------------|------|---------|
-| Mistral AI | Yes (`MISTRAL_API_KEY`) | ~$0.21 / full run | Stage 1b |
-| WMATA | Yes (`WMATA_API_KEY`) | Free | Stage 6 |
-| OSRM | No | Free | Stage 6 |
-| NWS Weather | No | Free | Stage 9 |
-| Nominatim | No | Free (rate-limited) | Stage 3 |
-| CAFB ArcGIS | No | Free | Stage 1 |
+| API | Key | Cost | Stage |
+|-----|-----|------|-------|
+| Mistral AI | `MISTRAL_API_KEY` | ~$0.80/run | 1b |
+| WMATA | `WMATA_API_KEY` | Free | 6 |
+| OSRM | None | Free | 6 |
+| NWS | None | Free | 9 |
+| Nominatim | None | Free (1 req/s) | 3 |
 
 ## Project Structure
 
 ```
-pipeline-backend/
-|-- .env                              # API keys (gitignored)
-|-- .gitignore
-|-- requirements.txt
-|-- README.md
-|
-|-- scripts/                          # Pipeline stages
-|   |-- stage1_scrape.py              # Scrape 5 sources
-|   |-- stage1b_enrich.py             # Website scrape + Mistral LLM
-|   |-- stage2_dedup.py               # Cross-source deduplication
-|   |-- stage3_geocode.py             # Geocoding (ArcGIS + Nominatim)
-|   |-- stage4_normalize.py           # Phone, hours, IDs, defaults
-|   |-- stage5_export.py              # Export to frontend JSON
-|   |-- stage6_transit.py             # WMATA + OSRM transit enrichment
-|   |-- stage7_equity.py              # Equity gap analysis
-|   |-- stage8_tldai.py               # TLDAI accessibility index
-|   |-- stage9_weather.py             # NWS weather alerts
-|   |-- fix_languages.py              # ZIP-based language inference
-|   |-- test_transit_weather.py       # 81-assertion integration test
-|
-|-- src/
-|   |-- config.py                     # Source definitions
-|   |-- scrapers/                     # Playwright + curl_cffi scrapers
-|   |-- utils/logger.py
-|   |-- validators/schemas.py         # Pydantic data models
-|
-|-- output/                           # Intermediate stage results
-|-- state/                            # Persistent caches
-|-- logs/                             # JSONL audit logs
-|
-|-- frontend/                         # React + Vite frontend (separate)
-    |-- src/
-    |-- public/data/                  # Pipeline outputs consumed by frontend
-    |-- package.json
-    |-- vite.config.ts
+Nutrire/
+├── .env.example              # API key template
+├── requirements.txt          # Python dependencies
+├── README.md
+│
+├── scripts/                  # Pipeline stages (run in order)
+│   ├── stage1_scrape.py      # 5-source scraping
+│   ├── stage1b_enrich.py     # Website scrape + Mistral LLM + templates
+│   ├── stage2_dedup.py       # Cross-source deduplication
+│   ├── stage3_geocode.py     # 3-tier geocoding
+│   ├── stage4_normalize.py   # Phone, hours, IDs, defaults
+│   ├── fix_languages.py      # ZIP-based language inference
+│   ├── stage6_transit.py     # WMATA + OSRM transit
+│   ├── stage9_weather.py     # NWS weather alerts
+│   ├── stage7_equity.py      # Equity gap analysis
+│   ├── stage8_tldai.py       # TLDAI accessibility index
+│   ├── stage5_export.py      # Export to frontend JSON
+│   ├── analytics_server.py   # Search analytics endpoint
+│   └── test_transit_weather.py  # Integration tests
+│
+├── src/
+│   ├── config.py             # Source definitions (24 sources, 6 enabled)
+│   ├── scrapers/             # Playwright + curl_cffi scrapers
+│   │   ├── cafb.py           # ArcGIS FeatureServer via in-browser fetch
+│   │   ├── mdfb.py           # GeoMyWP pagination
+│   │   ├── two11md.py        # Next.js SSR pagination (MD + VA)
+│   │   ├── mocofood.py       # DRTS WordPress plugin
+│   │   ├── pgcfec.py         # PG County (disabled, iframe-only)
+│   │   ├── caroline.py       # Caroline County (disabled, not metro DMV)
+│   │   ├── generic_html.py   # Fallback HTML parser
+│   │   └── generic_pdf.py    # PDF parser
+│   ├── utils/
+│   │   └── logger.py         # Colorama console logger + UTF-8 safety
+│   └── validators/
+│       └── schemas.py        # Pydantic models (RawRecord, NormalizedRecord)
+│
+├── output/                   # Intermediate stage results (gitignored)
+├── state/                    # Persistent caches (gitignored)
+├── logs/                     # JSONL audit logs (gitignored)
+│
+└── frontend/                 # React + Vite app (separate)
+    └── public/data/          # Pipeline outputs consumed by frontend
 ```

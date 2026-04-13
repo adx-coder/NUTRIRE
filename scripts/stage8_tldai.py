@@ -23,9 +23,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 PIPELINE = Path(__file__).resolve().parents[1]
-PROJECT  = PIPELINE.parent
 INPUT    = PIPELINE / "output" / "stage4_normalized.json"
-OUTPUT   = PROJECT / "public" / "data" / "access-summary.json"
+OUTPUT   = PIPELINE / "frontend" / "public" / "data" / "access-summary.json"
 
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 

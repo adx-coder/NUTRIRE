@@ -1,40 +1,39 @@
 {
-  "generatedAt": "2026-04-12T23:37:42.607219+00:00",
+  "generatedAt": "2026-04-13T07:44:44.205202+00:00",
   "inputFile": "stage9_weather.json",
-  "totalOrganizations": 1401,
+  "totalOrganizations": 1395,
   "byState": {
-    "MD": 877,
-    "VA": 422,
+    "MD": 876,
+    "VA": 419,
     "DC": 92,
-    "Va": 1,
-    "": 9
+    "": 8
   },
   "bySource": {
-    "mocofood": 90,
+    "mocofood": 88,
     "cafb": 358,
     "two11md": 380,
     "mdfb-find-food": 259,
-    "two11va": 314
+    "two11va": 310
   },
   "coverage": {
-    "hasHours": 763,
+    "hasHours": 757,
     "hasCoords": 1395,
-    "hasHeroCopy": 1401,
-    "hasWebsite": 1240,
-    "hasFoodTypes": 1383,
-    "hasCulturalNotes": 261,
-    "hasLanguages": 548,
-    "hasTransit": 1395,
+    "hasHeroCopy": 1367,
+    "hasWebsite": 1234,
+    "hasFoodTypes": 1377,
+    "hasCulturalNotes": 259,
+    "hasLanguages": 713,
+    "hasTransit": 402,
     "hasMetro": 194,
     "hasBus": 396,
     "activeWeatherAlerts": 993,
     "osrmRoutedOrgs": 194,
     "hasHoursPct": 54,
     "hasCoordsPct": 100,
-    "hasWebsitePct": 89,
+    "hasWebsitePct": 88,
     "hasFoodTypesPct": 99,
-    "hasTransitPct": 100,
-    "hasLanguagesPct": 39
+    "hasTransitPct": 29,
+    "hasLanguagesPct": 51
   },
   "sources": [
     {
@@ -50,7 +49,7 @@
     {
       "id": "two11va",
       "name": "211 Virginia",
-      "count": 314
+      "count": 310
     },
     {
       "id": "mdfb-find-food",
@@ -60,7 +59,7 @@
     {
       "id": "mocofood",
       "name": "Montgomery County Food Council",
-      "count": 90
+      "count": 88
     }
   ]
 }

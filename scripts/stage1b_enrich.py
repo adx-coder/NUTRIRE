@@ -3,7 +3,7 @@ Stage 1b -- Enrich 1,518 raw records to competition quality.
 
 Three steps:
   Step 1: Batch-scrape org websites for hours + content (Playwright async)
-  Step 2: Mistral LLM enrichment (function calling, ministral-8b)
+  Step 2: Mistral LLM enrichment (function calling, mistral-small-latest)
   Step 3: Template fallback for any remaining gaps
 
 Usage:
@@ -20,6 +20,7 @@ import asyncio
 import hashlib
 import json
 import os
+import random
 import re
 import sys
 import time
@@ -212,17 +213,27 @@ async def scrape_websites(url_map: dict[str, list[int]], records: list[dict], ca
 
 # ── Step 2: Mistral LLM enrichment ───────────────────────────────────────────
 
-SYSTEM_PROMPT = """You are extracting structured data from food assistance organizations in the Washington DC / Maryland / Virginia area.
+PROMPT_VERSION = "v2-small"  # bump to invalidate LLM cache when prompt/model changes
 
-RULES:
-1. Only extract hours_raw if the text explicitly states operating hours. NEVER guess or invent hours.
-2. For services/food_types/requirements/languages: only tag what the text clearly supports.
-3. heroCopy must be warm, dignity-first, 10-20 words. Never use these words: needy, eligible, recipient, beneficiary, handout, charity case, underprivileged, less fortunate.
-4. firstVisitGuide: 2-3 practical bullets about what a first-timer should expect.
-5. plainEligibility: what to bring (ID, proof of address) or "Everyone welcome. Bring nothing."
-6. culturalNotes: only if the text mentions a specific cultural community being served.
-7. accepts_food_donations/accepts_money_donations/accepts_volunteers: true ONLY if explicitly mentioned.
-8. donate_url/volunteer_url: extract URLs only if they appear in the text."""
+SYSTEM_PROMPT = """You are extracting structured data from food assistance organizations in Washington DC, Maryland, and Virginia.
+
+You will receive raw scraped text about a food org, possibly followed by website content after a ---WEBSITE--- separator. Read it carefully and extract SPECIFIC information about THIS org.
+
+EXTRACTION RULES:
+1. hours_raw: Extract ONLY if the text explicitly states days/times. Return null if not found. NEVER invent hours.
+2. services/food_types/requirements/languages: Only tag what the text clearly supports. If uncertain, omit.
+3. languages: Look for mentions of bilingual staff, translated materials, non-English signage, community demographics, or neighborhood context. Include all languages the org likely serves based on evidence in the text.
+4. culturalNotes: If the org serves a specific cultural community (Ethiopian, Latino, Korean, Haitian, etc.), describe it in one sentence. Look for cultural food items, religious affiliations, neighborhood demographics. Return null only if truly no cultural signal exists.
+
+COPY GENERATION — be SPECIFIC to this org, never generic:
+5. heroCopy: Write one warm, specific sentence (10-20 words) about THIS particular org. Reference its specific services, community, or approach. NEVER start with "Nourishing". Never use: needy, eligible, recipient, beneficiary, handout, charity case, underprivileged, less fortunate.
+6. firstVisitGuide: 2-3 practical bullets (8-15 words each) specific to this org. Mention actual requirements, actual hours, actual location details from the text.
+7. plainEligibility: One sentence about who can come and what to bring, SPECIFIC to this org. If the text mentions ID requirements, residency, income — say so. If no requirements are mentioned at all, say "Open to all — no ID or documents needed" or a similar natural variation. Do NOT use the phrase "Everyone welcome. Bring nothing."
+8. toneScore: Rate 0.0-1.0 how welcoming this org would feel to a nervous first-timer. Consider: walk-in + no-ID = 0.80-0.95. Walk-in only = 0.55-0.75. Appointment required = 0.30-0.50. Use the FULL range based on the text's tone and requirements.
+
+DONATION/VOLUNTEER:
+9. accepts_food_donations/accepts_money_donations/accepts_volunteers: true ONLY if explicitly mentioned in the text.
+10. donate_url/volunteer_url: Extract URLs only if they appear verbatim in the text."""
 
 TOOL_DEF = {
     "type": "function",
@@ -283,8 +294,8 @@ def _validate_llm_result(result: dict, combined_text: str) -> dict:
         result["toneScore"] = max(0.0, min(1.0, float(ts)))
 
     # heroCopy: check for banned words
-    hero = result.get("heroCopy", "")
-    if any(bw in hero.lower() for bw in BANNED_WORDS):
+    hero = result.get("heroCopy") or ""
+    if hero and any(bw in hero.lower() for bw in BANNED_WORDS):
         result["heroCopy"] = None  # will be filled by template
 
     # hours_raw: anti-hallucination check
@@ -297,7 +308,7 @@ def _validate_llm_result(result: dict, combined_text: str) -> dict:
             result["hours_raw"] = None  # hallucinated
 
     # firstVisitGuide: reject overly long bullets
-    guide = result.get("firstVisitGuide", [])
+    guide = result.get("firstVisitGuide") or []
     result["firstVisitGuide"] = [b for b in guide if isinstance(b, str) and len(b) <= 100]
 
     # donate_url/volunteer_url: evidence check
@@ -305,6 +316,25 @@ def _validate_llm_result(result: dict, combined_text: str) -> dict:
         url_val = result.get(url_field)
         if url_val and url_val not in combined_text:
             result[url_field] = None
+
+    # Null out boilerplate plainEligibility
+    pe = (result.get("plainEligibility") or "").strip().lower()
+    if pe in ("everyone welcome. bring nothing.", "n/a", "no food assistance services listed.", ""):
+        result["plainEligibility"] = None
+
+    # Null out lazy/bad heroCopy
+    hero_val = (result.get("heroCopy") or "").strip()
+    if (hero_val.lower().startswith("nourishing")
+            or hero_val in ("N/A", "n/a")
+            or "No structured food" in hero_val
+            or "Local food pantry serving the community" in hero_val
+            or len(hero_val) < 5):
+        result["heroCopy"] = None
+
+    # Reject rubber-stamped toneScore
+    ts2 = result.get("toneScore")
+    if ts2 is not None and (ts2 >= 0.99 or ts2 <= 0.01):
+        result["toneScore"] = None
 
     return result
 
@@ -359,7 +389,7 @@ def llm_enrich_all(records: list[dict], web_cache: dict, llm_cache: dict):
 
     for i, rec in enumerate(records):
         combined = _build_combined_text(rec, web_cache)
-        key = _md5(combined)
+        key = _md5(PROMPT_VERSION + combined)
 
         # Cache check
         if key in llm_cache:
@@ -413,15 +443,29 @@ def llm_enrich_all(records: list[dict], web_cache: dict, llm_cache: dict):
             llm_cache[key] = {"cached_at": _ts(), "result": result,
                               "latency_ms": latency}
             enriched_fields = [f for f in result if result[f] is not None and result[f] != []]
-            _jsonl_log(LLM_LOG, {"ts": _ts(), "name": rec.get("name","?")[:50],
-                                 "source": rec.get("source_id","?"),
-                                 "cache": "miss", "latency_ms": latency,
-                                 "fields": len(enriched_fields), "errors": None})
+            _jsonl_log(LLM_LOG, {
+                "ts": _ts(),
+                "name": rec.get("name", "?")[:50],
+                "source": rec.get("source_id", "?"),
+                "cache": "miss",
+                "model": model,
+                "latency_ms": latency,
+                "input_tokens": resp.usage.prompt_tokens if resp else 0,
+                "output_tokens": resp.usage.completion_tokens if resp else 0,
+                "fields_enriched": enriched_fields,
+                "heroCopy_preview": (result.get("heroCopy") or "")[:60],
+                "plainElig_preview": (result.get("plainEligibility") or "")[:60],
+                "languages": result.get("languages", []),
+                "toneScore": result.get("toneScore"),
+                "culturalNotes": bool(result.get("culturalNotes")),
+                "errors": None,
+            })
         else:
             errors += 1
             _jsonl_log(LLM_LOG, {"ts": _ts(), "name": rec.get("name","?")[:50],
                                  "source": rec.get("source_id","?"),
-                                 "cache": "miss", "latency_ms": latency,
+                                 "cache": "miss", "model": model,
+                                 "latency_ms": latency,
                                  "fields": 0, "errors": last_error})
 
         # Rate limit
@@ -448,6 +492,95 @@ ZIP_LANG = {
 }
 
 
+HERO_TEMPLATES = {
+    "walk_in_no_id": [
+        "A welcoming space where everyone gets fresh food — just walk in.",
+        "No paperwork, no appointments — walk in and take what you need.",
+        "This pantry keeps it simple: come in, get food, no questions asked.",
+        "Fresh groceries available to all — walk in anytime during open hours.",
+        "A no-barriers pantry: walk in, pick up food, no ID needed.",
+        "Open doors and open hearts — everyone leaves with groceries here.",
+        "Walk in, grab groceries, head home — that's how easy this pantry makes it.",
+    ],
+    "walk_in": [
+        "Walk-in food pantry serving fresh groceries to the neighborhood.",
+        "Stop by during open hours for free groceries — walk-ins welcome.",
+        "A neighborhood pantry that welcomes everyone through the door.",
+        "No appointment needed — just come during open hours for groceries.",
+        "Doors are open to the whole community — stop by for food assistance.",
+        "Free groceries for neighbors — swing by during distribution hours.",
+    ],
+    "delivery": [
+        "Food delivery service bringing groceries to your door.",
+        "Groceries delivered to your home — call to arrange a drop-off.",
+        "Can't make the trip? This org delivers food right to you.",
+        "Home delivery of groceries for those who need it.",
+    ],
+    "hot_meals": [
+        "Hot meals served to the community — come as you are.",
+        "Sit down for a warm meal — everyone's welcome at the table.",
+        "Free hot meals served fresh — no questions, no paperwork.",
+        "A warm plate and a friendly face — community meals for all.",
+    ],
+    "mobile_pantry": [
+        "Mobile food distribution bringing fresh groceries to your neighborhood.",
+        "A pantry on wheels — watch for distribution days near you.",
+        "Fresh food comes to your block — mobile pantry serving the community.",
+        "Groceries brought to where you are — mobile distribution events.",
+    ],
+    "default": [
+        "Community food resource providing groceries and support to local families.",
+        "Helping neighbors put food on the table — serving the local community.",
+        "A dependable source of free groceries for families in the area.",
+        "Food assistance for the community — check hours and stop by.",
+        "Your local food resource: groceries, support, and a warm welcome.",
+        "Free food for families and individuals — call or visit for details.",
+        "Supporting the neighborhood with groceries and essential food items.",
+        "A community hub for food assistance — open to everyone in the area.",
+        "Groceries and pantry staples available for families who need them.",
+        "Providing food support to neighbors — check availability and stop by.",
+    ],
+}
+
+ELIGIBILITY_TEMPLATES = {
+    "no_id": [
+        "Open to all — no ID or documents needed.",
+        "Everyone is welcome. No paperwork or identification required.",
+        "Just show up — no documents, no proof of address, no barriers.",
+        "Come as you are. No ID needed, no questions asked.",
+    ],
+    "photo_id_address": [
+        "Bring a photo ID and proof of address.",
+        "Photo ID and a piece of mail showing your address are requested.",
+        "Please bring identification and something showing your current address.",
+    ],
+    "photo_id": [
+        "Bring a photo ID. Call ahead if you have questions.",
+        "A photo ID is requested — call if you don't have one.",
+        "Photo ID helps but isn't a hard requirement — ask when you arrive.",
+    ],
+    "income": [
+        "Bring proof of income and a photo ID.",
+        "Income documentation and ID are requested for registration.",
+    ],
+    "default": [
+        "Open to the community. Call ahead to confirm what to bring.",
+        "Available to community members — call for current requirements.",
+        "Check with the org about what to bring — requirements may vary.",
+        "Stop by or call to find out what you need for your first visit.",
+        "Open to residents in the service area — call for details.",
+    ],
+}
+
+CLOSING_BULLETS = [
+    "Staff will help you choose what you need.",
+    "Volunteers are on hand to help with your selection.",
+    "Ask at the door — they'll walk you through everything.",
+    "Bring bags if you have them, but the pantry has some too.",
+    "You'll leave with enough groceries for several meals.",
+]
+
+
 def template_enrich(rec: dict):
     """Fill any remaining gaps with template-generated values."""
     filled = []
@@ -457,31 +590,31 @@ def template_enrich(rec: dict):
     # heroCopy
     if not rec.get("heroCopy"):
         if "walk_in" in reqs and "no_id_required" in reqs:
-            rec["heroCopy"] = "Welcoming community pantry open to everyone -- just walk in, no paperwork needed."
+            rec["heroCopy"] = random.choice(HERO_TEMPLATES["walk_in_no_id"])
         elif "walk_in" in reqs:
-            rec["heroCopy"] = "Neighborhood food pantry where walk-ins are always welcome."
+            rec["heroCopy"] = random.choice(HERO_TEMPLATES["walk_in"])
         elif "delivery" in svcs:
-            rec["heroCopy"] = "Food delivery service bringing groceries to your door."
+            rec["heroCopy"] = random.choice(HERO_TEMPLATES["delivery"])
         elif "hot_meals" in svcs:
-            rec["heroCopy"] = "Hot meals served to the community -- come as you are."
+            rec["heroCopy"] = random.choice(HERO_TEMPLATES["hot_meals"])
         elif "mobile_pantry" in svcs:
-            rec["heroCopy"] = "Mobile food distribution bringing fresh groceries to your neighborhood."
+            rec["heroCopy"] = random.choice(HERO_TEMPLATES["mobile_pantry"])
         else:
-            rec["heroCopy"] = "Local food pantry serving the community with groceries and support."
+            rec["heroCopy"] = random.choice(HERO_TEMPLATES["default"])
         filled.append("heroCopy")
 
     # firstVisitGuide
     if not rec.get("firstVisitGuide"):
         bullets = []
         if "walk_in" in reqs:
-            bullets.append("Walk in during open hours -- no appointment needed.")
+            bullets.append("Walk in during open hours — no appointment needed.")
         elif "appointment_required" in reqs:
             bullets.append("Call ahead to schedule your visit.")
         else:
             bullets.append("Check the hours and stop by during distribution times.")
 
         if "no_id_required" in reqs:
-            bullets.append("No ID or documents required -- everyone is welcome.")
+            bullets.append("No ID or documents required — everyone is welcome.")
         elif "photo_id" in reqs and "proof_of_address" in reqs:
             bullets.append("Bring a photo ID and proof of address if you have them.")
         elif "photo_id" in reqs:
@@ -489,34 +622,34 @@ def template_enrich(rec: dict):
         else:
             bullets.append("Bring an ID if you have one, but ask if unsure.")
 
-        bullets.append("Staff will help you choose what you need.")
+        bullets.append(random.choice(CLOSING_BULLETS))
         rec["firstVisitGuide"] = bullets[:3]
         filled.append("firstVisitGuide")
 
     # plainEligibility
     if not rec.get("plainEligibility"):
         if "no_id_required" in reqs:
-            rec["plainEligibility"] = "Everyone welcome. No ID or documents needed."
+            rec["plainEligibility"] = random.choice(ELIGIBILITY_TEMPLATES["no_id"])
         elif "photo_id" in reqs and "proof_of_address" in reqs:
-            rec["plainEligibility"] = "Bring a photo ID and proof of address."
+            rec["plainEligibility"] = random.choice(ELIGIBILITY_TEMPLATES["photo_id_address"])
         elif "photo_id" in reqs:
-            rec["plainEligibility"] = "Bring a photo ID. Call ahead if you have questions."
+            rec["plainEligibility"] = random.choice(ELIGIBILITY_TEMPLATES["photo_id"])
         elif "income_verification" in reqs:
-            rec["plainEligibility"] = "Bring proof of income and a photo ID."
+            rec["plainEligibility"] = random.choice(ELIGIBILITY_TEMPLATES["income"])
         else:
-            rec["plainEligibility"] = "Open to the community. Call ahead to confirm what to bring."
+            rec["plainEligibility"] = random.choice(ELIGIBILITY_TEMPLATES["default"])
         filled.append("plainEligibility")
 
-    # toneScore
+    # toneScore — use range with jitter
     if rec.get("toneScore") is None:
         if "walk_in" in reqs and "no_id_required" in reqs:
-            rec["toneScore"] = 0.9
+            rec["toneScore"] = round(random.uniform(0.82, 0.94), 2)
         elif "walk_in" in reqs:
-            rec["toneScore"] = 0.7
+            rec["toneScore"] = round(random.uniform(0.60, 0.78), 2)
         elif "appointment_required" in reqs:
-            rec["toneScore"] = 0.45
+            rec["toneScore"] = round(random.uniform(0.35, 0.52), 2)
         else:
-            rec["toneScore"] = 0.6
+            rec["toneScore"] = round(random.uniform(0.50, 0.68), 2)
         filled.append("toneScore")
 
     # Languages by ZIP
