@@ -113,7 +113,7 @@ export default function Home() {
           className="px-4 sm:px-6 lg:px-10 pt-4 sm:pt-6 flex items-center justify-between"
         >
           <div className="flex items-center gap-2.5">
-            <img src="/logos/nutrire-mark.png" alt="Nutrire" className="h-9 w-9" />
+            <img src={`${import.meta.env.BASE_URL}logos/nutrire-mark.png`} alt="Nutrire" className="h-9 w-9" />
             <span className="font-display text-[22px] font-bold text-ink tracking-tight">Nutrire</span>
           </div>
 
@@ -432,7 +432,7 @@ function CredentialBadges() {
       transition={{ duration: 0.8, delay: 1.5, ease: [0.22, 1, 0.36, 1] }}
       className="mt-5 xl:mt-6 flex items-center justify-center gap-1.5 text-[11px] font-medium text-ink/35"
     >
-      <img src="/logos/nutrire-mark.png" alt="" className="w-4 h-4 opacity-50" />
+      <img src={`${import.meta.env.BASE_URL}logos/nutrire-mark.png`} alt="" className="w-4 h-4 opacity-50" />
       <span>A NourishNet Data Challenge project</span>
       <span className="text-ink/15 mx-0.5">·</span>
       <span>University of Maryland</span>
