@@ -1,0 +1,108 @@
+@import "./tokens.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter", "Noto Sans Ethiopic", system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11", "kern";
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    hanging-punctuation: first last;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    /* Safe area for notched phones */
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Inter Tight", "Inter", system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  button, input, select, textarea {
+    font: inherit;
+    color: inherit;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--sage);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes nutrireDrift1 {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(6vw, 4vh, 0) scale(1.08); }
+}
+
+@keyframes nutrireDrift2 {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(-5vw, 6vh, 0) scale(0.94); }
+}
+
+@keyframes nutrireDrift3 {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(-4vw, -3vh, 0) scale(1.06); }
+}
+
+/* Map pin pulse — used by Leaflet DivIcon inline styles */
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes nutrireDrift1 { 0%, 100% { transform: none; } }
+  @keyframes nutrireDrift2 { 0%, 100% { transform: none; } }
+  @keyframes nutrireDrift3 { 0%, 100% { transform: none; } }
+  @keyframes ping { 0%, 100% { transform: none; opacity: 0; } }
+}
