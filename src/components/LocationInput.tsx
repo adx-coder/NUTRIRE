@@ -5,6 +5,22 @@ import { useLocationStore } from "@/store/location";
 import { mockUserLocation } from "@/data/load-data";
 import { useT } from "@/i18n/useT";
 
+const DMV_CENTER = mockUserLocation; // fallback if geocode fails
+
+async function geocodeQuery(query: string): Promise<{ lat: number; lng: number } | null> {
+  try {
+    const q = encodeURIComponent(`${query}, Washington DC metro area`);
+    const resp = await fetch(`https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=us`, {
+      headers: { "User-Agent": "Nutrire-FoodAccess/1.0" },
+    });
+    const results = await resp.json();
+    if (results.length > 0) {
+      return { lat: parseFloat(results[0].lat), lng: parseFloat(results[0].lon) };
+    }
+  } catch {}
+  return null;
+}
+
 interface Props {
   onSubmit: () => void;
   autoFocus?: boolean;
@@ -30,10 +46,15 @@ export function LocationInput({ onSubmit, autoFocus = true }: Props) {
   const useCurrentLocationLabel = t("home.input.useMyLocation");
   const usingLocationLabel = t("home.input.usingLocation");
 
-  const submitTyped = () => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const submitTyped = async () => {
     const trimmed = value.trim();
     if (!trimmed) return;
-    setLocation({ coords: mockUserLocation, label: trimmed, source: "typed" });
+    setSubmitting(true);
+    const coords = await geocodeQuery(trimmed);
+    setLocation({ coords: coords ?? DMV_CENTER, label: trimmed, source: coords ? "geolocate" : "typed" });
+    setSubmitting(false);
     onSubmit();
   };
 
@@ -127,9 +148,9 @@ export function LocationInput({ onSubmit, autoFocus = true }: Props) {
             "shadow-[0_2px_8px_rgba(58,101,81,0.3)]",
             "disabled:opacity-30 disabled:pointer-events-none",
           )}
-          disabled={!value.trim()}
+          disabled={!value.trim() || submitting}
         >
-          <ArrowRight size={18} strokeWidth={2.5} aria-hidden="true" />
+          {submitting ? <Loader2 size={18} className="animate-spin" aria-hidden="true" /> : <ArrowRight size={18} strokeWidth={2.5} aria-hidden="true" />}
         </button>
       </form>
 
