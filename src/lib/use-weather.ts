@@ -32,7 +32,7 @@ export function useWeather(lat: number | undefined, lon: number | undefined): We
   const [weather, setWeather] = useState<Weather | null>(null);
 
   useEffect(() => {
-    if (!lat || !lon) return;
+    if (lat == null || lon == null || Number.isNaN(lat) || Number.isNaN(lon)) return;
 
     const key = `${lat.toFixed(2)},${lon.toFixed(2)}`;
     const cached = cache.get(key);
