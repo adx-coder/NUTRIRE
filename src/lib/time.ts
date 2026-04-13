@@ -6,7 +6,11 @@ export function relativeTimeShort(iso: string): string {
   return formatDistanceToNowStrict(d, { addSuffix: true });
 }
 
-/** "Tomorrow 10:00 AM" / "Today 5:00 PM" / "Saturday 10:00 AM" / "April 18, 10:00 AM" */
+/**
+ * Formats a time window into a human-readable string.
+ * Examples: "Tomorrow 10:00 AM–12:00 PM", "Today 5:00 PM–7:00 PM",
+ * "Saturday 10:00 AM–1:00 PM", "April 18, 10:00 AM–11:00 AM"
+ */
 export function humanTimeWindow(startIso: string, endIso: string, now = new Date()): string {
   const start = new Date(startIso);
   const end = new Date(endIso);
@@ -38,7 +42,10 @@ export function timeRange(startIso: string, endIso: string): string {
   return `${format(start, "h:mm a")} to ${format(end, "h:mm a")}`;
 }
 
-/** Minutes from now until event starts. Negative means event started. */
+/**
+ * Minutes from now until event starts. Negative means event has already started.
+ * Used for urgency calculations (e.g. "closes in 15 min" banners).
+ */
 export function minutesUntil(iso: string, now = new Date()): number {
   return differenceInMinutes(new Date(iso), now);
 }
