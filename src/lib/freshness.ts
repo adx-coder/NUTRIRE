@@ -10,6 +10,11 @@ export type FreshnessTone = {
   urgentCall: boolean;
 };
 
+/**
+ * Maps a ConfidenceSignal tier to display properties (dot colour, label, CTA behaviour).
+ * "verified" and "likely" are safe to show as-is; "stale" and "unknown" always
+ * prompt the user to call ahead before visiting.
+ */
 export function freshnessTone(c: ConfidenceSignal): FreshnessTone {
   switch (c.tier) {
     case "verified":
