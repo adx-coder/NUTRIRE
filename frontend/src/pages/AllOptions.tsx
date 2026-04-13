@@ -54,7 +54,7 @@ export default function AllOptions() {
     { key: "open", label: "Open now", apply: (r) => r.openStatus.state === "open" },
     { key: "today", label: "Today", apply: (r) => r.openStatus.state === "open" || r.openStatus.state === "opens_today" },
     { key: "walk", label: "Walkable", apply: (r) => r.walkMinutes <= 20 },
-    { key: "metro", label: "Near metro", apply: (r) => !!r.org.nearestTransit && r.org.nearestTransit.name.toLowerCase().includes("metro") },
+    { key: "metro", label: "Near metro", apply: (r) => !!r.org.nearestTransit && (typeof r.org.nearestTransit === "string" ? r.org.nearestTransit : r.org.nearestTransit.name).toLowerCase().includes("metro") },
     { key: "es", label: "Español", apply: (r) => r.org.languages.includes("es") },
     { key: "am", label: "አማርኛ", apply: (r) => r.org.languages.includes("am") },
     { key: "no_id", label: "No ID", apply: (r) => r.org.accessRequirements.includes("no_id_required") },

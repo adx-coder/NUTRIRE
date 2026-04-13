@@ -13,6 +13,7 @@ import { useOrgs, mockUserLocation } from "@/data/load-data";
 import { rankOrgs } from "@/lib/rank-orgs";
 import { reliabilityTone } from "@/lib/freshness";
 import { useLocationStore } from "@/store/location";
+import { trackOrgClick } from "@/lib/analytics";
 import type { RankedOrg } from "@/types";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -97,7 +98,7 @@ export default function BestMatch() {
           transition={{ duration: 0.6, delay: 0.1, ease }}
           whileHover={{ scale: 1.008, transition: { duration: 0.2 } }}
           className="lg:order-2 rounded-2xl bg-white/30 backdrop-blur-2xl border border-white/40 shadow-[0_4px_16px_rgba(0,0,0,0.06),inset_0_1px_0_rgba(255,255,255,0.5)] p-4 flex flex-col gap-2 cursor-pointer"
-          onClick={() => navigate(`/org/${org.id}`)}>
+          onClick={() => { trackOrgClick(org.id, org.name, "best-match"); navigate(`/org/${org.id}`); }}>
           <div>
             <div className="flex items-center gap-2 mb-1">
               <OpenDot state={hero.openStatus.state} />
@@ -546,8 +547,11 @@ function pickDistance(r: RankedOrg): string {
 function bestTransit(org: RankedOrg["org"], walk: number, transit: number | null, drive: number): { Icon: LucideIcon; label: string } {
   if (walk <= 20) return { Icon: Footprints, label: `${walk} min walk` };
   if (org.nearestTransit) {
-    const wk = org.nearestTransit.walkMinutes ?? Math.round(org.nearestTransit.distanceMeters / 80);
-    return { Icon: org.nearestTransit.name.toLowerCase().includes("metro") ? Train : Bus, label: `${wk} min to ${org.nearestTransit.name.split(" (")[0]}` };
+    const raw = typeof org.nearestTransit === "string" ? org.nearestTransit : org.nearestTransit.name;
+    const wk = typeof org.nearestTransit === "string"
+      ? 5
+      : (org.nearestTransit.walkMinutes ?? Math.round(org.nearestTransit.distanceMeters / 80));
+    return { Icon: raw.toLowerCase().includes("metro") ? Train : Bus, label: `${wk} min to ${raw.split(" (")[0]}` };
   }
   if (transit !== null && transit <= 40) return { Icon: Bus, label: `~${transit} min bus` };
   return { Icon: Car, label: `${drive} min drive` };

@@ -69,8 +69,10 @@ function StatusDot({ state }: { state: string }) {
 function pickMode(org: RankedOrg["org"], walk: number, transit: number | null, drive: number): string {
   if (walk <= 25) return `${walk}m walk`;
   if (org.nearestTransit) {
-    const wk = org.nearestTransit.walkMinutes ?? Math.round(org.nearestTransit.distanceMeters / 80);
-    return `${wk}m → ${org.nearestTransit.name.split(" (")[0]}`;
+    const nt = org.nearestTransit;
+    const raw = typeof nt === "string" ? nt : nt.name;
+    const wk = typeof nt === "string" ? 5 : (nt.walkMinutes ?? Math.round(nt.distanceMeters / 80));
+    return `${wk}m → ${raw.split(" (")[0]}`;
   }
   if (transit !== null && transit <= 40) return `~${transit}m bus`;
   return `${drive}m drive`;

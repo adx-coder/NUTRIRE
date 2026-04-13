@@ -34,8 +34,11 @@ Output: public/data/enriched-orgs.json
 Usage:
   python scripts/stage5_export.py
 """
+import hashlib
 import json
+import os
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -46,6 +49,8 @@ PROJECT     = PIPELINE.parent
 OUTPUT_DIR  = PROJECT / "public" / "data"
 OUTPUT_ORGS = OUTPUT_DIR / "enriched-orgs.json"
 OUTPUT_META = OUTPUT_DIR / "metadata.json"
+EQUITY_GAPS = OUTPUT_DIR / "equity-gaps.json"
+TRANSIT_LLM_CACHE = PIPELINE / "state" / "transit-llm-cache.json"
 
 # Pick richest available input
 def _pick_input() -> Path:
@@ -137,6 +142,9 @@ def _build_transit_block(rec: dict) -> dict | None:
             "osrmUsed":       bus_raw.get("osrm_used", False),
         }
 
+    # Build actionable transit directions (#3)
+    directions = _build_transit_directions(metro_raw, bus_raw, rec)
+
     return {
         "nearestMetro":           metro,
         "nearestBus":             bus,
@@ -144,8 +152,193 @@ def _build_transit_block(rec: dict) -> dict | None:
         "walkMinutesToBus":       detail.get("walk_minutes_to_bus"),
         "reachableHoursOfWeek":   detail.get("reachable_hours_of_week", []),
         "transitSummary":         detail.get("transit_summary", ""),
+        "transitDirections":      directions,
         "enrichedAt":             detail.get("enriched_at", ""),
     }
+
+
+def _build_transit_directions_template(metro_raw: dict | None, bus_raw: dict | None,
+                                       rec: dict) -> dict | None:
+    """Fallback: build transit directions from templates when LLM is unavailable."""
+    primary_type = rec.get("nearestTransitType")
+    directions: dict = {}
+
+    if metro_raw:
+        lines = metro_raw.get("lines", [])
+        name = metro_raw.get("name", "")
+        walk_min = metro_raw.get("walk_minutes")
+        line_str = "/".join(lines) if lines else "Metro"
+        directions["metro"] = {
+            "action": f"Take the {line_str} line to {name}" +
+                      (f" ({walk_min} min walk from stop)" if walk_min else ""),
+            "lines": lines,
+            "station": name,
+            "walkMinutes": walk_min,
+        }
+
+    if bus_raw:
+        route = bus_raw.get("route", "")
+        all_routes = bus_raw.get("all_routes", [route]) if route else []
+        stop_name = bus_raw.get("stop_name", "")
+        walk_min = bus_raw.get("walk_minutes")
+        route_str = "/".join(all_routes) if all_routes else "Bus"
+        directions["bus"] = {
+            "action": f"Take the {route_str} bus, get off at {stop_name}" +
+                      (f" ({walk_min} min walk from stop)" if walk_min else ""),
+            "routes": all_routes,
+            "stopName": stop_name,
+            "walkMinutes": walk_min,
+        }
+
+    if not directions:
+        return None
+
+    directions["recommended"] = primary_type or ("metro" if metro_raw else "bus")
+    return directions
+
+
+# ── LLM-powered transit directions ──────────────────────────────────────────
+
+TRANSIT_PROMPT = """You are writing brief, friendly transit directions to a food assistance organization.
+Write like you're texting a friend who needs to get there. Be specific with route numbers and stop names.
+2-3 sentences max. If both metro and bus are available, mention both but recommend the better option.
+Do NOT include org name or address in the directions — the user already knows where they're going.
+Do NOT say "you can" or "you could" — just say what to do: "Hop on the…", "Take the…", "Grab the…" etc."""
+
+_transit_llm_cache: dict = {}
+_transit_llm_client = None
+
+
+def _load_transit_cache() -> dict:
+    """Load LLM transit directions cache from disk."""
+    if TRANSIT_LLM_CACHE.exists():
+        try:
+            return json.loads(TRANSIT_LLM_CACHE.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return {}
+
+
+def _save_transit_cache(cache: dict):
+    """Persist LLM transit directions cache."""
+    TRANSIT_LLM_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    TRANSIT_LLM_CACHE.write_text(json.dumps(cache, indent=2), encoding="utf-8")
+
+
+def _get_transit_client():
+    """Lazy-init Mistral client for transit directions."""
+    global _transit_llm_client
+    if _transit_llm_client is None:
+        api_key = os.getenv("MISTRAL_API_KEY")
+        if not api_key:
+            return None
+        from mistralai.client import Mistral
+        _transit_llm_client = Mistral(api_key=api_key)
+    return _transit_llm_client
+
+
+def _transit_cache_key(metro_raw: dict | None, bus_raw: dict | None, rec: dict) -> str:
+    """Build a stable cache key from transit data."""
+    blob = json.dumps({
+        "metro": metro_raw,
+        "bus": bus_raw,
+        "name": rec.get("name", ""),
+        "address": rec.get("address", ""),
+    }, sort_keys=True)
+    return hashlib.md5(blob.encode("utf-8")).hexdigest()
+
+
+def _build_llm_transit_input(metro_raw: dict | None, bus_raw: dict | None, rec: dict) -> str:
+    """Build the user message for the LLM."""
+    parts = [f"Destination: {rec.get('name', '?')} at {rec.get('address', '?')}, {rec.get('city', '')}, {rec.get('state', '')}"]
+
+    if metro_raw:
+        lines = metro_raw.get("lines", [])
+        parts.append(f"Nearest metro: {metro_raw.get('name', '?')} station"
+                     f" ({', '.join(lines) if lines else 'Metro'} line)"
+                     f" — {metro_raw.get('walk_minutes', '?')} min walk from station to org")
+
+    if bus_raw:
+        routes = bus_raw.get("all_routes", [bus_raw.get("route", "?")])
+        parts.append(f"Nearest bus: stop \"{bus_raw.get('stop_name', '?')}\""
+                     f" (routes: {', '.join(routes)})"
+                     f" — {bus_raw.get('walk_minutes', '?')} min walk from stop to org")
+
+    return "\n".join(parts)
+
+
+def _call_transit_llm(metro_raw: dict | None, bus_raw: dict | None,
+                      rec: dict) -> str | None:
+    """Call Mistral to generate natural transit directions. Returns text or None."""
+    client = _get_transit_client()
+    if not client:
+        return None
+
+    model = os.getenv("MISTRAL_MODEL", "ministral-8b-latest")
+    user_msg = _build_llm_transit_input(metro_raw, bus_raw, rec)
+
+    for attempt in range(3):
+        try:
+            resp = client.chat.complete(
+                model=model,
+                messages=[
+                    {"role": "system", "content": TRANSIT_PROMPT},
+                    {"role": "user", "content": user_msg},
+                ],
+                max_tokens=200,
+                temperature=0.7,
+            )
+            text = resp.choices[0].message.content.strip()
+            if text:
+                return text
+            break
+        except Exception as exc:
+            err = str(exc)
+            if "429" in err or "rate" in err.lower():
+                time.sleep(2 ** (attempt + 1))
+            elif any(c in err for c in ("500", "502", "503")):
+                time.sleep(3)
+            else:
+                break
+    return None
+
+
+def _build_transit_directions(metro_raw: dict | None, bus_raw: dict | None,
+                              rec: dict) -> dict | None:
+    """Build transit directions using LLM, with template fallback."""
+    global _transit_llm_cache
+
+    # Template-based structured data (always computed for metro/bus sub-fields)
+    template = _build_transit_directions_template(metro_raw, bus_raw, rec)
+    if template is None:
+        return None
+
+    # Try LLM for natural-language directions
+    cache_key = _transit_cache_key(metro_raw, bus_raw, rec)
+
+    if cache_key in _transit_llm_cache:
+        cached = _transit_llm_cache[cache_key]
+        template["naturalDirections"] = cached.get("text", "")
+        return template
+
+    llm_text = _call_transit_llm(metro_raw, bus_raw, rec)
+
+    if llm_text:
+        _transit_llm_cache[cache_key] = {
+            "text": llm_text,
+            "cached_at": datetime.now(timezone.utc).isoformat(),
+        }
+        template["naturalDirections"] = llm_text
+    else:
+        # Build a simple natural sentence from the template actions
+        actions = []
+        if template.get("metro"):
+            actions.append(template["metro"]["action"])
+        if template.get("bus"):
+            actions.append(template["bus"]["action"])
+        template["naturalDirections"] = ". ".join(actions) + "." if actions else ""
+
+    return template
 
 
 def _build_weather_block(rec: dict) -> dict | None:
@@ -165,6 +358,60 @@ def _build_weather_block(rec: dict) -> dict | None:
         "affectsTravel":  alert.get("affects_travel", False),
         "nwsId":          alert.get("nws_id"),
         "fetchedAt":      alert.get("fetched_at"),
+    }
+
+
+def _load_equity_gaps() -> dict[str, dict]:
+    """Load equity gap data keyed by ZIP code."""
+    if not EQUITY_GAPS.exists():
+        return {}
+    try:
+        data = json.loads(EQUITY_GAPS.read_text(encoding="utf-8"))
+        gaps = data.get("gaps", [])
+        return {g["zip"]: g for g in gaps if "zip" in g}
+    except Exception:
+        return {}
+
+_EQUITY_BY_ZIP: dict[str, dict] = _load_equity_gaps()
+
+
+def _build_urgency(zip_code: str) -> dict | None:
+    """Build urgency signal for donors based on equity gap data."""
+    gap_info = _EQUITY_BY_ZIP.get(zip_code)
+    if not gap_info:
+        return None
+    gap_score = gap_info.get("gap", 0)
+    if gap_score <= 0.01:
+        return None
+
+    pop = gap_info.get("population", 0)
+    underserved = gap_info.get("underservedPopulation", gap_info.get("underserved_population", 0))
+    nearby_orgs = gap_info.get("nearbyOrgCount", gap_info.get("nearby_org_count", 0))
+    label = gap_info.get("label", zip_code)
+
+    # Compute a multiplier: how much more impact donations have here
+    # compared to the average area
+    avg_gap = 0.03  # rough average gap across all ZIPs
+    multiplier = round(gap_score / avg_gap, 1) if avg_gap > 0 else 1.0
+
+    if gap_score >= 0.06:
+        level = "high"
+    elif gap_score >= 0.03:
+        level = "medium"
+    else:
+        level = "low"
+
+    return {
+        "level": level,
+        "gapScore": round(gap_score, 4),
+        "multiplier": multiplier,
+        "population": pop,
+        "underservedPopulation": underserved,
+        "nearbyOrgCount": nearby_orgs,
+        "areaLabel": label,
+        "message": f"{label} has {underserved:,} underserved residents"
+                   f" but only {nearby_orgs} food resource{'s' if nearby_orgs != 1 else ''}"
+                   f" — donations here go {multiplier}x further.",
     }
 
 
@@ -257,6 +504,9 @@ def transform_record(rec: dict) -> dict:
         "donateUrl": rec.get("donate_url"),
         "volunteerUrl": rec.get("volunteer_url"),
 
+        # Urgency signal for donors (from equity gap analysis)
+        "urgency": _build_urgency(rec.get("zip", "")),
+
         # Timestamps
         "createdAt": datetime.now(timezone.utc).isoformat(),
         "updatedAt": datetime.now(timezone.utc).isoformat(),
@@ -348,13 +598,26 @@ def build_metadata(records: list[dict], exported: list[dict]) -> dict:
 
 
 def main():
+    global _transit_llm_cache
+
     data = json.loads(INPUT.read_text(encoding="utf-8"))
     records = data["records"]
     total = len(records)
     print(f"Stage 5: exporting {total} records to frontend format")
 
+    # Load LLM transit directions cache
+    _transit_llm_cache = _load_transit_cache()
+    cache_before = len(_transit_llm_cache)
+    print(f"  Transit LLM cache: {cache_before} entries loaded")
+
     # Transform all records
     exported = [transform_record(r) for r in records]
+
+    # Save updated transit LLM cache
+    cache_after = len(_transit_llm_cache)
+    if cache_after > cache_before:
+        _save_transit_cache(_transit_llm_cache)
+        print(f"  Transit LLM cache: {cache_after - cache_before} new entries ({cache_after} total)")
 
     # Filter out records without essential fields
     valid = [r for r in exported if r.get("name") and r.get("address")]
@@ -388,6 +651,9 @@ def main():
                       if (r.get("transit") or {}).get("nearestMetro", {}) and
                          (r.get("transit", {}).get("nearestMetro") or {}).get("osrmUsed"))
 
+    has_llm_dir  = sum(1 for r in exported
+                       if (r.get("transit") or {}).get("transitDirections", {}) and
+                          (r.get("transit", {}).get("transitDirections") or {}).get("naturalDirections"))
     has_website  = sum(1 for r in exported if r.get("website"))
     has_ft       = sum(1 for r in exported if r.get("foodTypes"))
     has_cultural = sum(1 for r in exported if r.get("ai", {}).get("culturalNotes"))
@@ -407,6 +673,7 @@ def main():
     print(f"  With transit block:     {has_transit}/{n} ({pct(has_transit)}%)")
     print(f"    Nearest Metro:        {has_metro}  (OSRM real routes: {osrm_routed})")
     print(f"    Nearest Bus stop:     {has_bus}")
+    print(f"    LLM directions:       {has_llm_dir}")
     print(f"  ── Weather (stage 9) ──────────────────────────────────")
     print(f"  Active weather alerts:  {has_weather}")
     print(f"\n  Frontend files:")

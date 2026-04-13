@@ -473,6 +473,57 @@ export interface TransitProximitySimple {
   walkMinutes?: number;
 }
 
+export interface TransitDirectionMode {
+  action: string;
+  lines?: string[];
+  station?: string;
+  routes?: string[];
+  stopName?: string;
+  walkMinutes?: number;
+}
+
+export interface TransitDirections {
+  metro?: TransitDirectionMode;
+  bus?: TransitDirectionMode;
+  recommended: "metro" | "bus";
+  naturalDirections?: string;
+}
+
+export interface TransitBlock {
+  nearestMetro?: {
+    name: string;
+    stationId: string;
+    lines: string[];
+    walkMinutes: number;
+    walkDistanceM: number;
+    osrmUsed: boolean;
+  };
+  nearestBus?: {
+    stopId: string;
+    stopName: string;
+    route: string;
+    allRoutes: string[];
+    walkMinutes: number;
+    walkDistanceM: number;
+    osrmUsed: boolean;
+  };
+  walkMinutesToMetro?: number;
+  walkMinutesToBus?: number;
+  transitSummary: string;
+  transitDirections?: TransitDirections;
+}
+
+export interface UrgencySignal {
+  level: "high" | "medium" | "low";
+  gapScore: number;
+  multiplier: number;
+  population: number;
+  underservedPopulation: number;
+  nearbyOrgCount: number;
+  areaLabel: string;
+  message: string;
+}
+
 export interface NeighborhoodContext {
   zip: string;
   povertyRate: number;            // 0..1
@@ -540,10 +591,16 @@ export interface EnrichedOrganization {
   languages: LangCode[];
 
   // -- enrichment blocks --
-  nearestTransit?: TransitProximitySimple;
+  nearestTransit?: TransitProximitySimple | string;
   neighborhoodContext?: NeighborhoodContext;
   reliability: ReliabilitySignal;
   ai: AIEnrichment;
+
+  // -- full transit block (stage 6) --
+  transit?: TransitBlock;
+
+  // -- urgency signal for donors (from equity gap analysis) --
+  urgency?: UrgencySignal | null;
 
   // -- donor & volunteer --
   acceptsFoodDonations?: boolean;

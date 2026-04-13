@@ -90,13 +90,34 @@ export function rankOrgs(orgs: EnrichedOrganization[], opts: RankOrgOptions): Ra
     });
   }
 
-  results.sort((a, b) => b.score - a.score);
+  // Primary sort: open status tier (open > opens_today > opens_this_week > rest)
+  // Secondary sort: proximity (closest first within each tier)
+  const openTierRank = (state: string): number => {
+    switch (state) {
+      case "open": return 0;
+      case "opens_today": return 1;
+      case "opens_this_week": return 2;
+      default: return 3;
+    }
+  };
+
+  results.sort((a, b) => {
+    const tierA = openTierRank(a.openStatus.state);
+    const tierB = openTierRank(b.openStatus.state);
+    if (tierA !== tierB) return tierA - tierB;
+    // Within same tier, sort by distance (closest first)
+    return a.distanceMeters - b.distanceMeters;
+  });
+
   return results.slice(0, max);
 }
 
 function estimateTransit(org: EnrichedOrganization, meters: number): number | null {
   if (!org.nearestTransit) return null;
-  const walkToStop = org.nearestTransit.walkMinutes ?? Math.round(org.nearestTransit.distanceMeters / 80);
+  // nearestTransit may be a string (stop name) or an object { name, distanceMeters, walkMinutes }
+  const walkToStop = typeof org.nearestTransit === "string"
+    ? 5 // default estimate when only stop name is available
+    : (org.nearestTransit.walkMinutes ?? Math.round(org.nearestTransit.distanceMeters / 80));
   const busMiles = metersToMiles(meters);
   const busMinutes = Math.round((busMiles / 15) * 60);
   return walkToStop + busMinutes;
@@ -112,7 +133,8 @@ function explain(
 
   if (walk <= 20) parts.push(`${walk} min walk`);
   else if (org.nearestTransit) {
-    const name = org.nearestTransit.name.split(" (")[0];
+    const raw = typeof org.nearestTransit === "string" ? org.nearestTransit : org.nearestTransit.name;
+    const name = raw.split(" (")[0];
     parts.push(`near ${name}`);
   }
 

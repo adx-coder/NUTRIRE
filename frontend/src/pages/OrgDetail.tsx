@@ -1,6 +1,6 @@
 import { useMemo, useState, type ReactNode } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { ArrowLeft, Share2, Phone, Check, X, AlertTriangle, Clock, Footprints, Bus, Car, Train, ArrowRight } from "lucide-react";
+import { ArrowLeft, Share2, Phone, Check, X, AlertTriangle, Clock, Footprints, Bus, Car, Train, ArrowRight, Printer } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
@@ -87,6 +87,9 @@ export default function OrgDetail() {
             <ArrowLeft size={14} /> Back
           </button>
           <div className="flex items-center gap-2">
+            <button onClick={() => window.print()} className="no-print h-9 px-3 rounded-lg bg-white/30 backdrop-blur-xl border border-white/40 text-[12px] font-medium text-ink-soft hover:text-ink transition-colors inline-flex items-center gap-1.5">
+              <Printer size={13} /> Print
+            </button>
             <button onClick={() => setShareOpen(true)} className="h-9 px-3 rounded-lg bg-white/30 backdrop-blur-xl border border-white/40 text-[12px] font-medium text-ink-soft hover:text-ink transition-colors inline-flex items-center gap-1.5">
               <Share2 size={13} /> Send
             </button>
@@ -204,6 +207,33 @@ export default function OrgDetail() {
                 <AlertTriangle size={10} className="shrink-0 mt-0.5" /><span>{org.ai.reconciliationWarnings[0]}</span>
               </div>
             ) : null}
+
+            {/* Transit directions */}
+            {org.transit?.transitDirections && (
+              <div className="mt-3">
+                <CardLabel>How to get there</CardLabel>
+                {org.transit.transitDirections.naturalDirections ? (
+                  <p className="mt-1.5 text-[12px] text-ink/70 leading-relaxed">
+                    {org.transit.transitDirections.naturalDirections}
+                  </p>
+                ) : (
+                  <div className="mt-1.5 space-y-1.5">
+                    {org.transit.transitDirections.metro && (
+                      <div className={`flex items-start gap-2 rounded-lg px-2.5 py-2 text-[11px] ${org.transit.transitDirections.recommended === "metro" ? "bg-sage/8 border border-sage/12" : "bg-white/20"}`}>
+                        <Train size={13} className="text-sage-deep mt-0.5 shrink-0" />
+                        <span className="text-ink/70 leading-snug">{org.transit.transitDirections.metro.action}</span>
+                      </div>
+                    )}
+                    {org.transit.transitDirections.bus && (
+                      <div className={`flex items-start gap-2 rounded-lg px-2.5 py-2 text-[11px] ${org.transit.transitDirections.recommended === "bus" ? "bg-sage/8 border border-sage/12" : "bg-white/20"}`}>
+                        <Bus size={13} className="text-sage-deep mt-0.5 shrink-0" />
+                        <span className="text-ink/70 leading-snug">{org.transit.transitDirections.bus.action}</span>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
           </GlassCard>
 
           {/* ── ALTERNATIVES CARD (bottom-right) ── */}
@@ -246,6 +276,73 @@ export default function OrgDetail() {
         </div>
       </div>
 
+      {/* Print-only one-pager */}
+      <div className="print-only print-page hidden" style={{ fontFamily: "system-ui, sans-serif", color: "#1a1a1a", padding: "20px" }}>
+        <div style={{ borderBottom: "2px solid #3A6551", paddingBottom: "12px", marginBottom: "16px" }}>
+          <div style={{ fontSize: "10px", color: "#666", textTransform: "uppercase", letterSpacing: "0.1em" }}>Nutrire — Food Resource Info Sheet</div>
+          <h1 style={{ fontSize: "24px", fontWeight: 700, margin: "4px 0 0" }}>{org.name}</h1>
+          <p style={{ fontSize: "13px", color: "#555", margin: "2px 0" }}>{org.address}, {org.city}, {org.state} {org.zip}</p>
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
+          <div>
+            {org.phone && <p style={{ fontSize: "14px", margin: "0 0 8px" }}><strong>Phone:</strong> {org.phone}</p>}
+            {org.website && <p style={{ fontSize: "12px", margin: "0 0 8px", wordBreak: "break-all" }}><strong>Website:</strong> {org.website}</p>}
+
+            <div style={{ marginTop: "12px" }}>
+              <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", color: "#666", letterSpacing: "0.08em" }}>Hours</p>
+              <p style={{ fontSize: "13px", margin: "4px 0", whiteSpace: "pre-wrap" }}>{org.hoursRaw || "Call for hours"}</p>
+            </div>
+
+            <div style={{ marginTop: "12px" }}>
+              <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", color: "#666", letterSpacing: "0.08em" }}>Eligibility</p>
+              <p style={{ fontSize: "13px", margin: "4px 0" }}>{org.ai.plainEligibility}</p>
+            </div>
+          </div>
+
+          <div>
+            {org.ai.firstVisitGuide && org.ai.firstVisitGuide.length > 0 && (
+              <div>
+                <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", color: "#666", letterSpacing: "0.08em" }}>What to bring / expect</p>
+                <ul style={{ fontSize: "13px", margin: "4px 0", paddingLeft: "16px" }}>
+                  {org.ai.firstVisitGuide.map((b, i) => <li key={i} style={{ margin: "2px 0" }}>{b}</li>)}
+                </ul>
+              </div>
+            )}
+
+            {org.transit?.transitDirections && (
+              <div style={{ marginTop: "12px" }}>
+                <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", color: "#666", letterSpacing: "0.08em" }}>Transit</p>
+                {org.transit.transitDirections.naturalDirections ? (
+                  <p style={{ fontSize: "12px", margin: "4px 0" }}>{org.transit.transitDirections.naturalDirections}</p>
+                ) : (
+                  <>
+                    {org.transit.transitDirections.metro && (
+                      <p style={{ fontSize: "12px", margin: "4px 0" }}>🚇 {org.transit.transitDirections.metro.action}</p>
+                    )}
+                    {org.transit.transitDirections.bus && (
+                      <p style={{ fontSize: "12px", margin: "4px 0" }}>🚌 {org.transit.transitDirections.bus.action}</p>
+                    )}
+                  </>
+                )}
+              </div>
+            )}
+
+            {org.ai.culturalNotes && (
+              <div style={{ marginTop: "12px" }}>
+                <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", color: "#666", letterSpacing: "0.08em" }}>Notes</p>
+                <p style={{ fontSize: "12px", margin: "4px 0", fontStyle: "italic" }}>{org.ai.culturalNotes}</p>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div style={{ borderTop: "1px solid #ddd", marginTop: "16px", paddingTop: "8px", fontSize: "10px", color: "#999", display: "flex", justifyContent: "space-between" }}>
+          <span>Generated by Nutrire (NourishNet) — nutrire.github.io</span>
+          <span>{new Date().toLocaleDateString()}</span>
+        </div>
+      </div>
+
       {shareOpen && <ShareSheet org={org} ranked={heroResult} onClose={() => setShareOpen(false)} />}
     </main>
   );
@@ -283,9 +380,27 @@ function FormattedHours({ org }: { org: EnrichedOrganization }) {
   return (<div className="space-y-0.5">{days.map((d) => (<div key={d} className="flex items-baseline gap-2 text-[11px]"><span className="w-7 text-ink-muted font-medium shrink-0">{DL[d]}</span><span className="text-ink">{p[d]!.map((s, i) => <span key={i}>{i > 0 && ", "}{s.start}–{s.end}</span>)}</span></div>))}</div>);
 }
 
-function bestTransit(org: EnrichedOrganization, walk: number, transit: number | null, drive: number): { Icon: LucideIcon; label: string } {
+function bestTransit(org: EnrichedOrganization, walk: number, transit: number | null, drive: number): { Icon: LucideIcon; label: string; directions?: string } {
   if (walk <= 20) return { Icon: Footprints, label: `${walk} min walk` };
-  if (org.nearestTransit) { const wk = org.nearestTransit.walkMinutes ?? Math.round(org.nearestTransit.distanceMeters / 80); return { Icon: org.nearestTransit.name.toLowerCase().includes("metro") ? Train : Bus, label: `${wk} min to ${org.nearestTransit.name.split(" (")[0]}` }; }
+
+  // Use actionable transit directions if available
+  const td = org.transit?.transitDirections;
+  if (td) {
+    const rec = td.recommended;
+    const mode = rec === "metro" ? td.metro : td.bus;
+    if (mode) {
+      const Icon = rec === "metro" ? Train : Bus;
+      return { Icon, label: mode.action, directions: mode.action };
+    }
+  }
+
+  // Fallback to basic transit info
+  if (org.nearestTransit) {
+    const nt = org.nearestTransit;
+    const raw = typeof nt === "string" ? nt : nt.name;
+    const wk = typeof nt === "string" ? 5 : (nt.walkMinutes ?? Math.round(nt.distanceMeters / 80));
+    return { Icon: raw.toLowerCase().includes("metro") ? Train : Bus, label: `${wk} min to ${raw.split(" (")[0]}` };
+  }
   if (transit !== null && transit <= 40) return { Icon: Bus, label: `~${transit} min bus` };
   return { Icon: Car, label: `${drive} min drive` };
 }

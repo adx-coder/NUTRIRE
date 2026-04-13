@@ -1,6 +1,7 @@
 {
-  "generatedAt": "2026-04-12T09:13:46.806248+00:00",
-  "totalOrganizations": 1395,
+  "generatedAt": "2026-04-12T23:37:42.607219+00:00",
+  "inputFile": "stage9_weather.json",
+  "totalOrganizations": 1401,
   "byState": {
     "MD": 877,
     "VA": 422,
@@ -19,8 +20,21 @@
     "hasHours": 763,
     "hasCoords": 1395,
     "hasHeroCopy": 1401,
+    "hasWebsite": 1240,
+    "hasFoodTypes": 1383,
+    "hasCulturalNotes": 261,
+    "hasLanguages": 548,
+    "hasTransit": 1395,
+    "hasMetro": 194,
+    "hasBus": 396,
+    "activeWeatherAlerts": 993,
+    "osrmRoutedOrgs": 194,
     "hasHoursPct": 54,
-    "hasCoordsPct": 100
+    "hasCoordsPct": 100,
+    "hasWebsitePct": 89,
+    "hasFoodTypesPct": 99,
+    "hasTransitPct": 100,
+    "hasLanguagesPct": 39
   },
   "sources": [
     {

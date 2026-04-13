@@ -88,3 +88,64 @@
   @keyframes nutrireDrift3 { 0%, 100% { transform: none; } }
   @keyframes ping { 0%, 100% { transform: none; opacity: 0; } }
 }
+
+/* ── Print styles for one-pager (#4) ── */
+@media print {
+  /* Hide everything except printable content */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide non-print elements */
+  nav, .no-print, [aria-hidden="true"],
+  button:not(.print-keep), .backdrop-blur-2xl::before,
+  .maplibregl-map, .leaflet-container {
+    display: none !important;
+  }
+
+  /* Show print-only elements */
+  .print-only {
+    display: block !important;
+  }
+
+  /* Reset glass effects for print */
+  .backdrop-blur-2xl, .backdrop-blur-xl, .backdrop-blur-lg {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: white !important;
+    border-color: #e5e5e5 !important;
+  }
+
+  /* Clean layout */
+  main {
+    background: white !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  .print-page {
+    page-break-inside: avoid;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  /* Force single column */
+  .grid {
+    display: block !important;
+  }
+
+  /* Hide map card in print */
+  .print-hide-map {
+    display: none !important;
+  }
+
+  @page {
+    margin: 1cm;
+    size: letter;
+  }
+}

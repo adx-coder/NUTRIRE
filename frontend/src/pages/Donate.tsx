@@ -1,8 +1,9 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ExternalLink, Heart } from "lucide-react";
+import { ExternalLink, Heart, AlertTriangle } from "lucide-react";
 import { useOrgs, mockUserLocation } from "@/data/load-data";
+import { trackFilter } from "@/lib/analytics";
 import { haversineMeters, metersToMiles } from "@/lib/geo";
 import { GlassBackdrop, GLASS_BG } from "@/components/GlassBackdrop";
 import { TopNav } from "@/components/TopNav";
@@ -32,8 +33,11 @@ export default function Donate() {
     has_url: false,
   });
 
-  const toggle = (key: FilterKey) =>
-    setFilters((prev) => ({ ...prev, [key]: !prev[key] }));
+  const toggle = (key: FilterKey) => {
+    const newVal = !filters[key];
+    trackFilter(`donate_${key}`, newVal);
+    setFilters((prev) => ({ ...prev, [key]: newVal }));
+  };
 
   const rows = useMemo<DonorRow[]>(() => {
     const donorOrgs = orgs.filter(
@@ -110,11 +114,23 @@ export default function Donate() {
 }
 
 function DonorCard({ org, distanceMiles }: { org: EnrichedOrganization; distanceMiles: number }) {
+  const urgency = org.urgency;
   return (
     <Link
       to={`/org/${org.id}`}
       className="block rounded-2xl border border-white/40 bg-white/30 backdrop-blur-2xl p-5 hover:bg-white/40 transition-colors"
     >
+      {/* Urgency banner */}
+      {urgency && (urgency.level === "high" || urgency.level === "medium") && (
+        <div className={`-mt-1 mb-3 flex items-start gap-2 rounded-xl px-3 py-2 text-[11px] leading-snug ${
+          urgency.level === "high"
+            ? "bg-terracotta/8 border border-terracotta/15 text-terracotta"
+            : "bg-mustard/8 border border-mustard/15 text-ink-soft"
+        }`}>
+          <AlertTriangle size={12} className="shrink-0 mt-0.5" />
+          <span>{urgency.message}</span>
+        </div>
+      )}
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
           <h3 className="font-display text-base font-semibold text-ink truncate">{org.name}</h3>
@@ -128,6 +144,11 @@ function DonorCard({ org, distanceMiles }: { org: EnrichedOrganization; distance
             {org.acceptsMoneyDonations && (
               <span className="inline-flex items-center gap-1 h-6 px-2 rounded-full bg-white/25 backdrop-blur-xl border border-white/35 text-[11px] font-medium text-ink-soft">
                 $ Money
+              </span>
+            )}
+            {urgency && urgency.level === "high" && (
+              <span className="inline-flex items-center gap-1 h-6 px-2 rounded-full bg-terracotta/10 border border-terracotta/15 text-[11px] font-bold text-terracotta">
+                {urgency.multiplier}x impact
               </span>
             )}
             <span className="h-6 px-2 rounded-full bg-white/20 border border-white/30 text-[11px] font-medium text-ink-muted inline-flex items-center">
