@@ -7,6 +7,7 @@ This plan replaces the old drip-by-drip migration list with shippable sprint lan
 Already shipped:
 
 - SDK-first runtime recovery for ASR, LLM, and TTS.
+- Model-extension docs, scaffold script, and golden contract tests.
 - Legacy `Voice-Agent/config.yaml` bridge with preserved model recipes.
 - ASR SDK registry with `qwen3`, `nemotron`, `silero` lazy loaders.
 - LLM SDK registry with OpenAI-compatible client, response processor, turn coordinator, metrics shell, conversation manager.
@@ -53,7 +54,7 @@ Goal: make “add a model like Transformers” explicit and hard to regress.
 
 Deliverables:
 
-- [ ] `docs/adding-models.md`
+- [x] `docs/adding-models.md`
   - ASR model loader contract.
   - ASR VAD contract.
   - LLM client contract.
@@ -61,22 +62,22 @@ Deliverables:
   - Optional dependency pattern.
   - Fake test pattern.
   - Real smoke pattern.
-- [ ] `scripts/scaffold_model_loader.py`
+- [x] `scripts/scaffold_model_loader.py`
   - `--kind asr --name <model>`
   - `--kind vad --name <provider>`
   - `--kind llm --name <client>`
   - `--kind tts --name <model>`
   - Generates loader/client skeleton plus starter test.
-- [ ] Golden extension tests:
+- [x] Golden extension tests:
   - ASR fake model works without runtime/bootstrap edits.
   - VAD fake provider works without runtime/bootstrap edits.
   - LLM fake client works without runtime/bootstrap edits.
   - TTS fake loader works without runtime/bootstrap edits.
-- [ ] `RECOVERY_PLAN.md` updated with the registry-first rule.
+- [x] `RECOVERY_PLAN.md` updated with the registry-first rule.
 
 Exit demo:
 
-- Scaffold a dummy model, run its generated test, then delete or keep as a documented example.
+- Scaffold generator has direct unit coverage and golden contract tests exercise registered fake ASR/VAD/LLM/TTS entries without runtime edits.
 
 ---
 
@@ -206,14 +207,13 @@ Exit demo:
 
 Do these next, in order:
 
-1. Sprint 1 docs and scaffold script.
-2. Real Qwen3 GPU smoke attempt using old tested config.
-3. Port ASR streaming processor parity from old FLOW.
-4. Build one full local demo config:
+1. Real Qwen3 GPU smoke attempt using old tested config.
+2. Port ASR streaming processor parity from old FLOW.
+3. Build one full local demo config:
    - `qwen3` ASR
    - OpenAI-compatible or mock LLM
    - Kokoro TTS
-5. Wire `flow-ui` voice test path to PolyVoice.
+4. Wire `flow-ui` voice test path to PolyVoice.
 
 ## Risk Register
 
@@ -228,6 +228,6 @@ Do these next, in order:
 ## What We Are Not Doing Yet
 
 - No benchmark harness until real end-to-end local demo works.
-- No docs-site polish until `docs/adding-models.md` and model scaffolding exist.
+- No docs-site polish until the real local demo path is stable.
 - No telephony-first work until the SDK runtime path is demoable.
 - No copying the old monolith wholesale.

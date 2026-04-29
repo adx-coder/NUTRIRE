@@ -40,7 +40,7 @@ python -m pytest tests/unit tests/integration/test_pipeline_mocks.py
 
 Goal: make adding a new ASR/LLM/TTS model as predictable as adding a Transformers model class.
 
-Build next:
+Shipped:
 
 1. `docs/adding-models.md`
    - ASR model loader contract.
@@ -57,11 +57,13 @@ Build next:
    - `--kind tts`
 3. `tests/unit/services/test_extension_contracts.py`
    - confirms fake registered models/clients/providers require no runtime edits.
+4. `tests/unit/test_scaffold_model_loader.py`
+   - confirms the scaffold writer creates source/test files and protects existing files.
 
 Definition of done:
 
-- Scaffold one dummy model/client and run its generated test.
-- No changes to `runtime/bootstrap.py` are needed for the dummy.
+- Scaffold generator and golden contract tests pass.
+- No changes to `runtime/bootstrap.py` are needed for ASR/VAD/LLM/TTS fake extensions.
 
 ## Phase 2: Real Local Model Bring-Up
 
@@ -176,7 +178,6 @@ Definition of done:
 
 ## How To Pick The Next Task
 
-1. Finish Phase 1 first.
-2. If GPU is available, run Phase 2 Qwen3 real smoke in parallel.
-3. Then start Phase 3 ASR streaming processor parity.
-4. Do not jump to telephony until the local SDK voice loop is demoable.
+1. If GPU is available, run Phase 2 Qwen3 real smoke in parallel.
+2. Then start Phase 3 ASR streaming processor parity.
+3. Do not jump to telephony until the local SDK voice loop is demoable.

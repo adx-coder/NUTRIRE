@@ -25,15 +25,16 @@ What works today:
 - Qwen3 ASR recipe preserving the old GPU-tested FLOW defaults.
 - LLM SDK with OpenAI-compatible client, response processor, conversation state, turn coordination, and service wrapper.
 - OpenAI-compatible LLM/TTS examples and SDK integration tests.
+- Model-extension docs, scaffold script, and golden contract tests.
 
 Still in progress:
 
 - Telephony adapters such as FreeSWITCH, Asterisk, Twilio, Vonage, Telnyx, Plivo, and raw SIP.
 - Production orchestration: barge-in, filler scheduling, tool timing, RAG, escalation, audit logs, and observability.
 - Real GPU smoke for Qwen3 ASR in this repo. The config has been preserved from the old FLOW codebase, but the heavy `qwen-asr[vllm]` path still needs a GPU environment.
-- Model-extension docs and scaffold tooling.
+- Real model recipes for more ASR/LLM/TTS targets beyond the recovered Kokoro/Qwen/OpenAI-compatible paths.
 
-See [`SPRINT_PLAN.md`](./SPRINT_PLAN.md), [`RECOVERY_PLAN.md`](./RECOVERY_PLAN.md), and [`BUILD_ORDER.md`](./BUILD_ORDER.md) for the live plan.
+See [`SPRINT_PLAN.md`](./SPRINT_PLAN.md), [`RECOVERY_PLAN.md`](./RECOVERY_PLAN.md), and [`BUILD_ORDER.md`](./BUILD_ORDER.md) for the live plan. See [`docs/adding-models.md`](./docs/adding-models.md) for the SDK extension path.
 
 ## Current Quickstart
 

@@ -19,11 +19,13 @@ While the project is `0.x`, breaking changes can occur in any release; we will c
 - LLM SDK with OpenAI-compatible client, response processor, conversation state, turn coordination, metrics, and service wrapper.
 - Legacy FLOW config bridge and recipe tests for selected model settings.
 - Integration tests covering mock runtime and SDK-backed pipeline wiring.
+- Model-extension guide, scaffold script, and golden ASR/VAD/LLM/TTS extension contract tests.
 
 ### Changed
 
 - Preserved old FLOW Qwen3 ASR GPU-tested defaults, including `gpu_memory_utilization: 0.08`, `max_model_len: 4096`, low-latency streaming windows, and Silero VAD thresholds.
 - Refreshed project planning docs around the SDK-first recovery path instead of one-off provider wiring.
+- Added VAD and LLM client registry listing helpers to match ASR model and TTS loader discovery.
 
 ### Fixed
 

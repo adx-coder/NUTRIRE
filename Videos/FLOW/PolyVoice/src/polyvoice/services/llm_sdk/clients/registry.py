@@ -2,8 +2,12 @@
 
 from __future__ import annotations
 
+from typing import TYPE_CHECKING
+
 from polyvoice.core.exceptions import ConfigurationError
-from polyvoice.services.llm_sdk.clients.base import BaseLLMClient
+
+if TYPE_CHECKING:
+    from polyvoice.services.llm_sdk.clients.base import BaseLLMClient
 
 _CLIENTS: dict[str, type[BaseLLMClient]] = {}
 
@@ -29,3 +33,9 @@ def get_llm_client(name: str) -> type[BaseLLMClient]:
     except KeyError as exc:
         available = ", ".join(sorted(_CLIENTS)) or "(none)"
         raise ConfigurationError(f"Unknown LLM client '{normalized}'. Available: {available}") from exc
+
+
+def list_llm_clients() -> list[str]:
+    """Return registered LLM client names."""
+
+    return sorted(_CLIENTS)

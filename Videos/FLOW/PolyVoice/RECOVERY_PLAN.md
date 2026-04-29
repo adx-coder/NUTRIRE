@@ -200,13 +200,16 @@ Remaining:
 
 ### Slice 3: SDK-First Services
 
-Status: active.
+Status: active, with extension architecture locked in.
 
 Shipped:
 
 - ASR SDK registry.
 - LLM SDK registry.
 - TTS SDK registry.
+- Model-extension docs.
+- Model scaffold script.
+- Golden ASR/VAD/LLM/TTS extension contract tests.
 - OpenAI-compatible LLM/TTS.
 - Kokoro real TTS loader.
 - Qwen3/Nemotron/Silero lazy ASR/VAD loaders.
@@ -214,8 +217,6 @@ Shipped:
 
 Remaining:
 
-- `docs/adding-models.md`.
-- `scripts/scaffold_model_loader.py`.
 - Real Qwen3 GPU smoke.
 - Silero real VAD smoke.
 - More LLM clients using the same registry pattern.
@@ -265,14 +266,13 @@ Build:
 
 ## Immediate Next Targets
 
-1. Add model-extension docs and scaffold script.
-2. Attempt real Qwen3 GPU smoke using preserved old config.
-3. Port old ASR streaming processor behavior in small tested modules.
-4. Build full local demo config:
+1. Attempt real Qwen3 GPU smoke using preserved old config.
+2. Port old ASR streaming processor behavior in small tested modules.
+3. Build full local demo config:
    - Qwen3 ASR
    - mock or OpenAI-compatible LLM
    - Kokoro TTS
-5. Start `flow-ui` voice-test route parity.
+4. Start `flow-ui` voice-test route parity.
 
 ## Non-Goals For This Recovery Phase
 
@@ -280,4 +280,3 @@ Build:
 - Do not build telephony before the SDK voice loop is stable.
 - Do not copy monolithic old files directly.
 - Do not add providers by editing runtime/bootstrap every time.
-

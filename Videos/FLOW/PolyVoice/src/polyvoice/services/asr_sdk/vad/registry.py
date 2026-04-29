@@ -2,8 +2,12 @@
 
 from __future__ import annotations
 
+from typing import TYPE_CHECKING
+
 from polyvoice.core.exceptions import ConfigurationError
-from polyvoice.services.asr_sdk.vad.base import BaseVAD
+
+if TYPE_CHECKING:
+    from polyvoice.services.asr_sdk.vad.base import BaseVAD
 
 _VADS: dict[str, type[BaseVAD]] = {}
 
@@ -29,3 +33,9 @@ def get_vad(name: str) -> type[BaseVAD]:
     except KeyError as exc:
         available = ", ".join(sorted(_VADS)) or "(none)"
         raise ConfigurationError(f"Unknown VAD '{normalized}'. Available: {available}") from exc
+
+
+def list_vads() -> list[str]:
+    """Return registered VAD names."""
+
+    return sorted(_VADS)
