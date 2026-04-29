@@ -1,0 +1,141 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.pytest-local/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Environments
+.env
+.env.local
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project-specific
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.log
+*.err
+server.log
+streamlit.log
+*.pid
+
+# SSL / certs (never commit, ever)
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+cert.pem
+key.pem
+
+# Audio artifacts (use git-lfs if you must commit any)
+*.wav
+*.mp3
+*.opus
+*.flac
+*.m4a
+
+# Model weights (use HF, not git)
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.onnx
+models/
+weights/
+checkpoints/
+
+# Benchmark results (committed selectively)
+benchmarks/results/raw/
+benchmarks/results/*.tar.gz
+
+# Paper build artifacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+paper/*.fdb_latexmk
+paper/*.fls
+
+# Docs build
+site/
+docs/_build/
+docs/_static/build/
+
+# Local data
+data/
+uploads/
+outputs/scratch/
+
+# Secrets
+secrets/
+*.secret

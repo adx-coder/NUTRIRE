@@ -1,0 +1,22 @@
+runtime:
+  host: 127.0.0.1
+  port: 8092
+  log_level: info
+
+stt:
+  provider: mock
+  model: mock
+
+llm:
+  provider: openai-compatible
+  model: meta-llama/Llama-3.1-8B-Instruct
+  params:
+    endpoint_url: http://localhost:8000/v1/chat/completions
+    temperature: 0.7
+    max_tokens: 200
+    # api_key: optional-bearer-token
+
+tts:
+  provider: mock
+  model: mock
+

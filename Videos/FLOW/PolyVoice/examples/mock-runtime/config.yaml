@@ -1,0 +1,17 @@
+runtime:
+  host: 127.0.0.1
+  port: 8092
+  log_level: info
+
+stt:
+  provider: mock
+  model: mock
+
+llm:
+  provider: mock
+  model: mock
+
+tts:
+  provider: mock
+  model: mock
+

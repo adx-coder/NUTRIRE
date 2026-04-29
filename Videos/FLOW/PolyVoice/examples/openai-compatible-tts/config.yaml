@@ -1,0 +1,23 @@
+runtime:
+  host: 127.0.0.1
+  port: 8092
+  log_level: info
+
+stt:
+  provider: mock
+  model: mock
+
+llm:
+  provider: mock
+  model: mock
+
+tts:
+  provider: openai-compatible
+  model: tts-1
+  params:
+    endpoint_url: http://localhost:8000/v1/audio/speech
+    voice: alloy
+    response_format: wav
+    sample_rate: 24000
+    # api_key: optional-bearer-token
+
