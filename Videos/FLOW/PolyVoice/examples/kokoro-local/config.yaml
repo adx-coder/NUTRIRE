@@ -28,5 +28,3 @@ tts:
           voice: af_heart
           device: cpu
           repo_id: hexgrad/Kokoro-82M
-      audio_pipeline:
-        target_sample_rate: 24000

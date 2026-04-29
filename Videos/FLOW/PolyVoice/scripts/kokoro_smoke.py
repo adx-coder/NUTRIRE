@@ -4,8 +4,14 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import sys
 import wave
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
 
 from polyvoice.services.tts_sdk import SDKTTSService, TTSConfig
 
@@ -40,11 +46,13 @@ async def _main() -> None:
     async def text_stream():
         yield args.text
 
-    await service.start()
     audio = bytearray()
-    async for chunk in service.synthesize_stream(text_stream()):
-        audio.extend(chunk.audio)
-    await service.stop()
+    await service.start()
+    try:
+        async for chunk in service.synthesize_stream(text_stream()):
+            audio.extend(chunk.audio)
+    finally:
+        await service.stop()
 
     with wave.open(str(args.output), "wb") as wav:
         wav.setnchannels(1)

@@ -67,6 +67,7 @@ nemotron = [
     "nvidia-nemo>=2.0",  # placeholder; replace with actual NeMo extras when service lands
 ]
 qwen3-asr = [
+    "qwen-asr[vllm]",
     "vllm>=0.6.3",
 ]
 whisper-local = [
@@ -101,6 +102,7 @@ magpie = []  # in-process model; deps come from model artifact
 soprano = []
 kokoro = [
     "kokoro>=0.3",
+    "soundfile>=0.12",
 ]
 chatterbox = []
 maya1 = [
