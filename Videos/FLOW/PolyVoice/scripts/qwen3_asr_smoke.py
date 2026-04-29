@@ -157,7 +157,7 @@ def main() -> int:
     parser.add_argument("--model", default="Qwen/Qwen3-ASR-0.6B")
     parser.add_argument("--language", default=None)
     parser.add_argument("--device", default="cuda")
-    parser.add_argument("--gpu-memory-utilization", type=float, default=0.1)
+    parser.add_argument("--gpu-memory-utilization", type=float, default=0.08)
     parser.add_argument("--max-model-len", type=int, default=4096)
     parser.add_argument("--max-inference-batch-size", type=int, default=32)
     parser.add_argument("--max-new-tokens", type=int, default=256)

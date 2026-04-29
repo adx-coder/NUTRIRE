@@ -120,7 +120,7 @@ def select_asr_recipe(config: PolyVoiceConfig, key: str) -> PolyVoiceConfig:
     }
     vad = _dict(recipe.get("vad"))
     if recipe.get("enable_vad", bool(vad)):
-        vad.setdefault("provider", vad.get("type", "energy"))
+        vad.setdefault("provider", vad.get("backend") or vad.get("type") or "energy")
 
     updated.stt = ServiceConfig(
         provider="asr-sdk",

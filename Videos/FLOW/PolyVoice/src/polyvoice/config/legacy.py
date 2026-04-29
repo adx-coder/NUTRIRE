@@ -232,7 +232,7 @@ def _extract_asr_recipes(asr: dict[str, Any]) -> dict[str, Any]:
         nested = _dict(asr.get(key))
         if nested:
             recipe = {**_drop_none(active_recipe), **nested}
-            recipe.setdefault("backend", key)
+            recipe["backend"] = key
             recipes[key] = recipe
 
     return {
