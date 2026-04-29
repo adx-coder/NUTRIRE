@@ -1,63 +1,71 @@
-# AGENTS.md — Guidance for AI coding assistants
+# AGENTS.md - Guidance For AI Coding Assistants
 
-This file is read by AI coding assistants (Claude Code, Cursor, Codex, Aider, etc.) when they work on this repository. Humans should read [`CONTRIBUTING.md`](./CONTRIBUTING.md) and [`CONTEXT.md`](./CONTEXT.md) instead.
+This file is read by AI coding assistants when they work on this repository. Humans should read [`CONTRIBUTING.md`](./CONTRIBUTING.md) and [`CONTEXT.md`](./CONTEXT.md) too.
 
-## Project context
+## Project Context
 
-PolyVoice is a model-agnostic, platform-agnostic open framework for building local-first voice agents. See [`VISION.md`](./VISION.md) for the positioning, [`STRUCTURE.md`](./STRUCTURE.md) for the file layout, [`SPRINT_PLAN.md`](./SPRINT_PLAN.md) for the work plan, and [`BUILD_ORDER.md`](./BUILD_ORDER.md) for the dependency-ordered build queue.
+PolyVoice is a model-agnostic, platform-agnostic open framework for building local-first voice agents. The project is in pre-alpha recovery: the SDK-first ASR/LLM/TTS/runtime baseline exists, while telephony, production orchestration, agents, RAG, observability, and compliance profiles are still being rebuilt.
 
-The core team is **NetoAI engineering**. Treat this as a serious open-source project: production-grade code, not prototype quality.
+Read these before changing architecture:
 
-## How to find work
+- [`VISION.md`](./VISION.md) for scope and product thesis.
+- [`CONTEXT.md`](./CONTEXT.md) for current state.
+- [`SPRINT_PLAN.md`](./SPRINT_PLAN.md) for sprint priorities.
+- [`RECOVERY_PLAN.md`](./RECOVERY_PLAN.md) for parity gaps.
+- [`BUILD_ORDER.md`](./BUILD_ORDER.md) for the ordered work queue.
 
-1. Open `BUILD_ORDER.md`. Find the lowest-numbered unfinished file in the active sprint.
-2. Open the spec referenced in `[spec: NN]` (e.g., `specs/02-services-base.md`).
-3. Read the spec end-to-end. Read any spec it depends on.
-4. Read the existing reference implementation if `CONTEXT.md` lists one for that path (the legacy NetoAI Voice-Agent codebase).
-5. Implement. Open a PR.
+## How To Find Work
 
-## Hard rules
+1. Open `SPRINT_PLAN.md` and identify the current high-value target.
+2. Open `BUILD_ORDER.md` and find the next unfinished item in that target.
+3. Read `CONTEXT.md` for the legacy FLOW porting map.
+4. If touching model support, use the SDK extension path: add one loader/client/provider, register it, add a recipe or example, add tests, and add a smoke script when dependency weight requires it.
+5. Implement with the smallest runtime surface change possible.
 
-- **Never invent a service / adapter / feature that isn't in [`STRUCTURE.md`](./STRUCTURE.md) and [`BUILD_ORDER.md`](./BUILD_ORDER.md).** If you think one is missing, propose it in a PR that updates both files.
-- **Never expand scope beyond [`VISION.md`](./VISION.md).** WebRTC SFU, vision/avatar, cloud realtime APIs, mobile SDKs, IDE plugins — all out of scope. Don't add them, even if they look easy.
-- **Never write code without a spec.** If you reach a file whose spec is missing, write the spec first in the same PR.
-- **Never break a public API in a non-breaking version.** Use a deprecation cycle.
-- **Never add a `utils.py`, `helpers.py`, `common.py`, `misc.py`, `*_v2.py`, or `*_old.py`.** Use a domain-specific name.
-- **Never commit secrets, API keys, model weights, audio files, or DB files.** `.gitignore` blocks most of them; double-check.
-- **Never run benchmarks in CI** — they require GPU and live providers. CI is unit-tests-only.
+Formal specs may be missing or stale during recovery. If a spec exists, follow it. If it does not, update the relevant plan/doc in the same change instead of silently inventing a new architecture.
 
-## Style requirements
+## Hard Rules
 
-- Python 3.11+, full type hints, `X | None` over `Optional[X]`, PEP 604 unions
-- `loguru.logger` for all logging in library code; never bare `print()` or stdlib `logging`
-- Pydantic 2 for config; never raw dicts in new code
-- Async by default in I/O paths; sync helpers only for pure compute
-- Docstrings (Google style) on every public class and method
-- Errors raise from `polyvoice.core.exceptions`; never bare `Exception`
-- Imports auto-sorted by ruff-isort
-- Line length 100; ruff format handles it
-- One class per file in `services/`, `telephony/`, `agents/tools/`
+- **Do not break the SDK-first extension contract.** New ASR/LLM/TTS support should not require runtime rewrites.
+- **Do not expand beyond `VISION.md`.** WebRTC SFU, avatar/vision, cloud realtime API, mobile SDK, and IDE plugin work are out of scope.
+- **Do not pretend planned areas are implemented.** Docs must clearly separate recovered, partial, and planned work.
+- **Do not add generic dumping-ground modules.** Avoid `utils.py`, `helpers.py`, `common.py`, `misc.py`, `*_v2.py`, and `*_old.py`.
+- **Do not commit secrets, API keys, model weights, generated audio files, or DB files.**
+- **Do not run benchmarks in CI.** GPU and provider-live checks must stay explicit.
 
-## Test requirements
+## Style Requirements
 
-Every PR adds or updates a test. Conventions:
+- Python 3.11+, full type hints, `X | None` over `Optional[X]`.
+- Pydantic 2 for structured config.
+- Async by default in I/O paths; sync helpers only for pure compute.
+- Docstrings on public classes and methods.
+- Domain-specific filenames and one clear responsibility per module.
+- Library code should use the project logging/error style instead of bare `print()` or bare `Exception`.
 
-- Unit tests under `tests/unit/<area>/test_<module>.py`
-- Integration tests under `tests/integration/test_<scenario>.py`
-- E2E tests under `tests/e2e/test_<scenario>.py`
-- Mock services in `tests/mocks/` (already provided once Sprint 1 lands)
-- GPU-required tests must be marked `@pytest.mark.gpu`
-- Telephony tests against real providers must be marked `@pytest.mark.telephony`
-- Slow tests (>5s) must be marked `@pytest.mark.slow`
-- CI runs unit tests only; never relies on GPU or live providers
+## Test Requirements
 
-Coverage gate: 60% line coverage on touched modules. PRs that decrease coverage on a module are rejected.
+Every implementation change adds or updates tests. Conventions:
 
-## Commit / PR style
+- Unit tests under `tests/unit/<area>/test_<module>.py`.
+- Integration tests under `tests/integration/test_<scenario>.py`.
+- E2E tests under `tests/e2e/test_<scenario>.py`.
+- Mock services live in `src/polyvoice/services/mocks.py` today.
+- GPU-required tests must be marked `@pytest.mark.gpu`.
+- Telephony tests against real providers must be marked `@pytest.mark.telephony`.
+- Slow tests should be marked `@pytest.mark.slow`.
 
-Conventional commits enforced:
+Useful CPU-safe verification:
 
+```bash
+python -m pytest tests/unit tests/integration/test_pipeline_mocks.py tests/integration/test_pipeline_sdks.py
+python scripts/qwen3_asr_smoke.py --fake-qwen-asr --language en --device cpu
 ```
+
+## Commit / PR Style
+
+Use conventional commits:
+
+```text
 <type>(<scope>): <subject>
 
 <optional body>
@@ -67,35 +75,23 @@ Conventional commits enforced:
 
 Types: `feat`, `fix`, `docs`, `refactor`, `perf`, `test`, `chore`, `ci`, `build`, `style`.
 
-Every PR must update `CHANGELOG.md` under the `## Unreleased` section.
+Every PR should update `CHANGELOG.md` under `## [Unreleased]` when behavior, public docs, examples, or tests change materially.
 
-PRs to `main` require:
-- CI green
-- 1 maintainer approval (`@netoai/engineering`)
-- For paths under CODEOWNERS: the listed reviewers must approve
+## Things That Look Like Good Ideas But Are Not
 
-## Things that look like good ideas but aren't
+- "Unify ASR/LLM/TTS into one service base." No. Their contracts differ.
+- "Add a frame-based pipeline clone." No. Keep the event-oriented design.
+- "Add OpenAI Realtime support because it is popular." No. Cloud realtime APIs are out of scope.
+- "Collapse TTS provider, loader, and codec into one class." No. Keep the layers separate.
+- "Patch runtime bootstrap for each new model." No. Add to the SDK registries and recipes.
 
-- "Let me unify the ASR/LLM/TTS into one base class." → No. Three separate ABCs because the contracts genuinely differ.
-- "Let me add a frame-based pipeline like Pipecat." → No. Defended architectural choice; see [VISION.md commitment 6](./VISION.md#six-architectural-commitments).
-- "Let me add Realtime API support since OpenAI Realtime is popular." → No. Out of scope.
-- "Let me consolidate `provider`, `loader`, `codec` into one class for the TTS layer." → No. Three layers, each with one responsibility.
-- "Let me parallelize the codec normalization with multiprocessing." → No. The audio path is async I/O-bound, not CPU-bound, in the realistic latency budget. Don't optimize what isn't slow.
-- "Let me cache the LLM responses." → Not in core. Caching belongs to the agent layer; even there, it's not in the critical path for v0.x.
+## Reference Implementations To Port From
 
-## Things that look like overkill but aren't
+The old FLOW/Voice-Agent codebase contains working behavior and tested configs. See [`CONTEXT.md`](./CONTEXT.md#legacy-flow-porting-map). Port behavior and settings; do not preserve old file structure just because it existed.
 
-- **Pydantic config models** for every config section. Yes, write them. Validation at startup beats debugging at runtime.
-- **OpenTelemetry spans** at every async boundary. Yes, instrument them. Production deployments need this.
-- **Audit log entries** for every model swap, every barge-in, every escalation. Yes, log them. Compliance needs them.
-- **Mock services** for every real service. Yes, ship them. CI without GPU depends on them.
+## When You Do Not Know What To Do
 
-## Reference implementations to port from
-
-The legacy NetoAI Voice-Agent codebase contains working implementations of most orchestration mechanisms. See [`CONTEXT.md`](./CONTEXT.md#what-youll-find-in-the-existing-netoai-codebase) for the porting map. **Port the behavior, not the file structure.** The new layout in [`STRUCTURE.md`](./STRUCTURE.md) is the canonical home; old paths are not.
-
-## When you don't know what to do
-
-1. Check the active sprint in [`SPRINT_PLAN.md`](./SPRINT_PLAN.md).
-2. Look at the spec in `specs/`.
-3. If still stuck, open a discussion. Don't guess and don't expand scope.
+1. Read `SPRINT_PLAN.md`.
+2. Read `RECOVERY_PLAN.md`.
+3. Read `BUILD_ORDER.md`.
+4. If the question is about model support, keep the SDK extension path intact.

@@ -1,81 +1,136 @@
 # PolyVoice Recovery Plan
 
-This document captures the current reality of the workspace and the practical path from the older working codebase to the newer public `PolyVoice` package.
+This document tracks the migration from the older working `Voice-Agent` codebase into the cleaner public `PolyVoice` package. It is intentionally stateful: update it whenever the real state changes.
 
 ## Current Reality
 
 ### PolyVoice
 
-`PolyVoice` is currently a clean public scaffold, not yet the working product.
+`PolyVoice` is no longer only a public scaffold. It now has a working SDK-first runtime core with mock end-to-end flow, audio utilities, legacy config loading, and first real model smoke paths.
 
 What exists:
 
 - Public project docs: `README.md`, `VISION.md`, `CONTEXT.md`, `STRUCTURE.md`, `SPRINT_PLAN.md`, `BUILD_ORDER.md`, `AGENTS.md`, `SECURITY.md`, `CHANGELOG.md`.
-- Package metadata in `pyproject.toml`.
-- Minimal importable package under `src/polyvoice`.
-- Basic core abstractions:
+- Package metadata and optional extras in `pyproject.toml`.
+- Core abstractions:
   - `core/events.py`
   - `core/processor.py`
   - `core/session.py`
   - `core/exceptions.py`
   - `services/base.py`
   - `services/registry.py`
-- Small unit test set covering the current basics.
+- Config:
+  - Pydantic config models.
+  - YAML/env loader.
+  - Legacy `Voice-Agent/config.yaml` bridge.
+  - Preserved ASR/LLM/TTS model recipes.
+- Audio:
+  - PCM16/float conversion.
+  - WAV wrapping/unwrapping.
+  - mu-law/A-law.
+  - resampling.
+  - AGC.
+- Runtime:
+  - FastAPI server.
+  - health/config status.
+  - WebSocket voice transport.
+  - mock ASR -> LLM -> TTS pipeline.
+- SDK-first services:
+  - ASR SDK with model registry, VAD registry, `qwen3`, `nemotron`, `silero` lazy loaders.
+  - LLM SDK with client registry, OpenAI-compatible client, response processor, turn coordinator, metrics, conversation manager.
+  - TTS SDK with local-model provider, OpenAI-compatible provider, Kokoro loader.
+- Examples and smokes:
+  - mock runtime.
+  - OpenAI-compatible LLM.
+  - OpenAI-compatible TTS.
+  - Kokoro local TTS.
+  - Qwen3 ASR local/fake smoke.
+- Tests:
+  - unit coverage for core/config/audio/services/runtime.
+  - mock integration pipeline.
+  - SDK-backed integration pipeline.
+  - latest known full suite: `79 passed`.
 
-What is missing:
+Validated real smoke:
 
-- Config models and config loader.
-- Audio normalization utilities: codecs, resampling, frames, AGC.
-- Telephony abstractions and adapters.
-- Runtime server, lifecycle, health checks, WebSocket transport, and HTTP config routes.
-- Real ASR, LLM, and TTS implementations.
-- Orchestration: turn coordination, barge-in, TTS control, interruption handling.
-- Agent/tool execution layer.
-- Knowledge/RAG layer.
-- Observability: audit log, metrics, tracing.
-- CLI entry point.
-- Examples, benchmark harness, and docs site.
+- Kokoro CPU TTS wrote `C:\tmp\kokoro_smoke.wav`.
+- WAV metadata: mono, 24 kHz, 2.325 seconds.
+
+Validated fake smoke:
+
+- Qwen3 fake ASR smoke exercises the actual SDK loader path and returns `hello from fake qwen3`.
+
+Still missing:
+
+- Real Qwen3 GPU smoke with `qwen-asr[vllm]`.
+- Full old ASR streaming processor parity:
+  - rolling buffer
+  - sliding windows
+  - onset gate
+  - partial stability
+  - SmartTurn endpointing
+  - finalization rules
+  - full Qwen3 hallucination guard behavior
+- Orchestration layer:
+  - barge-in
+  - TTS pause/resume/cancel
+  - interruption context
+  - filler scheduling
+  - tool execution
+- Telephony adapters:
+  - Twilio
+  - FreeSWITCH
+  - Asterisk
+  - other CPaaS/SIP adapters
+- Observability:
+  - OpenTelemetry spans
+  - audit log
+  - metrics surfaces beyond SDK counters
+- API/UI parity with `flow-ui`.
+- Benchmark harness and docs site.
 
 ### Voice-Agent
 
-`Voice-Agent` is the older working implementation. It is messy but valuable.
+`Voice-Agent` is the older working implementation. It remains the behavioral reference.
 
-What exists:
+What to preserve from it:
 
-- End-to-end ASR -> LLM -> TTS voice pipeline.
-- FastAPI/WebSocket backend.
-- Runtime config switching.
-- Browser-facing voice WebSocket protocol.
-- ASR/VAD modules:
-  - Nemotron/Qwen3 ASR wrappers.
+- SDK-first model extension style.
+- Tested Qwen3 GPU settings:
+  - `device: cuda`
+  - `gpu_memory_utilization: 0.08`
+  - `max_model_len: 4096`
+  - `max_inference_batch_size: 32`
+  - `max_new_tokens: 256`
+  - `chunk_size_sec: 0.032`
+  - `final_padding_sec: 0.08`
+  - `vad.backend: silero`
+- ASR/VAD behavior:
+  - Qwen3 and Nemotron wrappers.
   - Silero VAD.
   - SmartTurn.
   - AGC, punctuation, noise tracking, interruption and barge-in logic.
-- LLM modules:
-  - Streaming SDK.
-  - OpenAI-compatible/Mistral/vLLM-style client support.
-  - Conversation manager, response processor, turn coordinator, backpressure manager.
-- TTS modules:
-  - Streaming SDK.
-  - OpenAI-compatible provider.
-  - Local model loaders for Magpie, Soprano, Kokoro, Chatterbox, Maya-style loaders.
-  - Audio pipeline, text pipeline, resampler, codecs.
-- Agents/tools/knowledge subsystems.
-- Auth, permissions, SQLAlchemy models, repositories, migrations.
-- Streamlit and Gradio UIs.
-- Local demo data and development scripts.
+- LLM behavior:
+  - streaming SDK.
+  - response processor.
+  - turn coordinator.
+  - conversation manager.
+  - backpressure manager.
+- TTS behavior:
+  - streaming SDK.
+  - provider/model-loader separation.
+  - Kokoro, Soprano, Chatterbox, Maya-style loaders.
 
 Risks:
 
-- Large mixed-concern files, especially `voice_orchestrator.py`.
-- Some runtime behavior is coupled to local demo assumptions.
-- Some TODOs and `NotImplementedError` paths remain in tool/database backends.
-- Production hardening is uneven.
+- Old implementation has large mixed-concern files.
+- Some runtime behavior is coupled to local demos.
 - Some docs/output have encoding artifacts.
+- Some pieces are valuable behavior but not clean public API.
 
 ### flow-ui
 
-`flow-ui` is a Next.js dashboard pointed at the old backend shape.
+`flow-ui` is still pointed at the old backend shape.
 
 What exists:
 
@@ -86,182 +141,143 @@ What exists:
 - Settings page for ASR/TTS/LLM hot-swap.
 - Voice test page with real mic capture, WebSocket streaming, transcript state, and TTS playback.
 
-What is placeholder:
+What remains:
 
-- Call history page.
-- Call detail page.
-- Tool edit page.
+- Route parity from PolyVoice.
+- Event compatibility for the voice test page.
+- Placeholder call history/detail/tool edit pages.
 
 ## Strategy
 
-Use the old codebase for working behavior and the new package for clean shape.
+Use `Voice-Agent` for working behavior and `PolyVoice` for clean shape.
 
-Do not copy `Voice-Agent` wholesale. Port vertical slices that can be tested and run independently.
+Rules:
 
-The target is:
+1. Do not copy `Voice-Agent` wholesale.
+2. Preserve the SDK-first model extension style.
+3. New model support must go through loader/client registries.
+4. Heavy model dependencies stay optional and lazy.
+5. Every model/provider path gets:
+   - loader/client
+   - recipe/config
+   - fake contract test
+   - real smoke when practical
 
-1. `PolyVoice` owns the production package, runtime, APIs, tests, and examples.
-2. `Voice-Agent` remains a reference implementation during migration.
-3. `flow-ui` stays wired to the old API until `PolyVoice` reaches route parity.
+## Active Migration Slices
 
-## Migration Slices
+### Slice 1: Mock Runtime
 
-### Slice 1: Mock End-to-End Runtime
+Status: mostly shipped.
 
-Goal: make `PolyVoice` run a voice WebSocket session with mock services.
+Shipped:
 
-Build:
+- Config models and loader.
+- Mock services.
+- Runtime bootstrap/server/health.
+- WebSocket voice transport.
+- Mock ASR -> LLM -> TTS integration tests.
 
-- `polyvoice/config/models.py`
-- `polyvoice/config/loader.py`
-- `polyvoice/audio/frames.py`
-- `polyvoice/runtime/server.py`
-- `polyvoice/runtime/bootstrap.py`
-- `polyvoice/runtime/health.py`
-- `polyvoice/transport/ws_voice.py`
-- `polyvoice/transport/http_routes.py`
-- `tests/mocks/stt.py`
-- `tests/mocks/llm.py`
-- `tests/mocks/tts.py`
-- `tests/integration/test_pipeline_mocks.py`
+Remaining:
 
-Source references:
-
-- `Voice-Agent/app/runtime/bootstrap.py`
-- `Voice-Agent/app/runtime/server_runtime.py`
-- `Voice-Agent/app/transport/server_app.py`
-- `Voice-Agent/app/transport/voice_ws.py`
-- `Voice-Agent/app/contracts/voice_events.py`
-
-Definition of done:
-
-- `pytest tests/unit tests/integration/test_pipeline_mocks.py` passes.
-- A local WebSocket client can connect, send audio bytes, receive ready/transcript/LLM/TTS events.
+- Confirm full `flow-ui` event compatibility.
+- Add richer `/config/status` detail for selected recipes.
 
 ### Slice 2: Audio Foundation
 
-Goal: lock audio data types and conversion behavior before telephony.
+Status: shipped enough for current runtime.
+
+Shipped:
+
+- codecs
+- resample
+- AGC
+- frames
+- unit tests
+
+Remaining:
+
+- Telephony-specific codec negotiation when adapters land.
+
+### Slice 3: SDK-First Services
+
+Status: active.
+
+Shipped:
+
+- ASR SDK registry.
+- LLM SDK registry.
+- TTS SDK registry.
+- OpenAI-compatible LLM/TTS.
+- Kokoro real TTS loader.
+- Qwen3/Nemotron/Silero lazy ASR/VAD loaders.
+- Legacy recipe activation into SDK configs.
+
+Remaining:
+
+- `docs/adding-models.md`.
+- `scripts/scaffold_model_loader.py`.
+- Real Qwen3 GPU smoke.
+- Silero real VAD smoke.
+- More LLM clients using the same registry pattern.
+
+### Slice 4: Old FLOW Intelligence
+
+Status: next major implementation slice.
+
+Port from old FLOW:
+
+- ASR streaming processor.
+- VAD state machine.
+- onset gate.
+- finalization logic.
+- Qwen3 hallucination suppression.
+- SmartTurn endpointing.
+- barge-in classifier.
+- LLM backpressure/adaptive chunking.
+
+Definition of done:
+
+- Tests cover partials, stable finals, low-confidence suppression, endpointing, and interruption.
+
+### Slice 5: Runtime/UI Parity
+
+Status: not started.
 
 Build:
 
-- `polyvoice/audio/codecs.py`
-- `polyvoice/audio/resample.py`
-- `polyvoice/audio/agc.py`
-- codec/frame tests.
+- route parity for `flow-ui`
+- richer config APIs
+- hot-swap with mutex
+- readiness around loaded models
+- one-command local demo
 
-Source references:
+### Slice 6: Telephony
 
-- `Voice-Agent/tts_sdk/pipeline/resampler.py`
-- `Voice-Agent/tts_sdk/pipeline/format_converter.py`
-- `Voice-Agent/asr/processing/agc.py`
-- `Voice-Agent/tts_sdk/codecs/`
-
-Definition of done:
-
-- Deterministic tests for PCM16, mulaw, alaw, WAV-ish framing where applicable.
-- Audio chunks have one canonical internal format: PCM16 mono 16 kHz unless explicitly declared otherwise.
-
-### Slice 3: Service Implementations
-
-Goal: make the service ABCs useful with real providers.
+Status: deferred until internal voice loop is trustworthy.
 
 Build:
 
-- `polyvoice/services/llm/openai_compat.py`
-- `polyvoice/services/tts/openai_compat.py`
-- `polyvoice/services/tts/kokoro.py` or first local TTS adapter.
-- `polyvoice/services/asr/*` after the mock runtime is stable.
-
-Source references:
-
-- `Voice-Agent/llm/sdk/streaming_sdk.py`
-- `Voice-Agent/llm/models/llm_client.py`
-- `Voice-Agent/tts_sdk/sdk/streaming_sdk.py`
-- `Voice-Agent/tts_sdk/providers/openai_compatible.py`
-- `Voice-Agent/asr/sdk/streaming_sdk.py`
-
-Definition of done:
-
-- Mock services and one real LLM/TTS path share the same public interface.
-- Provider failures produce typed `PolyVoiceError` subclasses.
-
-### Slice 4: Orchestration
-
-Goal: port the actual turn-taking intelligence without preserving the old monolith.
-
-Build:
-
-- `polyvoice/orchestration/orchestrator.py`
-- `polyvoice/orchestration/barge_in.py`
-- `polyvoice/orchestration/tts_control.py`
-- `polyvoice/orchestration/stream_state.py`
-- `polyvoice/orchestration/turn_coordinator.py`
-- `polyvoice/orchestration/interrupted_context.py`
-
-Source references:
-
-- `Voice-Agent/voice_orchestrator.py`
-- `Voice-Agent/app/orchestration/`
-- `Voice-Agent/asr/processing/barge_in_classifier.py`
-- `Voice-Agent/llm/processing/turn_coordinator.py`
-- `Voice-Agent/llm/processing/tts_coordinator.py`
-
-Definition of done:
-
-- Tests cover normal turn, interrupted turn, true barge-in, and backchannel/resume behavior.
-
-### Slice 5: Telephony Adapters
-
-Goal: add CPaaS/provider adapters on top of a stable internal voice pipeline.
-
-Build:
-
-- `polyvoice/telephony/base.py`
-- `polyvoice/telephony/twilio.py`
-- `polyvoice/telephony/freeswitch.py`
-- `polyvoice/telephony/asterisk.py`
-
-Definition of done:
-
-- The same orchestrator runs unchanged behind Twilio, FreeSWITCH, and Asterisk mocks.
-- Provider wire formats are normalized before entering orchestration.
-
-### Slice 6: API Parity and UI Cleanup
-
-Goal: move `flow-ui` from old backend routes to `PolyVoice` when ready.
-
-Build or port:
-
-- Auth strategy.
-- Agent CRUD API.
-- Tool CRUD API.
-- Knowledge API.
-- Calls/session history API.
-- Config status/update API.
-
-Then fix `flow-ui` placeholders:
-
-- Replace call history placeholder with real session list.
-- Replace call detail placeholder with transcript, timings, and metrics.
-- Replace tool edit placeholder with the existing create form loaded from API state.
-
-Definition of done:
-
-- `flow-ui` can point to `PolyVoice` without route changes.
-- Placeholder dashboard pages are gone.
+- telephony base
+- Twilio
+- FreeSWITCH
+- Asterisk
+- codec normalization at adapter edge
 
 ## Immediate Next Targets
 
-1. Build Slice 1 with mocks.
-2. Keep the WebSocket event names compatible with `flow-ui/src/hooks/use-voice-session.ts`.
-3. Add integration tests before porting the old orchestration.
-4. Only after mock runtime works, start porting audio and real services.
+1. Add model-extension docs and scaffold script.
+2. Attempt real Qwen3 GPU smoke using preserved old config.
+3. Port old ASR streaming processor behavior in small tested modules.
+4. Build full local demo config:
+   - Qwen3 ASR
+   - mock or OpenAI-compatible LLM
+   - Kokoro TTS
+5. Start `flow-ui` voice-test route parity.
 
-## Non-Goals For The First Pass
+## Non-Goals For This Recovery Phase
 
-- Do not port every provider at once.
-- Do not rebuild the whole dashboard first.
-- Do not copy the old monolithic orchestrator directly.
-- Do not start with benchmark/docs-site work.
-- Do not make telephony adapters before the internal mock voice loop is stable.
+- Do not start benchmarks before a real local demo works.
+- Do not build telephony before the SDK voice loop is stable.
+- Do not copy monolithic old files directly.
+- Do not add providers by editing runtime/bootstrap every time.
 

@@ -1,8 +1,8 @@
 # PolyVoice — Repository Structure
 
-This is the canonical file tree. Every file has a single, clear purpose.
+This file describes the target repository structure. During the current recovery sprint, the implemented subset is concentrated in `config`, `audio`, `runtime`, `transport`, and the `services/*_sdk` packages. Telephony, orchestration, agents, knowledge, observability, compliance profiles, docs site, and benchmarks are still planned or partial.
 
-If a file isn't in this tree, it shouldn't exist. If you need a file that isn't here, update this doc in the same PR.
+Use [`CONTEXT.md`](./CONTEXT.md), [`SPRINT_PLAN.md`](./SPRINT_PLAN.md), [`RECOVERY_PLAN.md`](./RECOVERY_PLAN.md), and [`BUILD_ORDER.md`](./BUILD_ORDER.md) for the live state. If you add a new architectural area, update this file in the same PR.
 
 ```
 PolyVoice/
