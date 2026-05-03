@@ -1,0 +1,17 @@
+# GPU-flavored extras. Install ON TOP of requirements.txt when running on a
+# CUDA-capable host (RTX 4070, Colab T4/A100, etc.). CPU-only deployments do
+# NOT need this file — the runtime degrades gracefully via _gpu_utils.
+
+# PyTorch with CUDA 12.1 wheels — install via:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+# We do NOT pin torch here so the same file works on Windows + Linux + Colab.
+torch
+torchvision
+
+# Optional — Hugging Face transformer stack for sentiment plugins that may
+# adopt a transformer encoder later. Leave commented until a plugin needs it.
+# transformers>=4.40.0
+# accelerate>=0.30.0
+
+# LightGBM and XGBoost ship CUDA support inside their default PyPI wheels,
+# so no extra package is needed beyond what requirements.txt already lists.
