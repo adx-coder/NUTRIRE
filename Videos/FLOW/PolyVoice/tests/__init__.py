@@ -1,2 +1,0 @@
-"""PolyVoice test package."""
-
