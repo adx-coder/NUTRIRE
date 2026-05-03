@@ -1,2 +1,0 @@
-"""HTTP and WebSocket transports."""
-
