@@ -1,0 +1,43 @@
+fastapi>=0.104.0
+uvicorn>=0.24.0
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+python-dotenv>=1.0.0
+python-multipart>=0.0.6
+reportlab>=4.0.0
+joblib>=1.3.0
+pandas>=2.0.0
+numpy>=1.24.0,<2.0
+scikit-learn>=1.3.0
+# lightgbm and xgboost wheels include CUDA kernels; _gpu_utils selects
+# device_type / tree_method at runtime, so this file stays CPU-default.
+# For GPU training (RTX 4070 / Colab) install requirements-gpu.txt on top.
+lightgbm>=4.3.0
+matplotlib>=3.7.0
+minio>=7.2.0
+xgboost>=2.0.0
+lifetimes>=0.11.3
+prophet>=1.1.5
+statsmodels>=0.14.0
+
+# ── Auth ────────────────────────────────────────────────────
+python-jose[cryptography]>=3.3.0   # JWT signing / verification
+passlib[bcrypt]>=1.7.4             # password hashing
+pydantic[email]
+
+openpyxl
+
+# ── Mock data generators (digital twin) ──────────────────────────────────────
+Faker>=24.0.0
+
+# ── Data Source Connectors ───────────────────────────────────────────────────
+# Google Cloud Storage connector (optional — only needed if GCS connector is used)
+google-cloud-storage>=2.10.0
+google-auth>=2.23.0
+# Google Drive connector (datasets + model artifact sync)
+google-api-python-client>=2.110.0
+google-auth-oauthlib>=1.2.0
+
+# ── AI Agent SDK ─────────────────────────────────────────────────────────────
+anthropic>=0.40.0
+httpx>=0.25.0
