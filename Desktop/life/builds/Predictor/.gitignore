@@ -1,0 +1,21 @@
+# Model artifacts (regenerated via: python run_detector.py train)
+models/*.joblib
+
+# Detection output (regenerated via: python run_detector.py detect/full)
+results/
+results_detect/
+
+# Environment and secrets
+.env
+kaggle.json
+mobile_money_fraud/kaggle.json
+mobile_money_fraud/data/
+mobile_money_fraud/.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Backend caches (Drive token cache, etc.)
+predictor/backend/.cache/
