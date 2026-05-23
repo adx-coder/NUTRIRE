@@ -16,7 +16,7 @@
 
 <p align="center">
   <em>A premium, mobile-first food access intelligence app for the DC / Maryland / Virginia metro area.<br/>
-  Built for the <strong>NourishNet Data Challenge 2025</strong> - University of Maryland · NSF Funded.</em>
+  Built for the <strong>NourishNet Data Challenge 2026</strong> - University of Maryland · NSF Funded.</em>
 </p>
 
 ---
@@ -227,14 +227,14 @@ Every organization has a warm, LLM-generated "what to expect" guide that reduces
 
 ## Team
 
-Built by **Sankhasubhra Ghosal** and **Ashwath David** for the NourishNet Data Challenge 2025.
+Built by **Sankhasubhra Ghosal** and **Ashwath David** for the NourishNet Data Challenge 2026.
 
 ---
 
 <p align="center">
   <img src="public/logos/nutrire-mark.png" alt="Nutrire" width="40" />
   <br/>
-  <sub>NourishNet Data Challenge 2025 · University of Maryland · NSF Funded</sub>
+  <sub>NourishNet Data Challenge 2026 · University of Maryland · NSF Funded</sub>
   <br/>
   <sub>MIT License</sub>
 </p>
