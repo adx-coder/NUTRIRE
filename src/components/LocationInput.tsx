@@ -3,23 +3,8 @@ import { MapPin, Loader2, ArrowRight, Navigation } from "lucide-react";
 import clsx from "clsx";
 import { useLocationStore } from "@/store/location";
 import { mockUserLocation } from "@/data/load-data";
+import { geocodeTypedLocation } from "@/lib/geocode-search";
 import { useT } from "@/i18n/useT";
-
-const DMV_CENTER = mockUserLocation; // fallback if geocode fails
-
-async function geocodeQuery(query: string): Promise<{ lat: number; lng: number } | null> {
-  try {
-    const q = encodeURIComponent(`${query}, Washington DC metro area`);
-    const resp = await fetch(`https://nominatim.openstreetmap.org/search?q=${q}&format=json&limit=1&countrycodes=us`, {
-      headers: { "User-Agent": "Nutrire-FoodAccess/1.0" },
-    });
-    const results = await resp.json();
-    if (results.length > 0) {
-      return { lat: parseFloat(results[0].lat), lng: parseFloat(results[0].lon) };
-    }
-  } catch {}
-  return null;
-}
 
 interface Props {
   onSubmit: () => void;
@@ -32,6 +17,7 @@ interface Props {
 export function LocationInput({ onSubmit, autoFocus = true }: Props) {
   const [value, setValue] = useState("");
   const [geolocating, setGeolocating] = useState(false);
+  const [resolvingTyped, setResolvingTyped] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const setLocation = useLocationStore((s) => s.setLocation);
   const t = useT();
@@ -46,16 +32,21 @@ export function LocationInput({ onSubmit, autoFocus = true }: Props) {
   const useCurrentLocationLabel = t("home.input.useMyLocation");
   const usingLocationLabel = t("home.input.usingLocation");
 
-  const [submitting, setSubmitting] = useState(false);
-
   const submitTyped = async () => {
     const trimmed = value.trim();
     if (!trimmed) return;
-    setSubmitting(true);
-    const coords = await geocodeQuery(trimmed);
-    setLocation({ coords: coords ?? DMV_CENTER, label: trimmed, source: coords ? "geolocate" : "typed" });
-    setSubmitting(false);
-    onSubmit();
+    setResolvingTyped(true);
+    try {
+      const resolved = await geocodeTypedLocation(trimmed);
+      if (resolved) {
+        setLocation({ coords: resolved.coords, label: resolved.label, source: "typed" });
+      } else {
+        setLocation({ coords: mockUserLocation, label: trimmed, source: "typed" });
+      }
+      onSubmit();
+    } finally {
+      setResolvingTyped(false);
+    }
   };
 
   const useMyLocation = () => {
@@ -90,7 +81,7 @@ export function LocationInput({ onSubmit, autoFocus = true }: Props) {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          submitTyped();
+          void submitTyped();
         }}
         className={clsx(
           "group relative flex items-center gap-3 w-full",
@@ -117,7 +108,7 @@ export function LocationInput({ onSubmit, autoFocus = true }: Props) {
         <button
           type="button"
           onClick={useMyLocation}
-          disabled={geolocating}
+          disabled={geolocating || resolvingTyped}
           aria-label={useCurrentLocationLabel}
           className={clsx(
             "hidden sm:inline-flex items-center gap-1.5 shrink-0",
@@ -128,7 +119,7 @@ export function LocationInput({ onSubmit, autoFocus = true }: Props) {
             "disabled:opacity-50",
           )}
         >
-          {geolocating ? (
+          {geolocating || resolvingTyped ? (
             <Loader2 size={13} className="animate-spin" aria-hidden="true" />
           ) : (
             <Navigation size={13} aria-hidden="true" />
@@ -148,9 +139,13 @@ export function LocationInput({ onSubmit, autoFocus = true }: Props) {
             "shadow-[0_2px_8px_rgba(58,101,81,0.3)]",
             "disabled:opacity-30 disabled:pointer-events-none",
           )}
-          disabled={!value.trim() || submitting}
+          disabled={!value.trim() || resolvingTyped}
         >
-          {submitting ? <Loader2 size={18} className="animate-spin" aria-hidden="true" /> : <ArrowRight size={18} strokeWidth={2.5} aria-hidden="true" />}
+          {resolvingTyped ? (
+            <Loader2 size={18} className="animate-spin" aria-hidden="true" />
+          ) : (
+            <ArrowRight size={18} strokeWidth={2.5} aria-hidden="true" />
+          )}
         </button>
       </form>
 
