@@ -29,6 +29,11 @@ function slotsForDay(hours: WeeklySchedule, day: DayKey) {
   return hours[day] ?? [];
 }
 
+/** Same calendar-day slot that continues past midnight (e.g. 22:00–02:00). */
+function isOvernightSlot(openMin: number, closeMin: number): boolean {
+  return closeMin < openMin;
+}
+
 export function computeOpenStatus(org: EnrichedOrganization, now: Date): OpenStatus {
   const hours = org.ai?.parsedHours;
   if (!hours) return { state: "unknown", label: "Call for hours", labelKey: "status.callForHours" };
@@ -46,10 +51,31 @@ export function computeOpenStatus(org: EnrichedOrganization, now: Date): OpenSta
   const todayKey = DAY_KEYS[now.getDay()];
   const currentMin = now.getHours() * 60 + now.getMinutes();
   const todaySlots = slotsForDay(hours, todayKey);
+  const yesterdayKey = DAY_KEYS[(now.getDay() + 6) % 7];
+  const yesterdaySlots = slotsForDay(hours, yesterdayKey);
+
+  // Morning segment of an overnight window that started yesterday (e.g. Sat 22:00–Sun 02:00, now Sun 01:00)
+  for (const slot of yesterdaySlots) {
+    const open = parseMin(slot.start);
+    const close = parseMin(slot.end);
+    if (!isOvernightSlot(open, close)) continue;
+    if (currentMin < close) {
+      const time = fmtTime(slot.end);
+      return { state: "open", label: `Open now - closes ${time}`, labelKey: "status.opensAt", labelVars: { time } };
+    }
+  }
 
   for (const slot of todaySlots) {
     const open = parseMin(slot.start);
     const close = parseMin(slot.end);
+
+    if (isOvernightSlot(open, close)) {
+      if (currentMin >= open) {
+        const time = fmtTime(slot.end);
+        return { state: "open", label: `Open now - closes ${time}`, labelKey: "status.opensAt", labelVars: { time } };
+      }
+      continue;
+    }
 
     if (currentMin >= open && currentMin < close) {
       const time = fmtTime(slot.end);
