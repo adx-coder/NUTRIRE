@@ -227,7 +227,7 @@ Every organization has a warm, LLM-generated "what to expect" guide that reduces
 
 ## Team
 
-Built by **Sankhasubhra Ghosal** and **Ashwath David** for the NourishNet Data Challenge 2026.
+Built by **Sankhasubhra Ghosal**, **Ashwath David**, and **Aaryadev Chandra** for the NourishNet Data Challenge 2026.
 
 ---
 
